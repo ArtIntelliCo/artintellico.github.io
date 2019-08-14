@@ -8,6 +8,12 @@ end
 activate :livereload
 activate :i18n, :mount_at_root => :ru
 
+activate :deploy do |deploy|
+  deploy.deploy_method = :git
+  deploy.branch = 'master'
+  deploy.build_before = true
+end
+
 # Layouts
 # https://middlemanapp.com/basics/layouts/
 
