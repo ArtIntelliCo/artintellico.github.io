@@ -73,3 +73,33 @@ describe('страницы локалей', () => {
     expect(new Set(titles).size).toBe(3);
   });
 });
+
+describe('шапка и подвал', () => {
+  it('дают переключатель на две другие локали', () => {
+    const uk = read(pages.uk);
+    expect(uk).toContain('href="/ru/"');
+    expect(uk).toContain('href="/en/"');
+
+    const ru = read(pages.ru);
+    expect(ru).toContain('href="/"');
+    expect(ru).toContain('href="/en/"');
+  });
+
+  it('помечают текущий язык как активный', () => {
+    expect(read(pages.ru)).toContain('aria-current="true"');
+  });
+
+  it('показывают текущий год в подвале', () => {
+    const year = String(new Date().getFullYear());
+    for (const path of Object.values(pages)) {
+      expect(read(path), path).toContain(year);
+    }
+  });
+
+  it('пишут название компании без опечатки', () => {
+    for (const path of Object.values(pages)) {
+      expect(read(path), path).toContain('ArtIntelliCo');
+      expect(read(path), path).not.toContain('AtrIntelliCo');
+    }
+  });
+});

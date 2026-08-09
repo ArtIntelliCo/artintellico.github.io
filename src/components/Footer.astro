@@ -1,0 +1,15 @@
+---
+import { t, type Locale } from '../i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const dict = t(locale);
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-brand-navy/10 py-8 text-center text-sm text-brand-navy/60">
+  <p>© {year} ArtIntelliCo. {dict.footer.rights}</p>
+</footer>
