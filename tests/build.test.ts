@@ -125,3 +125,23 @@ describe('первый экран', () => {
     }
   });
 });
+
+describe('блок услуг', () => {
+  it('выводит девять карточек в каждой локали', () => {
+    for (const path of Object.values(pages)) {
+      expect(read(path).match(/<article/g)?.length, path).toBe(9);
+    }
+  });
+
+  it('имеет якорь для навигации', () => {
+    for (const path of Object.values(pages)) {
+      expect(read(path), path).toContain('id="services"');
+    }
+  });
+
+  it('переводит названия услуг', () => {
+    expect(read(pages.uk)).toContain('Хмарні рішення');
+    expect(read(pages.ru)).toContain('Облачные решения');
+    expect(read(pages.en)).toContain('Cloud solutions');
+  });
+});
