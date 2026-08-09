@@ -172,3 +172,25 @@ describe('контакты', () => {
     }
   });
 });
+
+describe('статические файлы', () => {
+  it('содержат robots.txt со ссылкой на sitemap', () => {
+    expect(existsSync('dist/robots.txt')).toBe(true);
+    expect(read('dist/robots.txt')).toContain('https://artintellico.com/sitemap-index.xml');
+  });
+
+  it('генерируют sitemap со всеми локалями', () => {
+    expect(existsSync('dist/sitemap-index.xml')).toBe(true);
+    const sitemap = read('dist/sitemap-0.xml');
+    expect(sitemap).toContain('https://artintellico.com/');
+    expect(sitemap).toContain('https://artintellico.com/ru/');
+    expect(sitemap).toContain('https://artintellico.com/en/');
+  });
+
+  it('сохраняют привязку домена и иконки', () => {
+    expect(read('dist/CNAME').trim()).toBe('artintellico.com');
+    expect(existsSync('dist/favicon.ico')).toBe(true);
+    expect(existsSync('dist/apple-touch-icon.png')).toBe(true);
+    expect(existsSync('dist/og-image.png')).toBe(true);
+  });
+});
