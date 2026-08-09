@@ -156,6 +156,31 @@ describe('блок услуг', () => {
   });
 });
 
+describe('блок партнёров', () => {
+  it('идёт сразу после блока услуг', () => {
+    for (const path of Object.values(pages)) {
+      const html = read(path);
+      expect(html.indexOf('id="partners"'), path).toBeGreaterThan(html.indexOf('id="services"'));
+      expect(html.indexOf('id="partners"'), path).toBeLessThan(html.indexOf('id="contacts"'));
+    }
+  });
+
+  it('перечисляет всех пятерых партнёров', () => {
+    for (const path of Object.values(pages)) {
+      const html = read(path);
+      for (const partner of ['Red Hat', 'Microsoft', 'Veeam', 'VMware', 'Dell']) {
+        expect(html, `${path} / ${partner}`).toContain(partner);
+      }
+    }
+  });
+
+  it('переводит заголовок блока', () => {
+    expect(read(pages.uk)).toContain('Наші партнери');
+    expect(read(pages.ru)).toContain('Наши партнёры');
+    expect(read(pages.en)).toContain('Our partners');
+  });
+});
+
 describe('контакты', () => {
   it('дают рабочую почту', () => {
     for (const path of Object.values(pages)) {

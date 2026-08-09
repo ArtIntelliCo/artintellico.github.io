@@ -54,6 +54,9 @@
       }
     }
   },
+  "partners": {
+    "heading": "Our partners"
+  },
   "contacts": {
     "heading": "Tell us about your project",
     "text": "If you have a partnership proposal or want to know more about our solutions and experience — drop us an email.",
