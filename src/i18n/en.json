@@ -20,9 +20,9 @@
         "title": "IT solution concept",
         "text": "We analyse what you actually need, define business requirements, and either select an existing product or write a development specification that both business and engineers can work from."
       },
-      "ux": {
-        "title": "Product design (UX/UI)",
-        "text": "We research users and product, design interfaces, and run usability testing and expert reviews."
+      "saas": {
+        "title": "SaaS development",
+        "text": "We design and build SaaS platforms: multi-tenant architecture, billing and subscriptions, customer dashboards, integrations and scaling."
       },
       "web": {
         "title": "Web development",

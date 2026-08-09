@@ -144,6 +144,16 @@ describe('блок услуг', () => {
     expect(read(pages.ru)).toContain('Облачные решения');
     expect(read(pages.en)).toContain('Cloud solutions');
   });
+
+  it('предлагает разработку SaaS вместо прежнего блока UX/UI', () => {
+    expect(read(pages.uk)).toContain('Розробка SaaS рішень');
+    expect(read(pages.ru)).toContain('Разработка SaaS решений');
+    expect(read(pages.en)).toContain('SaaS development');
+
+    for (const path of Object.values(pages)) {
+      expect(read(path), path).not.toContain('UX/UI');
+    }
+  });
 });
 
 describe('контакты', () => {
