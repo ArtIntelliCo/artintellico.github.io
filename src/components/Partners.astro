@@ -16,12 +16,31 @@ const dict = t(locale);
       {dict.partners.heading}
     </h2>
 
-    <ul class="mt-8 flex flex-wrap items-center justify-center gap-x-12 gap-y-6">
+    <ul class="mt-10 flex flex-wrap items-center justify-center gap-x-14 gap-y-10">
       {
         partners.map((partner) => (
-          <li class="text-xl font-bold tracking-tight text-brand-navy/70 sm:text-2xl">{partner}</li>
+          <li
+            class="partner flex items-center justify-center"
+            style={`--partner-color: ${partner.color}; --partner-size: ${partner.size}px`}
+          >
+            <span class="partner-logo flex h-12 items-center text-brand-navy/45 transition-colors duration-200">
+              <Fragment set:html={partner.logo} />
+            </span>
+          </li>
         ))
       }
     </ul>
   </div>
 </section>
+
+<style>
+  .partner-logo :global(svg) {
+    width: var(--partner-size);
+    height: var(--partner-size);
+    fill: currentColor;
+  }
+
+  .partner:hover .partner-logo {
+    color: var(--partner-color);
+  }
+</style>

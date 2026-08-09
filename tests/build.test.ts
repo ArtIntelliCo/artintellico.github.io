@@ -179,6 +179,16 @@ describe('блок партнёров', () => {
     expect(read(pages.ru)).toContain('Наши партнёры');
     expect(read(pages.en)).toContain('Our partners');
   });
+
+  it('встраивает пять логотипов как inline-SVG', () => {
+    for (const path of Object.values(pages)) {
+      const section = read(path).split('id="partners"')[1]?.split('id="contacts"')[0] ?? '';
+      expect(section.match(/<svg/g)?.length, path).toBe(5);
+      for (const title of ['Red Hat', 'Microsoft', 'Veeam', 'VMware', 'Dell']) {
+        expect(section, `${path} / ${title}`).toContain(`<title>${title}</title>`);
+      }
+    }
+  });
 });
 
 describe('контакты', () => {
