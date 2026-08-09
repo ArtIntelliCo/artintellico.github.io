@@ -103,3 +103,25 @@ describe('шапка и подвал', () => {
     }
   });
 });
+
+describe('первый экран', () => {
+  it('содержит заголовок из словаря своей локали', () => {
+    expect(read(pages.uk)).toContain('Ми створюємо корисні ІТ рішення');
+    expect(read(pages.ru)).toContain('Мы создаём полезные ИТ решения');
+    expect(read(pages.en)).toContain('We build IT solutions that work');
+  });
+
+  it('содержит ровно один h1 на страницу', () => {
+    for (const path of Object.values(pages)) {
+      expect(read(path).match(/<h1[\s>]/g)?.length, path).toBe(1);
+    }
+  });
+
+  it('встраивает логотип как inline-SVG с подписью', () => {
+    for (const path of Object.values(pages)) {
+      const html = read(path);
+      expect(html, path).toContain('<svg');
+      expect(html, path).toContain('role="img"');
+    }
+  });
+});
