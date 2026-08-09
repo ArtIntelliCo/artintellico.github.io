@@ -1,0 +1,94 @@
+---
+import { htmlLang, localePath, locales, ogLocale, t, type Locale } from '../i18n';
+import '../styles/global.css';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const dict = t(locale);
+const site = Astro.site!;
+const canonical = new URL(localePath[locale], site).href;
+const ogImage = new URL('/og-image.png', site).href;
+
+const organization = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'ArtIntelliCo',
+  url: site.href,
+  logo: ogImage,
+  email: 'io@artintellico.com',
+  telephone: '+380960566642',
+};
+---
+
+<!doctype html>
+<html lang={htmlLang[locale]}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{dict.meta.title}</title>
+    <meta name="description" content={dict.meta.description} />
+
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang="x-default" href={new URL('/', site).href} />
+    {
+      locales.map((item) => (
+        <link rel="alternate" hreflang={htmlLang[item]} href={new URL(localePath[item], site).href} />
+      ))
+    }
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="ArtIntelliCo" />
+    <meta property="og:title" content={dict.meta.title} />
+    <meta property="og:description" content={dict.meta.description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:locale" content={ogLocale[locale]} />
+    {
+      locales
+        .filter((item) => item !== locale)
+        .map((item) => <meta property="og:locale:alternate" content={ogLocale[item]} />)
+    }
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <script type="application/ld+json" set:html={JSON.stringify(organization)} />
+
+    <script is:inline>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-W3Z644V');
+    </script>
+  </head>
+  <body class="font-sans text-brand-navy antialiased">
+    <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-W3Z644V"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"
+        title="Google Tag Manager"></iframe>
+    </noscript>
+
+    <a
+      href="#main"
+      class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded focus:bg-white focus:px-4 focus:py-2"
+      >{dict.nav.skipToContent}</a
+    >
+
+    <main id="main">
+      <slot />
+    </main>
+  </body>
+</html>
