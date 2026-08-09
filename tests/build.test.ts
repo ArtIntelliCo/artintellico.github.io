@@ -147,11 +147,18 @@ describe('блок услуг', () => {
 });
 
 describe('контакты', () => {
-  it('дают рабочие телефон и почту', () => {
+  it('дают рабочую почту', () => {
+    for (const path of Object.values(pages)) {
+      expect(read(path), path).toContain('href="mailto:io@artintellico.com"');
+    }
+  });
+
+  it('нигде не показывают телефон', () => {
     for (const path of Object.values(pages)) {
       const html = read(path);
-      expect(html, path).toContain('href="tel:+380960566642"');
-      expect(html, path).toContain('href="mailto:io@artintellico.com"');
+      expect(html, path).not.toContain('tel:');
+      expect(html, path).not.toContain('380960566642');
+      expect(html, path).not.toContain('096 056 66 42');
     }
   });
 
