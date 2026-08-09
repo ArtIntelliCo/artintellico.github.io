@@ -1,1 +1,0 @@
-$(document).ready(function(){$(window).scroll(function(){$(window).scrollTop()>200?$(".navigation").addClass("animated"):$(".navigation").removeClass("animated")}),$("#menu").on("click","a",function(n){n.preventDefault();var a=$(this).attr("href"),o=$(a).offset().top;$("body,html").animate({scrollTop:o},1500)})});
