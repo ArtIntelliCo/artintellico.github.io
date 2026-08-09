@@ -1,0 +1,66 @@
+{
+  "meta": {
+    "title": "Software development and IT support for business — ArtIntelliCo",
+    "description": "ArtIntelliCo builds IT solutions: e-commerce, portals, SaaS, machine learning, artificial intelligence and ongoing technical support."
+  },
+  "nav": {
+    "skipToContent": "Skip to content",
+    "services": "Services",
+    "contacts": "Contacts",
+    "languageLabel": "Language"
+  },
+  "hero": {
+    "title": "We build IT solutions that work for your business",
+    "text": "The ArtIntelliCo team helps you digitalise business processes by designing and delivering modern IT solutions."
+  },
+  "services": {
+    "heading": "How we can help",
+    "items": {
+      "concept": {
+        "title": "IT solution concept",
+        "text": "We analyse what you actually need, define business requirements, and either select an existing product or write a development specification that both business and engineers can work from."
+      },
+      "ux": {
+        "title": "Product design (UX/UI)",
+        "text": "We research users and product, design interfaces, and run usability testing and expert reviews."
+      },
+      "web": {
+        "title": "Web development",
+        "text": "We build web applications of any complexity: corporate sites, marketplaces, online stores, booking systems and more."
+      },
+      "mobile": {
+        "title": "Mobile apps",
+        "text": "We develop iOS and Android applications together with the admin panels behind them."
+      },
+      "ai": {
+        "title": "AI-powered solutions",
+        "text": "We deliver solutions built on artificial intelligence and machine learning."
+      },
+      "crm": {
+        "title": "CRM and ERP development",
+        "text": "We build custom CRM and ERP systems shaped around how your business actually works."
+      },
+      "cloud": {
+        "title": "Cloud solutions",
+        "text": "We migrate your infrastructure, in full or in part, to Amazon Web Services."
+      },
+      "api": {
+        "title": "APIs and integrations",
+        "text": "We design APIs for your systems and integrate them with the tools you already use."
+      },
+      "support": {
+        "title": "Technical support",
+        "text": "We keep your systems running and continue to improve them."
+      }
+    }
+  },
+  "contacts": {
+    "heading": "Tell us about your project",
+    "text": "If you have a partnership proposal or want to know more about our solutions and experience — give us a call or drop us an email.",
+    "phoneLabel": "Phone",
+    "emailLabel": "Email"
+  },
+  "footer": {
+    "rights": "All rights reserved."
+  }
+}
