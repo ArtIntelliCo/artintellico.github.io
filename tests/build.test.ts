@@ -145,3 +145,30 @@ describe('блок услуг', () => {
     expect(read(pages.en)).toContain('Cloud solutions');
   });
 });
+
+describe('контакты', () => {
+  it('дают рабочие телефон и почту', () => {
+    for (const path of Object.values(pages)) {
+      const html = read(path);
+      expect(html, path).toContain('href="tel:+380960566642"');
+      expect(html, path).toContain('href="mailto:io@artintellico.com"');
+    }
+  });
+
+  it('не содержат битого домена из старой версии', () => {
+    for (const path of Object.values(pages)) {
+      expect(read(path), path).not.toContain('io@artintelico.com');
+    }
+  });
+
+  it('не содержат заглушку о реконструкции', () => {
+    const html = Object.values(pages).map(read).join('\n').toLowerCase();
+    expect(html).not.toContain('реконструкц');
+  });
+
+  it('имеют якорь для навигации', () => {
+    for (const path of Object.values(pages)) {
+      expect(read(path), path).toContain('id="contacts"');
+    }
+  });
+});
