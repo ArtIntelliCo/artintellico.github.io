@@ -2,7 +2,8 @@ import en from './en.json';
 import ru from './ru.json';
 import uk from './uk.json';
 
-export const locales = ['uk', 'ru', 'en'] as const;
+/** Порядок задаёт и переключатель языков в шапке, и список hreflang. */
+export const locales = ['uk', 'en', 'ru'] as const;
 export type Locale = (typeof locales)[number];
 
 /** Украинский словарь задаёт форму: остальные локали обязаны ей соответствовать. */

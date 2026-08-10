@@ -5,7 +5,7 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
   site: 'https://artintellico.com',
   i18n: {
-    locales: ['uk', 'ru', 'en'],
+    locales: ['uk', 'en', 'ru'],
     defaultLocale: 'uk',
     routing: {
       prefixDefaultLocale: false,

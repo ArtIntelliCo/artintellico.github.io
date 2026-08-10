@@ -89,6 +89,13 @@ describe('шапка и подвал', () => {
     expect(read(pages.ru)).toContain('aria-current="true"');
   });
 
+  it('выстраивают языки в порядке UK, EN, RU', () => {
+    for (const path of Object.values(pages)) {
+      const order = [...read(path).matchAll(/>(UK|EN|RU)</g)].map((m) => m[1]);
+      expect(order, path).toEqual(['UK', 'EN', 'RU']);
+    }
+  });
+
   it('показывают текущий год в подвале', () => {
     const year = String(new Date().getFullYear());
     for (const path of Object.values(pages)) {
