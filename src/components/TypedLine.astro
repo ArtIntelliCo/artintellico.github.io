@@ -8,6 +8,14 @@ interface Props {
 const { locale } = Astro.props;
 const dict = t(locale);
 const phrases = dict.hero.typed;
+
+/**
+ * Цвета фирменного логотипа: каждая фраза печатается своим.
+ * Охра логотипа (#E7B744) на белом даёт контраст 1.9:1 и для текста
+ * нечитаема, поэтому взят её затемнённый оттенок — цвет тот же, контраст
+ * поднят до уровня, пригодного для чтения.
+ */
+const colors = ['#20769F', '#DF542F', '#A17708', '#1D2A46'];
 ---
 
 <p class="mt-6 flex flex-wrap items-baseline gap-x-2 text-lg text-brand-navy/70">
@@ -19,8 +27,10 @@ const phrases = dict.hero.typed;
   <span
     data-typed-output
     aria-hidden="true"
-    class="typed font-semibold text-brand-blue"
-    data-phrases={JSON.stringify(phrases)}>{phrases[0]}</span>
+    class="typed font-semibold"
+    style={`color: ${colors[0]}`}
+    data-phrases={JSON.stringify(phrases)}
+    data-colors={JSON.stringify(colors)}>{phrases[0]}</span>
 </p>
 
 <script>
@@ -30,6 +40,7 @@ const phrases = dict.hero.typed;
 
   function setup(element: HTMLElement) {
     const phrases: string[] = JSON.parse(element.dataset.phrases ?? '[]');
+    const colors: string[] = JSON.parse(element.dataset.colors ?? '[]');
     if (phrases.length < 2) return;
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
@@ -53,6 +64,8 @@ const phrases = dict.hero.typed;
       if (erasing && position === 0) {
         erasing = false;
         index = (index + 1) % phrases.length;
+        // Цвет меняем на пустой строке, чтобы переход не был заметен на буквах.
+        if (colors.length) element.style.color = colors[index % colors.length]!;
       }
 
       window.setTimeout(tick, erasing ? ERASE_SPEED : TYPE_SPEED);
@@ -66,6 +79,10 @@ const phrases = dict.hero.typed;
 </script>
 
 <style>
+  .typed {
+    transition: color 300ms ease;
+  }
+
   .typed.is-animated::after {
     content: '';
     display: inline-block;

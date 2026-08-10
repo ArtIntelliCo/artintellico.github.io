@@ -137,6 +137,15 @@ describe('первый экран', () => {
     expect(hero(pages.en)).toContain('build SaaS platforms');
   });
 
+  it('красит печатающуюся строку в цвета логотипа', () => {
+    for (const path of Object.values(pages)) {
+      const hero = read(path).split('id="services"')[0];
+      expect(hero, path).toMatch(/data-colors="[^"]*20769F/i);
+      expect(hero, path).toMatch(/data-colors="[^"]*DF542F/i);
+      expect(hero, path).toMatch(/data-colors="[^"]*1D2A46/i);
+    }
+  });
+
   it('прячет декоративную анимацию от скринридеров, оставляя текст', () => {
     for (const path of Object.values(pages)) {
       const html = read(path);
