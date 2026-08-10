@@ -1,0 +1,25 @@
+---
+import LangSwitcher from './LangSwitcher.astro';
+import { localePath, t, type Locale } from '../i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const dict = t(locale);
+---
+
+<header class="sticky top-0 z-40 border-b border-brand-navy/10 bg-white/95 backdrop-blur">
+  <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4">
+    <a href={localePath[locale]} class="text-lg font-bold tracking-tight">ArtIntelliCo</a>
+
+    <div class="flex items-center gap-4">
+      <nav class="hidden gap-4 text-sm font-medium uppercase tracking-wide sm:flex">
+        <a href="#services" class="transition hover:text-brand-blue">{dict.nav.services}</a>
+        <a href="#contacts" class="transition hover:text-brand-blue">{dict.nav.contacts}</a>
+      </nav>
+      <LangSwitcher locale={locale} />
+    </div>
+  </div>
+</header>

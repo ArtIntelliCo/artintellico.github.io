@@ -1,0 +1,40 @@
+---
+import { partners } from '../data/partners';
+import { t, type Locale } from '../i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const dict = t(locale);
+---
+
+<section id="partners" class="border-y border-brand-navy/10 bg-white py-14">
+  <div class="mx-auto max-w-6xl px-4">
+    <h2 class="text-center text-sm font-semibold uppercase tracking-[0.2em] text-brand-navy/60">
+      {dict.partners.heading}
+    </h2>
+
+    <ul class="mt-10 flex flex-wrap items-center justify-center gap-x-14 gap-y-10">
+      {
+        partners.map((partner) => (
+          <li
+            class="partner flex h-14 items-center justify-center"
+            style={`--partner-height: ${partner.height}px`}
+          >
+            <Fragment set:html={partner.logo} />
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>
+
+<style>
+  .partner :global(svg) {
+    height: var(--partner-height);
+    width: auto;
+    max-width: 100%;
+  }
+</style>
