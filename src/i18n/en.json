@@ -11,7 +11,14 @@
   },
   "hero": {
     "title": "We build IT solutions that work for your business",
-    "text": "The ArtIntelliCo team helps you digitalise business processes by designing and delivering modern IT solutions."
+    "text": "The ArtIntelliCo team helps you digitalise business processes by designing and delivering modern IT solutions.",
+    "typedLead": "For your business we",
+    "typed": [
+      "build SaaS platforms",
+      "ship CRM and ERP systems",
+      "put AI to work",
+      "move infrastructure to the cloud"
+    ]
   },
   "services": {
     "heading": "How we can help",

@@ -124,6 +124,27 @@ describe('первый экран', () => {
     }
   });
 
+  it('содержит canvas для нейросетевого фона', () => {
+    for (const path of Object.values(pages)) {
+      expect(read(path), path).toContain('data-neural-canvas');
+    }
+  });
+
+  it('отдаёт фразы печатающейся строки в HTML, а не только из JS', () => {
+    const hero = (path: string) => read(path).split('id="services"')[0];
+    expect(hero(pages.uk)).toContain('розробляємо SaaS-платформи');
+    expect(hero(pages.ru)).toContain('разрабатываем SaaS-платформы');
+    expect(hero(pages.en)).toContain('build SaaS platforms');
+  });
+
+  it('прячет декоративную анимацию от скринридеров, оставляя текст', () => {
+    for (const path of Object.values(pages)) {
+      const html = read(path);
+      expect(html, path).toMatch(/data-typed-output[^>]*aria-hidden="true"/);
+      expect(html, path).toContain('sr-only');
+    }
+  });
+
   it('встраивает логотип как inline-SVG с подписью', () => {
     for (const path of Object.values(pages)) {
       const html = read(path);
