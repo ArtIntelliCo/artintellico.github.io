@@ -1,0 +1,154 @@
+---
+/**
+ * Декоративный фон первого экрана: узлы дрейфуют, близкие соединяются линиями,
+ * рядом с курсором сеть подсвечивается и тянется к нему.
+ *
+ * Анимация — чистая декорация, поэтому canvas скрыт от скринридеров и не
+ * перехватывает события мыши. При prefers-reduced-motion рисуется один
+ * статичный кадр без цикла анимации.
+ */
+---
+
+<canvas
+  data-neural-canvas
+  aria-hidden="true"
+  class="pointer-events-none absolute inset-0 h-full w-full"></canvas>
+
+<script>
+  interface Node {
+    x: number;
+    y: number;
+    vx: number;
+    vy: number;
+  }
+
+  const NODE_COLOR = '29, 42, 70'; // brand-navy
+  const LINK_COLOR = '32, 118, 159'; // brand-blue
+  const LINK_DISTANCE = 130;
+  const POINTER_DISTANCE = 170;
+
+  function setup(canvas: HTMLCanvasElement) {
+    const context = canvas.getContext('2d');
+    if (!context) return;
+
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const pointer = { x: -9999, y: -9999 };
+    let nodes: Node[] = [];
+    let frame: number | null = null;
+    let width = 0;
+    let height = 0;
+
+    function buildNodes() {
+      const rect = canvas.getBoundingClientRect();
+      const ratio = Math.min(window.devicePixelRatio || 1, 2);
+      width = rect.width;
+      height = rect.height;
+      canvas.width = Math.round(width * ratio);
+      canvas.height = Math.round(height * ratio);
+      context!.setTransform(ratio, 0, 0, ratio, 0, 0);
+
+      // Плотность на площадь, но не больше 70 узлов даже на широком экране.
+      const count = Math.min(70, Math.round((width * height) / 14000));
+      nodes = Array.from({ length: count }, () => ({
+        x: Math.random() * width,
+        y: Math.random() * height,
+        vx: (Math.random() - 0.5) * 0.25,
+        vy: (Math.random() - 0.5) * 0.25,
+      }));
+    }
+
+    function render() {
+      context!.clearRect(0, 0, width, height);
+
+      for (let i = 0; i < nodes.length; i++) {
+        const node = nodes[i]!;
+
+        for (let j = i + 1; j < nodes.length; j++) {
+          const other = nodes[j]!;
+          const distance = Math.hypot(node.x - other.x, node.y - other.y);
+          if (distance > LINK_DISTANCE) continue;
+          context!.strokeStyle = `rgba(${NODE_COLOR}, ${0.16 * (1 - distance / LINK_DISTANCE)})`;
+          context!.lineWidth = 1;
+          context!.beginPath();
+          context!.moveTo(node.x, node.y);
+          context!.lineTo(other.x, other.y);
+          context!.stroke();
+        }
+
+        const toPointer = Math.hypot(node.x - pointer.x, node.y - pointer.y);
+        const near = toPointer < POINTER_DISTANCE;
+
+        if (near) {
+          const strength = 1 - toPointer / POINTER_DISTANCE;
+          context!.strokeStyle = `rgba(${LINK_COLOR}, ${0.5 * strength})`;
+          context!.lineWidth = 1;
+          context!.beginPath();
+          context!.moveTo(node.x, node.y);
+          context!.lineTo(pointer.x, pointer.y);
+          context!.stroke();
+        }
+
+        context!.fillStyle = near ? `rgba(${LINK_COLOR}, 0.85)` : `rgba(${NODE_COLOR}, 0.3)`;
+        context!.beginPath();
+        context!.arc(node.x, node.y, near ? 2.6 : 1.7, 0, Math.PI * 2);
+        context!.fill();
+      }
+    }
+
+    function step() {
+      for (const node of nodes) {
+        node.x += node.vx;
+        node.y += node.vy;
+        if (node.x < 0 || node.x > width) node.vx *= -1;
+        if (node.y < 0 || node.y > height) node.vy *= -1;
+      }
+      render();
+      frame = requestAnimationFrame(step);
+    }
+
+    function start() {
+      if (frame !== null || reduceMotion.matches) return;
+      frame = requestAnimationFrame(step);
+    }
+
+    function stop() {
+      if (frame === null) return;
+      cancelAnimationFrame(frame);
+      frame = null;
+    }
+
+    buildNodes();
+    render();
+
+    if (!reduceMotion.matches) start();
+    reduceMotion.addEventListener('change', () => (reduceMotion.matches ? stop() : start()));
+
+    // Анимация идёт только пока первый экран виден и вкладка активна.
+    const observer = new IntersectionObserver((entries) => {
+      entries[0]?.isIntersecting ? start() : stop();
+    });
+    observer.observe(canvas);
+
+    document.addEventListener('visibilitychange', () => (document.hidden ? stop() : start()));
+
+    window.addEventListener('resize', () => {
+      buildNodes();
+      render();
+    });
+
+    const section = canvas.parentElement;
+    section?.addEventListener('pointermove', (event) => {
+      if ((event as PointerEvent).pointerType !== 'mouse') return;
+      const rect = canvas.getBoundingClientRect();
+      pointer.x = (event as PointerEvent).clientX - rect.left;
+      pointer.y = (event as PointerEvent).clientY - rect.top;
+    });
+
+    section?.addEventListener('pointerleave', () => {
+      pointer.x = -9999;
+      pointer.y = -9999;
+    });
+  }
+
+  document.querySelectorAll<HTMLCanvasElement>('[data-neural-canvas]').forEach(setup);
+</script>

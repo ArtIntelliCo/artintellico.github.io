@@ -1,0 +1,107 @@
+---
+import { t, type Locale } from '../i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const dict = t(locale);
+const phrases = dict.hero.typed;
+
+/**
+ * Цвета фирменного логотипа: каждая фраза печатается своим.
+ * Охра логотипа (#E7B744) на белом даёт контраст 1.9:1 и для текста
+ * нечитаема, поэтому взят её затемнённый оттенок — цвет тот же, контраст
+ * поднят до уровня, пригодного для чтения.
+ */
+const colors = ['#A17708', '#DF542F', '#20769F', '#1D2A46'];
+---
+
+<p class="mt-6 flex flex-wrap items-baseline gap-x-2 text-lg text-brand-navy/70">
+  <span class="text-brand-navy/50">{dict.hero.typedLead}</span>
+
+  {/* Полный список фраз — для скринридеров и поисковиков: анимация их не отдаёт. */}
+  <span class="sr-only">{phrases.join(', ')}.</span>
+
+  <span
+    data-typed-output
+    aria-hidden="true"
+    class="typed font-semibold"
+    style={`color: ${colors[0]}`}
+    data-phrases={JSON.stringify(phrases)}
+    data-colors={JSON.stringify(colors)}>{phrases[0]}</span>
+</p>
+
+<script>
+  const TYPE_SPEED = 55;
+  const ERASE_SPEED = 28;
+  const HOLD = 1900;
+
+  function setup(element: HTMLElement) {
+    const phrases: string[] = JSON.parse(element.dataset.phrases ?? '[]');
+    const colors: string[] = JSON.parse(element.dataset.colors ?? '[]');
+    if (phrases.length < 2) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    element.classList.add('is-animated');
+
+    let index = 0;
+    let position = 0;
+    let erasing = false;
+
+    function tick() {
+      const phrase = phrases[index]!;
+      position += erasing ? -1 : 1;
+      element.textContent = phrase.slice(0, position);
+
+      if (!erasing && position === phrase.length) {
+        erasing = true;
+        window.setTimeout(tick, HOLD);
+        return;
+      }
+
+      if (erasing && position === 0) {
+        erasing = false;
+        index = (index + 1) % phrases.length;
+        // Цвет меняем на пустой строке, чтобы переход не был заметен на буквах.
+        if (colors.length) element.style.color = colors[index % colors.length]!;
+      }
+
+      window.setTimeout(tick, erasing ? ERASE_SPEED : TYPE_SPEED);
+    }
+
+    element.textContent = '';
+    window.setTimeout(tick, 600);
+  }
+
+  document.querySelectorAll<HTMLElement>('[data-typed-output]').forEach(setup);
+</script>
+
+<style>
+  .typed {
+    transition: color 300ms ease;
+  }
+
+  .typed.is-animated::after {
+    content: '';
+    display: inline-block;
+    width: 2px;
+    height: 1.1em;
+    margin-left: 2px;
+    vertical-align: -0.15em;
+    background: currentColor;
+    animation: caret 1s steps(1) infinite;
+  }
+
+  @keyframes caret {
+    0%,
+    50% {
+      opacity: 1;
+    }
+    50.01%,
+    100% {
+      opacity: 0;
+    }
+  }
+</style>
