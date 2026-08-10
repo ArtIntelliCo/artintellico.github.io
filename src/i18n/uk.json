@@ -70,6 +70,8 @@
     "emailLabel": "Пошта"
   },
   "footer": {
-    "rights": "Усі права захищено."
+    "rights": "Усі права захищено.",
+    "edrpouLabel": "ЄДРПОУ",
+    "addressLabel": "Адреса"
   }
 }

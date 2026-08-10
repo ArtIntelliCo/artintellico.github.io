@@ -70,6 +70,8 @@
     "emailLabel": "Email"
   },
   "footer": {
-    "rights": "All rights reserved."
+    "rights": "All rights reserved.",
+    "edrpouLabel": "Company ID",
+    "addressLabel": "Address"
   }
 }

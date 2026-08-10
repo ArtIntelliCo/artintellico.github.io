@@ -103,6 +103,19 @@ describe('шапка и подвал', () => {
     }
   });
 
+  it('показывают юридическое наименование на языке локали', () => {
+    expect(read(pages.uk)).toContain('ТОВ «АртІнтелліко»');
+    expect(read(pages.ru)).toContain('ООО «АртИнтеллико»');
+    expect(read(pages.en)).toContain('ArtIntelliCo LLC');
+  });
+
+  it('не выводят пустые реквизиты', () => {
+    for (const path of Object.values(pages)) {
+      const html = read(path);
+      expect(html, path).not.toMatch(/ЄДРПОУ\s*<|ЄДРПОУ\s*·|Адреса:\s*</);
+    }
+  });
+
   it('пишут название компании без опечатки', () => {
     for (const path of Object.values(pages)) {
       expect(read(path), path).toContain('ArtIntelliCo');

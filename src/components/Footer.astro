@@ -1,4 +1,5 @@
 ---
+import { company } from '../data/company';
 import { t, type Locale } from '../i18n';
 
 interface Props {
@@ -8,8 +9,21 @@ interface Props {
 const { locale } = Astro.props;
 const dict = t(locale);
 const year = new Date().getFullYear();
+
+const address = company.address[locale];
+
+// Реквизиты собираются в одну строку; незаполненные поля просто выпадают.
+const legalParts = [
+  company.legalName[locale],
+  company.edrpou && `${dict.footer.edrpouLabel} ${company.edrpou}`,
+  address && `${dict.footer.addressLabel}: ${address}`,
+].filter(Boolean);
 ---
 
-<footer class="border-t border-brand-navy/10 py-8 text-center text-sm text-brand-navy/60">
-  <p>© {year} ArtIntelliCo. {dict.footer.rights}</p>
+<footer class="border-t border-brand-navy/10 py-8 text-center">
+  <p class="text-sm text-brand-navy/60">© {year} ArtIntelliCo. {dict.footer.rights}</p>
+
+  <p class="mx-auto mt-3 max-w-3xl px-4 text-[11px] leading-relaxed text-brand-navy/35">
+    {legalParts.join(' · ')}
+  </p>
 </footer>
