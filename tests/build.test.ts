@@ -165,10 +165,10 @@ describe('блок партнёров', () => {
     }
   });
 
-  it('перечисляет всех пятерых партнёров', () => {
+  it('перечисляет всех шестерых партнёров', () => {
     for (const path of Object.values(pages)) {
       const html = read(path);
-      for (const partner of ['Red Hat', 'Microsoft', 'Veeam', 'VMware', 'Dell']) {
+      for (const partner of ['Red Hat', 'Microsoft', 'Amazon Web Services', 'Veeam', 'VMware', 'Dell']) {
         expect(html, `${path} / ${partner}`).toContain(partner);
       }
     }
@@ -180,13 +180,20 @@ describe('блок партнёров', () => {
     expect(read(pages.en)).toContain('Our partners');
   });
 
-  it('встраивает пять логотипов как inline-SVG', () => {
+  it('встраивает шесть логотипов как inline-SVG', () => {
     for (const path of Object.values(pages)) {
       const section = read(path).split('id="partners"')[1]?.split('id="contacts"')[0] ?? '';
-      expect(section.match(/<svg/g)?.length, path).toBe(5);
-      for (const title of ['Red Hat', 'Microsoft', 'Veeam', 'VMware', 'Dell']) {
+      expect(section.match(/<svg/g)?.length, path).toBe(6);
+      for (const title of ['Red Hat', 'Microsoft', 'Amazon Web Services', 'Veeam', 'VMware', 'Dell']) {
         expect(section, `${path} / ${title}`).toContain(`<title>${title}</title>`);
       }
+    }
+  });
+
+  it('показывает логотипы в фирменных цветах, а не монохромом', () => {
+    const section = read(pages.uk).split('id="partners"')[1]?.split('id="contacts"')[0] ?? '';
+    for (const color of ['#F25022', '#00A4EF', '#e00', '#00b336', '#007db8']) {
+      expect(section.toLowerCase(), color).toContain(color.toLowerCase());
     }
   });
 });

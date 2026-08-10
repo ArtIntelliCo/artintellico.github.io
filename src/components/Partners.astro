@@ -10,7 +10,7 @@ const { locale } = Astro.props;
 const dict = t(locale);
 ---
 
-<section id="partners" class="border-y border-brand-navy/10 bg-brand-navy/[0.03] py-14">
+<section id="partners" class="border-y border-brand-navy/10 bg-white py-14">
   <div class="mx-auto max-w-6xl px-4">
     <h2 class="text-center text-sm font-semibold uppercase tracking-[0.2em] text-brand-navy/60">
       {dict.partners.heading}
@@ -20,12 +20,10 @@ const dict = t(locale);
       {
         partners.map((partner) => (
           <li
-            class="partner flex items-center justify-center"
-            style={`--partner-color: ${partner.color}; --partner-size: ${partner.size}px`}
+            class="partner flex h-14 items-center justify-center"
+            style={`--partner-height: ${partner.height}px`}
           >
-            <span class="partner-logo flex h-12 items-center text-brand-navy/45 transition-colors duration-200">
-              <Fragment set:html={partner.logo} />
-            </span>
+            <Fragment set:html={partner.logo} />
           </li>
         ))
       }
@@ -34,13 +32,9 @@ const dict = t(locale);
 </section>
 
 <style>
-  .partner-logo :global(svg) {
-    width: var(--partner-size);
-    height: var(--partner-size);
-    fill: currentColor;
-  }
-
-  .partner:hover .partner-logo {
-    color: var(--partner-color);
+  .partner :global(svg) {
+    height: var(--partner-height);
+    width: auto;
+    max-width: 100%;
   }
 </style>

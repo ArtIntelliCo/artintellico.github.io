@@ -1,3 +1,4 @@
+import aws from '../assets/partners/aws.svg?raw';
 import dell from '../assets/partners/dell.svg?raw';
 import microsoft from '../assets/partners/microsoft.svg?raw';
 import redhat from '../assets/partners/redhat.svg?raw';
@@ -7,23 +8,22 @@ import vmware from '../assets/partners/vmware.svg?raw';
 export interface Partner {
   /** Название бренда: не переводится, одинаково во всех локалях. */
   name: string;
-  /** Inline-SVG логотипа, монохромный, наследует цвет через currentColor. */
+  /** Inline-SVG фирменного логотипа в оригинальных цветах. */
   logo: string;
-  /** Фирменный цвет бренда — подсвечивается при наведении. */
-  color: string;
   /**
-   * Высота бокса логотипа в пикселях. У всех логотипов viewBox 24×24, но
-   * словесные знаки (Veeam, VMware) занимают внутри него узкую полосу и в
-   * одинаковом боксе выглядят втрое мельче значков. Высота подобрана так,
-   * чтобы ряд читался оптически ровным.
+   * Высота логотипа в пикселях. Пропорции знаков сильно разные — от вытянутого
+   * Veeam (5.5:1) до круглого Dell (1:1), — поэтому единая высота даёт
+   * оптически неровный ряд. Значения подобраны так, чтобы знаки читались
+   * одинаково крупно.
    */
-  size: number;
+  height: number;
 }
 
 export const partners: Partner[] = [
-  { name: 'Red Hat', logo: redhat, color: '#EE0000', size: 40 },
-  { name: 'Microsoft', logo: microsoft, color: '#00A4EF', size: 32 },
-  { name: 'Veeam', logo: veeam, color: '#00B336', size: 104 },
-  { name: 'VMware', logo: vmware, color: '#607078', size: 96 },
-  { name: 'Dell', logo: dell, color: '#007DB8', size: 44 },
+  { name: 'Red Hat', logo: redhat, height: 34 },
+  { name: 'Microsoft', logo: microsoft, height: 30 },
+  { name: 'Amazon Web Services', logo: aws, height: 46 },
+  { name: 'Veeam', logo: veeam, height: 28 },
+  { name: 'VMware', logo: vmware, height: 30 },
+  { name: 'Dell', logo: dell, height: 52 },
 ];
