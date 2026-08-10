@@ -109,6 +109,12 @@ describe('шапка и подвал', () => {
     expect(read(pages.en)).toContain('ArtIntelliCo LLC');
   });
 
+  it('показывают код ЄДРПОУ с подписью на языке локали', () => {
+    expect(read(pages.uk)).toContain('ЄДРПОУ 40656107');
+    expect(read(pages.ru)).toContain('ЕГРПОУ 40656107');
+    expect(read(pages.en)).toContain('Company ID 40656107');
+  });
+
   it('не выводят пустые реквизиты', () => {
     for (const path of Object.values(pages)) {
       const html = read(path);
