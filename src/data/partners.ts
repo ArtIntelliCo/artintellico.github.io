@@ -2,6 +2,7 @@ import aws from '../assets/partners/aws.svg?raw';
 import dell from '../assets/partners/dell.svg?raw';
 import microsoft from '../assets/partners/microsoft.svg?raw';
 import redhat from '../assets/partners/redhat.svg?raw';
+import unio24 from '../assets/partners/unio24.svg?raw';
 import veeam from '../assets/partners/veeam.svg?raw';
 import vmware from '../assets/partners/vmware.svg?raw';
 
@@ -17,6 +18,8 @@ export interface Partner {
    * одинаково крупно.
    */
   height: number;
+  /** Сайт партнёра. Если задан, логотип становится ссылкой (открывается в новой вкладке). */
+  url?: string;
 }
 
 export const partners: Partner[] = [
@@ -26,4 +29,5 @@ export const partners: Partner[] = [
   { name: 'Veeam', logo: veeam, height: 28 },
   { name: 'VMware', logo: vmware, height: 30 },
   { name: 'Dell', logo: dell, height: 52 },
+  { name: 'UNIO24', logo: unio24, height: 30, url: 'https://unio24.com/' },
 ];

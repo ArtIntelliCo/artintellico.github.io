@@ -16,14 +16,28 @@ const dict = t(locale);
       {dict.partners.heading}
     </h2>
 
-    <ul class="mt-10 flex flex-wrap items-center justify-center gap-x-14 gap-y-10">
+    <ul class="mt-10 flex flex-wrap items-center justify-center gap-x-12 gap-y-10">
       {
         partners.map((partner) => (
           <li
             class="partner flex h-14 items-center justify-center"
             style={`--partner-height: ${partner.height}px`}
           >
-            <Fragment set:html={partner.logo} />
+            {
+              partner.url ? (
+                <a
+                  href={partner.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={partner.name}
+                  class="flex items-center transition-opacity hover:opacity-75"
+                >
+                  <Fragment set:html={partner.logo} />
+                </a>
+              ) : (
+                <Fragment set:html={partner.logo} />
+              )
+            }
           </li>
         ))
       }

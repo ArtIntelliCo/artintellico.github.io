@@ -221,10 +221,10 @@ describe('блок партнёров', () => {
     }
   });
 
-  it('перечисляет всех шестерых партнёров', () => {
+  it('перечисляет всех семерых партнёров', () => {
     for (const path of Object.values(pages)) {
       const html = read(path);
-      for (const partner of ['Red Hat', 'Microsoft', 'Amazon Web Services', 'Veeam', 'VMware', 'Dell']) {
+      for (const partner of ['Red Hat', 'Microsoft', 'Amazon Web Services', 'Veeam', 'VMware', 'Dell', 'UNIO24']) {
         expect(html, `${path} / ${partner}`).toContain(partner);
       }
     }
@@ -236,11 +236,11 @@ describe('блок партнёров', () => {
     expect(read(pages.en)).toContain('Our partners');
   });
 
-  it('встраивает шесть логотипов как inline-SVG', () => {
+  it('встраивает семь логотипов как inline-SVG', () => {
     for (const path of Object.values(pages)) {
       const section = read(path).split('id="partners"')[1]?.split('id="contacts"')[0] ?? '';
-      expect(section.match(/<svg/g)?.length, path).toBe(6);
-      for (const title of ['Red Hat', 'Microsoft', 'Amazon Web Services', 'Veeam', 'VMware', 'Dell']) {
+      expect(section.match(/<svg/g)?.length, path).toBe(7);
+      for (const title of ['Red Hat', 'Microsoft', 'Amazon Web Services', 'Veeam', 'VMware', 'Dell', 'UNIO24']) {
         expect(section, `${path} / ${title}`).toContain(`<title>${title}</title>`);
       }
     }
@@ -248,8 +248,19 @@ describe('блок партнёров', () => {
 
   it('показывает логотипы в фирменных цветах, а не монохромом', () => {
     const section = read(pages.uk).split('id="partners"')[1]?.split('id="contacts"')[0] ?? '';
-    for (const color of ['#F25022', '#00A4EF', '#e00', '#00b336', '#007db8']) {
+    for (const color of ['#F25022', '#00A4EF', '#e00', '#00b336', '#007db8', '#ff5702']) {
       expect(section.toLowerCase(), color).toContain(color.toLowerCase());
+    }
+  });
+
+  it('делает логотип UNIO24 ссылкой на сайт партнёра в новой вкладке', () => {
+    for (const path of Object.values(pages)) {
+      const section = read(path).split('id="partners"')[1]?.split('id="contacts"')[0] ?? '';
+      const link = section.match(/<a[^>]*href="https:\/\/unio24\.com\/?"[^>]*>/)?.[0] ?? '';
+      expect(link, path).not.toBe('');
+      expect(link, path).toContain('target="_blank"');
+      expect(link, path).toMatch(/rel="[^"]*noopener[^"]*"/);
+      expect(section.match(/<a /g)?.length, path).toBe(1);
     }
   });
 });
