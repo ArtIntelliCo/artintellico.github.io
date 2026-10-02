@@ -1,0 +1,45 @@
+/*
+ * Рамка вокруг ретро-варианта: вариант занимает экран за вычетом нижней полосы (bar.css).
+ * transform на body делает его контейнером для position: fixed внутри варианта,
+ * поэтому полноэкранные слои (inset: 0) заканчиваются над полосой.
+ */
+:root { --aic-vh: calc(100vh - var(--aic-bar)); }
+@supports (height: 100dvh) {
+  :root { --aic-vh: calc(100dvh - var(--aic-bar)); }
+}
+
+html {
+  height: 100% !important;
+  overflow: hidden !important;
+}
+body {
+  position: relative !important;
+  height: var(--aic-vh) !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  overflow: visible !important;
+  transform: translateZ(0);
+}
+
+/* Полоса — сразу под body: fixed здесь считался бы от body, а не от экрана */
+.aic-bar {
+  position: absolute;
+  top: 100%;
+  bottom: auto;
+}
+
+/* Без JavaScript: весь текст сайта обычной страницей поверх пустого экрана варианта */
+.nojs {
+  position: fixed;
+  inset: 0;
+  z-index: 2147482000;
+  overflow: auto;
+  padding: 16px 20px;
+  background: #000;
+  color: #c8c8c8;
+  font: 16px/1.4 ui-monospace, Menlo, Consolas, monospace;
+}
+.nojs h1, .nojs h2, .nojs h3 { font-size: 1em; font-weight: normal; color: #ffff55; margin: 1em 0 .5em; }
+.nojs p, .nojs ul { max-width: 64ch; margin: 0 0 1em; }
+.nojs ul { list-style: none; padding: 0; }
+.nojs a { color: #55ffff; }

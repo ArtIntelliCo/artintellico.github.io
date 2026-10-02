@@ -1,0 +1,21 @@
+---
+import type { GetStaticPaths } from 'astro';
+import Variant from '../layouts/Variant.astro';
+import { locales } from '../i18n';
+import { variantIds, variantPath, type RetroVariantId } from '../variants';
+
+/** Ретро-варианты, кроме Norton Commander в корне локали: /unix/, /ru/unix/, /en/unix/ … */
+export const getStaticPaths = (() =>
+  variantIds
+    .filter((id): id is Exclude<RetroVariantId, 'nc'> => id !== 'classic' && id !== 'nc')
+    .flatMap((variant) =>
+      locales.map((locale) => ({
+        params: { path: variantPath(variant, locale).slice(1, -1) },
+        props: { locale, variant },
+      }))
+    )) satisfies GetStaticPaths;
+
+const { locale, variant } = Astro.props;
+---
+
+<Variant locale={locale} variant={variant} />

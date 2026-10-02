@@ -1,0 +1,105 @@
+---
+import { locales, t, type Locale } from '../i18n';
+import { variantIds, variantName, variantPath, variants, variantTitle, type VariantId } from '../variants';
+
+/*
+ * Футер ретро-варианта: слоган и переключатель всех вариантов сайта.
+ * Ссылки — обычные <a>, чтобы варианты были связаны между собой и для поисковиков.
+ * Скрипт следит за языком варианта (атрибут lang у <html>): меняет адрес страницы
+ * на адрес этой локали и переводит сам футер.
+ */
+
+interface Props {
+  locale: Locale;
+  variant: VariantId;
+}
+
+const { locale, variant } = Astro.props;
+const dict = t(locale);
+const year = new Date().getFullYear();
+
+const aicText = Object.fromEntries(
+  locales.map((item) => [item, { slogan: t(item).footer.slogan, label: t(item).footer.variants }])
+);
+const aicTitles = Object.fromEntries(locales.map((item) => [item, variantTitle(variant, item)]));
+const aicNames = Object.fromEntries(
+  variantIds.map((id) => [id, Object.fromEntries(locales.map((item) => [item, variantName(id, item)]))])
+);
+---
+
+<footer class="aic-bar" id="aic-bar">
+  <div class="aic-copy-row">© {year} ArtIntelliCo</div>
+  <p class="aic-text">
+    <span class="aic-copy">© {year} ArtIntelliCo · </span><span class="aic-slogan" data-aic="slogan"
+      >{dict.footer.slogan}</span
+    >
+  </p>
+  <nav class="aic-nav" aria-label={dict.footer.variants} data-aic="nav">
+    <details>
+      <summary><span data-aic="label">{dict.footer.variants}</span>: <span data-aic="current">{variantName(variant, locale)}</span></summary>
+      <ul>
+        {
+          variantIds.map((id) => (
+            <li>
+              <a href={variantPath(id, locale)} data-variant={id} aria-current={id === variant ? 'page' : undefined}>
+                <span class="aic-year">{variants[id].year ?? ''}</span>
+                <span class="aic-name">{variantName(id, locale)}</span>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </details>
+  </nav>
+</footer>
+
+<script is:inline define:vars={{ aicText, aicNames, aicTitles }}>
+  const { url, langs, id } = window.AIC;
+  const bar = document.getElementById('aic-bar');
+  const details = bar.querySelector('details');
+  const $$ = (key) => bar.querySelector(`[data-aic="${key}"]`);
+
+  const render = (lang) => {
+    $$('slogan').textContent = aicText[lang].slogan;
+    $$('label').textContent = aicText[lang].label;
+    $$('nav').setAttribute('aria-label', aicText[lang].label);
+    $$('current').textContent = aicNames[id][lang];
+    // Заголовок от сервера переводим; свой заголовок вариант ведёт сам.
+    if (Object.values(aicTitles).includes(document.title)) document.title = aicTitles[lang];
+    bar.querySelectorAll('a[data-variant]').forEach((link) => {
+      link.href = url(link.dataset.variant, lang);
+      link.querySelector('.aic-name').textContent = aicNames[link.dataset.variant][lang];
+    });
+  };
+
+  const sync = () => {
+    const lang = document.documentElement.lang;
+    if (!langs.includes(lang)) return;
+    const path = url(id, lang);
+    if (location.pathname !== path) history.replaceState(history.state, '', path + location.search + location.hash);
+    render(lang);
+  };
+
+  new MutationObserver(sync).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
+
+  // Вариант мог взять язык из сохранённого выбора, не отметив его в <html lang>.
+  let saved = null;
+  try {
+    saved = localStorage.getItem('aic-lang');
+  } catch {
+    /* хранилище недоступно */
+  }
+  if (langs.includes(saved) && saved !== document.documentElement.lang) document.documentElement.lang = saved;
+  else sync();
+
+  document.addEventListener('pointerdown', (event) => {
+    if (details.open && !details.contains(event.target)) details.open = false;
+  });
+  details.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      details.open = false;
+      details.querySelector('summary').focus();
+      event.stopPropagation();
+    }
+  });
+</script>

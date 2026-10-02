@@ -1,0 +1,247 @@
+@font-face { font-family: "TCon16"; src: url("/fonts/c2bde4413472.woff") format("woff"); }
+
+/* Колірна схема «Стандартна»; інші схеми JS підставляє в ці ж змінні */
+:root {
+  --desktop: #C0C0C0;
+  --workspace: #FFFFFF;
+  --title: #000080;   --title-text: #FFFFFF;
+  --ititle: #FFFFFF;  --ititle-text: #000000;
+  --frame: #C0C0C0;
+  --menu: #FFFFFF;    --menu-text: #000000;
+  --hl: #000080;      --hl-text: #FFFFFF;
+  --window: #FFFFFF;  --window-text: #000000;
+  --face: #C0C0C0;    --shadow: #808080; --light: #FFFFFF;
+  --wall: none;
+  --ui: 700 13px/1.2 "MS Sans Serif", "Microsoft Sans Serif", Arial, Helvetica, sans-serif;
+  --ui-r: 400 12px/1.25 "MS Sans Serif", "Microsoft Sans Serif", Arial, Helvetica, sans-serif;
+  --hourglass: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 16 16' shape-rendering='crispEdges'%3E%3Cpath d='M3 1h10v2h-1v2l-3 3 3 3v2h1v2H3v-2h1v-2l3-3-3-3V3H3z' fill='%23000'/%3E%3Cpath d='M5 3h6v2L8 7.5 5 5zM5 13v-1l3-2.5 3 2.5v1z' fill='%23fff'/%3E%3C/svg%3E") 16 16, wait;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+body { overflow: hidden; background: #000; font: var(--ui); color: #000; }
+button, input, textarea, select { font: inherit; color: inherit; }
+button { background: none; border: 0; cursor: default; text-align: inherit; }
+a { color: inherit; }
+:focus { outline: none; }
+:focus-visible { outline: 1px dotted #000; outline-offset: -3px; }
+[hidden] { display: none !important; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.u { text-decoration: underline; }
+
+/* ---------- DOS і заставка ---------- */
+#dos { position: fixed; inset: 0; z-index: 900; background: #000; color: #AAAAAA; font: 16px/16px "TCon16", monospace; padding: 8px; white-space: pre-wrap; -webkit-font-smoothing: none; }
+#dos .skip { position: absolute; left: 8px; bottom: 8px; color: #555; }
+#dos input { position: absolute; left: 0; bottom: 0; width: 1px; height: 1px; opacity: 0; font-size: 16px; }
+#splash { position: fixed; inset: 0; z-index: 890; background: #000; color: #fff; display: grid; place-items: center; text-align: center; cursor: var(--hourglass); }
+#splash .mark { display: block; width: 80px; height: 97px; margin: 0 auto 20px; }
+#splash h1 { font: 700 40px/1.1 Arial, Helvetica, sans-serif; letter-spacing: -.5px; }
+#splash p { font: 400 16px/1.4 Arial, Helvetica, sans-serif; margin-top: 6px; }
+#splash small { display: block; margin-top: 28px; font: 400 12px/1.4 Arial, Helvetica, sans-serif; color: #AAAAAA; }
+
+/* ---------- Робочий стіл ---------- */
+#desk { position: fixed; inset: 0; background: var(--desktop); background-image: var(--wall); overflow: hidden; }
+/* логотип компанії на шпалерах, у вільному куті робочого столу */
+.doclogo { float: right; width: 64px; height: 78px; margin: 0 0 8px 16px; }
+#desk::before { content: ""; position: absolute; right: 48px; bottom: 48px; width: 140px; height: 170px; background: url("/logo.svg") center / contain no-repeat; pointer-events: none; }
+#desk.busy, #desk.busy * { cursor: var(--hourglass) !important; }
+
+/* ---------- Вікна ---------- */
+.w {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  min-width: 160px;
+  min-height: 80px;
+  padding: 3px;
+  background: var(--frame);
+  border: 1px solid #000;
+}
+.w.dlg { padding: 3px; }
+/* Розподіл рамки на кути, як у Windows 3.x */
+.w::before, .w::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  pointer-events: none;
+  background:
+    linear-gradient(#000, #000) 22px 0 / 1px 4px no-repeat,
+    linear-gradient(#000, #000) calc(100% - 22px) 0 / 1px 4px no-repeat,
+    linear-gradient(#000, #000) 22px 100% / 1px 4px no-repeat,
+    linear-gradient(#000, #000) calc(100% - 22px) 100% / 1px 4px no-repeat;
+}
+.w::after {
+  background:
+    linear-gradient(#000, #000) 0 22px / 4px 1px no-repeat,
+    linear-gradient(#000, #000) 100% 22px / 4px 1px no-repeat,
+    linear-gradient(#000, #000) 0 calc(100% - 22px) / 4px 1px no-repeat,
+    linear-gradient(#000, #000) 100% calc(100% - 22px) / 4px 1px no-repeat;
+}
+.w.dlg::before, .w.dlg::after { display: none; }
+.w > .in { flex: 1; min-height: 0; display: flex; flex-direction: column; border: 1px solid #000; background: var(--window); }
+.tb { display: flex; height: 20px; flex: none; background: var(--ititle); color: var(--ititle-text); border-bottom: 1px solid #000; touch-action: none; user-select: none; }
+.w.active > .in > .tb { background: var(--title); color: var(--title-text); }
+.tb h2 { flex: 1; min-width: 0; font: var(--ui); text-align: center; line-height: 19px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; padding: 0 4px; }
+.tb .ctl { width: 20px; flex: none; background: var(--face); border-right: 1px solid #000; display: grid; place-items: center; }
+.tb .ctl i { display: block; width: 13px; height: 3px; background: #fff; border: 1px solid #000; box-shadow: 1px 1px 0 var(--shadow); }
+.tb .mn, .tb .mx { width: 20px; flex: none; position: relative; background: var(--face); border-left: 1px solid #000; box-shadow: inset 1px 1px 0 #fff, inset -1px -1px 0 var(--shadow); }
+.tb .mn:active, .tb .mx:active { box-shadow: inset 1px 1px 0 var(--shadow); }
+.tb .mn::after, .tb .mx::after, .tb .mx.rs::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  border: 4px solid transparent;
+  transform: translateX(-50%);
+}
+.tb .mn::after { top: 7px; border-top: 5px solid #000; border-bottom: 0; }
+.tb .mx::after { top: 6px; border-bottom: 5px solid #000; border-top: 0; }
+.tb .mx.rs::before { top: 2px; border-bottom: 4px solid #000; border-top: 0; border-width: 0 3px 4px; }
+.tb .mx.rs::after { top: 11px; border-top: 4px solid #000; border-bottom: 0; border-width: 4px 3px 0; }
+.mb { display: flex; flex-wrap: wrap; flex: none; background: var(--menu); color: var(--menu-text); border-bottom: 1px solid #000; }
+.mb > button { padding: 2px 8px; }
+.mb > button[aria-expanded="true"] { background: var(--hl); color: var(--hl-text); }
+.body { position: relative; flex: 1; min-height: 0; display: flex; flex-direction: column; color: var(--window-text); background: var(--window); }
+.outline { position: absolute; z-index: 800; pointer-events: none; border: 3px solid #808080; mix-blend-mode: difference; }
+
+/* Смуги прокрутки Windows 3.x (WebKit) */
+.scroll { overflow: auto; }
+.scroll::-webkit-scrollbar { width: 17px; height: 17px; background: var(--face); }
+.scroll::-webkit-scrollbar-track { background: repeating-conic-gradient(#C0C0C0 0 25%, #FFFFFF 0 50%) 0 0 / 2px 2px; border-left: 1px solid #000; }
+.scroll::-webkit-scrollbar-thumb { background: var(--face); border: 1px solid #000; box-shadow: inset 1px 1px 0 #fff, inset -1px -1px 0 var(--shadow); }
+.scroll::-webkit-scrollbar-button:single-button { display: block; height: 17px; width: 17px; background: var(--face); border: 1px solid #000; box-shadow: inset 1px 1px 0 #fff, inset -1px -1px 0 var(--shadow); }
+.scroll::-webkit-scrollbar-button:single-button:vertical:decrement { background: var(--face) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='15'%3E%3Cpath d='M7.5 4 11 9H4z'/%3E%3C/svg%3E") center no-repeat; }
+.scroll::-webkit-scrollbar-button:single-button:vertical:increment { background: var(--face) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='15'%3E%3Cpath d='M7.5 11 11 6H4z'/%3E%3C/svg%3E") center no-repeat; }
+.scroll::-webkit-scrollbar-corner { background: var(--face); }
+
+/* ---------- Меню ---------- */
+.menu {
+  position: absolute;
+  z-index: 850;
+  min-width: 170px;
+  padding: 1px 0;
+  background: var(--menu);
+  color: var(--menu-text);
+  border: 1px solid #000;
+  box-shadow: 2px 2px 0 #000;
+}
+.menu button { display: flex; gap: 16px; width: 100%; padding: 2px 16px 2px 20px; white-space: nowrap; position: relative; }
+.menu button .acc { margin-left: auto; }
+.menu button[aria-checked="true"]::before { content: "✓"; position: absolute; left: 6px; }
+.menu button:hover:not(:disabled), .menu button:focus-visible { background: var(--hl); color: var(--hl-text); outline: none; }
+.menu button:disabled { color: #808080; }
+.menu hr { border: 0; border-top: 1px solid #000; margin: 3px 0; }
+
+/* ---------- Іконки ---------- */
+.ico { display: flex; flex-direction: column; align-items: center; gap: 3px; width: 84px; padding: 2px; font: var(--ui-r); text-align: center; }
+.ico svg { width: 32px; height: 32px; flex: none; }
+.ico span { padding: 0 2px; overflow-wrap: anywhere; }
+.ico.sel span { background: var(--hl); color: var(--hl-text); }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, 88px); align-content: start; gap: 10px 4px; padding: 8px; }
+.minis { position: absolute; display: flex; flex-wrap: wrap-reverse; gap: 4px; pointer-events: none; }
+.minis .ico { pointer-events: auto; }
+#desk > .minis { left: 8px; right: 8px; bottom: 8px; }
+.mdi > .minis { left: 4px; right: 4px; bottom: 4px; }
+#desk > .minis .ico span, .mdi .ico span { color: inherit; }
+#desk > .minis .ico span { background: var(--desktop); }
+#desk > .minis .ico.sel span { background: var(--hl); color: var(--hl-text); }
+.mdi { position: relative; flex: 1; min-height: 0; background: var(--workspace); overflow: hidden; }
+
+/* ---------- Елементи керування (CTL3D) ---------- */
+.face { background: var(--face); color: #000; }
+.btn {
+  min-width: 76px;
+  padding: 4px 12px;
+  background: var(--face);
+  border: 1px solid #000;
+  border-radius: 2px;
+  box-shadow: inset 1px 1px 0 #fff, inset 2px 2px 0 #fff, inset -1px -1px 0 var(--shadow), inset -2px -2px 0 var(--shadow);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+.btn:active { box-shadow: inset 1px 1px 0 var(--shadow); }
+.btn.def { border-width: 2px; padding: 3px 11px; }
+.btn:disabled { color: #808080; }
+.btn:focus-visible { outline: 1px dotted #000; outline-offset: -5px; }
+.btns { display: flex; flex-wrap: wrap; gap: 8px; }
+.field { display: grid; grid-template-columns: max-content 1fr; align-items: center; gap: 6px 8px; }
+.sunk { background: #fff; border: 1px solid; border-color: var(--shadow) #fff #fff var(--shadow); box-shadow: inset 1px 1px 0 #000; padding: 3px 4px; font: var(--ui-r); }
+textarea.sunk { resize: none; }
+select.sunk { appearance: auto; }
+
+/* ---------- Застосунки ---------- */
+.write { flex: 1; padding: 20px 36px 40px; font: 400 15px/1.45 "Times New Roman", Times, serif; color: #000; background: #fff; }
+.write h1 { font: 700 22px/1.2 Arial, Helvetica, sans-serif; margin-bottom: 12px; }
+.write p, .write ul { margin-bottom: 10px; max-width: 62ch; }
+.write ul { padding-left: 22px; }
+.write .ole { display: flex; gap: 18px; flex-wrap: wrap; margin: 16px 0; }
+.write .ole .ico { width: 104px; }
+.write .end { font: 700 14px Arial; }
+.write small { display: block; margin-top: 18px; padding-top: 8px; border-top: 1px solid #000; font-size: 13px; }
+.status { flex: none; padding: 2px 6px; border-top: 1px solid #000; background: var(--face); font: var(--ui-r); color: #000; }
+
+.cardbar { display: flex; align-items: center; gap: 10px; padding: 3px 8px; flex: none; border-bottom: 1px solid #000; background: var(--face); color: #000; font: var(--ui-r); }
+.cardbar button { width: 22px; height: 18px; border: 1px solid #000; background: var(--face); box-shadow: inset 1px 1px 0 #fff, inset -1px -1px 0 var(--shadow); font: 700 10px/1 Arial; text-align: center; }
+.cards { position: relative; flex: 1; min-height: 0; background: var(--workspace); overflow: hidden; }
+.card { position: absolute; display: flex; flex-direction: column; width: min(380px, calc(100% - 100px)); height: max(120px, min(220px, calc(100% - 166px))); background: #fff; color: #000; border: 1px solid #000; }
+.card > button { flex: none; padding: 2px 6px; text-align: left; border-bottom: 3px double #C00000; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font: var(--ui); }
+.card .cbody { flex: 1; padding: 8px 10px; overflow: auto; font: var(--ui-r); font-size: 13px; }
+.card .cbody p { margin-bottom: 8px; }
+.clist { list-style: none; flex: 1; overflow: auto; background: #fff; color: #000; }
+.clist button { width: 100%; padding: 2px 8px; font: var(--ui-r); font-size: 13px; text-align: left; }
+.clist button[aria-selected="true"] { background: var(--hl); color: var(--hl-text); }
+
+.notepad { flex: 1; width: 100%; border: 0; padding: 2px 4px; resize: none; font: 16px/16px "TCon16", monospace; -webkit-font-smoothing: none; color: #000; background: #fff; }
+
+.mail { display: flex; flex-direction: column; gap: 8px; padding: 8px; flex: 1; min-height: 0; }
+.mail .tool { display: flex; flex-wrap: wrap; gap: 4px; padding-bottom: 6px; border-bottom: 1px solid var(--shadow); }
+.mail .tool .btn { min-width: 0; }
+.mail textarea { flex: 1; min-height: 120px; }
+
+.cpl { display: grid; grid-template-columns: repeat(auto-fill, 92px); gap: 10px 6px; padding: 10px; }
+.clockface { flex: 1; display: grid; place-items: center; background: var(--face); padding: 6px; }
+.clockface svg { width: 100%; height: 100%; max-width: 260px; max-height: 260px; }
+.digital { font: 700 40px/1 Arial, Helvetica, sans-serif; color: #000; }
+
+.dlgbody { display: flex; flex-direction: column; gap: 12px; padding: 14px 16px; background: var(--face); color: #000; font: var(--ui-r); font-size: 13px; flex: 1; }
+.dlgbody .row { display: flex; gap: 14px; align-items: flex-start; }
+.dlgbody .row svg { width: 32px; height: 32px; flex: none; }
+.dlgbody .btns { justify-content: center; margin-top: auto; }
+.tasks { height: 120px; overflow: auto; list-style: none; }
+.tasks button { width: 100%; text-align: left; padding: 1px 4px; }
+.tasks button[aria-selected="true"] { background: var(--hl); color: var(--hl-text); }
+.preview { border: 1px solid #000; background: var(--desktop); padding: 10px; }
+.preview .pw { border: 1px solid #000; background: var(--frame); padding: 2px; }
+.preview .pt { background: var(--title); color: var(--title-text); text-align: center; padding: 1px; font: var(--ui); }
+.preview .pm { background: var(--menu); color: var(--menu-text); padding: 1px 6px; border-bottom: 1px solid #000; }
+.preview .pb { background: var(--window); color: var(--window-text); padding: 8px; }
+
+/* ---------- Вузькі екрани: вікна на весь стіл ---------- */
+@media (max-width: 720px) {
+  #desk > .w:not(.dlg) { inset: 0 !important; width: auto !important; height: auto !important; }
+  .mdi > .w { inset: 0 0 64px 0 !important; width: auto !important; height: auto !important; }
+  .write { padding: 14px; }
+  .card { width: calc(100% - 50px); }
+}
+
+/* ---------- Довідка WinHelp ---------- */
+.hbar { display: flex; flex-wrap: wrap; gap: 4px; padding: 4px; flex: none; border-bottom: 1px solid #000; }
+.hbar .btn { min-width: 0; padding: 2px 10px; }
+.htitle { flex: none; padding: 6px 12px 5px; font: 700 16px/1.25 Arial, Helvetica, sans-serif; background: #fff; color: #000; border-bottom: 1px solid #808080; }
+.htext { flex: 1; min-height: 0; overflow: auto; padding: 8px 12px 18px; background: #fff; color: #000; font: 400 14px/1.45 "MS Sans Serif", "Microsoft Sans Serif", Arial, Helvetica, sans-serif; }
+.htext p, .htext ul { margin: 0 0 9px; max-width: 64ch; }
+.htext ul { padding-left: 20px; }
+.htext h3 { font: 700 14px/1.3 Arial, Helvetica, sans-serif; margin: 12px 0 4px; }
+.htext .hnote { padding-left: 8px; border-left: 2px solid #808080; }
+.htext .hlist { list-style: none; padding-left: 4px; }
+.htext .hlist li { margin: 2px 0; }
+.hsee { margin-top: 14px; padding-top: 6px; border-top: 1px solid #C0C0C0; }
+.hsee b { display: block; margin-bottom: 2px; }
+.hjump, .hpop { display: inline; padding: 0; font: inherit; color: #008000; text-align: inherit; cursor: pointer; }
+.hjump { text-decoration: underline; }
+.hpop { text-decoration: underline dotted; text-underline-offset: 2px; }
+.hpop[aria-expanded="true"] { background: #008000; color: #fff; }
+.hpopup { position: absolute; z-index: 100000; max-width: min(300px, calc(100% - 16px)); padding: 6px 9px; background: #fff; color: #000; border: 1px solid #000; box-shadow: 3px 3px 0 #000; font: 400 13px/1.4 "MS Sans Serif", "Microsoft Sans Serif", Arial, Helvetica, sans-serif; }
+.card .cbody a[data-help] { color: #008000; }
+@media (max-width: 720px) {
+  .htext { font-size: 15px; }
+}

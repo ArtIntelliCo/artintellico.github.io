@@ -1,0 +1,288 @@
+@font-face {
+  font-family: "IBM VGA";
+  src: url("/fonts/c39020374ed5.woff") format("woff");
+  font-display: block;
+}
+
+/* EGA: палітра Norton Commander */
+:root {
+  --screen: #000000;
+  --text: #AAAAAA;
+  --panel-bg: #0000AA;
+  --panel-fg: #55FFFF;
+  --border: #55FFFF;
+  --hi: #FFFF55;
+  --white: #FFFFFF;
+  --dim: #AAAAAA;
+  --sel-bg: #00AAAA;
+  --sel-fg: #000000;
+  --menu-bg: #00AAAA;
+  --menu-fg: #000000;
+  --dlg-bg: #AAAAAA;
+  --dlg-fg: #000000;
+  --dlg-border: #FFFFFF;
+  --dlg-hi: #0000AA;
+  --focus-bg: #FFFF55;
+  --focus-fg: #000000;
+  --glow: 0 0 1px;
+  --bw: calc(3em / 16);
+  --hair: calc(1em / 16);
+}
+html[data-monitor="green"] {
+  --text: #33FF66; --panel-bg: #000000; --panel-fg: #33FF66; --border: #33FF66;
+  --hi: #B8FFC9; --white: #D6FFE0; --dim: #1E9E40; --sel-bg: #33FF66; --sel-fg: #000000;
+  --menu-bg: #33FF66; --menu-fg: #000000; --dlg-bg: #1E9E40; --dlg-fg: #000000;
+  --dlg-border: #000000; --dlg-hi: #000000; --focus-bg: #B8FFC9; --focus-fg: #000000;
+  --glow: 0 0 .2em;
+}
+html[data-monitor="amber"] {
+  --text: #FFB000; --panel-bg: #000000; --panel-fg: #FFB000; --border: #FFB000;
+  --hi: #FFDC8A; --white: #FFEBC2; --dim: #A87400; --sel-bg: #FFB000; --sel-fg: #000000;
+  --menu-bg: #FFB000; --menu-fg: #000000; --dlg-bg: #A87400; --dlg-fg: #000000;
+  --dlg-border: #000000; --dlg-hi: #000000; --focus-bg: #FFDC8A; --focus-fg: #000000;
+  --glow: 0 0 .2em;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+[hidden] { display: none !important; }
+
+/* Масштаб лише кратний пікселю шрифту 9x16, щоб гліфи лишались чіткими */
+html { font-size: 16px; background: #000; }
+@media (min-width: 1100px) and (min-height: 640px) { html { font-size: 24px; } }
+@media (min-width: 1500px) and (min-height: 900px) { html { font-size: 32px; } }
+
+body {
+  height: var(--aic-vh);
+  height: var(--aic-vh);
+  overflow: hidden;
+  background: var(--screen);
+  color: var(--text);
+  font: 1rem/1 "IBM VGA", monospace;
+  -webkit-font-smoothing: none;
+  text-shadow: var(--glow);
+}
+
+/* Скло кінескопа: розгортка і віньєтка */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 100;
+  background:
+    repeating-linear-gradient(to bottom, transparent 0 calc(1rem / 16), rgba(0, 0, 0, .22) calc(1rem / 16) calc(2rem / 16)),
+    radial-gradient(ellipse at center, transparent 62%, rgba(0, 0, 0, .5) 100%);
+}
+
+a { color: inherit; }
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; line-height: 1; text-shadow: inherit; }
+:focus { outline: none; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+
+/* ---------- Завантаження ---------- */
+#boot { height: 100%; padding: 1em 1ch; overflow: hidden; position: relative; }
+#boot .logo {
+  color: var(--hi);
+  white-space: pre;
+  font-size: min(1em, calc((100vw - 2rem) / 38));
+  line-height: 1;
+  margin-bottom: 1em;
+}
+#boot pre { font: inherit; white-space: pre-wrap; }
+#boot .skip { position: absolute; left: 1ch; right: 1ch; bottom: 1em; color: var(--dim); }
+
+/* ---------- Norton-подібний інтерфейс ---------- */
+#nc { display: grid; grid-template-rows: auto 1fr auto auto; height: 100%; }
+
+.menubar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0 1ch;
+  padding: 0 1ch;
+  background: var(--menu-bg);
+  color: var(--menu-fg);
+}
+.menubar .btn { padding: 0 1ch; }
+.menubar .group { display: flex; align-items: center; }
+.menubar .group > span { padding-left: 1ch; }
+.menubar [aria-pressed="true"] { background: var(--menu-fg); color: var(--menu-bg); }
+.menubar a.btn { text-decoration: none; }
+.menubar .clock { margin-left: auto; padding-right: 1ch; }
+.btn:focus-visible, .ncbtn:focus-visible, .fkeys button:focus-visible .lbl {
+  background: var(--focus-bg);
+  color: var(--focus-fg);
+}
+
+.work { position: relative; min-height: 0; min-width: 0; display: grid; grid-template-columns: minmax(0, 1fr); }
+.panels { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); min-height: 0; background: var(--panel-bg); }
+.panel { display: flex; min-height: 0; min-width: 0; padding: .5em .5ch; background: var(--panel-bg); color: var(--panel-fg); }
+.frame {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  min-width: 0;
+  border: var(--bw) double var(--border);
+}
+.frame .title {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -55%);
+  max-width: calc(100% - 4ch);
+  padding: 0 1ch;
+  background: var(--panel-bg);
+  color: var(--panel-fg);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.panel.active .title { background: var(--sel-bg); color: var(--sel-fg); }
+
+.cols, .list li { display: grid; grid-template-columns: 14ch minmax(0, 1fr); }
+.cols { color: var(--hi); text-align: center; padding-top: .5em; }
+.cols span:first-child, .list .n { border-right: var(--hair) solid var(--border); }
+.list {
+  list-style: none;
+  flex: 1;
+  overflow: auto;
+  scrollbar-width: none;
+  background: linear-gradient(var(--border), var(--border)) no-repeat calc(14ch - var(--hair)) 0 / var(--hair) 100%;
+}
+.list li { cursor: pointer; white-space: pre; }
+.list .n { padding-left: 1ch; }
+.list .d { padding-left: 1ch; overflow: hidden; text-overflow: ellipsis; }
+.list li.exe .n { color: var(--white); }
+.list li[aria-selected="true"], .list li[aria-selected="true"] .n { background: var(--sel-bg); color: var(--sel-fg); }
+.list:focus-visible li[aria-selected="true"] { background: var(--focus-bg); }
+.list:focus-visible li[aria-selected="true"] .n { background: var(--focus-bg); color: var(--focus-fg); }
+.mini {
+  border-top: var(--hair) solid var(--border);
+  padding: 0 1ch;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.view { flex: 1; overflow: auto; padding: 1em 2ch; scrollbar-width: none; }
+.view h1 { font-size: 1em; font-weight: normal; color: var(--hi); margin-bottom: 1em; }
+.view p, .view ul { margin-bottom: 1em; max-width: 64ch; }
+.view p { color: var(--white); line-height: 1; }
+.view .meta { color: var(--panel-fg); white-space: pre-wrap; }
+.view .lead { color: var(--panel-fg); }
+.view .tw { color: var(--hi); }
+.view .cur { color: var(--hi); animation: blink 1.06s steps(1) infinite; }
+.view .foot { color: var(--panel-fg); margin-top: 2em; margin-bottom: 0; }
+.view ul { list-style: none; }
+.view h2 { font-size: 1em; font-weight: normal; color: var(--hi); }
+.view li { color: var(--white); padding-left: 2ch; text-indent: -2ch; }
+.view li::before { content: "■ "; color: var(--panel-fg); }
+.view .rule { color: var(--panel-fg); margin-bottom: 1em; overflow: hidden; white-space: nowrap; }
+.ncbtn {
+  display: inline-block;
+  padding: 0;
+  background: var(--sel-bg);
+  color: var(--sel-fg);
+  text-decoration: none;
+  margin: 0 2ch 1em 0;
+}
+.ncbtn::before { content: "[ "; }
+.ncbtn::after { content: " ]"; }
+
+@keyframes blink { 50% { opacity: 0; } }
+
+#console {
+  min-height: 0;
+  overflow: auto;
+  padding: 0 1ch;
+  background: var(--screen);
+  color: var(--text);
+  font: inherit;
+  white-space: pre-wrap;
+  scrollbar-width: none;
+}
+
+.cmdline { display: flex; padding: 0 1ch; background: var(--screen); color: var(--text); }
+.cmdline label { white-space: pre; }
+.cmdline input {
+  flex: 1;
+  min-width: 0;
+  font: inherit;
+  line-height: 1;
+  height: 1em;
+  color: inherit;
+  background: transparent;
+  border: 0;
+  caret-color: var(--text);
+  text-shadow: inherit;
+}
+
+.fkeys { display: flex; flex-wrap: wrap; background: var(--screen); }
+.fkeys button { flex: 1 1 auto; min-width: 8ch; display: flex; text-align: left; }
+.fkeys .num { color: var(--white); background: var(--screen); padding: 0 0 0 1ch; }
+.fkeys button:first-child .num { padding-left: 0; }
+.fkeys .lbl { flex: 1; background: var(--menu-bg); color: var(--menu-fg); white-space: nowrap; overflow: hidden; }
+.fkeys button:disabled { cursor: default; }
+
+/* ---------- Діалог ---------- */
+dialog {
+  margin: auto;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: var(--dlg-fg);
+  max-width: calc(100vw - 4ch);
+  overflow: visible;
+  font: inherit;
+}
+dialog::backdrop { background: transparent; }
+dialog .box {
+  background: var(--dlg-bg);
+  padding: .5em 2ch;
+  width: min(58ch, calc(100vw - 6ch));
+  box-shadow: 2ch 1em 0 rgba(0, 0, 0, .78);
+}
+dialog .frame { border-color: var(--dlg-border); padding: 1.5em 2ch 1em; }
+dialog .frame .title { background: var(--dlg-bg); color: var(--dlg-fg); }
+dialog p { margin-bottom: 1em; }
+dialog .mail { color: var(--dlg-hi); }
+dialog .row { display: flex; flex-wrap: wrap; justify-content: center; gap: 0 2ch; }
+dialog .row > * { color: var(--dlg-fg); text-decoration: none; padding: 0; }
+dialog .row > *::before { content: "[ "; }
+dialog .row > *::after { content: " ]"; }
+dialog .row > :focus { background: var(--sel-bg); color: var(--sel-fg); }
+dialog .note { min-height: 1em; margin: 1em 0 0; text-align: center; }
+dialog .modes { list-style: none; margin-bottom: 1em; }
+dialog .modes a {
+  display: grid;
+  grid-template-columns: 5ch minmax(0, 1fr) 2ch;
+  padding: 0 1ch;
+  color: var(--dlg-fg);
+  text-decoration: none;
+  white-space: nowrap;
+}
+dialog .modes .y { color: var(--dlg-hi); }
+dialog .modes .n { overflow: hidden; text-overflow: ellipsis; }
+dialog .modes a[aria-current="page"] .n::after { content: " ◄"; }
+dialog .modes a:hover, dialog .modes a:focus { background: var(--sel-bg); color: var(--sel-fg); }
+dialog .modes a:hover .y, dialog .modes a:focus .y { color: inherit; }
+
+/* ---------- Вузькі екрани ---------- */
+@media (max-width: 760px) {
+  .panels { grid-template-columns: minmax(0, 1fr); grid-template-rows: minmax(0, 17em) minmax(0, 1fr); }
+  .panel + .panel { padding-top: 0; }
+  .view { padding: 1em 1ch; }
+  .fkeys button { flex-basis: 30%; }
+  .fkeys button:disabled { display: none; }
+  .menubar .clock { display: none; }
+}
+
+@media (pointer: coarse) {
+  .view .hint { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .view .cur { animation: none; }
+}

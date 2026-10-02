@@ -1,0 +1,48 @@
+<div class="app">
+  <canvas class="stars" id="stars" aria-hidden="true"></canvas>
+  <header>
+    <div class="brand"><img class="brand-logo" src="/logo.svg" alt="">ArtIntelliCo<small id="tagline"></small></div>
+    <div class="spacer"></div>
+    <div class="seg" role="group" aria-label="Language" id="langs">
+      <button type="button" data-l="uk" lang="uk">UK</button>
+      <button type="button" data-l="en" lang="en">EN</button>
+      <button type="button" data-l="ru" lang="ru">RU</button>
+    </div>
+    <button type="button" class="ghost" id="pastBtn" aria-expanded="false" aria-controls="pop"><svg class="past-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7M3 4v5h5M12 7v5l3 2"/></svg><span class="past-label" id="pastLabel"></span></button>
+    <button type="button" class="ghost briefbtn" id="briefBtn" aria-controls="side" aria-expanded="false"></button>
+    <button type="button" class="iconbtn" id="themeBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9z"/></svg></button>
+  </header>
+
+  <section class="chat" aria-labelledby="chatTitle">
+    <h1 class="sr" id="chatTitle"></h1>
+    <div class="log" id="log" role="log" aria-live="polite"></div>
+    <form class="dock" id="form">
+      <div class="composer">
+        <label class="sr" for="q" id="qLabel"></label>
+        <textarea id="q" rows="1" enterkeyhint="send"></textarea>
+        <button class="send" id="send" type="submit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg><span class="sr" id="sendLabel"></span></button>
+      </div>
+      <p class="demo" id="demo"></p>
+    </form>
+  </section>
+
+  <aside id="side" aria-labelledby="mapTitle">
+    <section>
+      <h2 id="mapTitle"></h2>
+      <p class="hint" id="mapHint"></p>
+      <svg class="map" id="map" viewBox="0 0 400 300" role="group" aria-labelledby="mapTitle"></svg>
+    </section>
+    <section class="brief" aria-labelledby="briefTitle">
+      <h2 id="briefTitle"></h2>
+      <label><span id="taskLabel"></span><textarea id="task"></textarea></label>
+      <div><div class="hint" id="dirLabel" style="margin-bottom:6px"></div><div class="dirs" id="dirs"></div></div>
+      <label><span id="emailLabel"></span><input type="email" id="email" autocomplete="email" inputmode="email"></label>
+      <div class="row">
+        <button type="button" class="primary" id="sendBrief"></button>
+        <button type="button" class="ghost" id="copyBrief"></button>
+      </div>
+      <p class="status" id="briefStatus" role="status"></p>
+    </section>
+  </aside>
+</div>
+<div class="pop" id="pop" hidden></div>

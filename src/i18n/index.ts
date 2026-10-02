@@ -15,11 +15,13 @@ export function t(locale: Locale): Dictionary {
   return dictionaries[locale];
 }
 
+/** Классическая версия сайта: живёт в /classic/, основной стала DOS-версия. */
 export const localePath: Record<Locale, string> = {
-  uk: '/',
-  ru: '/ru/',
-  en: '/en/',
+  uk: '/classic/',
+  ru: '/ru/classic/',
+  en: '/en/classic/',
 };
+
 
 export const htmlLang: Record<Locale, string> = {
   uk: 'uk',

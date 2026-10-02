@@ -1,0 +1,115 @@
+@font-face {
+  font-family: "IBM VGA";
+  src: url("/fonts/c39020374ed5.woff") format("woff");
+  font-display: block;
+}
+
+/* EGA: сірий текст DOS, яскраві кольори для заголовків і посилань */
+:root {
+  --screen: #000000;
+  --text: #AAAAAA;
+  --bright: #FFFFFF;
+  --accent: #FFFF55;
+  --link: #55FFFF;
+  --dim: #555555;
+  --inv-bg: #AAAAAA;
+  --inv-fg: #000000;
+  --glow: 0 0 1px;
+}
+html[data-monitor="green"] {
+  --text: #33FF66; --bright: #D6FFE0; --accent: #B8FFC9; --link: #B8FFC9; --dim: #1E9E40;
+  --inv-bg: #33FF66; --inv-fg: #000000; --glow: 0 0 .2em;
+}
+html[data-monitor="amber"] {
+  --text: #FFB000; --bright: #FFEBC2; --accent: #FFDC8A; --link: #FFDC8A; --dim: #A87400;
+  --inv-bg: #FFB000; --inv-fg: #000000; --glow: 0 0 .2em;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* Масштаб лише кратний пікселю шрифту 9x16 */
+html { font-size: 16px; background: #000; }
+@media (min-width: 1100px) and (min-height: 640px) { html { font-size: 24px; } }
+@media (min-width: 1500px) and (min-height: 900px) { html { font-size: 32px; } }
+
+body {
+  height: var(--aic-vh);
+  height: var(--aic-vh);
+  overflow: hidden;
+  background: var(--screen);
+  color: var(--text);
+  font: 1rem/1 "IBM VGA", monospace;
+  -webkit-font-smoothing: none;
+  text-shadow: var(--glow);
+}
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 10;
+  background:
+    repeating-linear-gradient(to bottom, transparent 0 calc(1rem / 16), rgba(0, 0, 0, .22) calc(1rem / 16) calc(2rem / 16)),
+    radial-gradient(ellipse at center, transparent 62%, rgba(0, 0, 0, .5) 100%);
+}
+
+/* 80 колонок, як у текстовому режимі VGA */
+#screen {
+  height: 100%;
+  overflow-y: auto;
+  scrollbar-width: none;
+  padding: 1em 1ch;
+}
+#screen::-webkit-scrollbar { display: none; }
+#out, #promptLine { max-width: 80ch; margin: 0 auto; }
+.line { white-space: pre-wrap; overflow-wrap: anywhere; min-height: 1em; }
+
+.b { color: var(--bright); }
+.a { color: var(--accent); }
+.d { color: var(--dim); }
+.rule { display: block; overflow: hidden; white-space: nowrap; color: var(--bright); }
+.logo {
+  color: var(--accent);
+  white-space: pre;
+  font-size: min(1em, calc((100vw - 2rem) / 38));
+  line-height: 1;
+}
+
+a, .tok {
+  font: inherit;
+  line-height: 1;
+  color: var(--link);
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: none;
+  text-shadow: inherit;
+}
+a:hover, .tok:hover, a:focus-visible, .tok:focus-visible {
+  outline: none;
+  background: var(--link);
+  color: var(--screen);
+}
+
+#promptLine { position: relative; white-space: pre-wrap; overflow-wrap: anywhere; min-height: 1em; }
+#promptLine[hidden] { display: none; }
+#cur { box-shadow: inset 0 calc(-2em / 16) 0 currentColor; }
+#cur.on { animation: blink 1.06s steps(1) infinite; }
+@keyframes blink { 50% { box-shadow: none; } }
+#cmd {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  opacity: 0;
+  font: inherit;
+  font-size: 16px;
+  border: 0;
+  background: transparent;
+  color: transparent;
+  caret-color: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #cur.on { animation: none; }
+}

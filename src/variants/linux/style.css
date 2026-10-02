@@ -1,0 +1,262 @@
+@font-face { font-family: "XFixed"; font-weight: 400; src: url("/fonts/2f64e0e1c2e2.woff") format("woff"); }
+@font-face { font-family: "XFixed"; font-weight: 700; src: url("/fonts/0b3a6ca03359.woff") format("woff"); }
+
+/* fvwm 1.x: активне вікно рожево-червоне, неактивні — бузково-сірі. Tk 4: сірий #d9d9d9 */
+:root {
+  --hi: #c06077;  --hi-l: #e8a4b4;  --hi-d: #6a2a3a;
+  --std: #908090; --std-l: #c9bdc9; --std-d: #4a3e4a;
+  --tk: #d9d9d9;  --tk-l: #ffffff;  --tk-d: #828282;
+  --tk-sel: #c3c3c3;
+  --navy: #000080;
+  --ink: #000000;
+  --paper: #ffffff;
+  --gs: 72px;
+  --ui: 700 12px/1.25 Helvetica, Arial, "Liberation Sans", sans-serif;
+  /* Стандартний фон кореневого вікна X11 — «weave» 4×4 */
+  --weave: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' shape-rendering='crispEdges'%3E%3Crect width='4' height='4'/%3E%3Cpath fill='%23fff' d='M3 0h1v1H3zM1 1h1v1H1zM2 2h1v1H2zM0 3h1v1H0z'/%3E%3C/svg%3E");
+  --xcursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' shape-rendering='crispEdges'%3E%3Cpath d='M1 1h3l4 4 4-4h3v3l-4 4 4 4v3h-3l-4-4-4 4H1v-3l4-4-4-4z' fill='%23fff'/%3E%3Cpath d='M2 2h2l4 4 4-4h2v2l-4 4 4 4v2h-2l-4-4-4 4H2v-2l4-4-4-4z'/%3E%3C/svg%3E") 8 8, crosshair;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+body { overflow: hidden; background: #000; font: var(--ui); color: var(--ink); }
+button, input, textarea { font: inherit; color: inherit; }
+button { border: 0; background: none; cursor: default; }
+a { color: inherit; }
+:focus { outline: none; }
+:focus-visible { outline: 1px dotted var(--ink); outline-offset: -4px; }
+[hidden] { display: none !important; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.mono { font: 400 14px/14px "XFixed", monospace; -webkit-font-smoothing: none; }
+
+/* Об'ємні рамки Motif */
+.raised { box-shadow: inset 2px 2px 0 var(--l), inset -2px -2px 0 var(--d); }
+.sunken { box-shadow: inset 2px 2px 0 var(--d), inset -2px -2px 0 var(--l); }
+
+/* ---------- Текстова консоль ---------- */
+#console { position: fixed; inset: 0; z-index: 900; background: #000; color: #aaa; padding: 8px; overflow: hidden; }
+#console pre { font: inherit; white-space: pre-wrap; }
+#console .cur { background: #aaa; }
+#console .skip { position: absolute; left: 8px; bottom: 8px; color: #555; }
+#console input { position: absolute; opacity: 0; left: 0; bottom: 0; width: 1px; height: 1px; font-size: 16px; }
+
+/* ---------- Кореневе вікно X ---------- */
+#xroot { position: fixed; inset: 0; background: url("/logo.svg") left 70px bottom 40px / 160px auto no-repeat, var(--weave); background-size: 160px auto, 4px 4px; image-rendering: pixelated; cursor: var(--xcursor); overflow: hidden; }
+#xroot.wm { cursor: default; }
+
+/* ---------- Вікна fvwm ---------- */
+.fw {
+  --c: var(--std); --l: var(--std-l); --d: var(--std-d);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  padding: 6px;
+  background: var(--c);
+  box-shadow: inset 2px 2px 0 var(--l), inset -2px -2px 0 var(--d), 1px 1px 0 #000;
+  min-width: 160px;
+  min-height: 90px;
+}
+.fw.active { --c: var(--hi); --l: var(--hi-l); --d: var(--hi-d); }
+/* Ручки кутів: поділ рамки, характерний для fvwm */
+.fw .h { position: absolute; z-index: 2; touch-action: none; }
+.fw .h.n, .fw .h.s { left: 22px; right: 22px; height: 6px; cursor: ns-resize; }
+.fw .h.e, .fw .h.w { top: 22px; bottom: 22px; width: 6px; cursor: ew-resize; }
+.fw .h.n { top: 0; } .fw .h.s { bottom: 0; } .fw .h.e { right: 0; } .fw .h.w { left: 0; }
+.fw .h.nw, .fw .h.ne, .fw .h.sw, .fw .h.se { width: 22px; height: 22px; }
+.fw .h.nw { left: 0; top: 0; cursor: nwse-resize; } .fw .h.se { right: 0; bottom: 0; cursor: nwse-resize; }
+.fw .h.ne { right: 0; top: 0; cursor: nesw-resize; } .fw .h.sw { left: 0; bottom: 0; cursor: nesw-resize; }
+.fw .h.nw, .fw .h.ne, .fw .h.sw, .fw .h.se { box-shadow: inset 0 0 0 0 transparent; }
+.fw::before, .fw::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(var(--d), var(--d)) 21px 0 / 1px 6px no-repeat,
+    linear-gradient(var(--l), var(--l)) 22px 0 / 1px 6px no-repeat,
+    linear-gradient(var(--d), var(--d)) calc(100% - 22px) 0 / 1px 6px no-repeat,
+    linear-gradient(var(--l), var(--l)) calc(100% - 21px) 0 / 1px 6px no-repeat,
+    linear-gradient(var(--d), var(--d)) 21px 100% / 1px 6px no-repeat,
+    linear-gradient(var(--l), var(--l)) 22px 100% / 1px 6px no-repeat,
+    linear-gradient(var(--d), var(--d)) calc(100% - 22px) 100% / 1px 6px no-repeat,
+    linear-gradient(var(--l), var(--l)) calc(100% - 21px) 100% / 1px 6px no-repeat;
+}
+.fw::after {
+  background:
+    linear-gradient(var(--d), var(--d)) 0 21px / 6px 1px no-repeat,
+    linear-gradient(var(--l), var(--l)) 0 22px / 6px 1px no-repeat,
+    linear-gradient(var(--d), var(--d)) 0 calc(100% - 22px) / 6px 1px no-repeat,
+    linear-gradient(var(--l), var(--l)) 0 calc(100% - 21px) / 6px 1px no-repeat,
+    linear-gradient(var(--d), var(--d)) 100% 21px / 6px 1px no-repeat,
+    linear-gradient(var(--l), var(--l)) 100% 22px / 6px 1px no-repeat,
+    linear-gradient(var(--d), var(--d)) 100% calc(100% - 22px) / 6px 1px no-repeat,
+    linear-gradient(var(--l), var(--l)) 100% calc(100% - 21px) / 6px 1px no-repeat;
+}
+.tb { display: flex; height: 20px; flex: none; touch-action: none; user-select: none; }
+.tb .title {
+  flex: 1;
+  min-width: 0;
+  display: grid;
+  place-items: center;
+  padding: 0 6px;
+  background: var(--c);
+  box-shadow: inset 1px 1px 0 var(--l), inset -1px -1px 0 var(--d);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.tb .title span { overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
+.tb .b { width: 20px; flex: none; background: var(--c); box-shadow: inset 1px 1px 0 var(--l), inset -1px -1px 0 var(--d); display: grid; place-items: center; }
+.tb .b:active { box-shadow: inset 1px 1px 0 var(--d), inset -1px -1px 0 var(--l); }
+.tb .b i { display: block; background: var(--c); box-shadow: inset 1px 1px 0 var(--l), inset -1px -1px 0 var(--d); }
+.tb .b.menu i { width: 12px; height: 4px; }
+.tb .b.min i { width: 5px; height: 5px; }
+.tb .b.max i { width: 11px; height: 11px; }
+.client { position: relative; flex: 1; min-height: 0; display: flex; flex-direction: column; margin-top: 1px; background: var(--tk); }
+.outline { position: absolute; z-index: 800; pointer-events: none; border: 2px solid #fff; mix-blend-mode: difference; }
+
+/* ---------- Іконки згорнутих вікон ---------- */
+.xicon { position: absolute; display: flex; flex-direction: column; align-items: center; gap: 2px; width: 84px; }
+.xicon svg { width: 48px; height: 48px; }
+.xicon span { padding: 1px 4px; max-width: 100%; background: var(--std); box-shadow: inset 1px 1px 0 var(--std-l), inset -1px -1px 0 var(--std-d); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+/* ---------- Меню fvwm ---------- */
+.fmenu {
+  --l: var(--std-l); --d: var(--std-d);
+  position: absolute;
+  z-index: 850;
+  min-width: 180px;
+  padding: 2px;
+  background: var(--std);
+  box-shadow: inset 2px 2px 0 var(--l), inset -2px -2px 0 var(--d), 2px 2px 0 rgba(0, 0, 0, .5);
+}
+.fmenu .mt { padding: 3px 10px; text-align: center; border-bottom: 1px solid var(--d); box-shadow: 0 1px 0 var(--l); margin-bottom: 3px; }
+.fmenu button { display: block; width: 100%; padding: 3px 10px; text-align: left; white-space: nowrap; }
+.fmenu button:hover, .fmenu button:focus-visible { box-shadow: inset 1px 1px 0 var(--l), inset -1px -1px 0 var(--d); outline: none; }
+.fmenu button[aria-checked="true"]::before { content: "◆ "; }
+.fmenu hr { border: 0; border-top: 1px solid var(--d); border-bottom: 1px solid var(--l); margin: 3px 2px; }
+
+/* ---------- GoodStuff ---------- */
+#goodstuff {
+  --l: var(--std-l); --d: var(--std-d);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 700;
+  display: flex;
+  padding: 3px;
+  gap: 0;
+  background: var(--std);
+  box-shadow: inset 2px 2px 0 var(--l), inset -2px -2px 0 var(--d), 1px 1px 0 #000;
+}
+.gsb {
+  width: var(--gs);
+  height: var(--gs);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  background: var(--std);
+  box-shadow: inset 2px 2px 0 var(--l), inset -2px -2px 0 var(--d);
+}
+.gsb:active, .gsb.down { box-shadow: inset 2px 2px 0 var(--d), inset -2px -2px 0 var(--l); }
+.gsb svg { width: 36px; height: 36px; }
+.gsb span { font-size: 11px; line-height: 1; white-space: nowrap; }
+.gsw { width: var(--gs); height: var(--gs); display: grid; place-items: center; background: var(--std); box-shadow: inset 2px 2px 0 var(--l), inset -2px -2px 0 var(--d); }
+#xclock { width: 62px; height: 62px; background: #fff; }
+#xload { width: 120px; height: 62px; background: #fff; display: block; image-rendering: pixelated; }
+.gsw.wide { width: 128px; }
+#pager { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; padding: 4px; width: 148px; height: var(--gs); background: var(--std); box-shadow: inset 2px 2px 0 var(--l), inset -2px -2px 0 var(--d); }
+#pager button { position: relative; overflow: hidden; background: var(--std); box-shadow: inset 1px 1px 0 var(--d), inset -1px -1px 0 var(--l); }
+#pager button.cur { background: var(--hi); }
+#pager i { position: absolute; display: block; border: 1px solid #000; background: var(--std-l); }
+#pager i.act { background: var(--hi-l); }
+
+/* ---------- Tk ---------- */
+.tk { --l: var(--tk-l); --d: var(--tk-d); background: var(--tk); }
+.tkbtn {
+  --l: var(--tk-l); --d: var(--tk-d);
+  display: inline-block;
+  padding: 5px 12px;
+  background: var(--tk);
+  box-shadow: inset 2px 2px 0 var(--l), inset -2px -2px 0 var(--d);
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.tkbtn:hover:not(:disabled) { background: #ececec; }
+.tkbtn:active:not(:disabled) { box-shadow: inset 2px 2px 0 var(--d), inset -2px -2px 0 var(--l); }
+.tkbtn:disabled { color: #a3a3a3; }
+.tkbtn.default { outline: 1px solid var(--ink); outline-offset: 2px; }
+.tkbtn:focus-visible { outline: 1px solid var(--ink); outline-offset: -5px; }
+.row { display: flex; flex-wrap: wrap; gap: 10px; padding: 10px; justify-content: center; }
+.pad { padding: 12px; overflow: auto; }
+.pad h1 { font-size: 14px; margin-bottom: 8px; }
+.pad p { font-weight: 400; margin-bottom: 8px; max-width: 60ch; }
+.well { --l: var(--tk-l); --d: var(--tk-d); background: var(--paper); box-shadow: inset 2px 2px 0 var(--d), inset -2px -2px 0 var(--l); padding: 6px 8px; overflow: auto; }
+.radio { display: flex; align-items: center; gap: 8px; padding: 3px 0; }
+.radio input { appearance: none; width: 12px; height: 12px; transform: rotate(45deg); margin: 0 3px; background: var(--tk); box-shadow: inset 1px 1px 0 var(--tk-l), inset -1px -1px 0 var(--tk-d); }
+.radio input:checked { background: var(--hi); box-shadow: inset 1px 1px 0 var(--tk-d), inset -1px -1px 0 var(--tk-l); }
+
+/* xterm: чорне на білому, смуга прокрутки Athena ліворуч */
+.xterm { display: grid; grid-template-columns: 14px minmax(0, 1fr); flex: 1; min-height: 0; background: #fff; }
+.athena { position: relative; background: #fff; border-right: 1px solid #000; }
+.athena i { position: absolute; left: 1px; right: 1px; background: var(--weave) 0 0 / 4px 4px; opacity: .55; }
+.tout { overflow: auto; scrollbar-width: none; padding: 2px 3px; color: #000; cursor: text; }
+.tout::-webkit-scrollbar { display: none; }
+.tout .ln { white-space: pre-wrap; overflow-wrap: anywhere; min-height: 14px; }
+.tout .b { font-weight: 700; }
+.tout .tok { font: inherit; text-decoration: underline; cursor: pointer; padding: 0; }
+.tout .tok:hover { background: #000; color: #fff; }
+.tout .cur { outline: 1px solid #000; outline-offset: -1px; }
+.xterm.focused .cur { background: #000; color: #fff; outline: none; }
+.tout form { position: relative; white-space: pre-wrap; overflow-wrap: anywhere; min-height: 14px; }
+.tout input { position: absolute; inset: 0; opacity: 0; width: 100%; font-size: 16px; border: 0; }
+
+/* Glint */
+.glint { display: grid; grid-template-columns: 160px minmax(0, 1fr) auto; grid-template-rows: minmax(0, 1fr) auto; gap: 6px; padding: 6px; flex: 1; min-height: 0; }
+.tree { font-weight: 700; }
+.tree button { display: flex; align-items: center; gap: 4px; width: 100%; padding: 2px 4px; text-align: left; }
+.tree button[aria-selected="true"] { background: var(--tk-sel); }
+.tree .sub { padding-left: 16px; }
+.tree svg { width: 16px; height: 14px; flex: none; }
+.pkgs { display: grid; grid-template-columns: repeat(auto-fill, minmax(86px, 1fr)); align-content: start; gap: 8px 4px; }
+.pkg { display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 4px 2px; }
+.pkg svg { width: 40px; height: 34px; }
+.pkg span { padding: 0 2px; overflow-wrap: anywhere; text-align: center; }
+.pkg[aria-selected="true"] span { background: var(--navy); color: #fff; }
+.gbtns { display: flex; flex-direction: column; gap: 6px; }
+.gstatus { grid-column: 1 / -1; padding: 3px 6px; font-weight: 400; }
+.info { display: grid; grid-template-columns: max-content 1fr; gap: 3px 12px; font-weight: 400; }
+.info dt { font-weight: 700; text-align: right; }
+.prog { height: 18px; margin: 10px 0; padding: 2px; }
+.prog i { display: block; height: 100%; width: 0; background: var(--navy); }
+
+/* Панель керування: стовпчик великих кнопок */
+.cp { display: flex; flex-direction: column; gap: 4px; padding: 6px; overflow: auto; }
+.cp .tkbtn { display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 8px 4px; white-space: normal; }
+.cp svg { width: 36px; height: 36px; }
+
+/* ---------- Вузькі екрани ---------- */
+@media (max-width: 760px) {
+  :root { --gs: 56px; }
+  #goodstuff { right: 0; overflow-x: auto; scrollbar-width: none; }
+  #goodstuff .gsw, #pager { display: none; }
+  .gsb { flex: none; }
+  .gsb svg { width: 28px; height: 28px; }
+  .fw { position: fixed; inset: calc(var(--gs) + 6px) 0 0 0 !important; width: auto !important; height: auto !important; }
+  .fw .h { display: none; }
+  .glint { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto minmax(0, 1fr) auto auto; }
+  .gbtns { flex-direction: row; flex-wrap: wrap; }
+  .tree { display: flex; flex-wrap: wrap; gap: 4px; }
+  .tree .sub { padding-left: 0; }
+}
+
+/* Відомості про пакет: опис, склад, результат */
+.pdesc { margin-top: 10px; font-weight: 400; }
+.pdesc p { margin-bottom: 8px; max-width: 64ch; }
+.pdesc .ph { font-size: inherit; font-weight: 700; margin: 10px 0 4px; }
+.pdesc .pfiles { margin: 0 0 4px 18px; }
+.pdesc .pfiles li { margin-bottom: 2px; }
+.info dd { min-width: 0; overflow-wrap: anywhere; }

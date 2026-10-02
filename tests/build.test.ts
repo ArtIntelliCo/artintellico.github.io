@@ -2,10 +2,32 @@ import { execSync } from 'node:child_process';
 import { existsSync, readFileSync } from 'node:fs';
 import { beforeAll, describe, expect, it } from 'vitest';
 
+/** Классическая версия сайта: переехала в /classic/. */
 const pages = {
+  uk: 'dist/classic/index.html',
+  ru: 'dist/ru/classic/index.html',
+  en: 'dist/en/classic/index.html',
+};
+
+/** Norton Commander — основной вариант, занимает корень и прежние адреса локалей. */
+const retro = {
   uk: 'dist/index.html',
   ru: 'dist/ru/index.html',
   en: 'dist/en/index.html',
+};
+
+/** Ретро-варианты по своим адресам ('' — корень локали). */
+const variantSlugs = ['', 'dos/', 'unix/', 'apple/', 'lisa/', 'linux/', 'mc/', 'win31/', 'winnt/', 'web90/', 'web2010/', 'ai/'];
+const localePrefix = { uk: '/', ru: '/ru/', en: '/en/' };
+const variantPages = Object.entries(localePrefix).flatMap(([locale, prefix]) =>
+  variantSlugs.map((slug) => ({ locale, slug, url: prefix + slug, file: `dist${prefix}${slug}index.html` }))
+);
+const allPages = [...Object.values(pages), ...variantPages.map((page) => page.file)];
+
+const slogans = {
+  uk: 'Ми бачили, як зароджувалося IT.',
+  ru: 'Мы видели, как зарождалось IT.',
+  en: 'We saw IT being born.',
 };
 
 const read = (path: string) => readFileSync(path, 'utf8');
@@ -29,18 +51,18 @@ describe('страницы локалей', () => {
   });
 
   it('указывают canonical на себя', () => {
-    expect(read(pages.uk)).toContain('rel="canonical" href="https://artintellico.com/"');
-    expect(read(pages.ru)).toContain('rel="canonical" href="https://artintellico.com/ru/"');
-    expect(read(pages.en)).toContain('rel="canonical" href="https://artintellico.com/en/"');
+    expect(read(pages.uk)).toContain('rel="canonical" href="https://artintellico.com/classic/"');
+    expect(read(pages.ru)).toContain('rel="canonical" href="https://artintellico.com/ru/classic/"');
+    expect(read(pages.en)).toContain('rel="canonical" href="https://artintellico.com/en/classic/"');
   });
 
   it('перечисляют все альтернативные языки и x-default', () => {
     for (const path of Object.values(pages)) {
       const html = read(path);
-      expect(html, path).toContain('hreflang="x-default" href="https://artintellico.com/"');
-      expect(html, path).toContain('hreflang="uk" href="https://artintellico.com/"');
-      expect(html, path).toContain('hreflang="ru" href="https://artintellico.com/ru/"');
-      expect(html, path).toContain('hreflang="en" href="https://artintellico.com/en/"');
+      expect(html, path).toContain('hreflang="x-default" href="https://artintellico.com/en/classic/"');
+      expect(html, path).toContain('hreflang="uk" href="https://artintellico.com/classic/"');
+      expect(html, path).toContain('hreflang="ru" href="https://artintellico.com/ru/classic/"');
+      expect(html, path).toContain('hreflang="en" href="https://artintellico.com/en/classic/"');
     }
   });
 
@@ -77,12 +99,29 @@ describe('страницы локалей', () => {
 describe('шапка и подвал', () => {
   it('дают переключатель на две другие локали', () => {
     const uk = read(pages.uk);
-    expect(uk).toContain('href="/ru/"');
-    expect(uk).toContain('href="/en/"');
+    expect(uk).toContain('href="/ru/classic/"');
+    expect(uk).toContain('href="/en/classic/"');
 
     const ru = read(pages.ru);
-    expect(ru).toContain('href="/"');
-    expect(ru).toContain('href="/en/"');
+    expect(ru).toContain('href="/classic/"');
+    expect(ru).toContain('href="/en/classic/"');
+  });
+
+  it('дают в шапке выбор варианта сайта на том же языке', () => {
+    for (const [locale, path] of Object.entries(pages)) {
+      const header = read(path).split('<header')[1]?.split('</header>')[0] ?? '';
+      const prefix = localePrefix[locale as keyof typeof localePrefix];
+      expect(header, path).toContain('data-variant-switcher');
+      for (const slug of variantSlugs) {
+        expect(header, `${path} → ${prefix}${slug}`).toContain(`href="${prefix}${slug}"`);
+      }
+    }
+  });
+
+  it('запоминают язык для DOS-версии', () => {
+    for (const path of Object.values(pages)) {
+      expect(read(path), path).toContain('aic-lang');
+    }
   });
 
   it('помечают текущий язык как активный', () => {
@@ -109,10 +148,10 @@ describe('шапка и подвал', () => {
     expect(read(pages.en)).toContain('ArtIntelliCo LLC');
   });
 
-  it('показывают код ЄДРПОУ с подписью на языке локали', () => {
-    expect(read(pages.uk)).toContain('ЄДРПОУ 40656107');
-    expect(read(pages.ru)).toContain('ЕГРПОУ 40656107');
-    expect(read(pages.en)).toContain('Company ID 40656107');
+  it('не показывают код ЄДРПОУ', () => {
+    for (const path of Object.values(pages)) {
+      expect(read(path), path).not.toContain('40656107');
+    }
   });
 
   it('не выводят пустые реквизиты', () => {
@@ -132,8 +171,8 @@ describe('шапка и подвал', () => {
 
 describe('первый экран', () => {
   it('содержит заголовок из словаря своей локали', () => {
-    expect(read(pages.uk)).toContain('Ми створюємо корисні ІТ рішення');
-    expect(read(pages.ru)).toContain('Мы создаём полезные ИТ решения');
+    expect(read(pages.uk)).toContain('Ми створюємо ІТ рішення, що працюють');
+    expect(read(pages.ru)).toContain('Мы создаём работающие ИТ решения');
     expect(read(pages.en)).toContain('We build IT solutions that work');
   });
 
@@ -183,9 +222,9 @@ describe('первый экран', () => {
 });
 
 describe('блок услуг', () => {
-  it('выводит девять карточек в каждой локали', () => {
+  it('выводит десять карточек в каждой локали', () => {
     for (const path of Object.values(pages)) {
-      expect(read(path).match(/<article/g)?.length, path).toBe(9);
+      expect(read(path).match(/<article/g)?.length, path).toBe(10);
     }
   });
 
@@ -193,6 +232,12 @@ describe('блок услуг', () => {
     for (const path of Object.values(pages)) {
       expect(read(path), path).toContain('id="services"');
     }
+  });
+
+  it('предлагает инфраструктуру на базе Red Hat', () => {
+    expect(read(pages.uk)).toContain('Інфраструктура компанії на базі Red Hat');
+    expect(read(pages.ru)).toContain('Инфраструктура компании на базе Red Hat');
+    expect(read(pages.en)).toContain('Company infrastructure on Red Hat');
   });
 
   it('переводит названия услуг', () => {
@@ -311,6 +356,12 @@ describe('статические файлы', () => {
     expect(sitemap).toContain('https://artintellico.com/');
     expect(sitemap).toContain('https://artintellico.com/ru/');
     expect(sitemap).toContain('https://artintellico.com/en/');
+    for (const page of variantPages) {
+      expect(sitemap, page.url).toContain(`<loc>https://artintellico.com${page.url}</loc>`);
+    }
+    expect(sitemap).toContain('https://artintellico.com/classic/');
+    expect(sitemap).toContain('https://artintellico.com/ru/classic/');
+    expect(sitemap).toContain('https://artintellico.com/en/classic/');
   });
 
   it('сохраняют привязку домена и иконки', () => {
@@ -318,5 +369,110 @@ describe('статические файлы', () => {
     expect(existsSync('dist/favicon.ico')).toBe(true);
     expect(existsSync('dist/apple-touch-icon.png')).toBe(true);
     expect(existsSync('dist/og-image.png')).toBe(true);
+  });
+});
+
+describe('ретро-варианты', () => {
+  it('собираются для каждого языка по своему адресу', () => {
+    for (const page of variantPages) {
+      expect(existsSync(page.file), page.file).toBe(true);
+      expect(read(page.file), page.file).toContain(`<html lang="${page.locale}"`);
+    }
+  });
+
+  it('указывают canonical на себя и связывают языки через hreflang', () => {
+    for (const page of variantPages) {
+      const html = read(page.file);
+      expect(html, page.file).toContain(`rel="canonical" href="https://artintellico.com${page.url}"`);
+      for (const [locale, prefix] of Object.entries(localePrefix)) {
+        expect(html, page.file).toContain(`hreflang="${locale}" href="https://artintellico.com${prefix}${page.slug}"`);
+      }
+      expect(html, page.file).toContain(`hreflang="x-default" href="https://artintellico.com/en/${page.slug}"`);
+    }
+  });
+
+  it('используют уникальные заголовки', () => {
+    const titles = variantPages.map((page) => /<title>(.*?)<\/title>/s.exec(read(page.file))?.[1]);
+    expect(new Set(titles).size).toBe(variantPages.length);
+  });
+
+  it('подключают GTM', () => {
+    for (const page of variantPages) {
+      expect(read(page.file), page.file).toContain('GTM-W3Z644V');
+    }
+  });
+
+  it('отдают весь текст сайта без JavaScript', () => {
+    for (const page of variantPages) {
+      const fallback = read(page.file).split('class="nojs"')[1]?.split('</noscript>')[0] ?? '';
+      expect(fallback.match(/<h1>/g)?.length, page.file).toBe(1);
+      expect(fallback.match(/<h3>/g)?.length, page.file).toBe(10);
+      expect(fallback, page.file).toContain('href="mailto:io@artintellico.com"');
+      expect(fallback, page.file).toContain('href="https://unio24.com/"');
+    }
+    expect(read(retro.uk)).toContain('Ми створюємо ІТ рішення, що працюють');
+    expect(read(retro.ru)).toContain('Мы создаём работающие ИТ решения');
+    expect(read(retro.en)).toContain('We build IT solutions that work');
+  });
+
+  it('не содержат ссылок на старые адреса тем', () => {
+    for (const page of variantPages) {
+      const html = read(page.file);
+      expect(html, page.file).not.toMatch(/["'](index|console|unix|apple|lisa|redhat|mc|win31|ai)\.html["']/);
+      expect(html, page.file).not.toMatch(/https:\/\/artintellico\.com\/\$\{lang/);
+    }
+  });
+
+  it('берут шрифты файлами, а не base64', () => {
+    for (const page of variantPages) {
+      expect(read(page.file), page.file).not.toContain('data:font/');
+    }
+  });
+});
+
+describe('перелинковка и футер', () => {
+  it('на каждой странице есть ссылки на все варианты на том же языке', () => {
+    for (const page of variantPages) {
+      const html = read(page.file);
+      const prefix = localePrefix[page.locale as keyof typeof localePrefix];
+      for (const slug of [...variantSlugs, 'classic/']) {
+        if (slug === page.slug) continue;
+        expect(html, `${page.file} → ${prefix}${slug}`).toContain(`href="${prefix}${slug}"`);
+      }
+      expect(html, page.file).toContain('aria-current="page"');
+    }
+    for (const [locale, path] of Object.entries(pages)) {
+      const html = read(path);
+      const prefix = localePrefix[locale as keyof typeof localePrefix];
+      for (const slug of variantSlugs) {
+        expect(html, `${path} → ${prefix}${slug}`).toContain(`href="${prefix}${slug}"`);
+      }
+    }
+  });
+
+  it('показывают слоган на языке страницы', () => {
+    for (const [locale, path] of Object.entries(pages)) {
+      expect(read(path), path).toContain(slogans[locale as keyof typeof slogans]);
+    }
+    for (const page of variantPages) {
+      expect(read(page.file), page.file).toContain(slogans[page.locale as keyof typeof slogans]);
+    }
+  });
+
+  it('нигде не показывают код ЄДРПОУ', () => {
+    for (const path of allPages) {
+      expect(read(path), path).not.toContain('40656107');
+    }
+  });
+});
+
+describe('язык по умолчанию', () => {
+  it('отправляет на английскую версию за пределами Украины, кроме роботов', () => {
+    for (const page of [...variantPages.map((p) => p.file), ...Object.values(pages)]) {
+      const html = read(page);
+      expect(html, page).toContain('Europe/Kyiv');
+      expect(html, page).toContain("location.replace(url(aicId, 'en')");
+      expect(html, page).toMatch(/bot\|crawl/);
+    }
   });
 });

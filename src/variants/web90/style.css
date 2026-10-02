@@ -1,0 +1,249 @@
+/* Домашня сторінка кінця 90-х: таблична верстка, зоряний фон, бевел-кнопки */
+.w90 {
+  height: 100%;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  background-color: #000033;
+  background-image:
+    radial-gradient(1px 1px at 12px 18px, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 67px 92px, #ffffaa 50%, transparent 51%),
+    radial-gradient(2px 2px at 101px 41px, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 33px 120px, #aaccff 50%, transparent 51%),
+    radial-gradient(1px 1px at 140px 140px, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 150px 10px, #fff 50%, transparent 51%);
+  background-size: 160px 160px;
+  color: #000;
+  font: 16px/1.3 "Times New Roman", Times, serif;
+  padding: 12px 0 24px;
+}
+.w90-loading { color: #ff0; text-align: center; font-family: "Courier New", monospace; }
+.w90 a { color: #0000ee; }
+.w90 a:visited { color: #551a8b; }
+.w90 a:focus-visible { outline: 2px dotted #ff0080; outline-offset: 1px; }
+
+.w90-page {
+  width: 760px;
+  margin: 0 auto;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 3px ridge #c0c0c0;
+  background: #c0c0c0;
+}
+.w90-page td { vertical-align: top; padding: 0; }
+
+/* Шапка з WordArt-логотипом */
+.w90-hdr { background: #000; text-align: center; padding: 14px 10px 10px !important; }
+.w90-logoimg { display: inline-block; vertical-align: middle; margin-right: 14px; filter: drop-shadow(3px 3px 0 #444); }
+.w90-logo {
+  display: inline-block;
+  margin: 0;
+  font: 900 italic 52px/1.05 "Arial Black", Impact, "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: -1px;
+  color: #ffcc00;
+  background: linear-gradient(180deg, #ffff66 0%, #ffaa00 45%, #ff3300 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: perspective(320px) rotateX(14deg) skewX(-9deg);
+  filter: drop-shadow(3px 3px 0 #0000cc) drop-shadow(1px 1px 0 #fff);
+}
+.w90-welcome {
+  margin: 6px 0 8px;
+  color: #00ff00;
+  font: bold 18px "Comic Sans MS", "Comic Sans", cursive;
+}
+.w90-langs { font: bold 12px Arial, sans-serif; color: #c0c0c0; }
+.w90-langs button { margin: 0 2px; }
+
+/* Бевел-кнопки */
+.w90-bvl {
+  display: inline-block;
+  box-sizing: border-box;
+  background: #c0c0c0;
+  color: #000 !important;
+  border: 2px solid;
+  border-color: #fff #808080 #808080 #fff;
+  box-shadow: 1px 1px 0 #000;
+  font: bold 13px Arial, Helvetica, sans-serif;
+  text-align: center;
+  text-decoration: none;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+.w90-bvl:active, .w90-bvl[aria-pressed="true"] { border-color: #808080 #fff #fff #808080; box-shadow: none; background: #a8a8a8; }
+
+/* Бігучий рядок */
+.w90-marq { background: #000080; color: #ffff00; border-top: 2px groove #c0c0c0; border-bottom: 2px groove #c0c0c0; }
+.w90-marquee { width: 0; min-width: 100%; overflow: hidden; white-space: nowrap; padding: 4px 0; font: bold 15px "Courier New", Courier, monospace; }
+.w90-marquee span { display: inline-block; padding-left: 100%; animation: w90-marquee 26s linear infinite; }
+@keyframes w90-marquee { to { transform: translateX(-100%); } }
+
+/* Ліва колонка */
+.w90-nav { width: 170px; background: #008080; padding: 10px 8px !important; text-align: center; color: #fff; font: 13px Arial, sans-serif; }
+.w90-nav .w90-bvl { display: block; margin: 0 0 7px; }
+.w90-nav h2 { font: bold 13px Arial, sans-serif; color: #ffff00; margin: 14px 0 6px; }
+.w90-counter { display: inline-flex; gap: 1px; padding: 2px; background: #333; border: 2px inset #c0c0c0; }
+.w90-counter span {
+  display: inline-block;
+  width: 13px;
+  background: #000;
+  color: #ff2020;
+  font: bold 17px/22px "Courier New", Courier, monospace;
+  text-shadow: 0 0 4px #ff0000;
+}
+.w90-b88s { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px; margin-top: 12px; }
+
+/* Банери 88×31 */
+.w90-b88 {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 88px;
+  height: 31px;
+  box-sizing: border-box;
+  overflow: hidden;
+  border: 1px solid #fff;
+  outline: 1px solid #000;
+  font: bold 9px/10px Verdana, Arial, sans-serif;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: -.2px;
+}
+.w90-b88 .y { font-weight: normal; opacity: .85; }
+.w90-b88.here { outline: 2px solid #ff0080; }
+
+/* Основна колонка */
+.w90-main { background: #ffffe0; padding: 14px 18px 18px !important; }
+.w90-main h1 { font: bold 26px/1.15 "Times New Roman", Times, serif; color: #800000; margin: 4px 0 10px; text-align: center; }
+.w90-main h2 {
+  font: bold 21px "Times New Roman", Times, serif;
+  color: #000080;
+  margin: 18px 0 8px;
+  padding-top: 4px;
+}
+.w90-main h2::before { content: "\00bb "; color: #ff0000; }
+.w90-main p { margin: 0 0 10px; }
+.w90-lead { font-weight: bold; color: #006400; }
+.w90-stars { list-style: none; padding: 0; margin: 0 0 12px 8px; }
+.w90-stars li { margin: 3px 0; }
+.w90-stars li::before { content: "\2605"; display: inline-block; margin-right: 6px; color: #ff0000; animation: w90-spin 2.4s linear infinite; }
+@keyframes w90-spin { to { transform: rotate(360deg); } }
+
+.w90-rainbow {
+  height: 6px;
+  margin: 16px 0;
+  border: 0;
+  background: linear-gradient(90deg, #f00, #f80, #ff0, #0c0, #00f, #4b0082, #8f00ff);
+  border-radius: 3px;
+}
+
+.w90-new {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 0 4px;
+  background: #ff0000;
+  color: #ffff00;
+  font: bold 11px Arial, sans-serif;
+  vertical-align: 2px;
+  animation: w90-blink 1s steps(1) infinite;
+}
+@keyframes w90-blink { 50% { visibility: hidden; } }
+
+.w90-uc {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 14px 0;
+  padding: 6px 10px;
+  border: 2px solid #000;
+  background: #ffd400;
+  font: bold 14px "Comic Sans MS", "Comic Sans", cursive;
+}
+.w90-uc .tape {
+  flex: none;
+  width: 60px;
+  height: 18px;
+  background: repeating-linear-gradient(45deg, #000 0 8px, #ffd400 8px 16px);
+  background-size: 22.6px 22.6px;
+  animation: w90-tape 1s linear infinite;
+}
+@keyframes w90-tape { to { background-position: 22.6px 0; } }
+
+.w90-svc { width: 100%; border-collapse: collapse; background: #fff; font-size: 15px; }
+.w90-svc th { background: #000080; color: #fff; font: bold 14px Arial, sans-serif; padding: 5px; }
+.w90-svc td { padding: 6px; border: 1px solid #808080; vertical-align: top; }
+.w90-svc tr:nth-child(even) td { background: #e8f0ff; }
+.w90-svc td:first-child { text-align: center; font-weight: bold; color: #800000; width: 28px; }
+.w90-svc b { color: #000080; }
+
+/* «Click here for more info!» і якірні блоки з подробицями */
+.w90-more { display: inline-block; margin-top: 4px; font: bold 13px Arial, sans-serif; }
+.w90-dethead { font: bold 19px "Times New Roman", Times, serif; color: #800000; margin: 20px 0 6px; text-align: center; }
+.w90-det { margin: 12px 0; padding: 8px 12px 4px; background: #fff; border: 2px dashed #000080; scroll-margin-top: 8px; }
+.w90-det h4 { margin: 2px 0 8px; font: bold 18px "Times New Roman", Times, serif; color: #000080; }
+.w90-det h4 .w90-new { font-size: 11px; }
+.w90-inc { font-weight: bold; color: #006400; margin-bottom: 4px !important; }
+.w90-dots { margin: 0 0 10px; padding-left: 22px; list-style: square; }
+.w90-dots li { margin: 2px 0; }
+.w90-dots li::marker { color: #ff0000; }
+.w90-get { padding: 4px 6px; background: #ffff99; border-left: 4px solid #ff0000; }
+.w90-get b { color: #800000; }
+.w90-back { font: bold 13px Arial, sans-serif; text-align: right; }
+
+.w90-partners li { margin: 4px 0; font: bold 16px Arial, sans-serif; color: #004000; }
+
+.w90-mail { display: inline-flex; align-items: center; gap: 8px; font: bold 18px Arial, sans-serif; }
+.w90-mail svg { animation: w90-bounce .9s ease-in-out infinite alternate; }
+@keyframes w90-bounce { to { transform: translateY(-5px) rotate(-6deg); } }
+
+/* Гостьова книга */
+.w90-gb { background: #c0c0c0; border: 2px solid; border-color: #fff #808080 #808080 #fff; padding: 10px; font: 13px Arial, sans-serif; }
+.w90-gb table { width: 100%; border-collapse: collapse; }
+.w90-gb td { padding: 3px 4px; }
+.w90-gb td:first-child { width: 38%; font-weight: bold; text-align: right; }
+.w90-gb input, .w90-gb select, .w90-gb textarea {
+  width: 100%;
+  box-sizing: border-box;
+  font: 13px "Courier New", Courier, monospace;
+  border: 2px inset #c0c0c0;
+  background: #fff;
+  padding: 2px;
+}
+.w90-gb textarea { height: 70px; resize: vertical; }
+.w90-gb .row { text-align: center; padding-top: 8px; }
+.w90-gb .row .w90-bvl { margin: 0 4px; }
+.w90-gb .note { margin: 8px 0 0; font-size: 11px; color: #333; text-align: center; }
+
+/* Вебринг */
+.w90-ring { border: 3px double #800080; background: #fff0ff; padding: 10px; text-align: center; font: 14px Arial, sans-serif; }
+.w90-ring .title { font: bold 16px "Comic Sans MS", "Comic Sans", cursive; color: #800080; margin-bottom: 6px; }
+.w90-ring .nav a { font-weight: bold; margin: 0 6px; }
+.w90-ring .list { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin-top: 10px; }
+.w90-ring .cell { display: flex; flex-direction: column; align-items: center; font: bold 9px Arial, sans-serif; color: #ff0080; gap: 2px; }
+
+/* Підвал */
+.w90-foot { background: #000; color: #c0c0c0; text-align: center; padding: 12px 10px !important; font: 12px Arial, sans-serif; }
+.w90-foot p { margin: 0 0 6px; }
+.w90-foot .slogan { color: #ffff66; font: italic 15px "Times New Roman", Times, serif; }
+.w90-foot a, .w90-foot a:visited { color: #66ccff; }
+.w90-foot .tiny { font-size: 11px; color: #808080; }
+
+@media (max-width: 780px) {
+  .w90 { padding: 0 0 16px; }
+  .w90-page { width: 100%; border-width: 0; }
+  .w90-page, .w90-page > tbody, .w90-page > tbody > tr, .w90-page > tbody > tr > td { display: block; width: auto; }
+  .w90-logo { font-size: 36px; }
+  .w90-nav { width: auto; }
+  .w90-nav .w90-navlinks { display: flex; flex-wrap: wrap; justify-content: center; gap: 5px; }
+  .w90-nav .w90-navlinks .w90-bvl { display: inline-block; margin: 0; }
+  .w90-main { padding: 12px 10px 14px !important; }
+  .w90-main h1 { font-size: 22px; }
+  .w90-gb td:first-child { width: auto; text-align: left; }
+  .w90-gb tr { display: flex; flex-direction: column; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .w90-marquee { white-space: normal; text-align: center; }
+  .w90-marquee span { padding-left: 0; animation: none; }
+  .w90-stars li::before, .w90-new, .w90-uc .tape, .w90-mail svg { animation: none; }
+}

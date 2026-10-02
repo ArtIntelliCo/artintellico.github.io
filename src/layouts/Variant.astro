@@ -1,0 +1,52 @@
+---
+import SeoHead from '../components/SeoHead.astro';
+import SeoFallback from '../components/SeoFallback.astro';
+import VariantBar from '../components/VariantBar.astro';
+import AicRuntime from '../components/AicRuntime.astro';
+import { htmlLang, type Locale } from '../i18n';
+import { variantPaths, variantTitle, type RetroVariantId } from '../variants';
+import { variantSource } from '../variants/sources';
+import barCss from '../variants/bar.css?raw';
+import frameCss from '../variants/frame.css?raw';
+
+/*
+ * Ретро-вариант сайта. Сам интерфейс — стили, разметка и скрипт из src/variants/<id>/,
+ * вставленные как есть. Вокруг них: SEO-заголовки, текст для поисковиков, футер
+ * с переключателем вариантов и рантайм window.AIC, который согласует язык и адреса.
+ */
+
+interface Props {
+  locale: Locale;
+  variant: RetroVariantId;
+}
+
+const { locale, variant } = Astro.props;
+const source = variantSource(variant);
+---
+
+<!doctype html>
+<html lang={htmlLang[locale]} {...source.htmlAttrs}>
+  <head>
+    <SeoHead locale={locale} paths={variantPaths(variant)} title={variantTitle(variant, locale)} />
+    <style is:inline set:html={source.css}></style>
+    <style is:inline set:html={barCss}></style>
+    <style is:inline set:html={frameCss}></style>
+    <AicRuntime variant={variant} withContent={source.usesContent} />
+  </head>
+  <body>
+    <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-W3Z644V"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"
+        title="Google Tag Manager"></iframe>
+    </noscript>
+    <SeoFallback locale={locale} />
+
+    <Fragment set:html={source.markup} />
+    <script is:inline set:html={source.script}></script>
+
+    <VariantBar locale={locale} variant={variant} />
+  </body>
+</html>

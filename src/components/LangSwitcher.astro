@@ -13,13 +13,13 @@ const dict = t(locale);
   {
     locales.map((item) =>
       item === locale ? (
-        <span aria-current="true" class="rounded px-2 py-1 text-brand-blue">
+        <span aria-current="true" class="rounded px-1.5 py-1 sm:px-2 text-brand-blue">
           {localeName[item]}
         </span>
       ) : (
         <a
           href={localePath[item]}
-          class="rounded px-2 py-1 text-brand-navy/60 transition hover:text-brand-blue"
+          class="rounded px-1.5 py-1 sm:px-2 text-brand-navy/60 transition hover:text-brand-blue"
         >
           {localeName[item]}
         </a>

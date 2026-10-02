@@ -1,0 +1,74 @@
+---
+import { t, type Locale } from '../i18n';
+import { variantIds, variantName, variantPath, variants } from '../variants';
+
+/*
+ * Выбор варианта сайта в шапке классической версии. Выпадающий список на <details>:
+ * работает без JavaScript, а ссылки видны поисковикам. Скрипт только закрывает
+ * список по клику мимо и по Esc.
+ */
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const dict = t(locale);
+---
+
+<details class="variant-switcher sm:relative" data-variant-switcher>
+  <summary
+    class="flex cursor-pointer list-none items-center gap-1 whitespace-nowrap rounded border border-brand-navy/20 px-2 py-1 font-mono text-xs font-semibold uppercase tracking-wide transition select-none hover:border-brand-blue hover:text-brand-blue [&::-webkit-details-marker]:hidden"
+  >
+    {dict.footer.variants}
+    <svg aria-hidden="true" viewBox="0 0 10 6" class="h-1.5 w-2.5 transition-transform" fill="currentColor">
+      <path d="M0 0h10L5 6z"></path>
+    </svg>
+  </summary>
+  <nav
+    aria-label={dict.footer.variants}
+    class="absolute inset-x-4 top-full z-50 mt-2 rounded-lg sm:inset-x-auto sm:right-0 sm:w-64 border border-brand-navy/10 bg-white py-2 shadow-lg"
+  >
+    <ul>
+      {
+        variantIds.map((id) => (
+          <li>
+            {id === 'classic' ? (
+              <span aria-current="page" class="flex gap-3 px-4 py-1.5 text-sm font-semibold text-brand-blue">
+                <span class="w-9 shrink-0" />
+                {variantName(id, locale)}
+              </span>
+            ) : (
+              <a
+                href={variantPath(id, locale)}
+                class="flex gap-3 px-4 py-1.5 text-sm transition hover:bg-brand-navy/5 hover:text-brand-blue"
+              >
+                <span class="w-9 shrink-0 font-mono text-xs leading-5 text-brand-navy/40">{variants[id].year}</span>
+                {variantName(id, locale)}
+              </a>
+            )}
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+</details>
+
+<style>
+  .variant-switcher[open] summary svg {
+    transform: rotate(180deg);
+  }
+</style>
+
+<script>
+  for (const details of document.querySelectorAll<HTMLDetailsElement>('[data-variant-switcher]')) {
+    document.addEventListener('click', (event) => {
+      if (details.open && !details.contains(event.target as Node)) details.open = false;
+    });
+    details.addEventListener('keydown', (event) => {
+      if (event.key !== 'Escape') return;
+      details.open = false;
+      details.querySelector('summary')?.focus();
+    });
+  }
+</script>

@@ -7,6 +7,7 @@
     "skipToContent": "Skip to content",
     "services": "Services",
     "contacts": "Contacts",
+    "classic": "Classic version of the site",
     "languageLabel": "Language"
   },
   "hero": {
@@ -22,42 +23,141 @@
   },
   "services": {
     "heading": "How we can help",
+    "lead": "We don't tie ourselves to one programming language or platform: we work out the problem first, then pick the tools. Sometimes the best answer is an off-the-shelf subscription service, and then we'll say so.",
+    "includesLabel": "What's included",
+    "resultLabel": "Outcome",
+    "more": "Details",
     "items": {
       "concept": {
         "title": "IT solution concept",
-        "text": "We analyse what you actually need, define business requirements, and either select an existing product or write a development specification that both business and engineers can work from."
+        "text": "We work out what the system actually has to do and turn it into requirements that both the business and the developers can work from.",
+        "details": "The most expensive mistake in an IT project happens before the first line of code: the system gets built for a problem nobody properly defined. So we start by talking to the people who'll use it — accounting, the warehouse, sales managers — not just the person signing off. Sometimes our conclusion is to build nothing and configure an existing product instead. That counts as a result too.",
+        "includes": [
+          "interviews with staff and a walkthrough of current processes",
+          "business requirements and user scenarios",
+          "a comparison of ready-made products against custom development",
+          "a specification with time and budget estimates per phase"
+        ],
+        "result": "A document any team, ours or someone else's, can estimate from and start building."
       },
       "saas": {
         "title": "SaaS development",
-        "text": "We design and build SaaS platforms: multi-tenant architecture, billing and subscriptions, customer dashboards, integrations and scaling."
+        "text": "We design and build SaaS platforms, from a first version for pilot customers to a service where every customer has their own workspace, plan and dashboard.",
+        "details": "In SaaS the money isn't in the code. It's in how easily a new customer can sign up, pay and get going without calling support. We build in multi-tenancy, billing and permissions from day one, because retrofitting them once customers are inside costs several times more. And we try to ship the first version early: real users are quick to show which features were never needed.",
+        "includes": [
+          "multi-tenant architecture with isolated customer data",
+          "sign-up, plans, subscriptions and online payments",
+          "customer dashboards, roles and permissions",
+          "integrations and a public API for your customers",
+          "scaling as load grows"
+        ],
+        "result": "A product you can sell by subscription, not a project you have to roll out by hand every time."
       },
       "web": {
         "title": "Web development",
-        "text": "We build web applications of any complexity: corporate sites, marketplaces, online stores, booking systems and more."
+        "text": "Corporate websites, marketplaces, online stores, booking systems and internal web tools, built around the task rather than a template.",
+        "details": "A business website is judged by leads and orders, not by how it looks in a portfolio. So we agree up front on what counts as a result and set up analytics before launch, not six months later. The technology follows the task: a landing page doesn't need a heavy platform, and a marketplace won't fit into a website builder.",
+        "includes": [
+          "prototype and interface design",
+          "frontend, backend and admin panel",
+          "integrations with payments, delivery, CRM and accounting systems",
+          "SEO groundwork, page speed and analytics",
+          "launch and ongoing support"
+        ],
+        "result": "A web service where you can see how many leads and how much revenue it brings in."
       },
       "mobile": {
         "title": "Mobile apps",
-        "text": "We develop iOS and Android applications together with the admin panels behind them."
+        "text": "iOS and Android apps, together with the server side and the admin panel behind them.",
+        "details": "An app makes sense when customers come back to it regularly: reordering, tracking a delivery, collecting loyalty points. If someone visits once a year, a good mobile website is cheaper, and we'll tell you that before any work starts. Native or cross-platform is decided by budget and by how much the app relies on the camera, location and offline mode.",
+        "includes": [
+          "iOS and Android apps",
+          "server side and API",
+          "an admin panel for content, orders and users",
+          "push notifications and analytics",
+          "publishing to the App Store and Google Play"
+        ],
+        "result": "An app that passes store review and that your team can run without calling a developer."
       },
       "ai": {
         "title": "AI-powered solutions",
-        "text": "We deliver solutions built on artificial intelligence and machine learning."
+        "text": "We offer solutions built on artificial intelligence and machine learning that automate your business processes with AI agents.",
+        "details": "We're more sceptical about AI than most: half of the \"let's add a neural network\" ideas are solved by ordinary automation. But where people spend hours sorting emails, documents and support requests, language models genuinely take the routine off their plate. We start with a pilot on your own data, so you see accuracy figures before the main build rather than after it.",
+        "includes": [
+          "AI agents that handle routine process steps on their own: triaging requests, filling in the CRM, drafting replies to customers",
+          "chatbots and assistants for customers and staff",
+          "document recognition and data extraction",
+          "request classification and knowledge-base search",
+          "demand forecasting and data analysis",
+          "a pilot with quality measured on your data"
+        ],
+        "result": "A specific process that people used to do by hand, now done by the system, with a person still in control."
       },
       "crm": {
         "title": "CRM and ERP development",
-        "text": "We build custom CRM and ERP systems shaped around how your business actually works."
+        "text": "Custom CRM and ERP systems built around the way your business works, not the other way round.",
+        "details": "Off-the-shelf CRM is fine as long as your process looks standard. When managers run half their work in spreadsheets because the system \"can't do that\", building your own becomes cheaper. We migrate data from old systems and spreadsheets and roll out department by department, so work never stops for a day.",
+        "includes": [
+          "sales, warehouse, production and finance modules, as needed",
+          "roles, permissions and an audit log",
+          "reports and dashboards for management",
+          "data migration from spreadsheets and legacy systems",
+          "integration with accounting, telephony and email"
+        ],
+        "result": "One system instead of a zoo of spreadsheets: management sees where things stand without weekly reports from every department."
       },
       "cloud": {
         "title": "Cloud solutions",
-        "text": "We migrate your infrastructure, in full or in part, to Amazon Web Services."
+        "text": "We move your infrastructure, in full or in part, to Amazon Web Services and make sure it keeps running and doesn't get more expensive for no reason.",
+        "details": "The cloud isn't always cheaper than your own server. It pays off when load spikes, when you need fault tolerance, or when new environments should come up in minutes rather than a week. So a migration starts with an audit and a cost estimate, and the move happens in stages, with a rollback plan at every step.",
+        "includes": [
+          "audit of the current infrastructure and a cost estimate",
+          "AWS architecture and a migration plan",
+          "moving servers, databases and files",
+          "backups and monitoring",
+          "cost optimisation after the move"
+        ],
+        "result": "Infrastructure that survives a server failure, and a cloud bill you actually understand."
+      },
+      "redhat": {
+        "title": "Company infrastructure on Red Hat",
+        "text": "We build your company's IT infrastructure on Red Hat: servers on Red Hat Enterprise Linux, the OpenShift container platform and automation with Ansible.",
+        "details": "Companies pick Red Hat when infrastructure has to run for years and pass audits, rather than live in one administrator's head. The subscription pays for itself through vendor support and a long lifecycle: Red Hat Enterprise Linux is supported for ten years. We design the infrastructure around your workloads and describe server configuration in Ansible, so any machine can be rebuilt from a playbook instead of from memory. Red Hat is our partner, so we can also help you sort out subscriptions and vendor support.",
+        "includes": [
+          "audit of your current servers and a migration plan",
+          "Red Hat Enterprise Linux rollout with centralised updates through Red Hat Satellite",
+          "the OpenShift container platform for your applications",
+          "configuration and deployment automation with Ansible",
+          "central identity and access management (Identity Management)",
+          "monitoring, backups and documentation for your team"
+        ],
+        "result": "Infrastructure you can audit, reproduce and hand over to another team without losing what it knows."
       },
       "api": {
         "title": "APIs and integrations",
-        "text": "We design APIs for your systems and integrate them with the tools you already use."
+        "text": "We design APIs for your systems and connect them with the services you already use.",
+        "details": "The most common pain we see is data typed in twice. Orders from the website re-entered into the accounting system by hand, payments reconciled in a spreadsheet. An integration removes that work and the mistakes that come with it. We also set up monitoring, because integrations break quietly when a partner changes their API, and it's better to hear about it from the system than from a customer.",
+        "includes": [
+          "API design and documentation",
+          "integrations with payment providers, delivery services, CRM and accounting",
+          "data exchange between internal systems",
+          "queues and retries when something fails",
+          "monitoring and alerts"
+        ],
+        "result": "Data is entered once and gets where it needs to go on its own."
       },
       "support": {
         "title": "Technical support",
-        "text": "We keep your systems running and continue to improve them."
+        "text": "We keep your systems running and keep improving them, including ones we didn't build.",
+        "details": "Support is more than fixing bugs. It's updates that close security holes, monitoring that spots a problem before users do, and small improvements along the way. If the system came from another contractor, we start with an audit and documentation: without it, every change is a gamble.",
+        "includes": [
+          "availability and error monitoring",
+          "bug fixes and security updates",
+          "backups and restore testing",
+          "planned improvements and new features",
+          "audit and documentation of systems built by other contractors"
+        ],
+        "result": "A system that works, and a team that knows how it's put together."
       }
     }
   },
@@ -71,7 +171,8 @@
   },
   "footer": {
     "rights": "All rights reserved.",
-    "edrpouLabel": "Company ID",
+    "slogan": "We saw IT being born. We know how it works today — and we understand where it is heading tomorrow.",
+    "variants": "Site version",
     "addressLabel": "Address"
   }
 }

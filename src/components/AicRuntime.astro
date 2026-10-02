@@ -1,0 +1,93 @@
+---
+import { locales } from '../i18n';
+import { variantIds, variantName, variantSlugs, variants, type VariantId } from '../variants';
+import { allSiteContent } from '../variants/content';
+
+/*
+ * Рантайм window.AIC: адреса вариантов, их список и согласование языка.
+ * Ставится в <head> до скриптов варианта и нижней полосы (VariantBar.astro).
+ */
+
+interface Props {
+  variant: VariantId;
+  /** Передать тексты сайта в window.AIC.content (для вариантов без своей копии текстов). */
+  withContent?: boolean;
+}
+
+const { variant, withContent = false } = Astro.props;
+/** Список вариантов для собственных окон выбора внутри варианта (window.AIC.variants). */
+const aicVariants = variantIds.map((id) => ({
+  id,
+  year: variants[id].year ?? '',
+  name: Object.fromEntries(locales.map((item) => [item, variantName(id, item)])),
+}));
+---
+
+<script
+  is:inline
+  define:vars={{
+    aicId: variant,
+    aicSlugs: variantSlugs,
+    aicVariants,
+    aicContent: withContent ? allSiteContent() : null,
+  }}
+>
+  const LANGS = ['uk', 'en', 'ru'];
+  const url = (id, lang) => (lang === 'uk' ? '/' : `/${lang}/`) + aicSlugs[id];
+  const page = document.documentElement.lang;
+  let saved = null;
+  try {
+    saved = localStorage.getItem('aic-lang');
+  } catch {
+    /* хранилище недоступно */
+  }
+  // Первый визит на адрес без префикса: в Украине остаётся украинская версия, в других странах —
+  // английская. Страну определяем по часовому поясу: хостинг статический, гео-IP на сервере нет.
+  // Роботов не перенаправляем, чтобы украинская версия оставалась в индексе.
+  if (page === 'uk' && !LANGS.includes(saved) && !/bot|crawl|spider|slurp|lighthouse/i.test(navigator.userAgent)) {
+    const UA_ZONES = ['Europe/Kyiv', 'Europe/Kiev', 'Europe/Uzhgorod', 'Europe/Zaporozhye', 'Europe/Simferopol'];
+    let zone = '';
+    try {
+      zone = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
+    } catch {
+      /* старый браузер без Intl */
+    }
+    if (zone && !UA_ZONES.includes(zone)) {
+      location.replace(url(aicId, 'en') + location.search + location.hash);
+    }
+  }
+  // /ru/… и /en/… задают язык явно; адреса без префикса помнят последний выбор.
+  if (page !== 'uk' || !LANGS.includes(saved)) {
+    try {
+      localStorage.setItem('aic-lang', page);
+    } catch {
+      /* хранилище недоступно */
+    }
+  }
+  // Письма с сайта: к теме добавляем версию сайта в скобках, чтобы было видно, откуда пришла заявка.
+  const MAIL_SUBJECT = { uk: 'Запит із сайту ArtIntelliCo', ru: 'Запрос с сайта ArtIntelliCo', en: 'Enquiry from the ArtIntelliCo website' };
+  const mailto = (href) => {
+    if (typeof href !== 'string' || !/^mailto:/i.test(href)) return href;
+    const lang = LANGS.includes(document.documentElement.lang) ? document.documentElement.lang : 'uk';
+    const variant = aicVariants.find((v) => v.id === aicId);
+    const tag = `(${variant ? variant.name[lang] : aicId})`;
+    const [addr, query = ''] = href.split('?');
+    const params = new URLSearchParams(query.replace(/\+/g, '%2B'));
+    const subject = (params.get('subject') || '').trim();
+    if (subject.endsWith(tag)) return href;
+    params.set('subject', `${subject || MAIL_SUBJECT[lang]} ${tag}`);
+    // URLSearchParams кодирует пробел как «+», а почтовые клиенты ждут %20
+    return `${addr}?${params.toString().replace(/\+/g, '%20')}`;
+  };
+  document.addEventListener(
+    'click',
+    (event) => {
+      const link = event.target instanceof Element && event.target.closest('a[href^="mailto:" i]');
+      if (link) link.setAttribute('href', mailto(link.getAttribute('href')));
+    },
+    true
+  );
+
+  // logo — логотип компании для графических вариантов (лежит в public/).
+  window.AIC = { id: aicId, langs: LANGS, url, variants: aicVariants, content: aicContent, logo: '/logo.svg', mailto };
+</script>

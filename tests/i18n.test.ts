@@ -31,9 +31,9 @@ describe('словари локалей', () => {
     }
   });
 
-  it('содержат девять услуг в каждой локали', () => {
+  it('содержат десять услуг в каждой локали', () => {
     for (const dict of [uk, ru, en]) {
-      expect(Object.keys(dict.services.items)).toHaveLength(9);
+      expect(Object.keys(dict.services.items)).toHaveLength(10);
     }
   });
 });

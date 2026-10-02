@@ -1,0 +1,42 @@
+@font-face { font-family: "TCon16"; src: url("/fonts/c2bde4413472.woff") format("woff"); }
+@font-face { font-family: "TCon20"; src: url("/fonts/947574accba7.woff") format("woff"); }
+@font-face { font-family: "TCon24"; src: url("/fonts/86ad7004327e.woff") format("woff"); }
+
+/* Палітра консолі Linux (VGA) */
+:root {
+  --c0: #000000; --c1: #AA0000; --c2: #00AA00; --c3: #AA5500;
+  --c4: #0000AA; --c5: #AA00AA; --c6: #00AAAA; --c7: #AAAAAA;
+  --c8: #555555; --c9: #FF5555; --c10: #55FF55; --c11: #FFFF55;
+  --c12: #5555FF; --c13: #FF55FF; --c14: #55FFFF; --c15: #FFFFFF;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+body { background: #000; overflow: hidden; }
+#scr {
+  position: absolute;
+  white-space: pre;
+  -webkit-font-smoothing: none;
+  user-select: none;
+  cursor: default;
+}
+#scr span { display: inline; }
+.f0{color:var(--c0)}.f1{color:var(--c1)}.f2{color:var(--c2)}.f3{color:var(--c3)}.f4{color:var(--c4)}.f5{color:var(--c5)}.f6{color:var(--c6)}.f7{color:var(--c7)}
+.f8{color:var(--c8)}.f9{color:var(--c9)}.f10{color:var(--c10)}.f11{color:var(--c11)}.f12{color:var(--c12)}.f13{color:var(--c13)}.f14{color:var(--c14)}.f15{color:var(--c15)}
+.b0{background:var(--c0)}.b1{background:var(--c1)}.b2{background:var(--c2)}.b3{background:var(--c3)}.b4{background:var(--c4)}.b5{background:var(--c5)}.b6{background:var(--c6)}.b7{background:var(--c7)}
+.b8{background:var(--c8)}.b9{background:var(--c9)}.b10{background:var(--c10)}.b11{background:var(--c11)}.b12{background:var(--c12)}.b13{background:var(--c13)}.b14{background:var(--c14)}.b15{background:var(--c15)}
+.blink { animation: blink 1s steps(1) infinite; }
+@keyframes blink { 50% { background: transparent; color: inherit; } }
+#ed {
+  position: absolute;
+  border: 0;
+  padding: 0;
+  resize: none;
+  outline: none;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  -webkit-font-smoothing: none;
+}
+#ed::selection { background: var(--c6); color: var(--c0); }
+#ki { position: absolute; left: 0; bottom: 0; width: 1px; height: 1px; opacity: 0; font-size: 16px; border: 0; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+@media (prefers-reduced-motion: reduce) { .blink { animation: none; } }

@@ -1,0 +1,75 @@
+---
+import { company } from '../data/company';
+import { partners } from '../data/partners';
+import { serviceKeys } from '../data/services';
+import { localePath, t, type Locale } from '../i18n';
+
+/*
+ * Текст сайта для ретро-вариантов без JavaScript и для поисковиков:
+ * сам вариант рисует интерфейс скриптом, а здесь — обычная разметка.
+ */
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const dict = t(locale);
+const year = new Date().getFullYear();
+---
+
+<noscript>
+  <div class="nojs">
+    <p><a href={localePath[locale]}>{dict.nav.classic}</a></p>
+    <h1>{dict.hero.title}</h1>
+    <p>{dict.hero.text}</p>
+    <p>{dict.hero.typedLead}: {dict.hero.typed.join(', ')}.</p>
+
+    <h2>{dict.services.heading}</h2>
+    <p>{dict.services.lead}</p>
+    {
+      serviceKeys.map((key) => {
+        const item = dict.services.items[key];
+        return (
+          <section>
+            <h3>{item.title}</h3>
+            <p>{item.text}</p>
+            <p>{item.details}</p>
+            <p>{dict.services.includesLabel}:</p>
+            <ul>
+              {item.includes.map((line) => (
+                <li>— {line}</li>
+              ))}
+            </ul>
+            <p>
+              {dict.services.resultLabel}: {item.result}
+            </p>
+          </section>
+        );
+      })
+    }
+
+    <h2>{dict.partners.heading}</h2>
+    <ul>
+      {
+        partners.map((partner) => (
+          <li>
+            {partner.url ? (
+              <a href={partner.url} target="_blank" rel="noopener">
+                {partner.name}
+              </a>
+            ) : (
+              partner.name
+            )}
+          </li>
+        ))
+      }
+    </ul>
+
+    <h2>{dict.contacts.heading}</h2>
+    <p>{dict.contacts.text}</p>
+    <p>{dict.contacts.emailLabel}: <a href={`mailto:${company.email}`}>{company.email}</a></p>
+
+    <p>© {year} ArtIntelliCo. {dict.footer.rights}</p>
+  </div>
+</noscript>

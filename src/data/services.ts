@@ -6,6 +6,7 @@ export const serviceKeys = [
   'ai',
   'crm',
   'cloud',
+  'redhat',
   'api',
   'support',
 ] as const;

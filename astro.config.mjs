@@ -25,5 +25,9 @@ export default defineConfig({
   ],
   vite: {
     plugins: [tailwindcss()],
+    build: {
+      // Логотипы партнёров нужны вариантам файлами (<img src>), а не data-URI в каждой странице.
+      assetsInlineLimit: (file) => (file.endsWith('.svg') ? false : undefined),
+    },
   },
 });

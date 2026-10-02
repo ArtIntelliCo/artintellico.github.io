@@ -1,0 +1,120 @@
+@font-face {
+  font-family: "DEC Rainbow";
+  src: url("/fonts/2da9755e33ad.woff") format("woff");
+  font-display: block;
+}
+
+/* VT100 монохромний: лише яскравість, підкреслення та інверсія */
+:root {
+  --screen: #000000;
+  --text: #C9D6EA;
+  --bright: #FFFFFF;
+  --dim: #74849C;
+  --glow: 0 0 .16em rgba(185, 210, 255, .6);
+}
+html[data-phosphor="green"] {
+  --text: #33FF66; --bright: #D6FFE0; --dim: #1E9E40; --glow: 0 0 .18em rgba(51, 255, 102, .55);
+}
+html[data-phosphor="amber"] {
+  --text: #FFB000; --bright: #FFEBC2; --dim: #A87400; --glow: 0 0 .18em rgba(255, 176, 0, .55);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* Гліф 10×20: розміри кратні 20px, щоб пікселі лишались чіткими */
+html { font-size: 20px; background: #000; }
+@media (min-width: 1100px) and (min-height: 700px) { html { font-size: 30px; } }
+@media (min-width: 1720px) and (min-height: 1000px) { html { font-size: 40px; } }
+
+body {
+  height: var(--aic-vh);
+  height: var(--aic-vh);
+  overflow: hidden;
+  background: var(--screen);
+  color: var(--text);
+  font: 1rem/1 "DEC Rainbow", monospace;
+  -webkit-font-smoothing: none;
+  text-shadow: var(--glow);
+}
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 10;
+  background:
+    repeating-linear-gradient(to bottom, transparent 0 calc(1rem / 20), rgba(0, 0, 0, .28) calc(1rem / 20) calc(2rem / 20)),
+    radial-gradient(ellipse at center, transparent 58%, rgba(0, 0, 0, .55) 100%);
+}
+
+#screen {
+  height: 100%;
+  overflow-y: auto;
+  scrollbar-width: none;
+  padding: 1em 1ch;
+}
+#screen::-webkit-scrollbar { display: none; }
+#out, #promptLine { max-width: 80ch; margin: 0 auto; }
+.line { white-space: pre-wrap; overflow-wrap: anywhere; min-height: 1em; }
+
+.b { color: var(--bright); }
+.u { text-decoration: underline; text-decoration-thickness: calc(1em / 20); text-underline-offset: calc(3em / 20); }
+.d { color: var(--dim); }
+.logo {
+  color: var(--bright);
+  white-space: pre;
+  font-size: min(1em, calc((100vw - 2rem) / 34));
+  line-height: 1;
+}
+
+a, .tok {
+  font: inherit;
+  line-height: 1;
+  color: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-thickness: calc(1em / 20);
+  text-underline-offset: calc(3em / 20);
+  text-shadow: inherit;
+}
+a:hover, .tok:hover, a:focus-visible, .tok:focus-visible {
+  outline: none;
+  background: var(--text);
+  color: var(--screen);
+  text-shadow: none;
+}
+
+#promptLine { position: relative; white-space: pre-wrap; overflow-wrap: anywhere; min-height: 1em; }
+#promptLine[hidden] { display: none; }
+/* Блоковий курсор VT100 */
+#cur { background: var(--text); color: var(--screen); text-shadow: none; }
+#cur.on { animation: blink 1.06s steps(1) infinite; }
+@keyframes blink { 50% { background: transparent; color: inherit; } }
+#cmd {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  opacity: 0;
+  font: inherit;
+  font-size: 16px;
+  border: 0;
+  background: transparent;
+  color: transparent;
+  caret-color: transparent;
+}
+#measure { position: absolute; visibility: hidden; white-space: pre; }
+
+@media (prefers-reduced-motion: reduce) {
+  #cur.on { animation: none; }
+}
+
+/* Сторінки man: абзаци з відступом, параметри з висячим відступом */
+.mp { display: block; padding-left: 5ch; }
+.mt { padding-left: 9ch; text-indent: -4ch; }
+@media (max-width: 520px) {
+  .mp { padding-left: 2ch; }
+  .mt { padding-left: 6ch; text-indent: -4ch; }
+}

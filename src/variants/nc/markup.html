@@ -1,0 +1,81 @@
+<div id="boot" aria-hidden="true">
+  <div class="logo" id="bootLogo"></div>
+  <pre id="bootOut"></pre>
+  <div class="skip" id="bootSkip"></div>
+</div>
+
+<div id="nc" hidden>
+  <nav class="menubar" aria-label="Menu">
+    <button class="btn" id="mServices"></button>
+    <button class="btn" id="mPartners"></button>
+    <button class="btn" id="mContacts"></button>
+    <div class="group" role="group" id="langGroup">
+      <span id="mLang"></span>
+      <button class="btn" data-lang="uk" lang="uk">UK</button>
+      <button class="btn" data-lang="en" lang="en">EN</button>
+      <button class="btn" data-lang="ru" lang="ru">RU</button>
+    </div>
+    <div class="group">
+      <span id="mMonitor"></span>
+      <button class="btn" id="monitorBtn"></button>
+    </div>
+    <button class="btn" id="mModes" aria-haspopup="dialog"></button>
+    <span class="clock" id="clock" aria-hidden="true"></span>
+  </nav>
+
+  <div class="work">
+    <main class="panels" id="panels">
+      <section class="panel active" id="leftPanel">
+        <div class="frame">
+          <span class="title">C:\ARTINTEL</span>
+          <div class="cols" aria-hidden="true"><span id="colName"></span><span id="colDesc"></span></div>
+          <ul class="list" id="list" role="listbox" tabindex="0" aria-labelledby="mServices"></ul>
+          <div class="mini" id="mini" aria-hidden="true"></div>
+        </div>
+      </section>
+      <section class="panel" id="rightPanel">
+        <div class="frame">
+          <span class="title" id="viewTitle"></span>
+          <article class="view" id="view" tabindex="0" aria-live="polite"></article>
+        </div>
+      </section>
+    </main>
+    <pre id="console" hidden></pre>
+  </div>
+
+  <form class="cmdline" id="cmdForm" autocomplete="off">
+    <label for="cmd" id="prompt">C:\ARTINTEL&gt;</label>
+    <input id="cmd" type="text" spellcheck="false" autocapitalize="off">
+  </form>
+
+  <div class="fkeys" id="fkeys"></div>
+</div>
+
+<dialog id="dlg">
+  <div class="box">
+    <div class="frame">
+      <span class="title" id="dlgTitle"></span>
+      <p id="dlgText"></p>
+      <p><span id="dlgLabel"></span>: <span class="mail">io@artintellico.com</span></p>
+      <div class="row">
+        <a href="mailto:io@artintellico.com" id="dlgWrite"></a>
+        <button type="button" id="dlgCopy"></button>
+        <button type="button" id="dlgCancel"></button>
+      </div>
+      <p class="note" id="dlgNote" role="status"></p>
+    </div>
+  </div>
+</dialog>
+
+<dialog id="modes" aria-labelledby="modesTitle">
+  <div class="box">
+    <div class="frame">
+      <span class="title" id="modesTitle"></span>
+      <p id="modesText"></p>
+      <ul class="modes" id="modesList"></ul>
+      <div class="row">
+        <button type="button" id="modesCancel"></button>
+      </div>
+    </div>
+  </div>
+</dialog>
