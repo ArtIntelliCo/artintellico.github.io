@@ -345,7 +345,6 @@
   /* Рядки агента. Він не вигадує фактів: ціни й терміни — лише після брифу */
   const AX = {
     uk: {
-      tagline: "агент сайту, демо",
       title: "ArtIntelliCo — агент сайту",
       invite: "Опишіть задачу своїми словами — я підберу напрями роботи й зберу бриф для команди.",
       demo: "Демо: агент працює у вашому браузері й відповідає лише тим, що є на сайті. Нічого не надсилається без вашої дії.",
@@ -396,7 +395,6 @@
       themeLight: "Світла тема", themeDark: "Темна тема"
     },
     en: {
-      tagline: "site agent, demo",
       title: "ArtIntelliCo — site agent",
       invite: "Describe your task in your own words — I'll match it to what the team does and put together a brief.",
       demo: "Demo: the agent runs in your browser and only uses what's on the site. Nothing is sent without your action.",
@@ -447,7 +445,6 @@
       themeLight: "Light theme", themeDark: "Dark theme"
     },
     ru: {
-      tagline: "агент сайта, демо",
       title: "ArtIntelliCo — агент сайта",
       invite: "Опишите задачу своими словами — я подберу направления работы и соберу бриф для команды.",
       demo: "Демо: агент работает в вашем браузере и отвечает только тем, что есть на сайте. Ничего не отправляется без вашего действия.",
@@ -929,7 +926,6 @@
     const x = a();
     document.documentElement.lang = lang;
     document.title = x.title;
-    $("tagline").textContent = x.tagline;
     $("chatTitle").textContent = x.title;
     $("q").placeholder = x.placeholder;
     $("qLabel").textContent = x.placeholder;
