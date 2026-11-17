@@ -86,6 +86,11 @@ a { color: inherit; }
   background: var(--paper);
   border: var(--px) solid var(--ink);
   box-shadow: calc(var(--px) * 2) calc(var(--px) * 2) 0 var(--ink);
+  /* вісім мов і всі версії сайту: довге меню прокручується, а не виходить за екран */
+  max-height: calc(100vh - var(--bar) - 8px);
+  max-height: calc(100dvh - var(--bar) - 8px);
+  overflow-y: auto;
+  scrollbar-width: thin;
 }
 .mitem { display: flex; gap: 8px; width: 100%; padding: 3px 20px 3px 8px; white-space: nowrap; }
 .mitem .chk { width: 12px; flex: none; }
@@ -115,6 +120,9 @@ a { color: inherit; }
   background: var(--paper);
   line-height: 1.15;
   overflow-wrap: anywhere;
+  /* довгі німецькі й португальські слова (Zwischenablage, Desenvolvimento) переносимо за складами */
+  -webkit-hyphens: auto;
+  hyphens: auto;
 }
 .icon.sel svg { filter: invert(1); }
 .icon.sel .lab { background: var(--ink); color: var(--paper); }
@@ -255,6 +263,9 @@ input[type="range"]::-moz-range-thumb { width: 12px; height: 16px; border-radius
   :root { --bar: 30px; }
   .menubar { padding: 0; overflow-x: auto; scrollbar-width: none; }
   .mtitle { padding: 0 8px; }
+  /* рядок меню прокручується вбік, тому список фіксований — інакше його обрізало б */
+  .mlist { position: fixed; top: var(--bar); max-width: 100vw; }
+  .mitem, .mhead { white-space: normal; }
   .icons { display: grid; grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)); align-content: start; gap: 16px 0; padding: 16px 8px; }
   .icons .icon { position: static; width: auto; }
   .win { position: fixed; inset: var(--bar) 0 0 0 !important; width: auto !important; height: auto !important; box-shadow: none; border-width: var(--px) 0 0; }

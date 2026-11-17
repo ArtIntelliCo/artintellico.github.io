@@ -1,5 +1,5 @@
 ---
-import { locales } from '../i18n';
+import { localeName, localeNative, locales } from '../i18n';
 import { variantIds, variantName, variantSlugs, variants, type VariantId } from '../variants';
 import { allSiteContent } from '../variants/content';
 
@@ -30,9 +30,12 @@ const aicVariants = variantIds.map((id) => ({
     aicSlugs: variantSlugs,
     aicVariants,
     aicContent: withContent ? allSiteContent() : null,
+    aicLangs: locales,
+    aicLangNames: localeNative,
+    aicLangCodes: localeName,
   }}
 >
-  const LANGS = ['uk', 'en', 'ru'];
+  const LANGS = aicLangs;
   const url = (id, lang) => (lang === 'uk' ? '/' : `/${lang}/`) + aicSlugs[id];
   const page = document.documentElement.lang;
   let saved = null;
@@ -42,8 +45,9 @@ const aicVariants = variantIds.map((id) => ({
     /* хранилище недоступно */
   }
   // Первый визит на адрес без префикса: в Украине остаётся украинская версия, в других странах —
-  // английская. Страну определяем по часовому поясу: хостинг статический, гео-IP на сервере нет.
-  // Роботов не перенаправляем, чтобы украинская версия оставалась в индексе.
+  // язык браузера, если сайт на нём есть, иначе английская. Страну определяем по часовому поясу:
+  // хостинг статический, гео-IP на сервере нет. Роботов не перенаправляем, чтобы украинская версия
+  // оставалась в индексе.
   if (page === 'uk' && !LANGS.includes(saved) && !/bot|crawl|spider|slurp|lighthouse/i.test(navigator.userAgent)) {
     const UA_ZONES = ['Europe/Kyiv', 'Europe/Kiev', 'Europe/Uzhgorod', 'Europe/Zaporozhye', 'Europe/Simferopol'];
     let zone = '';
@@ -53,10 +57,14 @@ const aicVariants = variantIds.map((id) => ({
       /* старый браузер без Intl */
     }
     if (zone && !UA_ZONES.includes(zone)) {
-      location.replace(url(aicId, 'en') + location.search + location.hash);
+      const wanted = (navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || ''])
+        .map((tag) => String(tag).toLowerCase().split('-')[0])
+        .find((code) => LANGS.includes(code));
+      const lang = wanted || 'en';
+      if (lang !== 'uk') location.replace(url(aicId, lang) + location.search + location.hash);
     }
   }
-  // /ru/… и /en/… задают язык явно; адреса без префикса помнят последний выбор.
+  // /ru/, /en/, /de/… задают язык явно; адреса без префикса помнят последний выбор.
   if (page !== 'uk' || !LANGS.includes(saved)) {
     try {
       localStorage.setItem('aic-lang', page);
@@ -65,7 +73,16 @@ const aicVariants = variantIds.map((id) => ({
     }
   }
   // Письма с сайта: к теме добавляем версию сайта в скобках, чтобы было видно, откуда пришла заявка.
-  const MAIL_SUBJECT = { uk: 'Запит із сайту ArtIntelliCo', ru: 'Запрос с сайта ArtIntelliCo', en: 'Enquiry from the ArtIntelliCo website' };
+  const MAIL_SUBJECT = {
+    uk: 'Запит із сайту ArtIntelliCo',
+    ru: 'Запрос с сайта ArtIntelliCo',
+    en: 'Enquiry from the ArtIntelliCo website',
+    de: 'Anfrage über die ArtIntelliCo-Website',
+    fr: 'Demande depuis le site ArtIntelliCo',
+    es: 'Consulta desde la web de ArtIntelliCo',
+    pt: 'Pedido a partir do site da ArtIntelliCo',
+    it: 'Richiesta dal sito di ArtIntelliCo',
+  };
   const mailto = (href) => {
     if (typeof href !== 'string' || !/^mailto:/i.test(href)) return href;
     const lang = LANGS.includes(document.documentElement.lang) ? document.documentElement.lang : 'uk';
@@ -89,5 +106,17 @@ const aicVariants = variantIds.map((id) => ({
   );
 
   // logo — логотип компании для графических вариантов (лежит в public/).
-  window.AIC = { id: aicId, langs: LANGS, url, variants: aicVariants, content: aicContent, logo: '/logo.svg', mailto };
+  // langs — коды языков в порядке переключателя; langNames — название языка на нём самом
+  // («Deutsch»), langCodes — короткая подпись для кнопок («DE»).
+  window.AIC = {
+    id: aicId,
+    langs: LANGS,
+    langNames: aicLangNames,
+    langCodes: aicLangCodes,
+    url,
+    variants: aicVariants,
+    content: aicContent,
+    logo: '/logo.svg',
+    mailto,
+  };
 </script>

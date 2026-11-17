@@ -88,6 +88,146 @@
       updated: "Последнее обновление:",
       bestViewed: "Лучше всего смотреть в Netscape Navigator 4.0 при 800×600",
       locale: "ru-RU"
+    },
+    de: {
+      welcome: "Willkommen auf unserer Homepage!",
+      langLabel: "Sprache:",
+      nav: { about: "Über uns", services: "Leistungen", partners: "Partner", contacts: "Kontakt", guestbook: "Gästebuch", webring: "Webring" },
+      counter: "Sie sind Besucher Nr.",
+      construction: "Diese Seite ist im Aufbau! Schauen Sie öfter vorbei – wir ergänzen ständig etwas Neues.",
+      cols: ["Nr.", "Leistung", "Was wir tun"],
+      svc: { more: "Hier klicken für mehr Infos!", details: "Alle Leistungen im Detail", incl: "Leistungsumfang:", get: "Was Sie bekommen:", back: "<<< Zurück zur Tabelle" },
+      emailMe: "Schreiben Sie uns!",
+      gb: {
+        title: "Tragen Sie sich in unser Gästebuch ein!",
+        name: "Ihr Name:",
+        email: "E-Mail:",
+        homepage: "Homepage:",
+        found: "Wie haben Sie uns gefunden?",
+        foundOpts: ["Yahoo!", "AltaVista", "Webring", "Tipp von einem Freund"],
+        comment: "Kommentar:",
+        submit: "Eintragen!",
+        reset: "Löschen",
+        subject: "Gästebucheintrag",
+        note: "Ihr E-Mail-Programm wird geöffnet. Ohne Sie wird nichts verschickt."
+      },
+      ring: { title: "ArtIntelliCo Retro Webring", prev: "<< Zurück", random: "Zufall", next: "Weiter >>", here: "SIE SIND HIER" },
+      top: "Nach oben",
+      updated: "Letzte Aktualisierung:",
+      bestViewed: "Optimiert für Netscape Navigator 4.0 bei 800×600",
+      locale: "de-DE"
+    },
+    fr: {
+      welcome: "Bienvenue sur notre page d'accueil !",
+      langLabel: "Langue :",
+      nav: { about: "Qui sommes-nous", services: "Services", partners: "Partenaires", contacts: "Contact", guestbook: "Livre d'or", webring: "Webring" },
+      counter: "Vous êtes le visiteur n°",
+      construction: "Site en construction ! Revenez souvent : nous ajoutons des nouveautés en permanence.",
+      cols: ["N°", "Service", "Ce que nous faisons"],
+      svc: { more: "Cliquez ici pour en savoir plus !", details: "Tout sur chaque service", incl: "Ce qui est inclus :", get: "Ce que vous obtenez :", back: "<<< Retour au tableau" },
+      emailMe: "Écrivez-nous !",
+      gb: {
+        title: "Signez notre livre d'or !",
+        name: "Votre nom :",
+        email: "E-mail :",
+        homepage: "Page perso :",
+        found: "Comment nous avez-vous trouvés ?",
+        foundOpts: ["Yahoo!", "AltaVista", "Webring", "Un ami m'en a parlé"],
+        comment: "Commentaire :",
+        submit: "Signer !",
+        reset: "Effacer",
+        subject: "Message pour le livre d'or",
+        note: "Votre logiciel de messagerie va s'ouvrir. Rien n'est envoyé sans vous."
+      },
+      ring: { title: "ArtIntelliCo Retro Webring", prev: "<< Précédent", random: "Au hasard", next: "Suivant >>", here: "VOUS ÊTES ICI" },
+      top: "Haut de page",
+      updated: "Dernière mise à jour :",
+      bestViewed: "Site optimisé pour Netscape Navigator 4.0 en 800×600",
+      locale: "fr-FR"
+    },
+    es: {
+      welcome: "¡Bienvenido a nuestra página web!",
+      langLabel: "Idioma:",
+      nav: { about: "Quiénes somos", services: "Servicios", partners: "Socios", contacts: "Contacto", guestbook: "Libro de visitas", webring: "Webring" },
+      counter: "Usted es el visitante n.º",
+      construction: "¡Página en construcción! Vuelva a menudo: siempre estamos añadiendo cosas nuevas.",
+      cols: ["N.º", "Servicio", "Qué hacemos"],
+      svc: { more: "¡Haga clic aquí para saber más!", details: "Todo sobre cada servicio", incl: "Qué incluye:", get: "Qué obtiene usted:", back: "<<< Volver a la tabla" },
+      emailMe: "¡Escríbanos!",
+      gb: {
+        title: "¡Firme nuestro libro de visitas!",
+        name: "Su nombre:",
+        email: "Correo electrónico:",
+        homepage: "Página personal:",
+        found: "¿Cómo nos encontró?",
+        foundOpts: ["Yahoo!", "AltaVista", "Webring", "Me lo dijo un amigo"],
+        comment: "Comentarios:",
+        submit: "¡Firmar!",
+        reset: "Borrar",
+        subject: "Firma en el libro de visitas",
+        note: "Se abrirá su programa de correo. No se envía nada sin usted."
+      },
+      ring: { title: "ArtIntelliCo Retro Webring", prev: "<< Anterior", random: "Al azar", next: "Siguiente >>", here: "USTED ESTÁ AQUÍ" },
+      top: "Arriba",
+      updated: "Última actualización:",
+      bestViewed: "Esta página se ve mejor con Netscape Navigator 4.0 a 800×600",
+      locale: "es-ES"
+    },
+    pt: {
+      welcome: "Bem-vindo à nossa página na Internet!",
+      langLabel: "Idioma:",
+      nav: { about: "Quem somos", services: "Serviços", partners: "Parceiros", contacts: "Contactos", guestbook: "Livro de visitas", webring: "Webring" },
+      counter: "É o visitante n.º",
+      construction: "Página em construção! Volte muitas vezes — estamos sempre a acrescentar novidades.",
+      cols: ["N.º", "Serviço", "O que fazemos"],
+      svc: { more: "Clique aqui para saber mais!", details: "Cada serviço em pormenor", incl: "O que inclui:", get: "O que recebe:", back: "<<< Voltar à tabela" },
+      emailMe: "Escreva-nos!",
+      gb: {
+        title: "Assine o nosso livro de visitas!",
+        name: "O seu nome:",
+        email: "E-mail:",
+        homepage: "Página pessoal:",
+        found: "Como nos encontrou?",
+        foundOpts: ["Yahoo!", "AltaVista", "Webring", "Foi um amigo que me disse"],
+        comment: "Comentário:",
+        submit: "Assinar!",
+        reset: "Limpar",
+        subject: "Mensagem no livro de visitas",
+        note: "Vai abrir-se o seu programa de correio. Nada é enviado sem si."
+      },
+      ring: { title: "ArtIntelliCo Retro Webring", prev: "<< Anterior", random: "Aleatório", next: "Seguinte >>", here: "ESTÁ AQUI" },
+      top: "Voltar ao topo",
+      updated: "Última atualização:",
+      bestViewed: "Melhor visualizado com Netscape Navigator 4.0 a 800×600",
+      locale: "pt-PT"
+    },
+    it: {
+      welcome: "Benvenuti nella nostra homepage!",
+      langLabel: "Lingua:",
+      nav: { about: "Chi siamo", services: "Servizi", partners: "Partner", contacts: "Contatti", guestbook: "Libro degli ospiti", webring: "Webring" },
+      counter: "Lei è il visitatore n°",
+      construction: "Sito in costruzione! Torni a trovarci spesso: aggiungiamo novità di continuo.",
+      cols: ["N°", "Servizio", "Cosa facciamo"],
+      svc: { more: "Clicchi qui per saperne di più!", details: "Tutti i dettagli su ogni servizio", incl: "Cosa comprende:", get: "Cosa ottiene:", back: "<<< Torna alla tabella" },
+      emailMe: "Ci scriva!",
+      gb: {
+        title: "Firmi il nostro libro degli ospiti!",
+        name: "Il Suo nome:",
+        email: "E-mail:",
+        homepage: "Homepage:",
+        found: "Come ci ha trovati?",
+        foundOpts: ["Yahoo!", "AltaVista", "Webring", "Me l'ha detto un amico"],
+        comment: "Commento:",
+        submit: "Firma!",
+        reset: "Cancella",
+        subject: "Messaggio nel libro degli ospiti",
+        note: "Si aprirà il Suo programma di posta. Nulla viene inviato senza di Lei."
+      },
+      ring: { title: "ArtIntelliCo Retro Webring", prev: "<< Precedente", random: "A caso", next: "Successivo >>", here: "LEI È QUI" },
+      top: "Torna su",
+      updated: "Ultimo aggiornamento:",
+      bestViewed: "Visualizzazione ottimale con Netscape Navigator 4.0 a 800×600",
+      locale: "it-IT"
     }
   };
 
@@ -288,10 +428,337 @@
           g: "a system that works, and a team that knows how it's put together."
         }
       }
+    },
+    de: {
+      lead: "Hier finden Sie alles, was wir für Sie tun können. Wir sind auf keine Programmiersprache und keine Plattform festgelegt: Erst verstehen wir Ihre Aufgabe, dann wählen wir die Werkzeuge. Und wenn ein fertiger Dienst im Abo besser zu Ihnen passt, sagen wir Ihnen das ganz offen. Ohne Tricks!",
+      items: {
+        concept: {
+          s: "Wir helfen Ihnen herauszufinden, was Ihr künftiges System wirklich leisten muss – bevor auch nur eine Zeile Code geschrieben wird.",
+          b: "Der teuerste Fehler passiert gleich am Anfang: Das System wird für eine Aufgabe gebaut, die nie jemand richtig formuliert hat. Deshalb sprechen wir zuerst mit den Leuten, die damit arbeiten werden (Buchhaltung, Lager, Vertrieb), und nicht nur mit der Geschäftsführung. Und ja, manchmal raten wir danach, gar nichts zu entwickeln, sondern ein fertiges Produkt einzurichten. Das sagen wir ganz ohne Scheu!",
+          l: ["Gespräche mit Ihren Mitarbeitern und ein Blick darauf, wie heute alles läuft", "Geschäftsanforderungen und Szenarien: wer was wann im System tut", "ein ehrlicher Vergleich: Standardprodukt oder Individualentwicklung", "ein Pflichtenheft mit Zeit- und Budgetschätzung für jede Phase"],
+          g: "ein Dokument, nach dem jedes Team (unseres oder ein anderes!) den Aufwand schätzen und loslegen kann."
+        },
+        saas: {
+          s: "Wir entwickeln SaaS-Dienste: von der ersten Version für Pilotkunden bis zur Plattform, auf der jeder Kunde seinen eigenen Arbeitsbereich, seinen Tarif und sein Dashboard hat.",
+          b: "Bei SaaS verdient nicht der Code das Geld, sondern die Frage, wie leicht sich ein neuer Kunde registriert, bezahlt und loslegt, ohne je beim Support anzurufen. Darum bauen wir Mandantenfähigkeit, Abrechnung und Zugriffsrechte vom ersten Tag an ein: Sie nachträglich umzubauen, wenn die Kunden schon drin sind, kostet ein Vielfaches. Und die erste Version bringen wir so früh wie möglich heraus, denn echte Nutzer zeigen sehr schnell, welche Funktionen überflüssig waren.",
+          l: ["eine Architektur, in der die Daten jedes Kunden von allen anderen getrennt sind", "Registrierung, Tarife, Abonnements und Online-Zahlung", "Kundenbereiche, Rollen und Zugriffsrechte", "Integrationen und eine offene API für Ihre Kunden", "Skalierung, wenn die Last wächst"],
+          g: "ein Produkt, das Sie im Abo verkaufen können, statt eines Projekts, das jedes Mal von Hand eingeführt werden muss."
+        },
+        web: {
+          s: "Firmenwebsites, Marktplätze, Online-Shops, Buchungssysteme und interne Webanwendungen. Passend zu Ihrer Aufgabe, nicht in eine Vorlage gepresst!",
+          b: "Wir wissen: Ein Unternehmen misst seine Website an Anfragen und Bestellungen, nicht daran, wie hübsch sie in irgendeinem Portfolio aussieht. Deshalb legen wir zuerst gemeinsam fest, was als Erfolg zählt, und richten die Webanalyse schon vor dem Start ein (und nicht erst ein halbes Jahr später, wie es oft passiert). Die Technik richtet sich nach der Aufgabe: Eine Landingpage braucht keine schwere Plattform, und ein Marktplatz passt in keinen Homepage-Baukasten.",
+          l: ["Prototyp und Design für jede Seite", "Frontend, Backend und Admin-Bereich", "Anbindung von Zahlung, Versand, CRM und Buchhaltungssystemen", "SEO-Grundlagen, schnelle Ladezeiten und Webanalyse", "Start und Betreuung danach"],
+          g: "eine Webanwendung, bei der Sie sehen, wie viele Anfragen und wie viel Umsatz sie bringt."
+        },
+        mobile: {
+          s: "Apps für iOS und Android, samt Serverseite und Admin-Bereich dahinter.",
+          b: "Sagen wir es gleich vorweg: Nicht jeder braucht eine App. Sie lohnt sich, wenn Kunden regelmäßig wiederkommen, um erneut zu bestellen, eine Lieferung zu verfolgen oder Bonuspunkte zu sammeln. Wer nur einmal im Jahr vorbeischaut, ist mit einer guten mobilen Website günstiger bedient, und das sagen wir Ihnen, bevor die Arbeit beginnt. Nativ oder plattformübergreifend? Das entscheiden wir gemeinsam, mit Blick auf das Budget und darauf, wie sehr die App Kamera, Standort und Offline-Betrieb braucht.",
+          l: ["Apps für iOS und Android", "Serverseite und API", "ein Admin-Bereich für Inhalte, Bestellungen und Nutzer", "Push-Benachrichtigungen und Statistik", "Veröffentlichung im App Store und bei Google Play"],
+          g: "eine App, die die Prüfung der Stores besteht und die Ihr eigenes Team ohne Entwickler betreiben kann."
+        },
+        ai: {
+          s: "Wir automatisieren Ihre Geschäftsprozesse mit KI-Agenten: Künstliche Intelligenz und maschinelles Lernen übernehmen die Routine, die heute Ihre Leute erledigen.",
+          b: "Stellen Sie sich vor: Eine Anfrage kommt herein, der Agent sortiert sie, trägt sie ins CRM ein und entwirft eine Antwort an den Kunden; ein Mensch muss sie nur noch prüfen. Zugegeben, wir sehen KI skeptischer als viele andere. Die Hälfte der Ideen à la „Bauen wir doch ein neuronales Netz ein!“ lässt sich mit ganz normaler Automatisierung lösen. Aber wo Mitarbeiter stundenlang E-Mails, Dokumente und Anfragen sortieren, nimmt KI ihnen die Routine wirklich ab. Wir beginnen mit einem Pilotprojekt auf Ihren eigenen Daten, damit Sie die Trefferquote vor der eigentlichen Entwicklung sehen, nicht danach.",
+          l: ["KI-Agenten, die selbstständig Anfragen sortieren, das CRM pflegen und Antworten an Kunden entwerfen", "Chatbots und Assistenten für Kunden und Mitarbeiter", "Dokumente erkennen und Daten daraus auslesen", "Anfragen sortieren und in Ihrer Wissensdatenbank suchen", "Bedarfsprognosen und Datenanalyse", "ein Pilotprojekt, in dem die Qualität an Ihren Daten gemessen wird"],
+          g: "eine konkrete Arbeit, die früher Menschen von Hand gemacht haben, erledigt jetzt das System, und ein Mensch behält die Kontrolle."
+        },
+        crm: {
+          s: "CRM- und ERP-Systeme, die sich nach Ihrem Geschäft richten, nicht umgekehrt.",
+          b: "Ein CRM von der Stange ist in Ordnung, solange Ihr Ablauf aussieht wie bei allen anderen. Aber wenn Ihre Vertriebler die Hälfte ihrer Arbeit in Tabellen erledigen, weil das System „das nicht kann“, wird eine eigene Lösung günstiger. Die Daten aus alten Systemen und Tabellen übernehmen wir selbst, und eingeführt wird Abteilung für Abteilung, damit die Arbeit keinen einzigen Tag stillsteht.",
+          l: ["Module für Vertrieb, Lager, Produktion und Finanzen, je nach Bedarf", "Rollen, Zugriffsrechte und ein Änderungsprotokoll", "Berichte und Dashboards für die Geschäftsleitung", "Datenübernahme aus Tabellen und Altsystemen", "Anbindung an Buchhaltung, Telefonanlage und E-Mail"],
+          g: "ein System statt eines Zoos aus Tabellen. Die Geschäftsleitung sieht, wie es läuft, ohne jede Woche Berichte aus allen Abteilungen einzusammeln."
+        },
+        cloud: {
+          s: "Wir bringen Ihre Infrastruktur zu Amazon Web Services, komplett oder Stück für Stück, und sorgen dafür, dass sie läuft und nicht grundlos teurer wird.",
+          b: "Was viele nicht erwarten: Die Cloud ist nicht immer billiger als der eigene Server. Sie lohnt sich, wenn die Last stark schwankt, wenn Ausfallsicherheit gefragt ist oder wenn eine neue Umgebung in Minuten statt in einer Woche stehen muss. Deshalb beginnt ein Umzug mit einem Audit und einer Kostenschätzung, und er erfolgt in Etappen, mit einem Plan zum Zurückrollen bei jedem Schritt.",
+          l: ["ein Audit des Ist-Zustands und eine Kostenschätzung", "AWS-Architektur und Migrationsplan", "Umzug von Servern, Datenbanken und Dateien", "Backups und Überwachung", "Kostenoptimierung nach dem Umzug"],
+          g: "eine Infrastruktur, die den Ausfall eines Servers übersteht, und eine Cloud-Rechnung, die Sie wirklich verstehen."
+        },
+        redhat: {
+          s: "Wir bauen Unternehmensinfrastruktur auf Red Hat: Server mit Red Hat Enterprise Linux, Container auf OpenShift und eine mit Ansible automatisierte Einrichtung.",
+          b: "Red Hat ist für alle, die ihre Infrastruktur auf lange Sicht brauchen: jahrelang im Betrieb, prüfungssicher und nicht nur im Kopf eines einzigen Administrators. Das Abonnement macht sich durch den Herstellersupport und den langen Lebenszyklus bezahlt (Red Hat Enterprise Linux wird zehn Jahre lang unterstützt!). Wir planen alles für Ihre Lasten und halten die Serverkonfiguration in Ansible fest, sodass jeder Server nach einem Playbook neu aufgebaut werden kann statt aus dem Gedächtnis von irgendwem. Und noch etwas: Red Hat ist unser Partner, wir helfen also auch bei Abonnements und Herstellersupport.",
+          l: ["ein Audit Ihrer Server und ein Migrationsplan", "Einführung von Red Hat Enterprise Linux mit zentralen Updates über Red Hat Satellite", "OpenShift, eine Container-Plattform für Ihre Anwendungen", "automatisierte Einrichtung und Bereitstellung mit Ansible", "zentrale Verwaltung von Benutzerkonten und Zugriffen (Identity Management)", "Überwachung, Backups und Dokumentation für Ihr Team"],
+          g: "eine Infrastruktur, die Sie prüfen, reproduzieren und an ein anderes Team übergeben können, ohne dass Wissen verloren geht."
+        },
+        api: {
+          s: "Wir schreiben APIs für Ihre Systeme und verbinden sie mit den Diensten, die Sie bereits nutzen.",
+          b: "Das Problem, das uns am häufigsten begegnet: Daten werden doppelt eingetippt. Bestellungen von der Website werden ins Buchhaltungssystem abgetippt, Zahlungen in einer Tabelle abgehakt. Eine Integration nimmt Ihnen diese Arbeit ab, samt den Fehlern, die dabei entstehen. Überwachung bauen wir immer mit ein: Integrationen gehen leise kaputt, wenn ein Partner seine API ändert, und davon erfährt man besser vom System als vom Kunden.",
+          l: ["API-Entwurf und Dokumentation", "Anbindung von Zahlungsanbietern, Versanddiensten, CRM und Buchhaltung", "Datenaustausch zwischen Ihren internen Systemen", "Warteschlangen und Wiederholungen, falls etwas ausfällt", "Überwachung und Alarme"],
+          g: "Daten werden einmal erfasst und finden von selbst ihren Weg dorthin, wo sie gebraucht werden."
+        },
+        support: {
+          s: "Wir betreuen Ihre IT-Systeme und entwickeln sie weiter. Auch die, die wir nicht gebaut haben!",
+          b: "Support heißt für uns nicht nur „reparieren, wenn es kaputtgeht“. Dazu gehören Updates, die Sicherheitslücken schließen, eine Überwachung, die ein Problem vor Ihren Nutzern bemerkt, und kleine Verbesserungen nebenbei. Haben Sie das System von einem anderen Dienstleister geerbt, beginnen wir mit einem Audit und einer Dokumentation, denn ohne sie ist jede Änderung ein Glücksspiel.",
+          l: ["Verfügbarkeit und Fehler im Blick behalten", "Bugs beheben und Sicherheitsupdates einspielen", "Backups anlegen und prüfen, ob sie sich wirklich zurückspielen lassen", "geplante Verbesserungen und neue Funktionen", "Audits und Dokumentation für Systeme anderer Dienstleister"],
+          g: "ein System, das läuft, und ein Team, das weiß, wie es aufgebaut ist."
+        }
+      }
+    },
+    fr: {
+      lead: "Voici tout ce que nous savons faire pour vous. Nous ne sommes liés à aucun langage de programmation ni à aucune plateforme : d'abord nous comprenons votre problème, ensuite nous choisissons les outils. Et si un service en abonnement tout prêt vous convient mieux, nous vous le dirons tout simplement. Sans entourloupe !",
+      items: {
+        concept: {
+          s: "Nous vous aidons à définir ce que votre futur système doit vraiment faire, avant que quiconque n'écrive la moindre ligne de code.",
+          b: "L'erreur la plus coûteuse se produit dès le départ : on construit le système pour un problème que personne n'a jamais vraiment formulé. Alors nous commençons par parler avec ceux qui l'utiliseront (la comptabilité, l'entrepôt, les commerciaux), et pas seulement avec la direction. Et oui, il arrive qu'après tout cela nous vous conseillions de ne rien développer et de paramétrer un produit existant. Nous n'avons aucune gêne à le dire !",
+          l: ["des entretiens avec vos équipes et un état des lieux de l'existant", "les besoins métier et les scénarios : qui fait quoi, et quand", "une comparaison honnête entre progiciel du marché et développement sur mesure", "un cahier des charges avec estimation des délais et du budget pour chaque phase"],
+          g: "un document à partir duquel n'importe quelle équipe (la nôtre ou une autre !) peut chiffrer le travail et démarrer."
+        },
+        saas: {
+          s: "Nous développons des services SaaS, de la première version pour des clients pilotes jusqu'à la plateforme où chaque client dispose de son espace, de son forfait et de son tableau de bord.",
+          b: "En SaaS, ce n'est pas le code qui rapporte de l'argent. C'est la facilité avec laquelle un nouveau client s'inscrit, paie et se lance sans jamais appeler le support. C'est pourquoi nous intégrons le multi-locataire, la facturation et les droits d'accès dès le premier jour : les refaire quand les clients sont déjà là coûte plusieurs fois plus cher. Et nous sortons la première version le plus tôt possible, car de vrais utilisateurs montrent très vite quelles fonctions ne servaient à rien.",
+          l: ["une architecture où les données de chaque client sont isolées de celles des autres", "inscription, forfaits, abonnements et paiement en ligne", "espaces clients, rôles et droits d'accès", "intégrations et API publique pour vos clients", "montée en charge quand l'activité grandit"],
+          g: "un produit que vous pouvez vendre par abonnement, au lieu d'un projet à déployer à la main à chaque fois."
+        },
+        web: {
+          s: "Sites d'entreprise, places de marché, boutiques en ligne, systèmes de réservation et outils web internes. Faits pour votre besoin, pas tassés dans un modèle !",
+          b: "Nous le savons : une entreprise juge son site à ses demandes de contact et à ses commandes, pas à sa beauté dans le portfolio de quelqu'un. Alors nous convenons d'abord avec vous de ce qui compte comme résultat, et nous installons les statistiques avant le lancement (et non six mois plus tard, comme c'est souvent le cas). La technique s'adapte au besoin : une page d'atterrissage n'a pas besoin d'une plateforme lourde, et une place de marché ne tiendra pas dans un outil de création de sites.",
+          l: ["une maquette et un design pour chaque écran", "frontend, backend et interface d'administration", "branchement du paiement, de la livraison, du CRM et de la comptabilité", "bases du référencement, chargement rapide et statistiques", "mise en ligne, puis suivi"],
+          g: "un service web qui vous montre combien de demandes et combien d'argent il rapporte."
+        },
+        mobile: {
+          s: "Applications iOS et Android, avec la partie serveur et l'interface d'administration qui vont derrière.",
+          b: "Disons-le d'emblée : tout le monde n'a pas besoin d'une application. Elle a du sens quand les clients reviennent régulièrement pour commander à nouveau, suivre une livraison ou cumuler des points de fidélité. Si quelqu'un vient vous voir une fois par an, un bon site mobile coûte moins cher, et nous vous le dirons avant que le travail ne commence. Natif ou multiplateforme ? Nous en décidons ensemble, en regardant le budget et à quel point l'application a besoin de l'appareil photo, de la géolocalisation et du mode hors ligne.",
+          l: ["applications pour iOS et Android", "partie serveur et API", "une interface d'administration pour le contenu, les commandes et les utilisateurs", "notifications push et statistiques", "publication sur l'App Store et Google Play"],
+          g: "une application qui passe la validation des stores et que votre équipe gère elle-même, sans appeler un développeur."
+        },
+        ai: {
+          s: "Nous automatisons vos processus métier avec des agents d'IA : l'intelligence artificielle et l'apprentissage automatique prennent en charge la routine que vos équipes font aujourd'hui.",
+          b: "Imaginez : une demande arrive, l'agent la trie, la saisit dans le CRM et prépare une réponse au client ; il ne reste plus qu'à vérifier. Cela dit, nous l'avouons, nous sommes plus sceptiques que beaucoup sur l'IA. La moitié des idées du genre « ajoutons un réseau de neurones ! » se règlent avec une automatisation toute simple. Mais là où l'on passe des heures à trier e-mails, documents et demandes, l'IA supprime vraiment la routine. Nous commençons par un pilote sur vos propres données, pour que vous voyiez les chiffres de précision avant le développement principal, pas après.",
+          l: ["des agents d'IA qui trient les demandes, remplissent le CRM et préparent seuls les réponses aux clients", "chatbots et assistants pour vos clients et vos équipes", "lecture de documents et extraction de leurs données", "tri des demandes et recherche dans votre base de connaissances", "prévisions de la demande et analyse de données", "un pilote où la qualité se mesure sur vos données"],
+          g: "une tâche précise que des personnes faisaient à la main est désormais réalisée par le système, sous contrôle humain."
+        },
+        crm: {
+          s: "Des CRM et ERP construits autour de la façon dont travaille votre entreprise, et non l'inverse.",
+          b: "Un CRM du commerce convient tant que votre fonctionnement ressemble à celui de tout le monde. Mais quand vos commerciaux font la moitié de leur travail dans des tableurs parce que le système « ne sait pas faire ça », une solution sur mesure revient moins cher. Nous reprenons nous-mêmes les données des anciens systèmes et des tableurs, et nous déployons service par service pour que le travail ne s'arrête pas un seul jour.",
+          l: ["modules ventes, stock, production et finances, selon vos besoins", "rôles, droits d'accès et journal des actions", "rapports et tableaux de bord pour la direction", "reprise des données depuis les tableurs et les anciens systèmes", "liaison avec la comptabilité, la téléphonie et la messagerie"],
+          g: "un seul système au lieu d'un zoo de tableurs. La direction voit où en sont les choses sans réclamer chaque semaine des rapports à chaque service."
+        },
+        cloud: {
+          s: "Nous migrons votre infrastructure vers Amazon Web Services, en totalité ou par étapes, et veillons à ce qu'elle tourne sans devenir plus chère sans raison.",
+          b: "Une chose qu'on n'attend pas toujours : le cloud n'est pas forcément moins cher que votre propre serveur. Il est rentable quand la charge varie fortement, quand il faut de la tolérance aux pannes, ou quand un nouvel environnement doit être prêt en quelques minutes plutôt qu'en une semaine. Une migration commence donc par un audit et une estimation des coûts, puis se fait par étapes, avec un plan de retour arrière à chaque pas.",
+          l: ["un audit de l'existant et une estimation des coûts", "architecture AWS et plan de migration", "migration des serveurs, des bases de données et des fichiers", "sauvegardes et supervision", "réduction des coûts une fois la migration terminée"],
+          g: "une infrastructure qui survit à la panne d'un serveur, et une facture cloud que vous comprenez vraiment."
+        },
+        redhat: {
+          s: "Nous bâtissons l'infrastructure de votre entreprise sous Red Hat : serveurs sous Red Hat Enterprise Linux, conteneurs sur OpenShift, configuration automatisée avec Ansible.",
+          b: "Red Hat s'adresse à ceux qui veulent une infrastructure pour longtemps : qui tourne des années, passe les audits et ne repose pas sur la mémoire d'un seul administrateur. L'abonnement se rentabilise par le support de l'éditeur et un long cycle de vie (Red Hat Enterprise Linux est maintenu dix ans !). Nous concevons tout en fonction de vos charges et consignons la configuration des serveurs dans Ansible : n'importe quel serveur peut être reconstruit à partir d'un playbook plutôt que de souvenirs. Autre chose : Red Hat est notre partenaire, nous pouvons donc aussi vous aider pour les abonnements et le support de l'éditeur.",
+          l: ["un audit de vos serveurs et un plan de migration", "déploiement de Red Hat Enterprise Linux avec mises à jour centralisées via Red Hat Satellite", "OpenShift, une plateforme de conteneurs pour vos applications", "configuration et déploiement automatisés avec Ansible", "gestion centralisée des comptes et des accès (Identity Management)", "supervision, sauvegardes et documentation pour votre équipe"],
+          g: "une infrastructure que vous pouvez auditer, reproduire et confier à une autre équipe sans rien perdre de ce qu'elle sait."
+        },
+        api: {
+          s: "Nous écrivons des API pour vos systèmes et les relions aux services que vous utilisez déjà.",
+          b: "Le problème que nous rencontrons le plus souvent : les données saisies deux fois. Les commandes du site sont retapées dans la comptabilité, les paiements pointés dans un tableur. Une intégration supprime ce travail, et les erreurs qui vont avec. Nous ajoutons toujours une supervision : une intégration casse sans bruit quand un partenaire modifie son API, et mieux vaut l'apprendre par le système que par un client.",
+          l: ["conception et documentation d'API", "branchement des prestataires de paiement, des transporteurs, du CRM et de la comptabilité", "échange de données entre vos systèmes internes", "files d'attente et nouvelles tentatives en cas d'échec", "supervision et alertes"],
+          g: "les données sont saisies une seule fois et arrivent toutes seules là où on en a besoin."
+        },
+        support: {
+          s: "Nous maintenons vos systèmes informatiques et continuons à les faire évoluer. Même ceux que nous n'avons pas développés !",
+          b: "Pour nous, le support, ce n'est pas seulement « réparer quand ça casse ». Ce sont des mises à jour qui comblent les failles de sécurité, une supervision qui repère un problème avant vos utilisateurs, et de petites améliorations au fil de l'eau. Si vous avez hérité du système d'un autre prestataire, nous commençons par un audit et une documentation, car sans eux chaque modification est un pari.",
+          l: ["surveillance de la disponibilité et des erreurs", "correction des bugs et installation des mises à jour de sécurité", "sauvegardes, et vérification qu'on peut vraiment les restaurer", "améliorations planifiées et nouvelles fonctions", "audits et documentation des systèmes d'autres prestataires"],
+          g: "un système qui fonctionne, et une équipe qui sait comment il est construit."
+        }
+      }
+    },
+    es: {
+      lead: "Aquí tiene todo lo que podemos hacer por usted. No estamos casados con ningún lenguaje de programación ni con ninguna plataforma: primero entendemos su problema y después elegimos las herramientas. Y si un servicio por suscripción ya hecho le conviene más, se lo diremos sin rodeos. ¡Sin trucos!",
+      items: {
+        concept: {
+          s: "Le ayudamos a definir qué tiene que hacer de verdad su futuro sistema, antes de que nadie escriba una sola línea de código.",
+          b: "El error más caro se comete justo al principio: el sistema se construye para un problema que nadie llegó a formular bien. Por eso primero hablamos con quienes lo van a usar (contabilidad, el almacén, los comerciales), y no solo con la dirección. Y sí, a veces, después de todo eso, le recomendamos no desarrollar nada y configurar un producto que ya existe. ¡No nos da ninguna vergüenza decirlo!",
+          l: ["entrevistas con su personal y un análisis de cómo funciona todo ahora", "requisitos de negocio y escenarios: quién hace qué y cuándo", "una comparación honesta entre producto estándar y desarrollo a medida", "una especificación con estimación de plazos y presupuesto por fases"],
+          g: "un documento con el que cualquier equipo (¡el nuestro u otro!) puede presupuestar el trabajo y empezar."
+        },
+        saas: {
+          s: "Desarrollamos servicios SaaS, desde una primera versión para clientes piloto hasta una plataforma donde cada cliente tiene su propio espacio, plan y panel.",
+          b: "En SaaS el dinero no lo genera el código, sino lo fácil que le resulta a un cliente nuevo registrarse, pagar y empezar sin llamar nunca a soporte. Por eso incorporamos multiinquilino, facturación y permisos desde el primer día: rehacerlos cuando los clientes ya están dentro cuesta varias veces más. Y lanzamos la primera versión lo antes posible, porque los usuarios reales enseñan muy rápido qué funciones sobraban.",
+          l: ["una arquitectura en la que los datos de cada cliente están aislados de los demás", "registro, planes, suscripciones y pago en línea", "áreas de cliente, roles y permisos", "integraciones y una API pública para sus clientes", "escalado a medida que crece la carga"],
+          g: "un producto que puede vender por suscripción, en lugar de un proyecto que hay que implantar a mano cada vez."
+        },
+        web: {
+          s: "Webs corporativas, marketplaces, tiendas en línea, sistemas de reservas y herramientas web internas. ¡Hechos para su caso, no metidos a presión en una plantilla!",
+          b: "Lo sabemos: una empresa valora su web por los contactos y los pedidos, no por lo bonita que queda en el portfolio de alguien. Así que primero acordamos con usted qué cuenta como resultado, y configuramos la analítica antes del lanzamiento (no seis meses después, como pasa a menudo). La tecnología se adapta al trabajo: una landing page no necesita una plataforma pesada, y un marketplace no cabe en un creador de webs.",
+          l: ["un prototipo y el diseño de cada pantalla", "frontend, backend y panel de administración", "conexión de pagos, envíos, CRM y sistemas contables", "bases de SEO, carga rápida y analítica", "lanzamiento y soporte posterior"],
+          g: "un servicio web que le muestra cuántos contactos y cuánto dinero le aporta."
+        },
+        mobile: {
+          s: "Aplicaciones para iOS y Android, con la parte de servidor y el panel de administración que hay detrás.",
+          b: "Digámoslo de entrada: no todo el mundo necesita una aplicación. Tiene sentido cuando los clientes vuelven con regularidad para pedir otra vez, seguir un envío o acumular puntos. Si alguien le visita una vez al año, una buena web móvil sale más barata, y se lo diremos antes de empezar. ¿Nativa o multiplataforma? Lo decidimos juntos, mirando el presupuesto y cuánto necesita la aplicación la cámara, la ubicación y funcionar sin conexión.",
+          l: ["aplicaciones para iOS y Android", "parte de servidor y API", "un panel de administración para contenidos, pedidos y usuarios", "notificaciones push y analítica", "publicación en App Store y Google Play"],
+          g: "una aplicación que supera la revisión de las tiendas y que su propio equipo puede gestionar sin llamar a un desarrollador."
+        },
+        ai: {
+          s: "Automatizamos sus procesos de negocio con agentes de IA: la inteligencia artificial y el aprendizaje automático se encargan de la rutina que hoy hace su gente.",
+          b: "Imagine: llega una solicitud y el agente la clasifica, la registra en el CRM y prepara una respuesta al cliente; a una persona solo le queda revisarla. Eso sí, reconocemos que somos más escépticos con la IA que la mayoría. La mitad de las ideas del tipo «¡añadamos una red neuronal!» se resuelven con automatización de toda la vida. Pero donde la gente pasa horas clasificando correos, documentos y solicitudes, la IA quita la rutina de verdad. Empezamos con un piloto sobre sus propios datos, para que vea las cifras de precisión antes del desarrollo principal, no después.",
+          l: ["agentes de IA que clasifican solicitudes, rellenan el CRM y preparan por sí solos respuestas a los clientes", "chatbots y asistentes para clientes y empleados", "lectura de documentos y extracción de sus datos", "clasificación de solicitudes y búsqueda en su base de conocimiento", "previsión de la demanda y análisis de datos", "un piloto en el que la calidad se mide con sus datos"],
+          g: "un trabajo concreto que antes hacían personas a mano ahora lo hace el sistema, y una persona mantiene el control."
+        },
+        crm: {
+          s: "Sistemas CRM y ERP construidos en torno a cómo trabaja su empresa, y no al revés.",
+          b: "Un CRM estándar está bien mientras su proceso se parezca al de todo el mundo. Pero cuando sus comerciales llevan la mitad de su trabajo en hojas de cálculo porque el sistema «no sabe hacer eso», una solución propia sale más barata. Migramos nosotros mismos los datos de los sistemas antiguos y de las hojas de cálculo, y lo ponemos en marcha departamento a departamento para que el trabajo no se pare ni un día.",
+          l: ["módulos de ventas, almacén, producción y finanzas, los que necesite", "roles, permisos y registro de actividad", "informes y cuadros de mando para la dirección", "migración de datos desde hojas de cálculo y sistemas antiguos", "conexión con contabilidad, telefonía y correo"],
+          g: "un solo sistema en lugar de un zoo de hojas de cálculo. La dirección ve cómo van las cosas sin recopilar cada semana informes de cada departamento."
+        },
+        cloud: {
+          s: "Llevamos su infraestructura a Amazon Web Services, entera o por partes, y nos aseguramos de que siga funcionando y no se encarezca sin motivo.",
+          b: "Algo que no todo el mundo espera: la nube no siempre es más barata que su propio servidor. Compensa cuando la carga sube y baja mucho, cuando necesita tolerancia a fallos o cuando un entorno nuevo tiene que estar listo en minutos y no en una semana. Por eso una migración empieza con una auditoría y una estimación de costes, y se hace por etapas, con un plan de vuelta atrás en cada paso.",
+          l: ["una auditoría de lo que tiene ahora y una estimación de costes", "arquitectura en AWS y plan de migración", "migración de servidores, bases de datos y archivos", "copias de seguridad y monitorización", "reducción de costes una vez terminada la migración"],
+          g: "una infraestructura que sobrevive a la caída de un servidor y una factura de la nube que de verdad entiende."
+        },
+        redhat: {
+          s: "Construimos la infraestructura de su empresa con Red Hat: servidores con Red Hat Enterprise Linux, contenedores en OpenShift y configuración automatizada con Ansible.",
+          b: "Red Hat es para quien necesita su infraestructura a largo plazo: que funcione durante años, supere auditorías y no dependa de la memoria de un solo administrador. La suscripción se amortiza con el soporte del fabricante y un ciclo de vida largo (¡Red Hat Enterprise Linux tiene soporte durante diez años!). Diseñamos todo según sus cargas de trabajo y dejamos la configuración de los servidores escrita en Ansible, de modo que cualquier servidor se puede reconstruir a partir de un playbook y no de la memoria de alguien. Una cosa más: Red Hat es nuestro socio, así que también le ayudamos con las suscripciones y el soporte del fabricante.",
+          l: ["una auditoría de sus servidores y un plan de migración", "implantación de Red Hat Enterprise Linux con actualizaciones centralizadas mediante Red Hat Satellite", "OpenShift, una plataforma de contenedores para sus aplicaciones", "configuración y despliegue automatizados con Ansible", "gestión centralizada de cuentas de usuario y accesos (Identity Management)", "monitorización, copias de seguridad y documentación para su equipo"],
+          g: "una infraestructura que puede auditar, reproducir y entregar a otro equipo sin perder nada de lo que sabe."
+        },
+        api: {
+          s: "Escribimos API para sus sistemas y los conectamos con los servicios que ya utiliza.",
+          b: "El problema que más nos encontramos son los datos tecleados dos veces. Los pedidos de la web se vuelven a escribir en el sistema contable, los pagos se marcan en una hoja de cálculo. Una integración elimina ese trabajo, junto con los errores que provoca. Además, siempre añadimos monitorización: las integraciones se rompen en silencio cuando un socio cambia su API, y es mejor enterarse por el sistema que por un cliente.",
+          l: ["diseño y documentación de API", "conexión con pasarelas de pago, empresas de mensajería, CRM y contabilidad", "intercambio de datos entre sus sistemas internos", "colas y reintentos para cuando algo falla", "monitorización y alertas"],
+          g: "los datos se introducen una sola vez y llegan solos allí donde hacen falta."
+        },
+        support: {
+          s: "Mantenemos sus sistemas informáticos y seguimos mejorándolos. ¡Incluso los que no hicimos nosotros!",
+          b: "Para nosotros el soporte no es solo «arreglarlo cuando se rompe». Son actualizaciones que cierran agujeros de seguridad, una monitorización que detecta un problema antes que sus usuarios y pequeñas mejoras sobre la marcha. Si heredó el sistema de otro proveedor, empezamos con una auditoría y documentación, porque sin ellas cada cambio es una lotería.",
+          l: ["vigilancia de la disponibilidad y los errores", "corrección de errores e instalación de actualizaciones de seguridad", "copias de seguridad y comprobación de que de verdad se pueden restaurar", "mejoras planificadas y nuevas funciones", "auditorías y documentación de sistemas hechos por otros proveedores"],
+          g: "un sistema que funciona y un equipo que sabe cómo está hecho."
+        }
+      }
+    },
+    pt: {
+      lead: "Aqui está tudo o que sabemos fazer por si. Não estamos presos a nenhuma linguagem de programação nem a nenhuma plataforma: primeiro percebemos o seu problema, depois escolhemos as ferramentas. E se um serviço por subscrição já pronto lhe servir melhor, dizemos-lho sem rodeios. Sem truques!",
+      items: {
+        concept: {
+          s: "Ajudamos a definir o que o seu futuro sistema tem realmente de fazer, antes de alguém escrever uma única linha de código.",
+          b: "O erro mais caro acontece logo no início: o sistema é construído para um problema que ninguém chegou a formular bem. Por isso, primeiro vamos falar com quem o vai usar (a contabilidade, o armazém, os comerciais) e não apenas com a administração. E sim, por vezes, depois de tudo isso, aconselhamos a não desenvolver nada e a configurar um produto que já existe. Não temos vergonha nenhuma de o dizer!",
+          l: ["conversas com os seus colaboradores e uma análise de como tudo funciona hoje", "requisitos de negócio e cenários: quem faz o quê, e quando", "uma comparação honesta entre produto de mercado e desenvolvimento à medida", "um caderno de encargos com estimativa de prazos e orçamento por fase"],
+          g: "um documento a partir do qual qualquer equipa (a nossa ou outra!) pode orçamentar o trabalho e começar."
+        },
+        saas: {
+          s: "Desenvolvemos serviços SaaS, desde uma primeira versão para clientes-piloto até uma plataforma onde cada cliente tem o seu espaço, plano e painel.",
+          b: "Em SaaS, o dinheiro não é feito pelo código. É feito pela facilidade com que um cliente novo se regista, paga e começa a trabalhar sem nunca telefonar para o suporte. Por isso incluímos multi-inquilino, faturação e permissões desde o primeiro dia: refazê-los quando os clientes já lá estão dentro custa várias vezes mais. E lançamos a primeira versão o mais cedo possível, porque os utilizadores reais mostram muito depressa que funcionalidades estavam a mais.",
+          l: ["uma arquitetura em que os dados de cada cliente ficam isolados dos restantes", "registo, planos, subscrições e pagamento online", "áreas de cliente, perfis e permissões de acesso", "integrações e uma API pública para os seus clientes", "escalabilidade à medida que a carga cresce"],
+          g: "um produto que pode vender por subscrição, em vez de um projeto que tem de ser implementado à mão de cada vez."
+        },
+        web: {
+          s: "Sites empresariais, marketplaces, lojas online, sistemas de reservas e ferramentas web internas. Feitos para o seu caso, não enfiados num modelo!",
+          b: "Sabemos que uma empresa avalia o site pelos contactos e pelas encomendas, não pelo bonito que fica no portfólio de alguém. Por isso, primeiro combinamos consigo o que conta como resultado e configuramos a análise de tráfego antes do lançamento (e não seis meses depois, como tantas vezes acontece). A tecnologia adapta-se ao trabalho: uma landing page não precisa de uma plataforma pesada, e um marketplace não cabe num construtor de sites.",
+          l: ["um protótipo e o design de cada ecrã", "frontend, backend e painel de administração", "ligação a pagamentos, entregas, CRM e sistemas de contabilidade", "bases de SEO, carregamento rápido e análise de tráfego", "lançamento e acompanhamento posterior"],
+          g: "um serviço web que lhe mostra quantos contactos e quanto dinheiro traz."
+        },
+        mobile: {
+          s: "Aplicações para iOS e Android, com a parte de servidor e o painel de administração por trás.",
+          b: "Digamo-lo desde já: nem toda a gente precisa de uma aplicação. Faz sentido quando os clientes voltam com regularidade para encomendar outra vez, seguir uma entrega ou juntar pontos. Se alguém o visita uma vez por ano, um bom site para telemóvel sai mais barato, e dizemos-lho antes de começar o trabalho. Nativa ou multiplataforma? Decidimos em conjunto, olhando para o orçamento e para o quanto a aplicação precisa da câmara, da localização e de funcionar sem rede.",
+          l: ["aplicações para iOS e Android", "parte de servidor e API", "um painel de administração para conteúdos, encomendas e utilizadores", "notificações push e análise de utilização", "publicação na App Store e no Google Play"],
+          g: "uma aplicação que passa a revisão das lojas e que a sua própria equipa gere sem chamar um programador."
+        },
+        ai: {
+          s: "Automatizamos os seus processos de negócio com agentes de IA: a inteligência artificial e a aprendizagem automática ficam com a rotina que hoje cabe às suas pessoas.",
+          b: "Imagine: chega um pedido e o agente classifica-o, regista-o no CRM e prepara uma resposta ao cliente; a uma pessoa só resta verificar. Dito isto, confessamos que somos mais céticos em relação à IA do que muitos. Metade das ideias do género «vamos pôr uma rede neuronal!» resolve-se com automação comum. Mas onde as pessoas passam horas a triar e-mails, documentos e pedidos, a IA tira mesmo a rotina de cima. Começamos com um piloto sobre os seus próprios dados, para que veja os números de precisão antes do desenvolvimento principal, e não depois.",
+          l: ["agentes de IA que triam pedidos, preenchem o CRM e preparam sozinhos respostas aos clientes", "chatbots e assistentes para clientes e colaboradores", "leitura de documentos e extração dos seus dados", "triagem de pedidos e pesquisa na sua base de conhecimento", "previsão da procura e análise de dados", "um piloto em que a qualidade é medida nos seus dados"],
+          g: "um trabalho concreto que antes era feito à mão por pessoas passa a ser feito pelo sistema, e uma pessoa mantém o controlo."
+        },
+        crm: {
+          s: "Sistemas CRM e ERP construídos à volta da forma como o seu negócio trabalha, e não o contrário.",
+          b: "Um CRM de prateleira serve enquanto o seu processo for igual ao de toda a gente. Mas quando os seus comerciais fazem metade do trabalho em folhas de cálculo porque o sistema «não faz isso», uma solução própria fica mais barata. Somos nós que migramos os dados dos sistemas antigos e das folhas de cálculo, e implementamos departamento a departamento para que o trabalho não pare um único dia.",
+          l: ["módulos de vendas, armazém, produção e finanças, os que precisar", "perfis, permissões de acesso e registo de atividade", "relatórios e painéis para a administração", "migração de dados de folhas de cálculo e sistemas antigos", "ligação à contabilidade, à telefonia e ao e-mail"],
+          g: "um só sistema em vez de um jardim zoológico de folhas de cálculo. A administração vê como correm as coisas sem recolher todas as semanas relatórios de cada departamento."
+        },
+        cloud: {
+          s: "Levamos a sua infraestrutura para a Amazon Web Services, toda ou por partes, e garantimos que continua a funcionar e não fica mais cara sem razão.",
+          b: "Uma coisa que nem todos esperam: a cloud nem sempre é mais barata do que o seu próprio servidor. Compensa quando a carga oscila muito, quando precisa de tolerância a falhas ou quando um novo ambiente tem de estar pronto em minutos e não numa semana. Por isso, uma migração começa com uma auditoria e uma estimativa de custos, e faz-se por etapas, com um plano para voltar atrás em cada passo.",
+          l: ["uma auditoria ao que tem hoje e uma estimativa de custos", "arquitetura na AWS e plano de migração", "migração de servidores, bases de dados e ficheiros", "cópias de segurança e monitorização", "redução de custos depois de concluída a migração"],
+          g: "uma infraestrutura que sobrevive à falha de um servidor e uma fatura da cloud que percebe mesmo."
+        },
+        redhat: {
+          s: "Construímos a infraestrutura da sua empresa em Red Hat: servidores com Red Hat Enterprise Linux, contentores no OpenShift e configuração automatizada com Ansible.",
+          b: "O Red Hat é para quem precisa da infraestrutura a longo prazo: a funcionar durante anos, a passar auditorias e sem depender da memória de um único administrador. A subscrição paga-se com o suporte do fabricante e um ciclo de vida longo (o Red Hat Enterprise Linux tem suporte durante dez anos!). Desenhamos tudo à medida das suas cargas e deixamos a configuração dos servidores escrita em Ansible, de modo que qualquer servidor pode ser reconstruído a partir de um playbook e não da memória de alguém. Mais uma coisa: a Red Hat é nossa parceira, por isso também ajudamos com as subscrições e o suporte do fabricante.",
+          l: ["uma auditoria aos seus servidores e um plano de migração", "implementação do Red Hat Enterprise Linux com atualizações centralizadas através do Red Hat Satellite", "OpenShift, uma plataforma de contentores para as suas aplicações", "configuração e implementação automatizadas com Ansible", "gestão centralizada de contas de utilizador e acessos (Identity Management)", "monitorização, cópias de segurança e documentação para a sua equipa"],
+          g: "uma infraestrutura que pode auditar, reproduzir e entregar a outra equipa sem perder nada do que ela sabe."
+        },
+        api: {
+          s: "Escrevemos APIs para os seus sistemas e ligamo-los aos serviços que já utiliza.",
+          b: "O problema que mais encontramos são dados introduzidos duas vezes. As encomendas do site são reescritas no sistema de contabilidade, os pagamentos são conferidos numa folha de cálculo. Uma integração acaba com esse trabalho e com os erros que ele provoca. Também acrescentamos sempre monitorização: as integrações avariam em silêncio quando um parceiro muda a sua API, e mais vale sabê-lo pelo sistema do que por um cliente.",
+          l: ["desenho e documentação de APIs", "ligação a prestadores de pagamento, transportadoras, CRM e contabilidade", "troca de dados entre os seus sistemas internos", "filas e novas tentativas para quando algo falha", "monitorização e alertas"],
+          g: "os dados são introduzidos uma vez e chegam sozinhos onde são precisos."
+        },
+        support: {
+          s: "Mantemos os seus sistemas informáticos e continuamos a melhorá-los. Mesmo os que não fomos nós a fazer!",
+          b: "Para nós, suporte não é só «arranjar quando avaria». São atualizações que fecham falhas de segurança, monitorização que deteta um problema antes dos seus utilizadores, e pequenas melhorias pelo caminho. Se herdou o sistema de outro fornecedor, começamos com uma auditoria e documentação, porque sem elas qualquer alteração é uma lotaria.",
+          l: ["vigilância da disponibilidade e dos erros", "correção de bugs e instalação de atualizações de segurança", "cópias de segurança e verificação de que se conseguem mesmo restaurar", "melhorias planeadas e novas funcionalidades", "auditorias e documentação de sistemas feitos por outros fornecedores"],
+          g: "um sistema que funciona e uma equipa que sabe como ele está feito."
+        }
+      }
+    },
+    it: {
+      lead: "Qui trova tutto quello che sappiamo fare per Lei. Non siamo legati a un solo linguaggio di programmazione o a una sola piattaforma: prima capiamo il Suo problema, poi scegliamo gli strumenti. E se un servizio in abbonamento già pronto fa più al caso Suo, glielo diciamo e basta. Niente trucchi!",
+      items: {
+        concept: {
+          s: "La aiutiamo a capire che cosa deve fare davvero il Suo futuro sistema, prima che qualcuno scriva anche una sola riga di codice.",
+          b: "L'errore più costoso si fa proprio all'inizio: il sistema viene costruito per un problema che nessuno ha mai formulato come si deve. Per questo per prima cosa parliamo con chi lo userà (l'amministrazione, il magazzino, i commerciali) e non solo con la direzione. E sì, a volte dopo tutto questo Le consigliamo di non sviluppare niente e di configurare un prodotto esistente. Non ci vergogniamo affatto a dirlo!",
+          l: ["colloqui con il personale e un'analisi di come funziona tutto oggi", "requisiti di business e scenari: chi fa cosa, e quando", "un confronto onesto tra prodotto standard e sviluppo su misura", "un capitolato con stima di tempi e budget per ogni fase"],
+          g: "un documento su cui qualsiasi team (il nostro o un altro!) può stimare il lavoro e partire."
+        },
+        saas: {
+          s: "Sviluppiamo servizi SaaS, dalla prima versione per i clienti pilota fino alla piattaforma in cui ogni cliente ha il proprio spazio, piano e pannello.",
+          b: "Nel SaaS i soldi non li fa il codice. Li fa la facilità con cui un nuovo cliente si registra, paga e inizia a lavorare senza mai telefonare all'assistenza. Ecco perché multi-tenancy, fatturazione e permessi li prevediamo dal primo giorno: rifarli quando i clienti sono già dentro costa molte volte di più. E la prima versione la rilasciamo il prima possibile, perché gli utenti veri mostrano molto in fretta quali funzioni erano superflue.",
+          l: ["un'architettura in cui i dati di ogni cliente sono separati da quelli degli altri", "registrazione, piani, abbonamenti e pagamento online", "aree clienti, ruoli e permessi", "integrazioni e un'API pubblica per i Suoi clienti", "scalabilità man mano che il carico cresce"],
+          g: "un prodotto da vendere in abbonamento, invece di un progetto da installare a mano ogni volta."
+        },
+        web: {
+          s: "Siti aziendali, marketplace, negozi online, sistemi di prenotazione e strumenti web interni. Fatti per il Suo caso, non infilati in un modello!",
+          b: "Lo sappiamo: un'azienda giudica il proprio sito dalle richieste e dagli ordini, non da quanto è carino nel portfolio di qualcuno. Per questo prima concordiamo con Lei che cosa conta come risultato, e impostiamo le statistiche prima del lancio (non sei mesi dopo, come capita spesso). La tecnologia si adatta al lavoro: una landing page non ha bisogno di una piattaforma pesante, e un marketplace non entra in un generatore di siti.",
+          l: ["un prototipo e il design di ogni schermata", "frontend, backend e pannello di amministrazione", "collegamento a pagamenti, spedizioni, CRM e gestionali contabili", "basi per la SEO, caricamento veloce e statistiche", "messa online e assistenza successiva"],
+          g: "un servizio web che Le mostra quante richieste e quanto denaro porta."
+        },
+        mobile: {
+          s: "App per iOS e Android, con la parte server e il pannello di amministrazione che stanno dietro.",
+          b: "Diciamolo subito: non a tutti serve un'app. Ha senso quando i clienti tornano regolarmente per ordinare di nuovo, seguire una consegna o raccogliere punti fedeltà. Se qualcuno passa da Lei una volta l'anno, un buon sito mobile costa meno, e glielo diremo prima di iniziare. Nativa o multipiattaforma? Lo decidiamo insieme, guardando il budget e quanto all'app servono fotocamera, posizione e funzionamento offline.",
+          l: ["app per iOS e Android", "parte server e API", "un pannello di amministrazione per contenuti, ordini e utenti", "notifiche push e statistiche", "pubblicazione su App Store e Google Play"],
+          g: "un'app che supera la revisione degli store e che il Suo team gestisce da solo, senza chiamare uno sviluppatore."
+        },
+        ai: {
+          s: "Automatizziamo i Suoi processi aziendali con agenti di IA: intelligenza artificiale e apprendimento automatico si fanno carico della routine che oggi svolgono le persone.",
+          b: "Immagini: arriva una richiesta, e l'agente la smista, la inserisce nel CRM e prepara una risposta al cliente; a una persona resta solo da controllare. Detto questo, ammettiamo di essere più scettici di molti sull'IA. Metà delle idee del tipo «aggiungiamo una rete neurale!» si risolvono con una normale automazione. Ma dove le persone passano ore a smistare e-mail, documenti e richieste, l'IA toglie davvero la routine. Partiamo da un progetto pilota sui Suoi dati, così vede i numeri sulla precisione prima dello sviluppo vero e proprio, non dopo.",
+          l: ["agenti di IA che smistano le richieste, compilano il CRM e preparano da soli le risposte ai clienti", "chatbot e assistenti per clienti e dipendenti", "lettura dei documenti ed estrazione dei dati", "smistamento delle richieste e ricerca nella Sua base di conoscenza", "previsioni della domanda e analisi dei dati", "un progetto pilota in cui la qualità si misura sui Suoi dati"],
+          g: "un lavoro preciso che prima le persone facevano a mano ora lo svolge il sistema, e una persona mantiene il controllo."
+        },
+        crm: {
+          s: "Sistemi CRM ed ERP costruiti attorno al modo in cui lavora la Sua azienda, e non il contrario.",
+          b: "Un CRM pronto all'uso va bene finché il Suo processo somiglia a quello di tutti gli altri. Ma quando i commerciali fanno metà del lavoro su fogli di calcolo perché il sistema «non lo sa fare», una soluzione propria costa meno. I dati dei vecchi sistemi e dei fogli di calcolo li trasferiamo noi, e partiamo un reparto alla volta, così il lavoro non si ferma nemmeno un giorno.",
+          l: ["moduli vendite, magazzino, produzione e finanza, quelli che servono", "ruoli, permessi e registro delle attività", "report e dashboard per la direzione", "trasferimento dei dati da fogli di calcolo e vecchi sistemi", "collegamento con contabilità, centralino ed e-mail"],
+          g: "un solo sistema al posto di uno zoo di fogli di calcolo. La direzione vede come vanno le cose senza raccogliere ogni settimana i report di ogni reparto."
+        },
+        cloud: {
+          s: "Portiamo la Sua infrastruttura su Amazon Web Services, tutta o un pezzo alla volta, e facciamo in modo che continui a funzionare e non diventi più cara senza motivo.",
+          b: "Una cosa che non tutti si aspettano: il cloud non sempre costa meno di un server proprio. Conviene quando il carico va su e giù, quando serve tolleranza ai guasti o quando un nuovo ambiente deve essere pronto in pochi minuti anziché in una settimana. Per questo un trasferimento parte da un audit e da una stima dei costi, e avviene per fasi, con un piano per tornare indietro a ogni passo.",
+          l: ["un audit di ciò che c'è oggi e una stima dei costi", "architettura su AWS e piano di migrazione", "trasferimento di server, database e file", "backup e monitoraggio", "riduzione dei costi a migrazione conclusa"],
+          g: "un'infrastruttura che sopravvive al guasto di un server, e una bolletta del cloud che capisce davvero."
+        },
+        redhat: {
+          s: "Costruiamo l'infrastruttura aziendale su Red Hat: server con Red Hat Enterprise Linux, container su OpenShift e configurazione automatizzata con Ansible.",
+          b: "Red Hat è per chi ha bisogno di un'infrastruttura a lungo termine: che funzioni per anni, superi gli audit e non viva solo nella testa di un amministratore. L'abbonamento si ripaga con il supporto del produttore e un ciclo di vita lungo (Red Hat Enterprise Linux è supportato per dieci anni!). Progettiamo tutto in base ai Suoi carichi di lavoro e scriviamo la configurazione dei server in Ansible, così qualsiasi server si può ricostruire da un playbook invece che dalla memoria di qualcuno. Ancora una cosa: Red Hat è nostro partner, quindi possiamo aiutarLa anche con abbonamenti e supporto del produttore.",
+          l: ["un audit dei Suoi server e un piano di migrazione", "introduzione di Red Hat Enterprise Linux con aggiornamenti centralizzati tramite Red Hat Satellite", "OpenShift, una piattaforma a container per le Sue applicazioni", "configurazione e deployment automatizzati con Ansible", "gestione centralizzata di account utente e accessi (Identity Management)", "monitoraggio, backup e documentazione per il Suo team"],
+          g: "un'infrastruttura che può verificare, riprodurre e passare a un altro team senza perdere nulla di ciò che sa."
+        },
+        api: {
+          s: "Scriviamo API per i Suoi sistemi e li colleghiamo ai servizi che usa già.",
+          b: "Il problema che incontriamo più spesso sono i dati digitati due volte. Gli ordini del sito vengono ribattuti nel gestionale, i pagamenti spuntati su un foglio di calcolo. Un'integrazione elimina questo lavoro, insieme agli errori che produce. E aggiungiamo sempre il monitoraggio: le integrazioni si rompono in silenzio quando un partner cambia la propria API, ed è meglio saperlo dal sistema che da un cliente.",
+          l: ["progettazione e documentazione di API", "collegamento a circuiti di pagamento, corrieri, CRM e contabilità", "scambio di dati tra i Suoi sistemi interni", "code e nuovi tentativi per quando qualcosa va storto", "monitoraggio e avvisi"],
+          g: "i dati si inseriscono una volta sola e arrivano da soli dove servono."
+        },
+        support: {
+          s: "Ci occupiamo dei Suoi sistemi informatici e continuiamo a migliorarli. Anche di quelli che non abbiamo realizzato noi!",
+          b: "Per noi assistenza non significa solo «aggiustare quando si rompe». Significa aggiornamenti che chiudono le falle di sicurezza, un monitoraggio che si accorge di un problema prima dei Suoi utenti, e piccoli miglioramenti strada facendo. Se ha ereditato il sistema da un altro fornitore, partiamo da un audit e dalla documentazione, perché senza di essi ogni modifica è una lotteria.",
+          l: ["controllo di disponibilità ed errori", "correzione dei bug e installazione degli aggiornamenti di sicurezza", "backup, e verifica che si possano davvero ripristinare", "miglioramenti pianificati e nuove funzioni", "audit e documentazione di sistemi realizzati da altri fornitori"],
+          g: "un sistema che funziona, e un team che sa come è fatto."
+        }
+      }
     }
   };
 
   const LANGS = AIC.langs;
+  const langName = (l) => (AIC.langNames && AIC.langNames[l]) || l;
+  const langCode = (l) => (AIC.langCodes && AIC.langCodes[l]) || l.toUpperCase();
   const NEW_KEYS = new Set(["saas", "ai", "redhat"]);
 
   /* Послуги для поточної мови: наші тексти, а за їх відсутності — словник сайту */
@@ -364,8 +831,8 @@
       `<img class="w90-logoimg" src="${esc(AIC.logo)}" alt="" width="62" height="75">` +
       `<p class="w90-logo">ArtIntelliCo</p>` +
       `<p class="w90-welcome">${esc(u.welcome)}</p>` +
-      `<div class="w90-langs" role="group" aria-label="${esc(u.langLabel)}">${esc(u.langLabel)} ` +
-      LANGS.map((l) => `<button type="button" class="w90-bvl" data-lang="${l}" lang="${l}" aria-pressed="${l === lang}">${l.toUpperCase()}</button>`).join("") +
+      `<div class="w90-langs" role="group" aria-label="${esc(u.langLabel)}"><span class="lbl">${esc(u.langLabel)}</span>` +
+      LANGS.map((l) => `<button type="button" class="w90-bvl" data-lang="${l}" lang="${l}" title="${esc(langName(l))}" aria-label="${esc(langName(l))}" aria-pressed="${l === lang}">${esc(langCode(l))}</button>`).join("") +
       `</div></td></tr>` +
       // Бігучий рядок
       `<tr><td colspan="2" class="w90-marq"><div class="w90-marquee"><span>${esc(marquee)}</span></div></td></tr>` +

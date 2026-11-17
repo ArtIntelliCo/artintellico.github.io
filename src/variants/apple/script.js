@@ -2,145 +2,119 @@
   const EMAIL = "io@artintellico.com";
   const PARTNERS = ["Red Hat", "Microsoft", "Amazon Web Services", "Veeam", "VMware", "Dell", "UNIO24"];
 
-  /* Тексти взяті з artintellico.com — ті самі, що в index.html */
+  /* Тексти взяті з artintellico.com — ті самі, що в index.html. Французькі «:» «?» — з нерозривним пробілом */
   const I18N = {
     uk: {
       title: "ArtIntelliCo — розробка та підтримка ІТ рішень для бізнесу",
-      menu: ["Послуги", "Партнери", "Контакти", "Мова:", "Монітор:"],
-      monitors: { ega: "EGA", green: "Зелений", amber: "Бурштин" },
-      cols: ["Ім'я", "Опис"],
-      fkeys: ["Довідка", "Мова", "Перегляд", "Лист", "", "", "", "", "Монітор", "Вихід"],
-      skip: "Натисніть будь-яку клавішу, щоб пропустити",
       heroTitle: "Ми створюємо ІТ рішення, що працюють на ваш бізнес",
       heroText: "Команда ArtIntelliCo допомагає цифровізувати та автоматизувати ваші бізнес-процеси шляхом розробки та впровадження сучасних ІТ рішень.",
       heroLead: "Для вашого бізнесу ми",
       phrases: ["розробляємо SaaS-платформи", "будуємо CRM та ERP системи", "впроваджуємо штучний інтелект", "переносимо інфраструктуру в хмару"],
-      readmeDesc: "Про компанію",
-      hint: "↑↓ вибрати файл   Enter відкрити   F1 довідка",
-      discuss: "Обговорити задачу",
       partnersTitle: "Наші партнери",
       contactTitle: "Розкажіть про вашу задачу",
       contactText: "Якщо у вас є пропозиція щодо співпраці або ви хочете дізнатися більше про наші рішення та досвід — напишіть нам на пошту.",
       emailLabel: "Пошта",
-      write: "Написати листа",
-      copy: "Копіювати адресу",
-      copied: "Адресу скопійовано",
-      copyFailed: "Не вдалося скопіювати. Адреса: " + EMAIL,
-      cancel: "Скасувати",
       copyright: "© 2026 ArtIntelliCo. Усі права захищено.",
       legal: "ТОВ «АртІнтелліко»",
-      slogan: "Ми бачили, як зароджувалося IT. Знаємо, як воно працює сьогодні — і розуміємо, куди рухається завтра.",
-      source: "Класична версія сайту",
-      bad: "Невірна команда або ім'я файлу. Введіть HELP.",
-      back: "Введіть NC або натисніть Esc, щоб повернутися до панелей.",
-      help: [
-        "Команди:",
-        "  DIR             список файлів",
-        "  TYPE <файл>     відкрити файл (можна просто ім'я)",
-        "  MAIL            написати нам",
-        "  LANG UK|EN|RU   змінити мову",
-        "  COLOR           змінити монітор",
-        "  CLS             очистити екран",
-        "  VER             версія",
-        "  BOOT            перезавантажити",
-        "  NC              повернутися до панелей",
-        "  COMMAND         консольний режим",
-        "  UNIX            термінал UNIX",
-        "",
-        "Клавіші: ↑↓ Home End Enter F1–F10 Esc Ctrl+O"
-      ]
+      slogan: "Ми бачили, як зароджувалося IT. Знаємо, як воно працює сьогодні — і розуміємо, куди рухається завтра."
     },
     en: {
       title: "ArtIntelliCo — software development and IT support for business",
-      menu: ["Services", "Partners", "Contacts", "Lang:", "Monitor:"],
-      monitors: { ega: "EGA", green: "Green", amber: "Amber" },
-      cols: ["Name", "Description"],
-      fkeys: ["Help", "Lang", "View", "Mail", "", "", "", "", "Monitor", "Quit"],
-      skip: "Press any key to skip",
       heroTitle: "We build IT solutions that work for your business",
       heroText: "The ArtIntelliCo team helps you digitalise and automate business processes by designing and delivering modern IT solutions.",
       heroLead: "For your business we",
       phrases: ["build SaaS platforms", "ship CRM and ERP systems", "put AI to work", "move infrastructure to the cloud"],
-      readmeDesc: "About the company",
-      hint: "↑↓ select file   Enter open   F1 help",
-      discuss: "Discuss your project",
       partnersTitle: "Our partners",
       contactTitle: "Tell us about your project",
       contactText: "If you have a partnership proposal or want to know more about our solutions and experience — drop us an email.",
       emailLabel: "Email",
-      write: "Write an email",
-      copy: "Copy address",
-      copied: "Address copied",
-      copyFailed: "Couldn't copy. The address is " + EMAIL,
-      cancel: "Cancel",
       copyright: "© 2026 ArtIntelliCo. All rights reserved.",
       legal: "ArtIntelliCo LLC",
-      slogan: "We saw IT being born. We know how it works today — and we understand where it is heading tomorrow.",
-      source: "Classic version of the site",
-      bad: "Bad command or file name. Type HELP.",
-      back: "Type NC or press Esc to return to the panels.",
-      help: [
-        "Commands:",
-        "  DIR             list files",
-        "  TYPE <file>     open a file (or just type its name)",
-        "  MAIL            write to us",
-        "  LANG UK|EN|RU   switch language",
-        "  COLOR           switch monitor",
-        "  CLS             clear screen",
-        "  VER             version",
-        "  BOOT            reboot",
-        "  NC              back to the panels",
-        "  COMMAND         console mode",
-        "  UNIX            UNIX terminal",
-        "",
-        "Keys: ↑↓ Home End Enter F1–F10 Esc Ctrl+O"
-      ]
+      slogan: "We saw IT being born. We know how it works today — and we understand where it is heading tomorrow."
     },
     ru: {
       title: "ArtIntelliCo — разработка и поддержка ИТ решений для бизнеса",
-      menu: ["Услуги", "Партнёры", "Контакты", "Язык:", "Монитор:"],
-      monitors: { ega: "EGA", green: "Зелёный", amber: "Янтарь" },
-      cols: ["Имя", "Описание"],
-      fkeys: ["Помощь", "Язык", "Просмотр", "Письмо", "", "", "", "", "Монитор", "Выход"],
-      skip: "Нажмите любую клавишу, чтобы пропустить",
       heroTitle: "Мы создаём работающие ИТ решения для вашего бизнеса",
       heroText: "Команда ArtIntelliCo помогает цифровизировать и автоматизировать ваши бизнес-процессы путём разработки и внедрения современных ИТ решений.",
       heroLead: "Для вашего бизнеса мы",
       phrases: ["разрабатываем SaaS-платформы", "строим CRM и ERP системы", "внедряем искусственный интеллект", "переносим инфраструктуру в облако"],
-      readmeDesc: "О компании",
-      hint: "↑↓ выбрать файл   Enter открыть   F1 помощь",
-      discuss: "Обсудить задачу",
       partnersTitle: "Наши партнёры",
       contactTitle: "Расскажите о вашей задаче",
       contactText: "Если у вас есть предложение о сотрудничестве или вы хотите узнать больше о наших решениях и опыте — напишите нам на почту.",
       emailLabel: "Почта",
-      write: "Написать письмо",
-      copy: "Копировать адрес",
-      copied: "Адрес скопирован",
-      copyFailed: "Не удалось скопировать. Адрес: " + EMAIL,
-      cancel: "Отмена",
       copyright: "© 2026 ArtIntelliCo. Все права защищены.",
       legal: "ООО «АртИнтеллико»",
-      slogan: "Мы видели, как зарождалось IT. Знаем, как оно работает сегодня — и понимаем, куда движется завтра.",
-      source: "Классическая версия сайта",
-      bad: "Неверная команда или имя файла. Введите HELP.",
-      back: "Введите NC или нажмите Esc, чтобы вернуться к панелям.",
-      help: [
-        "Команды:",
-        "  DIR             список файлов",
-        "  TYPE <файл>     открыть файл (можно просто имя)",
-        "  MAIL            написать нам",
-        "  LANG UK|EN|RU   сменить язык",
-        "  COLOR           сменить монитор",
-        "  CLS             очистить экран",
-        "  VER             версия",
-        "  BOOT            перезагрузить",
-        "  NC              вернуться к панелям",
-        "  COMMAND         консольный режим",
-        "  UNIX            терминал UNIX",
-        "",
-        "Клавиши: ↑↓ Home End Enter F1–F10 Esc Ctrl+O"
-      ]
+      slogan: "Мы видели, как зарождалось IT. Знаем, как оно работает сегодня — и понимаем, куда движется завтра."
+    },
+    de: {
+      title: "ArtIntelliCo – Softwareentwicklung und IT-Support für Unternehmen",
+      heroTitle: "Wir entwickeln IT-Lösungen, die für Ihr Unternehmen arbeiten",
+      heroText: "Das Team von ArtIntelliCo hilft Ihnen, Geschäftsprozesse zu digitalisieren und zu automatisieren: Wir konzipieren moderne IT-Lösungen und setzen sie um.",
+      heroLead: "Für Ihr Unternehmen",
+      phrases: ["entwickeln wir SaaS-Plattformen", "führen wir CRM- und ERP-Systeme ein", "lassen wir KI für Sie arbeiten", "bringen wir die Infrastruktur in die Cloud"],
+      partnersTitle: "Unsere Partner",
+      contactTitle: "Erzählen Sie uns von Ihrem Projekt",
+      contactText: "Sie haben einen Vorschlag für eine Zusammenarbeit oder möchten mehr über unsere Lösungen und unsere Erfahrung wissen? Schreiben Sie uns eine E-Mail.",
+      emailLabel: "E-Mail",
+      copyright: "© 2026 ArtIntelliCo. Alle Rechte vorbehalten.",
+      legal: "ArtIntelliCo LLC",
+      slogan: "Wir haben die Geburt der IT miterlebt. Wir wissen, wie sie heute funktioniert – und verstehen, wohin sie sich morgen entwickelt."
+    },
+    fr: {
+      title: "ArtIntelliCo — développement logiciel et support informatique pour les entreprises",
+      heroTitle: "Nous créons des solutions informatiques qui travaillent pour votre entreprise",
+      heroText: "L'équipe ArtIntelliCo vous aide à numériser et à automatiser vos processus métier en concevant et en déployant des solutions informatiques modernes.",
+      heroLead: "Pour votre entreprise, nous",
+      phrases: ["créons des plateformes SaaS", "mettons en place des systèmes CRM et ERP", "faisons travailler l'IA pour vous", "migrons l'infrastructure vers le cloud"],
+      partnersTitle: "Nos partenaires",
+      contactTitle: "Parlez-nous de votre projet",
+      contactText: "Vous avez une proposition de partenariat ou souhaitez en savoir plus sur nos solutions et notre expérience ? Écrivez-nous par e-mail.",
+      emailLabel: "E-mail",
+      copyright: "© 2026 ArtIntelliCo. Tous droits réservés.",
+      legal: "ArtIntelliCo LLC",
+      slogan: "Nous avons vu naître l'informatique. Nous savons comment elle fonctionne aujourd'hui — et nous comprenons où elle va demain."
+    },
+    es: {
+      title: "ArtIntelliCo — desarrollo de software y soporte de TI para empresas",
+      heroTitle: "Creamos soluciones de TI que trabajan para su negocio",
+      heroText: "El equipo de ArtIntelliCo le ayuda a digitalizar y automatizar los procesos de su negocio diseñando e implantando soluciones de TI modernas.",
+      heroLead: "Para su negocio",
+      phrases: ["desarrollamos plataformas SaaS", "implantamos sistemas CRM y ERP", "ponemos la IA a trabajar", "llevamos la infraestructura a la nube"],
+      partnersTitle: "Nuestros socios",
+      contactTitle: "Cuéntenos su proyecto",
+      contactText: "Si tiene una propuesta de colaboración o quiere saber más sobre nuestras soluciones y nuestra experiencia, escríbanos un correo electrónico.",
+      emailLabel: "Correo electrónico",
+      copyright: "© 2026 ArtIntelliCo. Todos los derechos reservados.",
+      legal: "ArtIntelliCo LLC",
+      slogan: "Vimos nacer la informática. Sabemos cómo funciona hoy y entendemos hacia dónde va mañana."
+    },
+    pt: {
+      title: "ArtIntelliCo — desenvolvimento de software e suporte de TI para empresas",
+      heroTitle: "Criamos soluções de TI que trabalham para o seu negócio",
+      heroText: "A equipa da ArtIntelliCo ajuda-o a digitalizar e automatizar os processos do seu negócio, concebendo e implementando soluções de TI modernas.",
+      heroLead: "Para o seu negócio",
+      phrases: ["desenvolvemos plataformas SaaS", "implementamos sistemas CRM e ERP", "pomos a IA a trabalhar", "levamos a infraestrutura para a cloud"],
+      partnersTitle: "Os nossos parceiros",
+      contactTitle: "Fale-nos do seu projeto",
+      contactText: "Se tem uma proposta de parceria ou quer saber mais sobre as nossas soluções e a nossa experiência, envie-nos um e-mail.",
+      emailLabel: "E-mail",
+      copyright: "© 2026 ArtIntelliCo. Todos os direitos reservados.",
+      legal: "ArtIntelliCo LLC",
+      slogan: "Vimos a informática nascer. Sabemos como funciona hoje — e percebemos para onde caminha amanhã."
+    },
+    it: {
+      title: "ArtIntelliCo — sviluppo software e supporto IT per le aziende",
+      heroTitle: "Realizziamo soluzioni IT che lavorano per la Sua azienda",
+      heroText: "Il team di ArtIntelliCo La aiuta a digitalizzare e automatizzare i processi aziendali, progettando e realizzando soluzioni IT moderne.",
+      heroLead: "Per la Sua azienda",
+      phrases: ["sviluppiamo piattaforme SaaS", "realizziamo sistemi CRM ed ERP", "mettiamo l'IA al lavoro", "portiamo l'infrastruttura nel cloud"],
+      partnersTitle: "I nostri partner",
+      contactTitle: "Ci parli del Suo progetto",
+      contactText: "Se ha una proposta di collaborazione o desidera saperne di più sulle nostre soluzioni e sulla nostra esperienza, ci scriva un'e-mail.",
+      emailLabel: "E-mail",
+      copyright: "© 2026 ArtIntelliCo. Tutti i diritti riservati.",
+      legal: "ArtIntelliCo LLC",
+      slogan: "Abbiamo visto nascere l'informatica. Sappiamo come funziona oggi e capiamo dove andrà domani."
     }
   };
 
@@ -310,6 +284,281 @@
           inc: ["мониторинг доступности и ошибок", "исправления и обновления", "бэкапы и проверка восстановления", "доработки по плану", "аудит чужих систем"],
           res: "Система работает, команда знает, как она устроена." }
       ]
+    },
+    de: {
+      labels: ["LEISTUNGSUMFANG", "ERGEBNIS"],
+      items: [
+        { t: "Konzeption von IT-Lösungen",
+          lead: "Erst klären, was das System leisten muss. Dann programmieren.",
+          body: "Für ein Problem zu bauen, das niemand definiert hat, ist der teuerste Weg. Wir gehen zu den Menschen, die mit dem System arbeiten werden: in die Buchhaltung, ins Lager, zum Vertrieb. Manchmal lautet die ehrliche Antwort: ein fertiges Produkt plus Einrichtung.",
+          inc: ["Interviews und Prozessanalyse", "Geschäftsanforderungen, Szenarien", "Standardprodukt oder Eigenentwicklung", "Pflichtenheft mit Zeit und Budget je Phase"],
+          res: "Ein Dokument, mit dem jedes Team, ob unseres oder nicht, den Aufwand schätzen und loslegen kann." },
+        { t: "SaaS-Entwicklung",
+          lead: "Eine SaaS-Plattform: vom Pilotprojekt zum Dienst mit Tarifen und Kundenportal.",
+          body: "SaaS bringt Geld, wenn Kunden sich selbst registrieren, bezahlen und arbeiten, ohne beim Support anzurufen. Mandantenfähigkeit, Abrechnung und Rechte gehören in den ersten Tag, später kosten sie ein Vielfaches. Die erste Version kommt früh: Die Nutzer zeigen, was überflüssig ist.",
+          inc: ["getrennte Kundendaten", "Registrierung, Tarife, Zahlung", "Kundenportal, Rollen, Rechte", "Integrationen und Kunden-API", "Skalierung mit wachsender Last"],
+          res: "Ein Produkt, das im Abo verkauft wird, statt jedes Mal von Hand eingeführt zu werden." },
+        { t: "Webentwicklung",
+          lead: "Websites, Marktplätze, Shops, Buchungssysteme, interne Tools.",
+          body: "Eine Unternehmenswebsite misst man in Anfragen und Bestellungen. Was als Ergebnis zählt, legen wir vor dem Start fest, die Webanalyse läuft ab dem ersten Tag. Die Technik richtet sich nach der Aufgabe: Eine Landingpage braucht keine schwere Plattform, ein Marktplatz lebt nicht im Baukasten.",
+          inc: ["Prototyp und Design", "Frontend, Backend, Admin-Bereich", "Zahlung, Versand, CRM, Buchhaltung", "SEO, Tempo, Webanalyse", "Start und Betreuung"],
+          res: "Sie sehen, wie viele Anfragen und wie viel Umsatz die Website bringt." },
+        { t: "Mobile Apps",
+          lead: "iOS und Android, dazu Server und Admin-Bereich.",
+          body: "Eine App lohnt sich, wenn die Leute wiederkommen: Nachbestellung, Status, Bonuspunkte. Nur einmal im Jahr? Dann reicht eine mobile Website, sie ist günstiger, und das sagen wir Ihnen vorab. Nativ oder plattformübergreifend: Das entscheiden Budget, Kamera, Standort und Offline-Betrieb.",
+          inc: ["Apps für iOS und Android", "Serverseite und API", "Admin: Inhalte, Bestellungen, Nutzer", "Push und Analyse", "App Store und Google Play"],
+          res: "Die Prüfung ist bestanden, Ihr Team betreibt die App ohne Entwickler." },
+        { t: "KI-Lösungen",
+          lead: "KI-Agenten, die Ihre Geschäftsprozesse automatisieren, auf Basis von KI und maschinellem Lernen.",
+          body: "Wir sind hier Skeptiker: Die Hälfte der Ideen für ein neuronales Netz erledigt schlichte Automatisierung. E-Mails, Dokumente und Anfragen verarbeiten Modelle dagegen gut. Zuerst ein Pilot mit Ihren Daten, Zahlen zur Genauigkeit vor der Entwicklung.",
+          inc: ["KI-Agenten: Anfragen sortieren, CRM pflegen, Kunden antworten", "Chatbots und Assistenten", "Dokumente auslesen", "Anfragen klassifizieren", "Suche in der Wissensdatenbank", "Bedarfsprognosen, Datenanalyse", "Pilot mit Qualitätsprüfung"],
+          res: "Das System erledigt die Routine. Ein Mensch prüft." },
+        { t: "CRM- und ERP-Entwicklung",
+          lead: "CRM und ERP rund um Ihre Prozesse, nicht umgekehrt.",
+          body: "Standardsoftware passt zu Standardprozessen. Wenn Ihre Leute die halbe Arbeit in Tabellen erledigen, weil das System „das nicht kann“, ist eine eigene Lösung günstiger. Die Daten übernehmen wir, eingeführt wird Abteilung für Abteilung, die Arbeit steht nie still.",
+          inc: ["Vertrieb, Lager, Produktion, Finanzen", "Rollen, Rechte, Änderungsprotokoll", "Berichte und Dashboards", "Übernahme aus Tabellen und Altsystemen", "Buchhaltung, Telefonie, E-Mail"],
+          res: "Ein System statt eines Tabellen-Zoos. Die Geschäftsführung sieht alles ohne Wochenberichte." },
+        { t: "Cloud-Lösungen",
+          lead: "Umzug zu Amazon Web Services, komplett oder in Teilen.",
+          body: "Die Cloud ist nicht immer günstiger als der eigene Server. Sie rechnet sich bei schwankender Last, wenn Ausfallsicherheit gefragt ist oder Umgebungen in Minuten bereitstehen müssen. Erst Analyse und Kalkulation, dann der Umzug in Schritten, mit Rückfallplan für jeden.",
+          inc: ["Analyse und Kostenschätzung", "AWS-Architektur, Migrationsplan", "Server, Datenbanken, Dateien", "Backups und Monitoring", "Kostenoptimierung"],
+          res: "Ein ausgefallener Server ist keine Katastrophe, die Cloud-Rechnung ist nachvollziehbar." },
+        { t: "Unternehmensinfrastruktur auf Red Hat", s: "Infrastruktur auf Red Hat",
+          lead: "Unternehmensserver auf Red Hat: Red Hat Enterprise Linux, OpenShift, Ansible.",
+          body: "Red Hat ist die Wahl, wenn Infrastruktur jahrelang läuft, Audits besteht und nicht vom Gedächtnis eines einzelnen Admins abhängen darf. Die Subskription bringt Herstellersupport und zehn Jahre Lebenszyklus für RHEL. Servereinstellungen landen in Ansible, so lässt sich jeder Server per Playbook neu aufbauen. Red Hat ist unser Partner, auch bei Subskriptionen helfen wir.",
+          inc: ["Server-Audit und Migrationsplan", "RHEL mit Updates über Red Hat Satellite", "OpenShift für Ihre Anwendungen", "Automatisierung mit Ansible", "Identity Management: Zugänge an einem Ort", "Monitoring, Backups, Dokumentation"],
+          res: "Eine Infrastruktur, die sich prüfen, nachbauen und ohne Verluste an ein anderes Team übergeben lässt." },
+        { t: "APIs und Integrationen",
+          lead: "APIs für Ihre Systeme, verbunden mit den Diensten, die Sie schon nutzen.",
+          body: "Meist schmerzt die doppelte Erfassung: Web-Bestellungen werden abgetippt, Zahlungen in Tabellen abgeglichen. Eine Integration beseitigt Arbeit und Fehler. Monitoring ist Pflicht: Ändert ein Partner seine API, reißt die Verbindung lautlos ab.",
+          inc: ["API-Design und Dokumentation", "Zahlung, Versand, CRM, Buchhaltung", "Austausch zwischen Ihren Systemen", "Warteschlangen, Wiederholung bei Fehlern", "Monitoring und Alarme"],
+          res: "Einmal erfasst, kommen die Daten von selbst an." },
+        { t: "Technischer Support",
+          lead: "Betreuung und Weiterentwicklung Ihrer Systeme. Auch solcher, die wir nicht geschrieben haben.",
+          body: "Support heißt auch Sicherheitsupdates, Monitoring, das einen Ausfall vor den Nutzern bemerkt, und kleine Verbesserungen. Bei einem übernommenen System stehen Audit und Dokumentation am Anfang, sonst ist jede Änderung ein Glücksspiel.",
+          inc: ["Verfügbarkeits- und Fehlermonitoring", "Fehlerbehebung und Updates", "Backups und Wiederherstellungstests", "geplante Verbesserungen", "Audit übernommener Systeme"],
+          res: "Das System läuft, das Team weiß, wie es aufgebaut ist." }
+      ]
+    },
+    fr: {
+      labels: ["CE QUI EST INCLUS", "RÉSULTAT"],
+      items: [
+        { t: "Conception de solutions informatiques", s: "Conception informatique",
+          lead: "D'abord comprendre ce que le système doit faire. Ensuite, écrire le code.",
+          body: "Construire pour un problème que personne n'a formulé, c'est la voie la plus coûteuse. Nous allons voir ceux qui utiliseront le système : comptabilité, entrepôt, commerciaux. Parfois, la réponse honnête, c'est un produit existant et son paramétrage.",
+          inc: ["entretiens et analyse des processus", "exigences métier et scénarios", "produit du marché ou sur mesure", "cahier des charges : délais et budget par phase"],
+          res: "Un document à partir duquel n'importe quelle équipe, la nôtre ou une autre, peut chiffrer le travail et démarrer." },
+        { t: "Développement SaaS",
+          lead: "Une plateforme SaaS : du pilote au service avec abonnements et espaces clients.",
+          body: "Un SaaS rapporte quand le client s'inscrit, paie et travaille sans appeler le support. Multi-locataire, facturation et droits se prévoient dès le premier jour ; plus tard, ils coûtent plusieurs fois plus cher. La première version sort tôt : les utilisateurs montrent ce qui est superflu.",
+          inc: ["données clients isolées", "inscription, abonnements, paiement", "espaces clients, rôles, droits", "intégrations et API clients", "montée en charge"],
+          res: "Un produit vendu par abonnement, et non déployé à la main à chaque fois." },
+        { t: "Développement web",
+          lead: "Sites, places de marché, boutiques, réservation, outils internes.",
+          body: "Un site d'entreprise se mesure en demandes et en commandes. Ce qui compte comme résultat, nous le fixons avant de commencer, et les statistiques tournent dès la mise en ligne. La technique suit la tâche : une page d'atterrissage n'a pas besoin d'une plateforme lourde, une place de marché ne vit pas dans un constructeur de sites.",
+          inc: ["prototype et design", "frontend, backend, administration", "paiement, livraison, CRM, comptabilité", "SEO, vitesse, statistiques", "mise en ligne et suivi"],
+          res: "Vous voyez combien de demandes et de chiffre d'affaires le site apporte." },
+        { t: "Applications mobiles",
+          lead: "iOS et Android, plus le serveur et l'interface d'administration.",
+          body: "Une application se justifie si l'on y revient : nouvelle commande, suivi, points de fidélité. Une visite par an ? Un site mobile suffit, il coûte moins cher, et nous vous le dirons d'emblée. Natif ou multiplateforme : le budget, l'appareil photo, la géolocalisation et le mode hors ligne décident.",
+          inc: ["applications iOS et Android", "partie serveur et API", "admin : contenus, commandes, utilisateurs", "notifications push et statistiques", "App Store et Google Play"],
+          res: "Validation obtenue ; votre équipe gère l'application sans développeurs." },
+        { t: "Solutions d'intelligence artificielle", s: "Solutions d'IA et agents IA",
+          lead: "Des agents IA qui automatisent vos processus métier, fondés sur l'IA et l'apprentissage automatique.",
+          body: "Ici, nous sommes sceptiques : une simple automatisation couvre la moitié des idées de réseau de neurones. En revanche, les modèles traitent bien les e-mails, les documents et les demandes. D'abord un pilote sur vos données, les chiffres de précision avant le développement.",
+          inc: ["agents IA : tri des demandes, saisie CRM, réponses aux clients", "chatbots et assistants", "lecture de documents", "classement des demandes", "recherche dans la base de connaissances", "prévision de la demande, analyse de données", "pilote avec contrôle qualité"],
+          res: "Le système fait la routine. Un humain vérifie." },
+        { t: "Développement CRM et ERP",
+          lead: "Un CRM et un ERP construits autour de vos processus, et pas l'inverse.",
+          body: "Un progiciel convient à un processus standard. Quand les commerciaux tiennent la moitié de leur travail dans des tableurs parce que le système « ne sait pas faire », une solution maison revient moins cher. Données reprises, déploiement service par service, le travail ne s'arrête jamais.",
+          inc: ["ventes, stock, production, finances", "rôles, droits, journal des actions", "rapports et tableaux de bord", "reprise des tableurs et anciens systèmes", "comptabilité, téléphonie, messagerie"],
+          res: "Un seul système au lieu d'une ménagerie de tableurs. La direction voit tout sans rapports hebdomadaires." },
+        { t: "Solutions cloud",
+          lead: "Migration vers Amazon Web Services, en totalité ou par parties.",
+          body: "Le cloud n'est pas toujours moins cher que votre propre serveur. Il devient rentable quand la charge varie fortement, quand la tolérance aux pannes compte ou quand il faut un environnement en quelques minutes. D'abord audit et chiffrage, puis la migration par étapes, avec un plan de retour arrière pour chacune.",
+          inc: ["audit et estimation des coûts", "architecture AWS, plan de migration", "serveurs, bases de données, fichiers", "sauvegardes et supervision", "optimisation des coûts"],
+          res: "Une panne de serveur n'est plus un drame ; la facture du cloud est lisible." },
+        { t: "Infrastructure d'entreprise sous Red Hat", s: "Infrastructure sous Red Hat",
+          lead: "Les serveurs de l'entreprise sous Red Hat : Red Hat Enterprise Linux, OpenShift, Ansible.",
+          body: "On choisit Red Hat quand l'infrastructure doit vivre des années, passer des audits et ne pas dépendre de la mémoire d'un seul administrateur. La souscription apporte le support de l'éditeur et les dix ans de cycle de vie de RHEL. La configuration des serveurs est décrite dans Ansible : chaque serveur se reconstruit à partir d'un playbook. Red Hat est notre partenaire ; nous vous aidons aussi pour les souscriptions.",
+          inc: ["audit des serveurs et plan de migration", "RHEL et mises à jour via Red Hat Satellite", "OpenShift pour vos applications", "automatisation avec Ansible", "Identity Management : accès centralisés", "supervision, sauvegardes, documentation"],
+          res: "Une infrastructure que l'on peut auditer, reproduire et confier à une autre équipe sans rien perdre." },
+        { t: "API et intégrations",
+          lead: "Des API pour vos systèmes, reliées aux services que vous utilisez déjà.",
+          body: "Le mal le plus courant, c'est la double saisie : commandes web retapées à la main, paiements pointés dans un tableur. L'intégration supprime le travail et les erreurs. La supervision est indispensable : un partenaire modifie son API et la liaison casse sans un bruit.",
+          inc: ["conception et documentation d'API", "paiement, livraison, CRM, comptabilité", "échanges entre vos systèmes", "files d'attente et reprises sur erreur", "supervision et alertes"],
+          res: "Saisies une fois, les données arrivent toutes seules." },
+        { t: "Support technique",
+          lead: "Maintenance et évolution de vos systèmes. Y compris ceux que nous n'avons pas écrits.",
+          body: "Le support, c'est aussi les mises à jour de sécurité, une supervision qui repère la panne avant les utilisateurs, et de petites améliorations. Un système hérité commence par un audit et une documentation, sinon chaque modification est un pari.",
+          inc: ["supervision de la disponibilité et des erreurs", "correctifs et mises à jour", "sauvegardes et tests de restauration", "améliorations planifiées", "audit des systèmes hérités"],
+          res: "Le système fonctionne, l'équipe sait comment il est construit." }
+      ]
+    },
+    es: {
+      labels: ["QUÉ INCLUYE", "RESULTADO"],
+      items: [
+        { t: "Concepto de la solución de TI",
+          lead: "Primero entender qué debe hacer el sistema. Después, escribir código.",
+          body: "Construir para un problema que nadie ha definido es el camino más caro. Vamos a hablar con quienes usarán el sistema: contabilidad, almacén, comerciales. A veces la respuesta honesta es un producto existente más su configuración.",
+          inc: ["entrevistas y análisis de procesos", "requisitos de negocio y escenarios", "producto estándar o a medida", "especificación con plazos y presupuesto por fase"],
+          res: "Un documento con el que cualquier equipo, nuestro o no, puede estimar el trabajo y empezar." },
+        { t: "Desarrollo SaaS",
+          lead: "Una plataforma SaaS: del piloto a un servicio con planes y áreas de cliente.",
+          body: "Un SaaS da dinero cuando el cliente se registra, paga y trabaja sin llamar a soporte. Multiinquilino, facturación y permisos van desde el primer día; más tarde cuestan varias veces más. La primera versión, cuanto antes: los usuarios enseñan lo que sobra.",
+          inc: ["datos de clientes aislados", "registro, planes, pagos", "áreas de cliente, roles, permisos", "integraciones y API para clientes", "escalado según la carga"],
+          res: "Un producto que se vende por suscripción, no que se implanta a mano cada vez." },
+        { t: "Desarrollo web",
+          lead: "Sitios web, marketplaces, tiendas, reservas, herramientas internas.",
+          body: "Un sitio de empresa se mide en solicitudes y pedidos. Qué cuenta como resultado lo acordamos antes de empezar, y la analítica se activa con el lanzamiento. La tecnología, según la tarea: una landing page no necesita una plataforma pesada y un marketplace no vive en un creador de webs.",
+          inc: ["prototipo y diseño", "frontend, backend, panel de administración", "pagos, envíos, CRM, contabilidad", "SEO, velocidad, analítica", "lanzamiento y mantenimiento"],
+          res: "Usted ve cuántas solicitudes y cuánto dinero aporta el sitio." },
+        { t: "Aplicaciones móviles",
+          lead: "iOS y Android, más servidor y panel de administración.",
+          body: "Una aplicación compensa si la gente vuelve: repetir pedido, consultar el estado, sumar puntos. ¿Entran una vez al año? Basta un sitio móvil, sale más barato, y se lo diremos desde el principio. Nativa o multiplataforma: lo deciden el presupuesto, la cámara, la geolocalización y el modo sin conexión.",
+          inc: ["aplicaciones iOS y Android", "parte de servidor y API", "panel: contenido, pedidos, usuarios", "notificaciones push y analítica", "App Store y Google Play"],
+          res: "Revisión superada; su equipo la gestiona sin desarrolladores." },
+        { t: "Soluciones con inteligencia artificial", s: "Soluciones con IA y agentes IA",
+          lead: "Agentes de IA que automatizan sus procesos de negocio, basados en IA y aprendizaje automático.",
+          body: "Aquí somos escépticos: la mitad de las ideas con redes neuronales se resuelven con automatización sencilla. Eso sí, los correos, documentos y solicitudes los modelos los procesan bien. Primero un piloto con sus datos, cifras de precisión antes del desarrollo.",
+          inc: ["agentes de IA: clasificar solicitudes, rellenar el CRM, responder a clientes", "chatbots y asistentes", "lectura de documentos", "clasificación de solicitudes", "búsqueda en la base de conocimiento", "previsión de demanda, análisis de datos", "piloto con control de calidad"],
+          res: "El sistema hace la rutina. Una persona lo revisa." },
+        { t: "Desarrollo de CRM y ERP",
+          lead: "CRM y ERP a la medida de sus procesos, y no al revés.",
+          body: "Un producto estándar sirve para un proceso estándar. Si los comerciales llevan media jornada en hojas de cálculo porque el sistema «no lo permite», uno propio sale más barato. Migramos los datos, implantamos por departamentos y el trabajo no se detiene.",
+          inc: ["ventas, almacén, producción, finanzas", "roles, permisos, registro de acciones", "informes y paneles", "migración desde hojas de cálculo y sistemas antiguos", "contabilidad, telefonía, correo"],
+          res: "Un solo sistema en lugar de un zoo de hojas de cálculo. La dirección lo ve todo sin informes semanales." },
+        { t: "Soluciones en la nube",
+          lead: "Migración a Amazon Web Services, completa o por partes.",
+          body: "La nube no siempre es más barata que un servidor propio. Compensa cuando la carga sube y baja, cuando hace falta tolerancia a fallos o cuando se necesita un entorno en minutos. Primero auditoría y cálculo, después la migración por pasos, con un plan de vuelta atrás en cada uno.",
+          inc: ["auditoría y estimación de costes", "arquitectura AWS, plan de migración", "servidores, bases de datos, archivos", "copias de seguridad y monitorización", "optimización de costes"],
+          res: "La caída de un servidor no es un drama; la factura de la nube se entiende." },
+        { t: "Infraestructura empresarial con Red Hat", s: "Infraestructura con Red Hat",
+          lead: "Servidores de la empresa con Red Hat: Red Hat Enterprise Linux, OpenShift, Ansible.",
+          body: "Red Hat se elige cuando la infraestructura vive años, pasa auditorías y no puede depender de la memoria de un solo administrador. La suscripción incluye el soporte del fabricante y diez años de ciclo de vida de RHEL. La configuración de los servidores se escribe en Ansible: cualquier servidor se reconstruye con un playbook. Red Hat es nuestro socio; también le ayudamos con las suscripciones.",
+          inc: ["auditoría de servidores y plan de migración", "RHEL con actualizaciones vía Red Hat Satellite", "OpenShift para sus aplicaciones", "automatización con Ansible", "Identity Management: accesos en un solo lugar", "monitorización, copias de seguridad, documentación"],
+          res: "Una infraestructura que se puede auditar, reproducir y entregar a otro equipo sin perder nada." },
+        { t: "API e integraciones",
+          lead: "API para sus sistemas, conectadas con los servicios que ya utiliza.",
+          body: "Lo que más duele suele ser la doble entrada: pedidos web que se vuelven a teclear, pagos que se cuadran en una hoja de cálculo. La integración elimina el trabajo y los errores. La monitorización es obligatoria: un socio cambia su API y la conexión se rompe sin hacer ruido.",
+          inc: ["diseño y documentación de API", "pagos, envíos, CRM, contabilidad", "intercambio entre sus sistemas", "colas y reintentos ante fallos", "monitorización y alertas"],
+          res: "Se introducen una vez y los datos llegan solos." },
+        { t: "Soporte técnico",
+          lead: "Soporte y evolución de sus sistemas. También de los que no escribimos nosotros.",
+          body: "Soporte también significa actualizaciones de seguridad, una monitorización que detecta el fallo antes que los usuarios y pequeñas mejoras. Un sistema heredado empieza con una auditoría y documentación; si no, cada cambio es una lotería.",
+          inc: ["monitorización de disponibilidad y errores", "correcciones y actualizaciones", "copias de seguridad y pruebas de restauración", "mejoras planificadas", "auditoría de sistemas heredados"],
+          res: "El sistema funciona y el equipo sabe cómo está construido." }
+      ]
+    },
+    pt: {
+      labels: ["O QUE INCLUI", "RESULTADO"],
+      items: [
+        { t: "Conceção de soluções de TI",
+          lead: "Primeiro perceber o que o sistema tem de fazer. Depois escrever código.",
+          body: "Construir para um problema que ninguém definiu é o caminho mais caro. Vamos falar com quem vai trabalhar com o sistema: contabilidade, armazém, comerciais. Às vezes, a resposta honesta é um produto existente e a respetiva configuração.",
+          inc: ["entrevistas e análise de processos", "requisitos de negócio e cenários", "produto pronto ou à medida", "caderno de encargos com prazos e orçamento por fase"],
+          res: "Um documento com o qual qualquer equipa, nossa ou não, consegue orçamentar o trabalho e começar." },
+        { t: "Desenvolvimento SaaS",
+          lead: "Uma plataforma SaaS: do piloto a um serviço com planos e áreas de cliente.",
+          body: "Um SaaS dá dinheiro quando o cliente se regista, paga e trabalha sem ligar para o suporte. Multi-inquilino, faturação e permissões entram no primeiro dia; mais tarde custam várias vezes mais. A primeira versão sai cedo: os utilizadores mostram o que está a mais.",
+          inc: ["dados de clientes isolados", "registo, planos, pagamentos", "áreas de cliente, perfis, permissões", "integrações e API para clientes", "escalabilidade à medida da carga"],
+          res: "Um produto vendido por subscrição, e não implementado à mão de cada vez." },
+        { t: "Desenvolvimento web",
+          lead: "Sites, marketplaces, lojas online, reservas, ferramentas internas.",
+          body: "Um site empresarial mede-se em pedidos de contacto e encomendas. O que conta como resultado é acordado antes de começar, e a análise de tráfego fica ativa no lançamento. A tecnologia depende da tarefa: uma landing page não precisa de uma plataforma pesada e um marketplace não vive num construtor de sites.",
+          inc: ["protótipo e design", "frontend, backend, área de administração", "pagamentos, entregas, CRM, contabilidade", "SEO, velocidade, análise de tráfego", "lançamento e acompanhamento"],
+          res: "Vê quantos contactos e quanto dinheiro o site traz." },
+        { t: "Aplicações móveis",
+          lead: "iOS e Android, mais servidor e área de administração.",
+          body: "Uma aplicação compensa se as pessoas voltam: nova encomenda, estado do pedido, pontos. Entram uma vez por ano? Chega um site móvel, é mais barato, e dizemos-lho logo à partida. Nativa ou multiplataforma: decidem o orçamento, a câmara, a localização e o modo offline.",
+          inc: ["aplicações iOS e Android", "lado do servidor e API", "administração: conteúdos, encomendas, utilizadores", "notificações push e análise", "App Store e Google Play"],
+          res: "Revisão aprovada; a sua equipa gere a aplicação sem programadores." },
+        { t: "Soluções com inteligência artificial", s: "Soluções com IA e agentes IA",
+          lead: "Agentes de IA que automatizam os seus processos de negócio, assentes em IA e aprendizagem automática.",
+          body: "Aqui somos céticos: metade das ideias com redes neuronais resolve-se com automatização simples. Já e-mails, documentos e pedidos, os modelos tratam bem. Primeiro um piloto com os seus dados, números de precisão antes do desenvolvimento.",
+          inc: ["agentes de IA: triagem de pedidos, registo no CRM, respostas a clientes", "chatbots e assistentes", "leitura de documentos", "classificação de pedidos", "pesquisa na base de conhecimento", "previsão da procura, análise de dados", "piloto com avaliação da qualidade"],
+          res: "O sistema faz a rotina. Uma pessoa verifica." },
+        { t: "Desenvolvimento de CRM e ERP",
+          lead: "CRM e ERP à volta dos seus processos, e não o contrário.",
+          body: "Um produto de prateleira serve para um processo-padrão. Se os comerciais fazem metade do trabalho em folhas de cálculo porque o sistema «não deixa», um sistema próprio sai mais barato. Migramos os dados, implementamos por departamentos e o trabalho nunca para.",
+          inc: ["vendas, armazém, produção, finanças", "perfis, permissões, registo de ações", "relatórios e dashboards", "migração de folhas de cálculo e sistemas antigos", "contabilidade, telefonia, e-mail"],
+          res: "Um só sistema em vez de um jardim zoológico de folhas de cálculo. A gestão vê tudo sem relatórios semanais." },
+        { t: "Soluções na cloud",
+          lead: "Migração para a Amazon Web Services, total ou por partes.",
+          body: "A cloud nem sempre é mais barata do que um servidor próprio. Compensa quando a carga oscila, quando é preciso tolerância a falhas ou ambientes prontos em minutos. Primeiro auditoria e cálculo, depois a migração por etapas, com um plano de reversão em cada uma.",
+          inc: ["auditoria e estimativa de custos", "arquitetura AWS, plano de migração", "servidores, bases de dados, ficheiros", "cópias de segurança e monitorização", "otimização de custos"],
+          res: "A falha de um servidor não é um drama; a fatura da cloud percebe-se." },
+        { t: "Infraestrutura empresarial em Red Hat", s: "Infraestrutura em Red Hat",
+          lead: "Servidores da empresa em Red Hat: Red Hat Enterprise Linux, OpenShift, Ansible.",
+          body: "Escolhe-se Red Hat quando a infraestrutura vive durante anos, passa auditorias e não pode depender da memória de um único administrador. A subscrição traz o suporte do fabricante e dez anos de ciclo de vida do RHEL. A configuração dos servidores fica em Ansible: qualquer servidor é reconstruído a partir de um playbook. A Red Hat é nossa parceira; também ajudamos com as subscrições.",
+          inc: ["auditoria de servidores e plano de migração", "RHEL com atualizações via Red Hat Satellite", "OpenShift para as suas aplicações", "automatização com Ansible", "Identity Management: acessos num só lugar", "monitorização, cópias de segurança, documentação"],
+          res: "Uma infraestrutura que se pode auditar, reproduzir e entregar a outra equipa sem perdas." },
+        { t: "APIs e integrações",
+          lead: "APIs para os seus sistemas, ligadas aos serviços que já utiliza.",
+          body: "A dor mais comum é a introdução em duplicado: encomendas do site redigitadas à mão, pagamentos conferidos numa folha de cálculo. A integração elimina o trabalho e os erros. A monitorização é obrigatória: um parceiro muda a API e a ligação parte-se sem aviso.",
+          inc: ["desenho e documentação de APIs", "pagamentos, entregas, CRM, contabilidade", "troca de dados entre os seus sistemas", "filas e novas tentativas em caso de falha", "monitorização e alertas"],
+          res: "Introduzidos uma vez, os dados chegam sozinhos." },
+        { t: "Suporte técnico",
+          lead: "Suporte e evolução dos seus sistemas. Também dos que não fomos nós a escrever.",
+          body: "Suporte também são atualizações de segurança, monitorização que deteta a falha antes dos utilizadores e pequenas melhorias. Um sistema herdado começa com auditoria e documentação; caso contrário, cada alteração é uma lotaria.",
+          inc: ["monitorização da disponibilidade e de erros", "correções e atualizações", "cópias de segurança e testes de reposição", "melhorias planeadas", "auditoria de sistemas herdados"],
+          res: "O sistema funciona e a equipa sabe como está construído." }
+      ]
+    },
+    it: {
+      labels: ["COSA COMPRENDE", "RISULTATO"],
+      items: [
+        { t: "Ideazione della soluzione IT",
+          lead: "Prima capire che cosa deve fare il sistema. Poi scrivere il codice.",
+          body: "Costruire per un problema che nessuno ha definito è la strada più costosa. Andiamo da chi userà il sistema: contabilità, magazzino, commerciali. A volte la risposta onesta è un prodotto già pronto più la configurazione.",
+          inc: ["interviste e analisi dei processi", "requisiti di business e scenari", "prodotto pronto o su misura", "capitolato con tempi e budget per fase"],
+          res: "Un documento con cui qualsiasi team, nostro o no, può stimare il lavoro e partire." },
+        { t: "Sviluppo SaaS",
+          lead: "Una piattaforma SaaS: dal pilota a un servizio con piani tariffari e aree clienti.",
+          body: "Un SaaS rende quando il cliente si registra, paga e lavora senza chiamare l'assistenza. Multi-tenancy, fatturazione e permessi vanno previsti dal primo giorno: dopo costano molte volte di più. La prima versione esce presto: gli utenti mostrano che cosa è superfluo.",
+          inc: ["dati dei clienti isolati", "registrazione, piani, pagamenti", "aree clienti, ruoli, permessi", "integrazioni e API per i clienti", "scalabilità al crescere del carico"],
+          res: "Un prodotto venduto in abbonamento, non installato a mano ogni volta." },
+        { t: "Sviluppo web",
+          lead: "Siti, marketplace, negozi online, prenotazioni, strumenti interni.",
+          body: "Un sito aziendale si misura in richieste e ordini. Che cosa conta come risultato lo stabiliamo prima di partire, e le statistiche sono attive dal lancio. La tecnologia dipende dal compito: a una landing page non serve una piattaforma pesante, un marketplace non vive in un site builder.",
+          inc: ["prototipo e design", "frontend, backend, pannello di amministrazione", "pagamenti, spedizioni, CRM, contabilità", "SEO, velocità, statistiche", "lancio e assistenza"],
+          res: "Si vede quante richieste e quanto fatturato porta il sito." },
+        { t: "App mobili",
+          lead: "iOS e Android, più server e pannello di amministrazione.",
+          body: "Un'app conviene se le persone ci tornano: nuovi ordini, stato, punti fedeltà. Una volta all'anno? Basta un sito mobile, costa meno, e glielo diciamo subito. Nativa o multipiattaforma: decidono budget, fotocamera, geolocalizzazione e modalità offline.",
+          inc: ["app iOS e Android", "lato server e API", "pannello: contenuti, ordini, utenti", "notifiche push e statistiche", "App Store e Google Play"],
+          res: "Revisione superata; il Suo team gestisce l'app senza sviluppatori." },
+        { t: "Soluzioni di intelligenza artificiale", s: "Soluzioni di IA e agenti IA",
+          lead: "Agenti IA che automatizzano i Suoi processi aziendali, basati su IA e machine learning.",
+          body: "Qui siamo scettici: metà delle idee con le reti neurali si risolve con una semplice automazione. E-mail, documenti e richieste, invece, i modelli li gestiscono bene. Prima un pilota sui Suoi dati, i numeri sull'accuratezza prima dello sviluppo.",
+          inc: ["agenti IA: smistamento richieste, inserimento nel CRM, risposte ai clienti", "chatbot e assistenti", "lettura di documenti", "classificazione delle richieste", "ricerca nella knowledge base", "previsione della domanda, analisi dei dati", "pilota con verifica della qualità"],
+          res: "Il sistema fa la routine. Una persona controlla." },
+        { t: "Sviluppo CRM ed ERP",
+          lead: "CRM ed ERP costruiti intorno ai Suoi processi, non il contrario.",
+          body: "Un prodotto standard va bene per un processo standard. Se i commerciali tengono metà del lavoro nei fogli di calcolo perché il sistema «non lo prevede», uno su misura costa meno. Migriamo i dati, avviamo reparto per reparto, il lavoro non si ferma mai.",
+          inc: ["vendite, magazzino, produzione, finanza", "ruoli, permessi, registro delle attività", "report e dashboard", "migrazione da fogli di calcolo e vecchi sistemi", "contabilità, telefonia, e-mail"],
+          res: "Un unico sistema al posto di uno zoo di fogli di calcolo. La direzione vede tutto senza report settimanali." },
+        { t: "Soluzioni cloud",
+          lead: "Migrazione su Amazon Web Services, completa o per parti.",
+          body: "Il cloud non è sempre più economico di un server proprio. Conviene quando il carico ha picchi, serve tolleranza ai guasti o un ambiente pronto in pochi minuti. Prima audit e stima, poi la migrazione per passi, con un piano di rollback per ognuno.",
+          inc: ["audit e stima dei costi", "architettura AWS, piano di migrazione", "server, database, file", "backup e monitoraggio", "ottimizzazione dei costi"],
+          res: "Un server guasto non è un dramma; la fattura del cloud è chiara." },
+        { t: "Infrastruttura aziendale su Red Hat", s: "Infrastruttura su Red Hat",
+          lead: "I server dell'azienda su Red Hat: Red Hat Enterprise Linux, OpenShift, Ansible.",
+          body: "Si sceglie Red Hat quando l'infrastruttura deve vivere per anni, superare gli audit e non dipendere dalla memoria di un solo amministratore. La sottoscrizione garantisce il supporto del produttore e dieci anni di ciclo di vita di RHEL. Le impostazioni dei server sono scritte in Ansible: ogni server si ricostruisce da un playbook. Red Hat è nostro partner: La aiutiamo anche con le sottoscrizioni.",
+          inc: ["audit dei server e piano di migrazione", "RHEL con aggiornamenti tramite Red Hat Satellite", "OpenShift per le Sue applicazioni", "automazione con Ansible", "Identity Management: accessi in un unico punto", "monitoraggio, backup, documentazione"],
+          res: "Un'infrastruttura che si può verificare, riprodurre e passare a un altro team senza perdite." },
+        { t: "API e integrazioni",
+          lead: "API per i Suoi sistemi, collegate ai servizi che usa già.",
+          body: "Il problema più comune è il doppio inserimento: ordini dal sito ridigitati a mano, pagamenti verificati su un foglio di calcolo. L'integrazione elimina lavoro ed errori. Il monitoraggio è d'obbligo: un partner cambia la sua API e il collegamento si rompe in silenzio.",
+          inc: ["progettazione e documentazione delle API", "pagamenti, spedizioni, CRM, contabilità", "scambio dati tra i Suoi sistemi", "code e nuovi tentativi in caso di errore", "monitoraggio e avvisi"],
+          res: "Inseriti una volta, i dati arrivano da soli." },
+        { t: "Supporto tecnico",
+          lead: "Supporto ed evoluzione dei Suoi sistemi. Anche di quelli che non abbiamo scritto noi.",
+          body: "Supporto significa anche aggiornamenti di sicurezza, un monitoraggio che si accorge del guasto prima degli utenti e piccoli miglioramenti. Con un sistema ereditato si parte da audit e documentazione, altrimenti ogni modifica è una lotteria.",
+          inc: ["monitoraggio di disponibilità ed errori", "correzioni e aggiornamenti", "backup e test di ripristino", "miglioramenti pianificati", "audit di sistemi ereditati"],
+          res: "Il sistema funziona, il team sa come è fatto." }
+      ]
     }
   };
 
@@ -362,10 +611,92 @@
       basicHint: ["Введите RUN или нажмите ESC,", "чтобы вернуться в меню.", "", "Команды: RUN CATALOG LIST HOME HGR", "BLOAD TITLE.PIC PRINT PR#6", "NC DOS UNIX LISA LINUX MC WIN AI"],
       touchHint: "Коснитесь экрана, чтобы вводить.",
       site: "Классическая версия сайта"
+    },
+    de: {
+      menu: ["Über das Unternehmen", "Leistungen", "Partner", "Kontakt", "Sprache", "Monitor", "Weiter in BASIC"],
+      langName: "Deutsch",
+      monitors: { color: "Farbfernseher", green: "grün", amber: "bernsteinfarben" },
+      select: (n) => `Ihre Wahl (1-${n}) ?`,
+      escMenu: "ESC - Menü",
+      back: "ESC - zurück",
+      more: "RETURN - weiter",
+      prevNext: "<- -> andere Leistung",
+      discussKey: "M - Projekt besprechen",
+      mailKey: "M - E-Mail schreiben",
+      pressReturn: "Drücken Sie RETURN",
+      basicHint: ["Geben Sie RUN ein oder drücken Sie ESC,", "um zum Menü zurückzukehren.", "", "Befehle: RUN CATALOG LIST HOME HGR", "BLOAD TITLE.PIC PRINT PR#6", "NC DOS UNIX LISA LINUX MC WIN AI"],
+      touchHint: "Zum Tippen den Bildschirm berühren.",
+      site: "Klassische Website"
+    },
+    fr: {
+      menu: ["À propos de l'entreprise", "Services", "Partenaires", "Contact", "Langue", "Moniteur", "Passer en BASIC"],
+      langName: "français",
+      monitors: { color: "TV couleur", green: "vert", amber: "ambre" },
+      select: (n) => `Votre choix (1-${n}) ?`,
+      escMenu: "ESC - menu",
+      back: "ESC - retour",
+      more: "RETURN - suite",
+      prevNext: "<- -> autre service",
+      discussKey: "M - parler de votre projet",
+      mailKey: "M - écrire un e-mail",
+      pressReturn: "Appuyez sur RETURN",
+      basicHint: ["Tapez RUN ou appuyez sur ESC", "pour revenir au menu.", "", "Commandes : RUN CATALOG LIST HOME HGR", "BLOAD TITLE.PIC PRINT PR#6", "NC DOS UNIX LISA LINUX MC WIN AI"],
+      touchHint: "Touchez l'écran pour taper.",
+      site: "Site classique"
+    },
+    es: {
+      menu: ["Acerca de la empresa", "Servicios", "Socios", "Contacto", "Idioma", "Monitor", "Salir a BASIC"],
+      langName: "español",
+      monitors: { color: "TV en color", green: "verde", amber: "ámbar" },
+      select: (n) => `Elija (1-${n}) ?`,
+      escMenu: "ESC - menú",
+      back: "ESC - volver",
+      more: "RETURN - seguir",
+      prevNext: "<- -> otro servicio",
+      discussKey: "M - hablar de su proyecto",
+      mailKey: "M - escribir un correo",
+      pressReturn: "Pulse RETURN",
+      basicHint: ["Escriba RUN o pulse ESC", "para volver al menú.", "", "Órdenes: RUN CATALOG LIST HOME HGR", "BLOAD TITLE.PIC PRINT PR#6", "NC DOS UNIX LISA LINUX MC WIN AI"],
+      touchHint: "Toque la pantalla para escribir.",
+      site: "Sitio clásico"
+    },
+    pt: {
+      menu: ["Sobre a empresa", "Serviços", "Parceiros", "Contactos", "Idioma", "Monitor", "Sair para o BASIC"],
+      langName: "português",
+      monitors: { color: "TV a cores", green: "verde", amber: "âmbar" },
+      select: (n) => `Escolha (1-${n}) ?`,
+      escMenu: "ESC - menu",
+      back: "ESC - voltar",
+      more: "RETURN - continuar",
+      prevNext: "<- -> outro serviço",
+      discussKey: "M - falar do seu projeto",
+      mailKey: "M - escrever um e-mail",
+      pressReturn: "Prima RETURN",
+      basicHint: ["Escreva RUN ou prima ESC", "para voltar ao menu.", "", "Comandos: RUN CATALOG LIST HOME HGR", "BLOAD TITLE.PIC PRINT PR#6", "NC DOS UNIX LISA LINUX MC WIN AI"],
+      touchHint: "Toque no ecrã para escrever.",
+      site: "Site clássico"
+    },
+    it: {
+      menu: ["Informazioni sull'azienda", "Servizi", "Partner", "Contatti", "Lingua", "Monitor", "Uscita al BASIC"],
+      langName: "italiano",
+      monitors: { color: "TV a colori", green: "verde", amber: "ambra" },
+      select: (n) => `Selezionare (1-${n}) ?`,
+      escMenu: "ESC - menu",
+      back: "ESC - indietro",
+      more: "RETURN - avanti",
+      prevNext: "<- -> altro servizio",
+      discussKey: "M - parliamo del progetto",
+      mailKey: "M - scrivere un'e-mail",
+      pressReturn: "Premere RETURN",
+      basicHint: ["Digitare RUN o premere ESC", "per tornare al menu.", "", "Comandi: RUN CATALOG LIST HOME HGR", "BLOAD TITLE.PIC PRINT PR#6", "NC DOS UNIX LISA LINUX MC WIN AI"],
+      touchHint: "Toccare lo schermo per digitare.",
+      site: "Sito classico"
     }
   };
 
-  const LANGS = ["uk", "en", "ru"];
+  /* Мови та їхній порядок — зі спільного AIC.langs; лишаємо ті, для яких є тексти */
+  const LANGS = ((window.AIC && AIC.langs) || Object.keys(I18N)).filter((l) => I18N[l] && SVC[l] && APL[l]);
+  const LANG_NAMES = (window.AIC && AIC.langNames) || {};
   const MONITORS = ["color", "green", "amber"];
   const $ = (id) => document.getElementById(id);
   const store = {
@@ -375,8 +706,8 @@
   const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
   const coarse = matchMedia("(pointer: coarse)").matches;
 
-  const nav = (navigator.language || "").toLowerCase();
-  let lang = store.get("aic-lang") || (nav.startsWith("ru") ? "ru" : nav.startsWith("uk") ? "uk" : nav.startsWith("en") ? "en" : "uk");
+  const nav = (navigator.language || "").toLowerCase().split("-")[0];
+  let lang = store.get("aic-lang") || (LANGS.includes(nav) ? nav : "uk");
   if (!LANGS.includes(lang)) lang = "uk";
   let monitor = store.get("aic-apple-monitor");
   if (!MONITORS.includes(monitor)) monitor = "color";
@@ -642,9 +973,8 @@
     drawPicture();
     return bload(1600).then(() => {
       if (mode !== "title") return;
-      const lines = wrap(t().heroTitle, 38);
-      center(20, lines[0] || "");
-      center(21, lines[1] || "");
+      /* Заголовок займає до трьох рядків (французький не вміщується у два) */
+      wrap(t().heroTitle, 38).slice(0, 3).forEach((l, i) => center(20 + i, l));
       center(23, A().pressReturn, 2);
       render();
       sr(t().heroTitle + ". " + A().pressReturn);
@@ -657,10 +987,10 @@
     cls();
     const a = A();
     bar(0, " ArtIntelliCo ][", lang + " ");
-    wrap(t().heroTitle, 38).slice(0, 2).forEach((l, i) => put(2 + i, 1, l));
+    wrap(t().heroTitle, 38).slice(0, 3).forEach((l, i) => put(2 + i, 1, l));
     const values = ["", "", "", "", a.langName, a.monitors[monitor], ""];
     a.menu.forEach((label, i) => {
-      const s = ` ${i + 1}  ${label}${values[i] ? ": " + values[i] : ""}`;
+      const s = ` ${i + 1}  ${label}${values[i] ? colon() + " " + values[i] : ""}`;
       put(5 + i * 2, 1, s.padEnd(38), i === menuSel ? 1 : 0);
       regions.push({ r: 5 + i * 2, act: () => { menuSel = i; choose(i); } });
     });
@@ -671,12 +1001,40 @@
     sr(a.menu.map((m, i) => `${i + 1}. ${m}${values[i] ? ": " + values[i] : ""}`).join(". "));
   }
 
+  /* Вибір мови — такий самий нумерований список, як меню програми: цифра, стрілки й RETURN */
+  let langSel = 0;
+  const langName = (l) => LANG_NAMES[l] || APL[l].langName;
+  function languages() {
+    mode = "langs";
+    gfx = "text";
+    cls();
+    const a = A();
+    const step = LANGS.length > 9 ? 1 : 2;
+    bar(0, " " + a.menu[4], lang + " ");
+    LANGS.forEach((l, i) => {
+      put(2 + i * step, 1, ` ${i + 1}  ${l.toUpperCase()}  ${langName(l)}`.padEnd(38), i === langSel ? 1 : 0);
+      regions.push({ r: 2 + i * step, act: () => pickLang(i) });
+    });
+    const p = a.select(LANGS.length);
+    put(21, 1, p);
+    cursor = { r: 21, c: 1 + norm(p).length };
+    put(23, 1, a.escMenu);
+    regions.push({ r: 23, act: menu });
+    render();
+    sr(a.menu[4] + ": " + LANGS.map((l, i) => `${i + 1}. ${langName(l)}`).join(". "));
+  }
+  function pickLang(i) {
+    langSel = i;
+    setLang(LANGS[i]);
+    menu();
+  }
+
   function choose(i) {
     if (i === 0) readme();
     else if (i === 1) services();
     else if (i === 2) partners();
     else if (i === 3) contact();
-    else if (i === 4) { setLang(LANGS[(LANGS.indexOf(lang) + 1) % LANGS.length]); menu(); }
+    else if (i === 4) { langSel = Math.max(0, LANGS.indexOf(lang)); languages(); }
     else if (i === 5) { setMonitor(MONITORS[(MONITORS.indexOf(monitor) + 1) % MONITORS.length]); menu(); }
     else basic();
   }
@@ -733,7 +1091,10 @@
   const L = (s, act, k = false) => ({ t: s, act, k });
   const block = (s, w = 38, indent = "") => wrap(s, w, indent).map((x) => L(x));
   const rule = (s) => L("-".repeat(Math.min(38, Math.max(...wrap(s, 38).map((x) => x.length)))));
-  const openSite = () => window.open(`${location.origin}/${lang === "uk" ? "" : lang + "/"}classic/`, "_blank", "noopener");
+  const pageUrl = (id) => (window.AIC && AIC.url ? AIC.url(id, lang) : `/${lang === "uk" ? "" : lang + "/"}${id}/`);
+  const openSite = () => window.open(location.origin + pageUrl("classic"), "_blank", "noopener");
+  /* Французька типографіка: нерозривний пробіл перед двокрапкою */
+  const colon = () => (lang === "fr" ? "\u00A0:" : ":");
   const mailto = () => { location.href = AIC.mailto("mailto:" + EMAIL); };
 
   function readme() {
@@ -743,10 +1104,10 @@
       lines: [
         ...block(s.heroTitle), rule(s.heroTitle), L(""),
         ...block(s.heroText), L(""),
-        L(norm(s.heroLead) + ":"),
+        L(norm(s.heroLead) + colon()),
         ...s.phrases.flatMap((p) => block("- " + p, 38, "  ")), L(""),
         ...block(s.copyright), ...block(s.legal), ...block(s.slogan),
-        L(A().site + ": artintellico.com", openSite)
+        ...wrap(A().site + colon() + " artintellico.com", 38).map((x) => L(x, openSite))
       ],
       back: menu,
       plain: [s.heroTitle, s.heroText, s.heroLead + ": " + s.phrases.join(", "), s.copyright, s.legal, s.slogan].join(" ")
@@ -822,7 +1183,7 @@
       lines: [
         ...block(s.contactTitle), rule(s.contactTitle), L(""),
         ...block(s.contactText), L(""),
-        L(norm(s.emailLabel) + ":"),
+        L(norm(s.emailLabel) + colon()),
         L(EMAIL, mailto)
       ],
       foot: [{ t: A().mailKey, act: mailto }],
@@ -901,7 +1262,7 @@
     "200  PRINT CHR$ (4)\"TYPE SERVICES\": RETURN",
     "300  PRINT CHR$ (4)\"TYPE PARTNERS\": RETURN",
     "400  PRINT CHR$ (4)\"TYPE CONTACT\": RETURN",
-    "500  L = L + 1: IF L > 3 THEN L = 1",
+    `500  INPUT "LANGUAGE (1-${LANGS.length}) ?";L`,
     "510  RETURN",
     "600  M = M + 1: IF M > 3 THEN M = 1",
     "610  RETURN",
@@ -915,7 +1276,7 @@
     term.push("]" + norm(raw).slice(0, COLS - 1));
     line = "";
     const cmd = norm(raw).trim();
-    const go = (url) => { drawBasic(); setTimeout(() => { location.href = url; }, 300); };
+    const go = (id) => { drawBasic(); setTimeout(() => { location.href = pageUrl(id); }, 300); };
     if (!cmd) return drawBasic();
     if (/^RUN( HELLO| ARTINTEL)?$/.test(cmd)) return menu();
     if (cmd === "HOME") { term = []; return drawBasic(); }
@@ -925,14 +1286,14 @@
     if (cmd === "HGR") { mode = "hgr"; gfx = "full"; drawPicture(); shown.fill(1); render(); return; }
     if (/^BLOAD\s+TITLE(\.PIC)?$/.test(cmd)) { mode = "hgr"; gfx = "full"; drawPicture(); bload(2200); return; }
     if (cmd === "PR#6" || cmd === "REBOOT") return boot();
-    if (cmd === "NC") return go("/");
-    if (cmd === "DOS") return go("/dos/");
-    if (cmd === "UNIX") return go("/unix/");
-    if (cmd === "LISA") return go("/lisa/");
-    if (cmd === "LINUX") return go("/linux/");
-    if (cmd === "MC") return go("/mc/");
-    if (cmd === "WIN") return go("/win31/");
-    if (cmd === "AI") return go("/ai/");
+    if (cmd === "NC") return go("nc");
+    if (cmd === "DOS") return go("dos");
+    if (cmd === "UNIX") return go("unix");
+    if (cmd === "LISA") return go("lisa");
+    if (cmd === "LINUX") return go("linux");
+    if (cmd === "MC") return go("mc");
+    if (cmd === "WIN") return go("win31");
+    if (cmd === "AI") return go("ai");
     if (cmd === "HELP") { A().basicHint.slice(3).forEach(println); return drawBasic(); }
     const m = /^(PRINT|\?)\s*(.*)$/.exec(cmd);
     if (m) {
@@ -1008,6 +1369,16 @@
       else if (key === "ArrowDown" || key === "ArrowRight") { menuSel = (menuSel + 1) % 7; menu(); }
       else if (key === "Enter") choose(menuSel);
       else if (/^[1-7]$/.test(key)) { menuSel = Number(key) - 1; choose(menuSel); }
+      else return false;
+      return true;
+    }
+    if (mode === "langs") {
+      const N = LANGS.length;
+      if (key === "ArrowUp" || key === "ArrowLeft") { langSel = (langSel + N - 1) % N; languages(); }
+      else if (key === "ArrowDown" || key === "ArrowRight") { langSel = (langSel + 1) % N; languages(); }
+      else if (key === "Enter") pickLang(langSel);
+      else if (/^[1-9]$/.test(key) && Number(key) <= N) pickLang(Number(key) - 1);
+      else if (key === "Escape" || key === "Backspace") menu();
       else return false;
       return true;
     }

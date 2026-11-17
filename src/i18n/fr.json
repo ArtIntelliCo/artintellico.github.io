@@ -1,0 +1,178 @@
+{
+  "meta": {
+    "title": "Développement logiciel et support informatique pour entreprises — ArtIntelliCo",
+    "description": "ArtIntelliCo développe des solutions informatiques : e-commerce, portails, SaaS, machine learning, intelligence artificielle et support technique continu."
+  },
+  "nav": {
+    "skipToContent": "Aller au contenu",
+    "services": "Services",
+    "contacts": "Contact",
+    "classic": "Version classique du site",
+    "languageLabel": "Langue"
+  },
+  "hero": {
+    "title": "Nous créons des solutions informatiques qui travaillent pour votre entreprise",
+    "text": "L'équipe ArtIntelliCo vous aide à numériser et à automatiser vos processus métier en concevant et en déployant des solutions informatiques modernes.",
+    "typedLead": "Pour votre entreprise, nous",
+    "typed": [
+      "créons des plateformes SaaS",
+      "déployons des systèmes CRM et ERP",
+      "mettons l'IA au travail",
+      "migrons l'infrastructure vers le cloud"
+    ]
+  },
+  "services": {
+    "heading": "Comment nous pouvons vous aider",
+    "lead": "Nous ne nous enfermons pas dans un langage de programmation ou une plateforme : nous analysons d'abord le problème, puis nous choisissons les outils. Parfois, la meilleure réponse est un service par abonnement déjà existant, et dans ce cas nous vous le dirons.",
+    "includesLabel": "Ce qui est inclus",
+    "resultLabel": "Résultat",
+    "more": "Détails",
+    "items": {
+      "concept": {
+        "title": "Conception de solutions informatiques",
+        "text": "Nous déterminons ce que le système doit réellement faire et le traduisons en exigences sur lesquelles les métiers comme les développeurs peuvent s'appuyer.",
+        "details": "L'erreur la plus coûteuse d'un projet informatique se produit avant la première ligne de code : le système est construit pour un problème que personne n'a vraiment défini. Nous commençons donc par parler avec ceux qui l'utiliseront — la comptabilité, l'entrepôt, les commerciaux — et pas seulement avec la personne qui valide le projet. Il arrive que notre conclusion soit de ne rien développer et de paramétrer un produit existant. C'est aussi un résultat.",
+        "includes": [
+          "entretiens avec les équipes et analyse des processus actuels",
+          "exigences métier et scénarios d'utilisation",
+          "comparaison entre produits du marché et développement sur mesure",
+          "cahier des charges avec estimation des délais et du budget par phase"
+        ],
+        "result": "Un document à partir duquel n'importe quelle équipe, la nôtre ou une autre, peut chiffrer le projet et commencer le développement."
+      },
+      "saas": {
+        "title": "Développement SaaS",
+        "text": "Nous concevons et développons des plateformes SaaS, de la première version pour des clients pilotes jusqu'au service où chaque client dispose de son propre espace de travail, de sa formule et de son tableau de bord.",
+        "details": "En SaaS, l'argent n'est pas dans le code. Il est dans la facilité avec laquelle un nouveau client peut s'inscrire, payer et démarrer sans appeler le support. Nous intégrons le multi-tenant, la facturation et les droits d'accès dès le premier jour, car les ajouter une fois les clients installés coûte plusieurs fois plus cher. Et nous cherchons à livrer la première version tôt : les vrais utilisateurs montrent vite quelles fonctionnalités n'ont jamais servi.",
+        "includes": [
+          "architecture multi-tenant avec données clients isolées",
+          "inscription, formules, abonnements et paiement en ligne",
+          "tableaux de bord clients, rôles et droits d'accès",
+          "intégrations et API publique pour vos clients",
+          "montée en charge à mesure que l'activité augmente"
+        ],
+        "result": "Un produit que vous pouvez vendre par abonnement, et non un projet à déployer à la main à chaque fois."
+      },
+      "web": {
+        "title": "Développement web",
+        "text": "Sites d'entreprise, places de marché, boutiques en ligne, systèmes de réservation et outils web internes, conçus pour votre besoin plutôt qu'à partir d'un modèle.",
+        "details": "Un site d'entreprise se juge aux demandes et aux commandes qu'il génère, pas à son allure dans un portfolio. Nous convenons donc dès le départ de ce qui compte comme résultat et mettons en place la mesure d'audience avant le lancement, pas six mois plus tard. La technologie suit le besoin : une landing page n'a pas besoin d'une plateforme lourde, et une place de marché ne tient pas dans un constructeur de sites.",
+        "includes": [
+          "prototype et design d'interface",
+          "frontend, backend et interface d'administration",
+          "intégrations avec les paiements, la livraison, le CRM et la comptabilité",
+          "bases du SEO, vitesse de chargement et mesure d'audience",
+          "mise en ligne et maintenance continue"
+        ],
+        "result": "Un service web dont vous voyez combien de demandes et quel chiffre d'affaires il rapporte."
+      },
+      "mobile": {
+        "title": "Applications mobiles",
+        "text": "Applications iOS et Android, avec la partie serveur et l'interface d'administration qui les accompagnent.",
+        "details": "Une application a du sens quand les clients y reviennent régulièrement : pour recommander, suivre une livraison, cumuler des points de fidélité. Si quelqu'un vient une fois par an, un bon site mobile coûte moins cher, et nous vous le dirons avant de commencer. Natif ou multiplateforme : le choix dépend du budget et de la place qu'occupent dans l'application l'appareil photo, la géolocalisation et le mode hors ligne.",
+        "includes": [
+          "applications iOS et Android",
+          "partie serveur et API",
+          "interface d'administration pour les contenus, les commandes et les utilisateurs",
+          "notifications push et mesure d'audience",
+          "publication sur l'App Store et Google Play"
+        ],
+        "result": "Une application qui passe la validation des stores et que votre équipe peut gérer sans appeler un développeur."
+      },
+      "ai": {
+        "title": "Solutions d'intelligence artificielle",
+        "text": "Nous proposons des solutions fondées sur l'intelligence artificielle et le machine learning, qui automatisent vos processus métier grâce à des agents IA.",
+        "details": "Nous sommes plus sceptiques que la plupart face à l'IA : la moitié des idées du type « ajoutons un réseau de neurones » se règlent avec une automatisation ordinaire. Mais là où des personnes passent des heures à trier des e-mails, des documents et des demandes de support, les modèles de langage les déchargent vraiment de la routine. Nous commençons par un pilote sur vos propres données, pour que vous voyiez les chiffres de précision avant le développement principal, et non après.",
+        "includes": [
+          "des agents IA qui gèrent seuls les étapes routinières d'un processus : tri des demandes, saisie dans le CRM, brouillons de réponses aux clients",
+          "chatbots et assistants pour vos clients et vos équipes",
+          "reconnaissance de documents et extraction de données",
+          "classification des demandes et recherche dans la base de connaissances",
+          "prévision de la demande et analyse de données",
+          "un pilote dont la qualité est mesurée sur vos données"
+        ],
+        "result": "Un processus précis, autrefois traité à la main, désormais pris en charge par le système, sous le contrôle d'une personne."
+      },
+      "crm": {
+        "title": "Développement CRM et ERP",
+        "text": "Des systèmes CRM et ERP sur mesure, construits autour de votre façon de travailler, et non l'inverse.",
+        "details": "Un CRM standard convient tant que votre processus reste standard. Quand vos commerciaux font la moitié de leur travail dans des tableurs parce que le système « ne sait pas faire », développer votre propre outil revient moins cher. Nous migrons les données des anciens systèmes et des tableurs et déployons service par service, pour que l'activité ne s'arrête pas un seul jour.",
+        "includes": [
+          "modules ventes, stock, production et finance, selon vos besoins",
+          "rôles, droits d'accès et journal d'audit",
+          "rapports et tableaux de bord pour la direction",
+          "migration des données depuis les tableurs et les anciens systèmes",
+          "intégration avec la comptabilité, la téléphonie et la messagerie"
+        ],
+        "result": "Un seul système au lieu d'une ménagerie de tableurs : la direction voit où en sont les choses sans rapports hebdomadaires de chaque service."
+      },
+      "cloud": {
+        "title": "Solutions cloud",
+        "text": "Nous migrons tout ou partie de votre infrastructure vers Amazon Web Services et veillons à ce qu'elle continue de fonctionner sans devenir plus chère sans raison.",
+        "details": "Le cloud n'est pas toujours moins cher que votre propre serveur. Il devient rentable quand la charge connaît des pics, quand vous avez besoin de tolérance aux pannes, ou quand de nouveaux environnements doivent être prêts en quelques minutes plutôt qu'en une semaine. C'est pourquoi une migration commence par un audit et une estimation des coûts, et le transfert se fait par étapes, avec un plan de retour arrière à chaque étape.",
+        "includes": [
+          "audit de l'infrastructure actuelle et estimation des coûts",
+          "architecture AWS et plan de migration",
+          "transfert des serveurs, des bases de données et des fichiers",
+          "sauvegardes et supervision",
+          "optimisation des coûts après la migration"
+        ],
+        "result": "Une infrastructure qui résiste à la panne d'un serveur, et une facture cloud que vous comprenez vraiment."
+      },
+      "redhat": {
+        "title": "Infrastructure d'entreprise sous Red Hat",
+        "text": "Nous bâtissons l'infrastructure informatique de votre entreprise sous Red Hat : serveurs sous Red Hat Enterprise Linux, plateforme de conteneurs OpenShift et automatisation avec Ansible.",
+        "details": "Les entreprises choisissent Red Hat quand l'infrastructure doit tourner pendant des années et passer des audits, plutôt que de vivre dans la tête d'un seul administrateur. L'abonnement se rentabilise grâce au support de l'éditeur et à un long cycle de vie : Red Hat Enterprise Linux est maintenu pendant dix ans. Nous concevons l'infrastructure en fonction de vos charges de travail et décrivons la configuration des serveurs dans Ansible, afin que n'importe quelle machine puisse être reconstruite à partir d'un playbook plutôt que de mémoire. Red Hat est notre partenaire : nous pouvons donc aussi vous aider à y voir clair dans les abonnements et le support de l'éditeur.",
+        "includes": [
+          "audit de vos serveurs actuels et plan de migration",
+          "déploiement de Red Hat Enterprise Linux avec mises à jour centralisées via Red Hat Satellite",
+          "la plateforme de conteneurs OpenShift pour vos applications",
+          "automatisation de la configuration et du déploiement avec Ansible",
+          "gestion centralisée des identités et des accès (Identity Management)",
+          "supervision, sauvegardes et documentation pour votre équipe"
+        ],
+        "result": "Une infrastructure que vous pouvez auditer, reproduire et confier à une autre équipe sans perdre le savoir accumulé."
+      },
+      "api": {
+        "title": "API et intégrations",
+        "text": "Nous concevons des API pour vos systèmes et les connectons aux services que vous utilisez déjà.",
+        "details": "Le problème que nous rencontrons le plus souvent, ce sont les données saisies deux fois. Les commandes du site ressaisies à la main dans la comptabilité, les paiements rapprochés dans un tableur. Une intégration supprime ce travail et les erreurs qui vont avec. Nous mettons aussi en place une supervision, car les intégrations tombent en panne sans bruit quand un partenaire modifie son API, et mieux vaut l'apprendre par le système que par un client.",
+        "includes": [
+          "conception et documentation d'API",
+          "intégrations avec les prestataires de paiement, les services de livraison, le CRM et la comptabilité",
+          "échange de données entre systèmes internes",
+          "files d'attente et nouvelles tentatives en cas d'échec",
+          "supervision et alertes"
+        ],
+        "result": "Les données sont saisies une seule fois et arrivent d'elles-mêmes là où il faut."
+      },
+      "support": {
+        "title": "Support technique",
+        "text": "Nous assurons le bon fonctionnement de vos systèmes et continuons à les améliorer, y compris ceux que nous n'avons pas développés.",
+        "details": "Le support, ce n'est pas seulement corriger des bugs. Ce sont aussi des mises à jour qui comblent les failles de sécurité, une supervision qui repère un problème avant les utilisateurs, et de petites améliorations au fil de l'eau. Si le système vient d'un autre prestataire, nous commençons par un audit et une documentation : sans cela, chaque modification est un pari.",
+        "includes": [
+          "supervision de la disponibilité et des erreurs",
+          "correction des bugs et mises à jour de sécurité",
+          "sauvegardes et tests de restauration",
+          "améliorations planifiées et nouvelles fonctionnalités",
+          "audit et documentation des systèmes développés par d'autres prestataires"
+        ],
+        "result": "Un système qui fonctionne, et une équipe qui sait comment il est construit."
+      }
+    }
+  },
+  "partners": {
+    "heading": "Nos partenaires"
+  },
+  "contacts": {
+    "heading": "Parlez-nous de votre projet",
+    "text": "Vous avez une proposition de partenariat ou souhaitez en savoir plus sur nos solutions et notre expérience ? Écrivez-nous par e-mail.",
+    "emailLabel": "E-mail"
+  },
+  "footer": {
+    "rights": "Tous droits réservés.",
+    "slogan": "Nous avons vu naître l'informatique. Nous savons comment elle fonctionne aujourd'hui — et nous comprenons où elle va demain.",
+    "variants": "Version du site",
+    "addressLabel": "Adresse"
+  }
+}

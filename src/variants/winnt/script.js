@@ -49,7 +49,8 @@
       modesHint: "Той самий сайт в інтерфейсах різних років",
       logonTitle: "Початок сеансу", logonText: "Натисніть Ctrl+Alt+Del, щоб почати сеанс.", logonHint: "Або натисніть будь-яку клавішу чи клацніть тут.",
       bootServices: "Запуск служб ArtIntelliCo...", bootSkip: "Натисніть будь-яку клавішу, щоб пропустити",
-      taskbar: "Панель задач", langLabel: "Мова інтерфейсу", embHint: "Двічі клацніть вбудований об'єкт, щоб відкрити його."
+      taskbar: "Панель задач", langLabel: "Мова інтерфейсу", embHint: "Двічі клацніть вбудований об'єкт, щоб відкрити його.",
+      cadKeys: ["Ctrl", "Alt", "Del"]
     },
     en: {
       dunTitle: "Dial-Up Networking", dunIntro: "Connect to the Internet to open the site.",
@@ -80,7 +81,8 @@
       modesHint: "The same site in interfaces from different years",
       logonTitle: "Begin Logon", logonText: "Press Ctrl+Alt+Del to log on.", logonHint: "Or press any key, or click here.",
       bootServices: "Starting ArtIntelliCo services...", bootSkip: "Press any key to skip",
-      taskbar: "Taskbar", langLabel: "Interface language", embHint: "Double-click an embedded object to open it."
+      taskbar: "Taskbar", langLabel: "Interface language", embHint: "Double-click an embedded object to open it.",
+      cadKeys: ["Ctrl", "Alt", "Del"]
     },
     ru: {
       dunTitle: "Удалённый доступ к сети", dunIntro: "Чтобы открыть сайт, подключитесь к Интернету.",
@@ -111,10 +113,172 @@
       modesHint: "Тот же сайт в интерфейсах разных лет",
       logonTitle: "Начало сеанса", logonText: "Нажмите Ctrl+Alt+Del, чтобы начать сеанс.", logonHint: "Или нажмите любую клавишу либо щёлкните здесь.",
       bootServices: "Запуск служб ArtIntelliCo...", bootSkip: "Нажмите любую клавишу, чтобы пропустить",
-      taskbar: "Панель задач", langLabel: "Язык интерфейса", embHint: "Дважды щёлкните встроенный объект, чтобы открыть его."
+      taskbar: "Панель задач", langLabel: "Язык интерфейса", embHint: "Дважды щёлкните встроенный объект, чтобы открыть его.",
+      cadKeys: ["Ctrl", "Alt", "Del"]
+    },
+    de: {
+      dunTitle: "DFÜ-Netzwerk", dunIntro: "Stellen Sie eine Verbindung zum Internet her, um die Website zu öffnen.",
+      dunEntry: "Zu wählender Telefonbucheintrag:", dunPhone: "Rufnummer:", dunUser: "Benutzername:", dunPass: "Kennwort:",
+      dunSave: "Kennwort speichern", dunSpeaker: "Modemlautsprecher", dunDial: "Wählen", dunHang: "Auflegen", dunStatus: "Status:",
+      dunConnecting: "Verbindung mit {e} wird hergestellt", dunSteps: ["Wählvorgang...", "Benutzername und Kennwort werden überprüft...", "Computer wird im Netzwerk registriert..."],
+      dunDone: "Verbunden mit ArtIntelliCo Online.", dunSpeed: "Geschwindigkeit: 33.600 Bit/s", dunOff: "Nicht verbunden",
+      start: "Start", programs: "Programme", modes: "Modi", language: "Sprache", help: "Hilfe", run: "Ausführen...", shutdown: "Beenden...",
+      mycomp: "Arbeitsplatz", bin: "Papierkorb", readme: "Über uns", services: "Leistungen", partners: "Partner", contacts: "Schreiben Sie uns",
+      cmd: "Eingabeaufforderung", control: "Systemsteuerung", drive: "ARTINTELLICO (C:)",
+      min: "Minimieren", max: "Maximieren", restore: "Wiederherstellen", close: "Schließen",
+      exMenus: ["Datei", "Bearbeiten", "Ansicht", "?"], wpMenus: ["Datei", "Bearbeiten", "Ansicht", "Einfügen", "Format", "?"],
+      objects: ["Objekt", "Objekte", "Objekte"], f1: "Drücken Sie F1, um Hilfe zu erhalten.",
+      serviceType: "ArtIntelliCo-Leistung", partnerType: "Partner", colName: "Name", colType: "Typ",
+      type: "Typ:", location: "Ort:", props: "Eigenschaften", general: "Allgemein",
+      tabParts: "Komponenten", tabResult: "Ergebnis", desc: "Beschreibung:", partsIntro: "Diese Leistung umfasst folgende Komponenten:", partsCount: "Ausgewählte Komponenten: {n} von {n}", resultHead: "Was Sie erhalten", noteHead: "Hinweis",
+      ok: "OK", cancel: "Abbrechen", yes: "Ja", no: "Nein", discuss: "Projekt besprechen",
+      write: "E-Mail schreiben", copy: "Adresse kopieren", copied: "Die Adresse wurde in die Zwischenablage kopiert.", copyFailed: "Kopieren nicht möglich. Die Adresse lautet: ",
+      runTitle: "Ausführen", open: "Öffnen:", browse: "Durchsuchen...", runText: "Geben Sie den Namen eines Programms, Ordners oder Dokuments ein, das geöffnet werden soll.",
+      notFound: "Die Datei „%s“ (oder eine ihrer Komponenten) wurde nicht gefunden. Überprüfen Sie, ob Pfad und Dateiname richtig sind.",
+      shutTitle: "Windows beenden", shutText: "Möchten Sie:",
+      shutOpts: { restart: "Computer neu starten", logoff: "Alle Programme schließen und unter anderem Namen anmelden", classic: "Zur klassischen Version der Website wechseln" },
+      langTitle: "Sprache der Oberfläche", langText: "Wählen Sie die Sprache der Oberfläche:",
+      aboutTitle: "Info über ArtIntelliCo NT", version: "Version 4.0 (Build 1381: Service Pack 6)", licensed: "Dieses Produkt ist lizenziert für:", guest: "Gast",
+      memory: "Für Windows NT verfügbarer physischer Speicher:", memoryVal: "65.536 KB",
+      helpTitle: "Windows NT-Hilfe", helpKeysHead: "Tasten", helpRunHead: "Befehle für „Ausführen“",
+      helpKeys: [["Strg+Esc", "Startmenü"], ["F1", "Hilfe"], ["Eingabetaste", "markiertes Objekt öffnen"], ["Esc", "Menü oder Dialogfeld schließen"], ["← ↑ → ↓", "Symbol in einem Ordner markieren"], ["← →", "Registerkarten im Fenster „Eigenschaften“"], ["Doppelklick auf die Titelleiste", "Fenster maximieren"]],
+      modesHint: "Dieselbe Website in Oberflächen verschiedener Jahre",
+      logonTitle: "Anmeldung", logonText: "Drücken Sie Strg+Alt+Entf, um sich anzumelden.", logonHint: "Oder drücken Sie eine beliebige Taste bzw. klicken Sie hier.",
+      bootServices: "ArtIntelliCo-Dienste werden gestartet...", bootSkip: "Drücken Sie eine beliebige Taste, um zu überspringen",
+      taskbar: "Taskleiste", langLabel: "Sprache der Oberfläche", embHint: "Doppelklicken Sie auf ein eingebettetes Objekt, um es zu öffnen.",
+      cadKeys: ["Strg", "Alt", "Entf"]
+    },
+    fr: {
+      dunTitle: "Accès réseau à distance", dunIntro: "Connectez-vous à Internet pour ouvrir le site.",
+      dunEntry: "Entrée de l'annuaire à composer\u00a0:", dunPhone: "Numéro de téléphone\u00a0:", dunUser: "Nom d'utilisateur\u00a0:", dunPass: "Mot de passe\u00a0:",
+      dunSave: "Enregistrer le mot de passe", dunSpeaker: "Haut-parleur du modem", dunDial: "Numéroter", dunHang: "Raccrocher", dunStatus: "État\u00a0:",
+      dunConnecting: "Connexion à {e}", dunSteps: ["Numérotation...", "Vérification du nom d'utilisateur et du mot de passe...", "Enregistrement de l'ordinateur sur le réseau..."],
+      dunDone: "Connecté à ArtIntelliCo Online.", dunSpeed: "Vitesse\u00a0: 33 600 bps", dunOff: "Non connecté",
+      start: "Démarrer", programs: "Programmes", modes: "Modes", language: "Langue", help: "Aide", run: "Exécuter...", shutdown: "Arrêter...",
+      mycomp: "Poste de travail", bin: "Corbeille", readme: "À propos", services: "Services", partners: "Partenaires", contacts: "Écrivez-nous",
+      cmd: "Invite de commandes", control: "Panneau de configuration", drive: "ARTINTELLICO (C:)",
+      min: "Réduire", max: "Agrandir", restore: "Restaurer", close: "Fermer",
+      exMenus: ["Fichier", "Édition", "Affichage", "?"], wpMenus: ["Fichier", "Édition", "Affichage", "Insertion", "Format", "?"],
+      objects: ["objet", "objets", "objets"], f1: "Pour obtenir de l'aide, appuyez sur F1",
+      serviceType: "Service ArtIntelliCo", partnerType: "Partenaire", colName: "Nom", colType: "Type",
+      type: "Type\u00a0:", location: "Emplacement\u00a0:", props: "Propriétés", general: "Général",
+      tabParts: "Composants", tabResult: "Résultat", desc: "Description\u00a0:", partsIntro: "Ce service comprend les composants suivants\u00a0:", partsCount: "Composants sélectionnés\u00a0: {n} sur {n}", resultHead: "Ce que vous obtenez", noteHead: "Remarque",
+      ok: "OK", cancel: "Annuler", yes: "Oui", no: "Non", discuss: "Parler du projet",
+      write: "Écrire un e-mail", copy: "Copier l'adresse", copied: "Adresse copiée dans le Presse-papiers.", copyFailed: "Copie impossible. L'adresse est\u00a0: ",
+      runTitle: "Exécuter", open: "Ouvrir\u00a0:", browse: "Parcourir...", runText: "Tapez le nom d'un programme, dossier ou document, et Windows l'ouvrira pour vous.",
+      notFound: "Impossible de trouver le fichier «\u00a0%s\u00a0» (ou l'un de ses composants). Vérifiez que le chemin d'accès et le nom de fichier sont corrects.",
+      shutTitle: "Arrêt de Windows", shutText: "Voulez-vous\u00a0:",
+      shutOpts: { restart: "Redémarrer l'ordinateur", logoff: "Fermer tous les programmes et ouvrir une session sous un autre nom", classic: "Passer à la version classique du site" },
+      langTitle: "Langue de l'interface", langText: "Choisissez la langue de l'interface\u00a0:",
+      aboutTitle: "À propos d'ArtIntelliCo NT", version: "Version 4.0 (Build 1381\u00a0: Service Pack 6)", licensed: "Ce produit est concédé sous licence à\u00a0:", guest: "Invité",
+      memory: "Mémoire physique disponible pour Windows NT\u00a0:", memoryVal: "65 536 Ko",
+      helpTitle: "Aide de Windows NT", helpKeysHead: "Touches", helpRunHead: "Commandes pour «\u00a0Exécuter\u00a0»",
+      helpKeys: [["Ctrl+Échap", "menu Démarrer"], ["F1", "aide"], ["Entrée", "ouvrir l'élément sélectionné"], ["Échap", "fermer un menu ou une boîte de dialogue"], ["← ↑ → ↓", "sélectionner une icône dans un dossier"], ["← →", "onglets de la fenêtre Propriétés"], ["Double-clic sur la barre de titre", "agrandir la fenêtre"]],
+      modesHint: "Le même site dans des interfaces de différentes époques",
+      logonTitle: "Ouverture de session", logonText: "Appuyez sur Ctrl+Alt+Suppr pour ouvrir une session.", logonHint: "Ou appuyez sur une touche, ou cliquez ici.",
+      bootServices: "Démarrage des services ArtIntelliCo...", bootSkip: "Appuyez sur une touche pour passer",
+      taskbar: "Barre des tâches", langLabel: "Langue de l'interface", embHint: "Double-cliquez sur un objet incorporé pour l'ouvrir.",
+      cadKeys: ["Ctrl", "Alt", "Suppr"]
+    },
+    es: {
+      dunTitle: "Acceso telefónico a redes", dunIntro: "Conéctese a Internet para abrir el sitio.",
+      dunEntry: "Entrada de la agenda que desea marcar:", dunPhone: "Número de teléfono:", dunUser: "Nombre de usuario:", dunPass: "Contraseña:",
+      dunSave: "Guardar contraseña", dunSpeaker: "Altavoz del módem", dunDial: "Marcar", dunHang: "Colgar", dunStatus: "Estado:",
+      dunConnecting: "Conectando con {e}", dunSteps: ["Marcando...", "Comprobando el nombre de usuario y la contraseña...", "Registrando el equipo en la red..."],
+      dunDone: "Conectado a ArtIntelliCo Online.", dunSpeed: "Velocidad: 33.600 bps", dunOff: "No conectado",
+      start: "Inicio", programs: "Programas", modes: "Modos", language: "Idioma", help: "Ayuda", run: "Ejecutar...", shutdown: "Apagar el sistema...",
+      mycomp: "Mi PC", bin: "Papelera de reciclaje", readme: "Quiénes somos", services: "Servicios", partners: "Socios", contacts: "Escríbanos",
+      cmd: "Símbolo del sistema", control: "Panel de control", drive: "ARTINTELLICO (C:)",
+      min: "Minimizar", max: "Maximizar", restore: "Restaurar", close: "Cerrar",
+      exMenus: ["Archivo", "Edición", "Ver", "?"], wpMenus: ["Archivo", "Edición", "Ver", "Insertar", "Formato", "?"],
+      objects: ["objeto", "objetos", "objetos"], f1: "Para obtener Ayuda, presione F1",
+      serviceType: "Servicio de ArtIntelliCo", partnerType: "Socio", colName: "Nombre", colType: "Tipo",
+      type: "Tipo:", location: "Ubicación:", props: "Propiedades", general: "General",
+      tabParts: "Componentes", tabResult: "Resultado", desc: "Descripción:", partsIntro: "Este servicio incluye los siguientes componentes:", partsCount: "Componentes seleccionados: {n} de {n}", resultHead: "Qué obtiene", noteHead: "Nota",
+      ok: "Aceptar", cancel: "Cancelar", yes: "Sí", no: "No", discuss: "Hablar del proyecto",
+      write: "Escribir un correo", copy: "Copiar dirección", copied: "Dirección copiada en el Portapapeles.", copyFailed: "No se pudo copiar. La dirección es: ",
+      runTitle: "Ejecutar", open: "Abrir:", browse: "Examinar...", runText: "Escriba el nombre de un programa, carpeta o documento, y Windows lo abrirá.",
+      notFound: "No se encuentra el archivo «%s» (o uno de sus componentes). Compruebe que la ruta de acceso y el nombre del archivo son correctos.",
+      shutTitle: "Apagar Windows", shutText: "¿Qué desea hacer?",
+      shutOpts: { restart: "Reiniciar el equipo", logoff: "Cerrar todos los programas e iniciar la sesión como otro usuario", classic: "Ir a la versión clásica del sitio" },
+      langTitle: "Idioma de la interfaz", langText: "Elija el idioma de la interfaz:",
+      aboutTitle: "Acerca de ArtIntelliCo NT", version: "Versión 4.0 (compilación 1381: Service Pack 6)", licensed: "Este producto está bajo licencia de:", guest: "Invitado",
+      memory: "Memoria física disponible para Windows NT:", memoryVal: "65.536 KB",
+      helpTitle: "Ayuda de Windows NT", helpKeysHead: "Teclas", helpRunHead: "Comandos para «Ejecutar»",
+      helpKeys: [["Ctrl+Esc", "menú Inicio"], ["F1", "ayuda"], ["Intro", "abrir el elemento seleccionado"], ["Esc", "cerrar un menú o un cuadro de diálogo"], ["← ↑ → ↓", "seleccionar un icono de una carpeta"], ["← →", "fichas de la ventana Propiedades"], ["Doble clic en la barra de título", "maximizar la ventana"]],
+      modesHint: "El mismo sitio con interfaces de distintas épocas",
+      logonTitle: "Iniciar sesión", logonText: "Presione Ctrl+Alt+Supr para iniciar la sesión.", logonHint: "O presione cualquier tecla, o haga clic aquí.",
+      bootServices: "Iniciando los servicios de ArtIntelliCo...", bootSkip: "Presione cualquier tecla para omitir",
+      taskbar: "Barra de tareas", langLabel: "Idioma de la interfaz", embHint: "Haga doble clic en un objeto incrustado para abrirlo.",
+      cadKeys: ["Ctrl", "Alt", "Supr"]
+    },
+    pt: {
+      dunTitle: "Acesso telefónico à rede", dunIntro: "Ligue-se à Internet para abrir o site.",
+      dunEntry: "Entrada da lista telefónica a marcar:", dunPhone: "Número de telefone:", dunUser: "Nome de utilizador:", dunPass: "Palavra-passe:",
+      dunSave: "Guardar a palavra-passe", dunSpeaker: "Altifalante do modem", dunDial: "Marcar", dunHang: "Desligar", dunStatus: "Estado:",
+      dunConnecting: "A ligar a {e}", dunSteps: ["A marcar...", "A verificar o nome de utilizador e a palavra-passe...", "A registar o computador na rede..."],
+      dunDone: "Ligado a ArtIntelliCo Online.", dunSpeed: "Velocidade: 33 600 bps", dunOff: "Sem ligação",
+      start: "Iniciar", programs: "Programas", modes: "Modos", language: "Idioma", help: "Ajuda", run: "Executar...", shutdown: "Encerrar...",
+      mycomp: "O meu computador", bin: "Reciclagem", readme: "Quem somos", services: "Serviços", partners: "Parceiros", contacts: "Escreva-nos",
+      cmd: "Linha de comandos", control: "Painel de controlo", drive: "ARTINTELLICO (C:)",
+      min: "Minimizar", max: "Maximizar", restore: "Restaurar", close: "Fechar",
+      exMenus: ["Ficheiro", "Editar", "Ver", "?"], wpMenus: ["Ficheiro", "Editar", "Ver", "Inserir", "Formatar", "?"],
+      objects: ["objeto", "objetos", "objetos"], f1: "Para obter ajuda, prima F1",
+      serviceType: "Serviço ArtIntelliCo", partnerType: "Parceiro", colName: "Nome", colType: "Tipo",
+      type: "Tipo:", location: "Localização:", props: "Propriedades", general: "Geral",
+      tabParts: "Componentes", tabResult: "Resultado", desc: "Descrição:", partsIntro: "Este serviço inclui os seguintes componentes:", partsCount: "Componentes selecionados: {n} de {n}", resultHead: "O que recebe", noteHead: "Nota",
+      ok: "OK", cancel: "Cancelar", yes: "Sim", no: "Não", discuss: "Falar do projeto",
+      write: "Escrever um e-mail", copy: "Copiar endereço", copied: "Endereço copiado para a Área de transferência.", copyFailed: "Não foi possível copiar. O endereço é: ",
+      runTitle: "Executar", open: "Abrir:", browse: "Procurar...", runText: "Escreva o nome de um programa, pasta ou documento e o Windows irá abri-lo.",
+      notFound: "Não é possível encontrar o ficheiro «%s» (ou um dos seus componentes). Verifique se o caminho e o nome do ficheiro estão corretos.",
+      shutTitle: "Encerrar o Windows", shutText: "Tem a certeza de que pretende:",
+      shutOpts: { restart: "Reiniciar o computador", logoff: "Fechar todos os programas e iniciar sessão como outro utilizador", classic: "Mudar para a versão clássica do site" },
+      langTitle: "Idioma da interface", langText: "Escolha o idioma da interface:",
+      aboutTitle: "Acerca do ArtIntelliCo NT", version: "Versão 4.0 (compilação 1381: Service Pack 6)", licensed: "Este produto está licenciado para:", guest: "Convidado",
+      memory: "Memória física disponível para o Windows NT:", memoryVal: "65 536 KB",
+      helpTitle: "Ajuda do Windows NT", helpKeysHead: "Teclas", helpRunHead: "Comandos para «Executar»",
+      helpKeys: [["Ctrl+Esc", "menu Iniciar"], ["F1", "ajuda"], ["Enter", "abrir o item selecionado"], ["Esc", "fechar um menu ou caixa de diálogo"], ["← ↑ → ↓", "selecionar um ícone numa pasta"], ["← →", "separadores da janela Propriedades"], ["Duplo clique na barra de título", "maximizar a janela"]],
+      modesHint: "O mesmo site em interfaces de várias épocas",
+      logonTitle: "Iniciar sessão", logonText: "Prima Ctrl+Alt+Delete para iniciar sessão.", logonHint: "Ou prima qualquer tecla, ou clique aqui.",
+      bootServices: "A iniciar os serviços ArtIntelliCo...", bootSkip: "Prima qualquer tecla para saltar",
+      taskbar: "Barra de tarefas", langLabel: "Idioma da interface", embHint: "Faça duplo clique num objeto incorporado para o abrir.",
+      cadKeys: ["Ctrl", "Alt", "Delete"]
+    },
+    it: {
+      dunTitle: "Accesso remoto", dunIntro: "Per aprire il sito, connettersi a Internet.",
+      dunEntry: "Voce della rubrica da chiamare:", dunPhone: "Numero di telefono:", dunUser: "Nome utente:", dunPass: "Password:",
+      dunSave: "Salva password", dunSpeaker: "Altoparlante del modem", dunDial: "Componi", dunHang: "Riaggancia", dunStatus: "Stato:",
+      dunConnecting: "Connessione a {e}", dunSteps: ["Composizione in corso...", "Verifica di nome utente e password...", "Registrazione del computer sulla rete..."],
+      dunDone: "Connesso a ArtIntelliCo Online.", dunSpeed: "Velocità: 33.600 bps", dunOff: "Non connesso",
+      start: "Avvio", programs: "Programmi", modes: "Modalità", language: "Lingua", help: "Guida", run: "Esegui...", shutdown: "Chiudi sessione...",
+      mycomp: "Risorse del computer", bin: "Cestino", readme: "Chi siamo", services: "Servizi", partners: "Partner", contacts: "Ci scriva",
+      cmd: "Prompt dei comandi", control: "Pannello di controllo", drive: "ARTINTELLICO (C:)",
+      min: "Riduci a icona", max: "Ingrandisci", restore: "Ripristina", close: "Chiudi",
+      exMenus: ["File", "Modifica", "Visualizza", "?"], wpMenus: ["File", "Modifica", "Visualizza", "Inserisci", "Formato", "?"],
+      objects: ["oggetto", "oggetti", "oggetti"], f1: "Per visualizzare la Guida, premere F1",
+      serviceType: "Servizio ArtIntelliCo", partnerType: "Partner", colName: "Nome", colType: "Tipo",
+      type: "Tipo:", location: "Percorso:", props: "Proprietà", general: "Generale",
+      tabParts: "Componenti", tabResult: "Risultato", desc: "Descrizione:", partsIntro: "Il servizio comprende i seguenti componenti:", partsCount: "Componenti selezionati: {n} di {n}", resultHead: "Che cosa ottiene", noteHead: "Nota",
+      ok: "OK", cancel: "Annulla", yes: "Sì", no: "No", discuss: "Parliamo del progetto",
+      write: "Scrivi un'e-mail", copy: "Copia indirizzo", copied: "Indirizzo copiato negli Appunti.", copyFailed: "Impossibile copiare. L'indirizzo è: ",
+      runTitle: "Esegui", open: "Apri:", browse: "Sfoglia...", runText: "Digitare il nome del programma, della cartella o del documento da aprire.",
+      notFound: "Impossibile trovare il file «%s» (o uno dei suoi componenti). Verificare che il percorso e il nome del file siano corretti.",
+      shutTitle: "Chiudi sessione di Windows", shutText: "Si desidera:",
+      shutOpts: { restart: "Riavviare il sistema", logoff: "Chiudere tutti i programmi e connettersi con un nome diverso", classic: "Passare alla versione classica del sito" },
+      langTitle: "Lingua dell'interfaccia", langText: "Scegliere la lingua dell'interfaccia:",
+      aboutTitle: "Informazioni su ArtIntelliCo NT", version: "Versione 4.0 (build 1381: Service Pack 6)", licensed: "Questo prodotto è concesso in licenza a:", guest: "Ospite",
+      memory: "Memoria fisica disponibile per Windows NT:", memoryVal: "65.536 KB",
+      helpTitle: "Guida di Windows NT", helpKeysHead: "Tasti", helpRunHead: "Comandi per «Esegui»",
+      helpKeys: [["Ctrl+Esc", "menu Avvio"], ["F1", "Guida"], ["Invio", "aprire l'elemento selezionato"], ["Esc", "chiudere un menu o una finestra di dialogo"], ["← ↑ → ↓", "selezionare un'icona in una cartella"], ["← →", "schede della finestra Proprietà"], ["Doppio clic sulla barra del titolo", "ingrandire la finestra"]],
+      modesHint: "Lo stesso sito con interfacce di epoche diverse",
+      logonTitle: "Accesso", logonText: "Premere Ctrl+Alt+Canc per accedere.", logonHint: "Oppure premere un tasto qualsiasi o fare clic qui.",
+      bootServices: "Avvio dei servizi ArtIntelliCo in corso...", bootSkip: "Premere un tasto qualsiasi per saltare",
+      taskbar: "Barra delle applicazioni", langLabel: "Lingua dell'interfaccia", embHint: "Fare doppio clic su un oggetto incorporato per aprirlo.",
+      cadKeys: ["Ctrl", "Alt", "Canc"]
     }
   };
-  const LANG_NAMES = { uk: "Українська (UK)", en: "English (EN)", ru: "Русский (RU)" };
+  /* Назва мови й код у дужках, як у списку розкладок NT: «Deutsch (DE)» */
+  const LANG_NAMES = Object.fromEntries(LANGS.map((l) => [l, `${AIC.langNames?.[l] || l} (${AIC.langCodes?.[l] || l.toUpperCase()})`]));
   const u = () => T[lang];
   /* Власні тексти послуг для вікна «Властивості»: text — опис, about — суть, parts — склад, result — результат.
      AIC.content лишається запасним джерелом. */
@@ -343,6 +507,381 @@
           result: "The system works, and the team knows how it's put together."
         }
       }
+    },
+    de: {
+      note: "Den Technologie-Stack wählen wir passend zur Aufgabe, nie umgekehrt. Manchmal lautet die ehrliche Antwort: ein fertiger Dienst im Abonnement. Dann sagen wir das auch, selbst wenn für uns nichts zu entwickeln bleibt.",
+      items: {
+        concept: {
+          title: "Konzeption von IT-Lösungen",
+          text: "Wir klären, was das System tatsächlich leisten muss, und halten es so fest, dass Fachabteilung und Entwickler es gleichermaßen verstehen.",
+          about: "Die teuersten Fehler passieren vor der ersten Codezeile – wenn ein System für ein Problem gebaut wird, das niemand richtig auf den Punkt gebracht hat. Deshalb sprechen wir nicht nur mit der Geschäftsführung, sondern auch mit Buchhaltung, Lager und Vertrieb: mit allen, die später jeden Tag mit dem System arbeiten. Manchmal lautet unser Rat danach, gar nichts zu entwickeln und stattdessen ein fertiges Produkt anzupassen. Auch das ist ein gutes Ergebnis.",
+          parts: ["Interviews mit Mitarbeitenden und Analyse der aktuellen Abläufe", "Fachliche Anforderungen und Nutzungsszenarien", "Vergleich: Standardprodukt oder Individualentwicklung", "Pflichtenheft mit Zeit- und Budgetschätzung je Phase"],
+          result: "Ein Dokument, auf dessen Grundlage jedes Team – unseres oder ein anderes – das Projekt schätzen und loslegen kann."
+        },
+        saas: {
+          title: "SaaS-Entwicklung",
+          text: "Wir konzipieren und bauen SaaS-Plattformen – von der ersten Version für Pilotkunden bis zum Dienst, in dem jeder Kunde seinen eigenen Arbeitsbereich, Tarif und Kundenbereich hat.",
+          about: "Bei SaaS kommt das Geld nicht vom Code, sondern davon, wie schnell ein neuer Kunde von der Registrierung über die Zahlung zur echten Nutzung gelangt – ohne ein einziges Mal beim Support anzurufen. Mandantenfähigkeit, Abrechnung und Berechtigungen planen wir von Anfang an ein: Sie nachträglich einzubauen, wenn schon Kunden im System sind, kostet ein Vielfaches. Die erste Version geht früh live, denn echte Nutzer zeigen schnell, welche Funktionen niemand braucht.",
+          parts: ["Mandantenfähige Architektur mit getrennten Kundendaten", "Registrierung, Tarife, Abonnements, Online-Zahlung", "Kundenbereiche, Rollen und Berechtigungen", "Integrationen und eine offene API für Ihre Kunden", "Skalierung bei wachsender Last"],
+          result: "Ein Produkt, das sich im Abonnement verkauft – kein Projekt, das jedes Mal von Hand eingeführt werden muss."
+        },
+        web: {
+          title: "Webentwicklung",
+          text: "Wir entwickeln Unternehmenswebsites, Marktplätze, Onlineshops, Buchungssysteme und interne Webanwendungen. Passend zur Aufgabe, ohne Vorlagen.",
+          about: "Eine Unternehmenswebsite misst man an Anfragen und Bestellungen; wie sie im Portfolio aussieht, ist zweitrangig. Deshalb legen wir vor dem Start fest, was als Ergebnis zählt, und die Webanalyse läuft ab dem Launch – nicht erst ein halbes Jahr später, wenn jemand daran denkt. Die Technik wählen wir passend zur Größe: Eine Landingpage braucht keine schwere Plattform, und ein Marktplatz passt in keinen Website-Baukasten.",
+          parts: ["Prototyp und Interface-Design", "Frontend, Backend und Admin-Bereich", "Anbindung von Zahlung, Versand, CRM und Buchhaltung", "SEO-Grundlagen, Ladezeit, Webanalyse", "Launch und laufende Betreuung"],
+          result: "Ein Webdienst, an dem Sie ablesen können, wie viele Anfragen und wie viel Umsatz er bringt."
+        },
+        mobile: {
+          title: "Mobile Apps",
+          text: "Wir entwickeln Apps für iOS und Android – samt Serverteil und Admin-Bereich, die sie am Laufen halten.",
+          about: "Eine App rechnet sich, wenn Nutzer wiederkommen: um nachzubestellen, einen Status zu prüfen, Bonuspunkte anzusehen. Schaut ein Kunde nur einmal im Jahr vorbei, ist eine gute mobile Website günstiger – und das sagen wir Ihnen vor Projektbeginn, nicht danach. Ob nativ oder plattformübergreifend, hängt vom Budget ab und davon, wie stark die App auf Kamera, Standort und Offline-Betrieb angewiesen ist.",
+          parts: ["Apps für iOS und Android", "Serverteil und API", "Admin-Bereich für Inhalte, Bestellungen und Nutzer", "Push-Benachrichtigungen und Analyse", "Veröffentlichung im App Store und bei Google Play"],
+          result: "Eine App, die die Store-Prüfung besteht und die Ihr Team betreibt, ohne einen Entwickler zu rufen."
+        },
+        ai: {
+          title: "KI-Lösungen",
+          text: "Wir automatisieren Geschäftsprozesse mit KI-Agenten: Software auf Basis von künstlicher Intelligenz und maschinellem Lernen, die Routineschritte übernimmt, die bisher Ihre Mitarbeitenden erledigt haben.",
+          about: "Wir sehen KI skeptischer als viele: Gut die Hälfte der Ideen à la „Bauen wir doch ein neuronales Netz ein“ lässt sich mit ganz normaler Automatisierung lösen. Wo Menschen aber stundenlang E-Mails, Dokumente und Anfragen sortieren, nimmt ein Agent auf Basis eines Sprachmodells diese Routine tatsächlich ab: Er ordnet Anfragen zu, trägt Daten ins CRM ein und entwirft die Antwort an den Kunden. Wir beginnen mit einem Pilotprojekt auf Ihren Daten – so sehen Sie die Genauigkeitswerte vor der eigentlichen Entwicklung, nicht danach.",
+          parts: ["KI-Agenten für Routineschritte: Anfragen zuordnen, CRM pflegen, Antwortentwürfe an Kunden", "Chatbots und Assistenten für Kunden und Mitarbeitende", "Dokumentenerkennung und Datenextraktion", "Klassifizierung von Anfragen, Suche in der Wissensdatenbank", "Bedarfsprognosen und Datenanalyse", "Pilotprojekt mit Qualitätsmessung auf Ihren Daten"],
+          result: "Eine konkrete Aufgabe, die bisher Menschen von Hand erledigt haben, übernimmt jetzt das System – und ein Mensch behält das Steuer in der Hand."
+        },
+        crm: {
+          title: "CRM- und ERP-Entwicklung",
+          text: "Wir bauen CRM und ERP rund um Ihre Abläufe. Ihre Prozesse müssen Sie nicht an die Software anpassen.",
+          about: "Ein Standard-CRM funktioniert, solange Ihr Prozess dem aller anderen ähnelt. Sobald Ihre Vertriebsleute die Hälfte ihrer Arbeit in Tabellen erledigen, weil das System „das nicht kann“, ist eine eigene Lösung günstiger. Die Daten übernehmen wir aus Altsystemen und Tabellen, eingeführt wird Abteilung für Abteilung – so steht die Arbeit keinen einzigen Tag still.",
+          parts: ["Module für Vertrieb, Lager, Produktion, Finanzen – je nach Bedarf", "Rollen, Berechtigungen, Änderungsprotokoll", "Berichte und Dashboards für die Geschäftsführung", "Datenübernahme aus Tabellen und Altsystemen", "Anbindung an Buchhaltung, Telefonie und E-Mail"],
+          result: "Ein System statt eines Tabellen-Zoos. Die Geschäftsführung sieht, wo die Dinge stehen, ohne wöchentliche Berichte aus jeder Abteilung."
+        },
+        cloud: {
+          title: "Cloud-Lösungen",
+          text: "Wir verlagern Ihre Infrastruktur zu Amazon Web Services – komplett oder schrittweise – und sorgen dafür, dass sie läuft, ohne dass die Rechnung grundlos steigt.",
+          about: "Die Cloud ist nicht immer günstiger als der eigene Server. Sie lohnt sich, wenn die Last stark schwankt, wenn Ausfallsicherheit gefragt ist oder wenn eine neue Umgebung in Minuten statt in einer Woche stehen muss. Deshalb beginnt ein Umzug mit einem Audit und einer Kostenrechnung, läuft in Etappen und hat bei jedem Schritt einen Rückfallplan.",
+          parts: ["Audit der bestehenden Infrastruktur und Kostenrechnung", "AWS-Architektur und Migrationsplan", "Umzug von Servern, Datenbanken und Dateien", "Datensicherung und Monitoring", "Kostenoptimierung nach dem Umzug"],
+          result: "Eine Infrastruktur, die den Ausfall eines Servers übersteht, und eine Cloud-Rechnung, die Sie wirklich nachvollziehen können."
+        },
+        redhat: {
+          title: "Unternehmensinfrastruktur auf Red Hat",
+          text: "Wir bauen die IT-Infrastruktur Ihres Unternehmens auf Red Hat auf: Server mit Red Hat Enterprise Linux, die Container-Plattform OpenShift, Automatisierung mit Ansible.",
+          about: "Red Hat ist die richtige Wahl, wenn eine Infrastruktur jahrelang laufen und Audits bestehen soll, statt nur im Kopf eines einzigen Administrators zu existieren. Das Abonnement zahlt sich durch Herstellersupport und einen langen Lebenszyklus aus – bei Red Hat Enterprise Linux sind das zehn Jahre. Wir planen alles für Ihre Workloads und halten die Serverkonfiguration in Ansible fest: Jede Maschine lässt sich nach Playbook neu aufsetzen, ohne Rätselraten, wie sie damals eingerichtet wurde. Red Hat ist unser Partner, daher helfen wir auch bei Abonnements und Herstellersupport.",
+          parts: ["Audit der bestehenden Server und Migrationsplan", "Red Hat Enterprise Linux mit zentral verwalteten Updates über Red Hat Satellite", "Container-Plattform OpenShift für Ihre Anwendungen", "Automatisierte Konfiguration und Bereitstellung mit Ansible", "Zentrale Verwaltung von Benutzerkonten und Zugriffsrechten (Identity Management)", "Monitoring, Backups und Dokumentation für Ihr Team"],
+          result: "Eine Infrastruktur, die sich prüfen, reproduzieren und an ein anderes Team übergeben lässt – ohne dass das Wissen mit einer einzigen Person geht."
+        },
+        api: {
+          title: "APIs und Integrationen",
+          text: "Wir entwerfen APIs für Ihre Systeme und verbinden sie mit den Diensten, die Sie bereits nutzen.",
+          about: "Am häufigsten sehen wir doppelt erfasste Daten: Bestellungen von der Website werden von Hand in die Warenwirtschaft abgetippt, Zahlungen in einer Tabelle abgeglichen. Eine Integration nimmt Ihnen diese Arbeit ab – und die Fehler, die dabei entstehen. Das Monitoring richten wir gesondert ein, denn Integrationen fallen lautlos aus, wenn ein Partner seine API ändert, und das erfahren Sie besser vom System als von einem Kunden.",
+          parts: ["API-Design und Dokumentation", "Zahlungsanbieter, Versanddienste, CRM, Buchhaltung", "Datenaustausch zwischen internen Systemen", "Warteschlangen und Wiederholungsversuche bei Fehlern", "Monitoring und Benachrichtigungen"],
+          result: "Daten werden einmal erfasst und landen von selbst dort, wo sie gebraucht werden."
+        },
+        support: {
+          title: "Technischer Support",
+          text: "Wir halten Ihre IT-Systeme am Laufen und entwickeln sie weiter – auch solche, die nicht von uns stammen.",
+          about: "Fehler beheben ist nur ein Teil der Arbeit. Dazu kommen Sicherheitsupdates, die Lücken schließen, ein Monitoring, das einen Ausfall vor den Nutzern bemerkt, und kleine Verbesserungen nebenbei. Stammt das System von einem anderen Dienstleister, beginnen wir mit einem Audit und schreiben die Dokumentation – ohne sie ist jede Änderung ein Glücksspiel.",
+          parts: ["Monitoring von Verfügbarkeit und Fehlern", "Fehlerbehebung und Sicherheitsupdates", "Backups und Wiederherstellungstests", "Geplante Verbesserungen und neue Funktionen", "Audit und Dokumentation von Fremdsystemen"],
+          result: "Das System läuft, und das Team weiß, wie es aufgebaut ist."
+        }
+      }
+    },
+    fr: {
+      note: "Nous choisissons la pile technique en fonction de la tâche, jamais l'inverse. Parfois, la réponse honnête est un service prêt à l'emploi sur abonnement\u00a0: nous vous le dirons, même s'il ne nous reste alors rien à développer.",
+      items: {
+        concept: {
+          title: "Conception de solutions informatiques",
+          text: "Nous déterminons ce que le système doit réellement faire et le formalisons de façon compréhensible aussi bien pour les métiers que pour les développeurs.",
+          about: "Les erreurs les plus coûteuses surviennent avant la première ligne de code, quand on construit un système pour un problème que personne n'a vraiment formulé. Nous ne parlons donc pas seulement à la direction, mais aussi à la comptabilité, à l'entrepôt, aux commerciaux\u00a0: à tous ceux qui travailleront chaque jour dans ce système. Il arrive qu'ensuite nous conseillions de ne rien développer et de paramétrer un produit existant. C'est aussi une très bonne conclusion.",
+          parts: ["Entretiens avec le personnel et analyse des processus actuels", "Exigences métier et scénarios d'utilisation", "Comparatif\u00a0: produit du marché ou développement sur mesure", "Cahier des charges avec estimation des délais et du budget par phase"],
+          result: "Un document à partir duquel n'importe quelle équipe, la nôtre ou une autre, peut chiffrer le projet et se mettre au travail."
+        },
+        saas: {
+          title: "Développement SaaS",
+          text: "Nous concevons et développons des plateformes SaaS, de la première version pour les clients pilotes jusqu'au service où chaque client dispose de son espace, de son offre et de son tableau de bord.",
+          about: "En SaaS, l'argent ne vient pas du code, mais de la rapidité avec laquelle un nouveau client passe de l'inscription au paiement, puis au travail effectif, sans jamais appeler le support. Nous intégrons dès le départ le multi-tenant, la facturation et les droits d'accès\u00a0: les ajouter après coup, avec des clients déjà à bord, coûte plusieurs fois plus cher. Et la première version sort tôt, car les vrais utilisateurs montrent vite quelles fonctions ne servaient à rien.",
+          parts: ["Architecture multi-tenant avec données clients isolées", "Inscription, offres, abonnements, paiement en ligne", "Espaces clients, rôles et droits d'accès", "Intégrations et API publique pour vos clients", "Montée en charge au rythme de la croissance"],
+          result: "Un produit qui se vend par abonnement, et non un projet à déployer à la main chez chaque client."
+        },
+        web: {
+          title: "Développement web",
+          text: "Nous réalisons des sites d'entreprise, des places de marché, des boutiques en ligne, des systèmes de réservation et des outils web internes. Sur mesure, sans modèles tout faits.",
+          about: "Un site d'entreprise se mesure en demandes et en commandes\u00a0; son allure dans un portfolio passe loin derrière. Avant de commencer, nous convenons donc de ce qui compte comme résultat, et les statistiques sont actives dès la mise en ligne, pas six mois plus tard quand quelqu'un y pense. La technologie est choisie à la bonne taille\u00a0: une landing page n'a que faire d'une plateforme lourde, et une place de marché ne tiendra pas dans un constructeur de sites.",
+          parts: ["Prototype et design des interfaces", "Frontend, backend et interface d'administration", "Intégration paiement, livraison, CRM et comptabilité", "Bases SEO, vitesse de chargement, statistiques", "Mise en ligne et maintenance"],
+          result: "Un service web dont vous voyez combien de demandes et de chiffre d'affaires il rapporte."
+        },
+        mobile: {
+          title: "Applications mobiles",
+          text: "Nous développons des applications iOS et Android, avec la partie serveur et l'interface d'administration qui les font tourner.",
+          about: "Une application est rentable quand on y revient\u00a0: pour recommander, suivre un statut, consulter ses points de fidélité. Si un client ne passe qu'une fois par an, un bon site mobile coûte moins cher, et nous vous le dirons avant de commencer, pas après. Natif ou multiplateforme\u00a0: tout dépend du budget et de la place que prennent l'appareil photo, la géolocalisation et le fonctionnement hors ligne.",
+          parts: ["Applications iOS et Android", "Partie serveur et API", "Interface d'administration\u00a0: contenus, commandes, utilisateurs", "Notifications push et statistiques", "Publication sur l'App Store et Google Play"],
+          result: "Une application qui passe la validation des stores et que votre équipe gère sans appeler un développeur."
+        },
+        ai: {
+          title: "Solutions d'intelligence artificielle",
+          text: "Nous automatisons les processus métier avec des agents d'IA\u00a0: des logiciels fondés sur l'intelligence artificielle et l'apprentissage automatique, qui accomplissent les tâches de routine jusque-là faites par vos équipes.",
+          about: "Nous sommes plus sceptiques que beaucoup vis-à-vis de l'IA\u00a0: une bonne moitié des idées du type «\u00a0ajoutons un réseau de neurones\u00a0» se règlent par une simple automatisation. Mais quand des personnes passent des heures à trier e-mails, documents et demandes, un agent fondé sur un modèle de langage supprime vraiment cette routine\u00a0: il trie les demandes, saisit les données dans le CRM et prépare un brouillon de réponse au client. Nous commençons par un pilote sur vos données\u00a0: vous voyez les chiffres de précision avant le développement principal, pas après.",
+          parts: ["Agents d'IA pour les tâches de routine\u00a0: tri des demandes, saisie dans le CRM, brouillons de réponses aux clients", "Chatbots et assistants pour les clients et le personnel", "Reconnaissance de documents et extraction de données", "Classification des demandes, recherche dans la base de connaissances", "Prévision de la demande et analyse de données", "Pilote avec mesure de la qualité sur vos données"],
+          result: "Une tâche précise, autrefois faite à la main, est désormais assurée par le système, et c'est toujours un humain qui tient la barre."
+        },
+        crm: {
+          title: "Développement CRM et ERP",
+          text: "Nous construisons votre CRM et votre ERP autour de vos processus. Vous n'aurez pas à plier vos processus au logiciel.",
+          about: "Un CRM du marché convient tant que votre processus ressemble à celui de tout le monde. Dès que vos commerciaux font la moitié de leur travail dans des tableurs parce que le système «\u00a0ne sait pas faire ça\u00a0», un outil sur mesure revient moins cher. Nous reprenons les données des anciens systèmes et des tableurs, et le déploiement se fait service par service, pour que le travail ne s'arrête pas un seul jour.",
+          parts: ["Modules ventes, stock, production, finances\u00a0: selon vos besoins", "Rôles, droits d'accès, journal des actions", "Rapports et tableaux de bord pour la direction", "Migration des données depuis les tableurs et les anciens systèmes", "Liaison avec la comptabilité, la téléphonie et la messagerie"],
+          result: "Un seul système au lieu d'une ménagerie de tableurs. La direction voit où en sont les choses sans rapport hebdomadaire de chaque service."
+        },
+        cloud: {
+          title: "Solutions cloud",
+          text: "Nous migrons votre infrastructure vers Amazon Web Services, en totalité ou par étapes, et veillons à ce qu'elle fonctionne sans que la facture grimpe sans raison.",
+          about: "Le cloud n'est pas toujours moins cher que votre propre serveur. Il devient rentable quand la charge fait des bonds, quand il faut de la tolérance aux pannes, ou quand un nouvel environnement doit être prêt en quelques minutes et non en une semaine. Une migration commence donc par un audit et une estimation des coûts, puis avance par étapes, avec un plan de retour arrière à chacune d'elles.",
+          parts: ["Audit de l'infrastructure actuelle et estimation des coûts", "Architecture AWS et plan de migration", "Migration des serveurs, bases de données et fichiers", "Sauvegardes et supervision", "Optimisation des coûts après la migration"],
+          result: "Une infrastructure qui survit à la panne d'un serveur, et une facture cloud que vous comprenez vraiment."
+        },
+        redhat: {
+          title: "Infrastructure d'entreprise sous Red Hat",
+          text: "Nous bâtissons l'infrastructure informatique de votre entreprise sur Red Hat\u00a0: serveurs sous Red Hat Enterprise Linux, plateforme de conteneurs OpenShift, automatisation avec Ansible.",
+          about: "On choisit Red Hat quand l'infrastructure doit tourner pendant des années et passer des audits, au lieu de n'exister que dans la tête d'un seul administrateur. L'abonnement se justifie par le support de l'éditeur et un long cycle de vie\u00a0: dix ans pour Red Hat Enterprise Linux. Nous concevons tout en fonction de vos charges et consignons la configuration des serveurs dans Ansible\u00a0: n'importe quelle machine peut être reconstruite à partir d'un playbook, sans se demander comment on l'avait configurée à l'époque. Red Hat est notre partenaire, nous pouvons donc aussi vous aider pour les abonnements et le support de l'éditeur.",
+          parts: ["Audit des serveurs actuels et plan de migration", "Red Hat Enterprise Linux, mises à jour centralisées via Red Hat Satellite", "Plateforme de conteneurs OpenShift pour vos applications", "Automatisation de la configuration et du déploiement avec Ansible", "Gestion centralisée des identités et des accès (Identity Management)", "Supervision, sauvegardes et documentation pour votre équipe"],
+          result: "Une infrastructure que l'on peut auditer, reproduire et confier à une autre équipe, sans que le savoir-faire parte avec une seule personne."
+        },
+        api: {
+          title: "API et intégrations",
+          text: "Nous concevons des API pour vos systèmes et les connectons aux services que vous utilisez déjà.",
+          about: "Ce que nous voyons le plus souvent, ce sont des données saisies deux fois\u00a0: les commandes du site retapées à la main dans le logiciel de gestion, les paiements rapprochés dans un tableur. Une intégration supprime ce travail et les erreurs qu'il engendre. La supervision est mise en place à part, car les intégrations tombent en panne sans bruit quand un partenaire modifie son API, et mieux vaut l'apprendre du système que d'un client.",
+          parts: ["Conception et documentation d'API", "Prestataires de paiement, transporteurs, CRM, comptabilité", "Échange de données entre systèmes internes", "Files d'attente et nouvelles tentatives en cas d'échec", "Supervision et alertes"],
+          result: "Les données sont saisies une seule fois et arrivent d'elles-mêmes là où l'on en a besoin."
+        },
+        support: {
+          title: "Support technique",
+          text: "Nous maintenons vos systèmes informatiques en état de marche et les faisons évoluer, y compris ceux que nous n'avons pas développés.",
+          about: "Corriger les bugs n'est qu'une partie du travail. Il y a aussi les mises à jour de sécurité qui comblent les failles, la supervision qui repère une panne avant les utilisateurs, et les petites améliorations au fil de l'eau. Si le système vient d'un autre prestataire, nous commençons par un audit et rédigeons la documentation, car sans elle chaque modification est une loterie.",
+          parts: ["Supervision de la disponibilité et des erreurs", "Correction des bugs et mises à jour de sécurité", "Sauvegardes et tests de restauration", "Améliorations et nouvelles fonctions planifiées", "Audit et documentation de systèmes tiers"],
+          result: "Le système fonctionne, et l'équipe sait comment il est construit."
+        }
+      }
+    },
+    es: {
+      note: "Elegimos la tecnología según la tarea, nunca al revés. A veces la respuesta honesta es un servicio ya hecho por suscripción, y se lo diremos aunque eso nos deje sin nada que desarrollar.",
+      items: {
+        concept: {
+          title: "Concepto de la solución de TI",
+          text: "Averiguamos qué tiene que hacer realmente el sistema y lo dejamos por escrito de forma que lo entiendan tanto el negocio como los desarrolladores.",
+          about: "Los errores más caros se cometen antes de la primera línea de código, cuando se construye un sistema para un problema que nadie ha llegado a definir bien. Por eso no hablamos solo con la dirección, sino también con contabilidad, el almacén y el equipo comercial: con todos los que trabajarán cada día en ese sistema. A veces, después, la recomendación es no desarrollar nada y configurar un producto que ya existe. También es un buen resultado.",
+          parts: ["Entrevistas con el personal y análisis de los procesos actuales", "Requisitos de negocio y escenarios de uso", "Comparativa: producto estándar o desarrollo a medida", "Especificación técnica con plazos y presupuesto por fases"],
+          result: "Un documento con el que cualquier equipo, el nuestro u otro, puede presupuestar el proyecto y ponerse manos a la obra."
+        },
+        saas: {
+          title: "Desarrollo SaaS",
+          text: "Diseñamos y construimos plataformas SaaS, desde una primera versión para clientes piloto hasta un servicio en el que cada cliente tiene su propio espacio, plan y panel.",
+          about: "En un SaaS, el dinero no lo trae el código, sino la rapidez con la que un cliente nuevo pasa de registrarse a pagar y a trabajar de verdad, sin llamar ni una vez a soporte. La arquitectura multiinquilino, la facturación y los permisos los incorporamos desde el principio: rehacerlos con los clientes ya dentro cuesta varias veces más. Y la primera versión sale pronto, porque los usuarios reales enseguida muestran qué funciones sobraban.",
+          parts: ["Arquitectura multiinquilino con los datos de cada cliente aislados", "Registro, planes, suscripciones, pago en línea", "Paneles de cliente, roles y permisos", "Integraciones y una API pública para sus clientes", "Escalado a medida que crece la carga"],
+          result: "Un producto que se vende por suscripción, no un proyecto que hay que implantar a mano cada vez."
+        },
+        web: {
+          title: "Desarrollo web",
+          text: "Desarrollamos webs corporativas, marketplaces, tiendas online, sistemas de reservas y herramientas web internas. A medida, sin plantillas.",
+          about: "Una web de empresa se mide en solicitudes y pedidos; cómo queda en un portfolio es lo de menos. Por eso, antes de empezar, acordamos qué se considera un resultado, y la analítica se activa con el lanzamiento, no seis meses después, cuando alguien se acuerde. La tecnología se elige a la medida: una landing page no necesita una plataforma pesada, y un marketplace no cabe en un creador de webs.",
+          parts: ["Prototipo y diseño de interfaces", "Frontend, backend y panel de administración", "Integración con pagos, envíos, CRM y contabilidad", "Base SEO, velocidad de carga, analítica", "Lanzamiento y mantenimiento"],
+          result: "Un servicio web en el que usted ve cuántas solicitudes y cuánto dinero aporta."
+        },
+        mobile: {
+          title: "Aplicaciones móviles",
+          text: "Desarrollamos aplicaciones para iOS y Android, junto con la parte de servidor y el panel de administración que las hacen funcionar.",
+          about: "Una aplicación se amortiza cuando la gente vuelve a ella: para repetir un pedido, consultar un estado, ver sus puntos. Si un cliente entra una vez al año, una buena web móvil sale más barata, y se lo diremos antes de empezar, no después. Nativa o multiplataforma: lo deciden el presupuesto y cuánto depende la aplicación de la cámara, la geolocalización y el trabajo sin conexión.",
+          parts: ["Aplicaciones para iOS y Android", "Parte de servidor y API", "Panel de administración: contenidos, pedidos, usuarios", "Notificaciones push y analítica", "Publicación en App Store y Google Play"],
+          result: "Una aplicación que supera la revisión de las tiendas y que su equipo gestiona sin llamar a un desarrollador."
+        },
+        ai: {
+          title: "Soluciones con inteligencia artificial",
+          text: "Automatizamos procesos de negocio con agentes de IA: software basado en inteligencia artificial y aprendizaje automático que se encarga de los pasos rutinarios que antes hacía su personal.",
+          about: "Somos más escépticos con la IA que la mayoría: buena parte de las ideas del tipo «añadamos una red neuronal» se resuelven con automatización de toda la vida. Pero cuando hay personas que pasan horas clasificando correos, documentos y solicitudes, un agente basado en un modelo de lenguaje sí elimina esa rutina: clasifica las solicitudes, introduce los datos en el CRM y prepara un borrador de respuesta al cliente. Empezamos con un piloto sobre sus datos, para que vea las cifras de precisión antes del desarrollo principal, no después.",
+          parts: ["Agentes de IA para pasos rutinarios: clasificación de solicitudes, registro en el CRM, borradores de respuesta a clientes", "Chatbots y asistentes para clientes y personal", "Reconocimiento de documentos y extracción de datos", "Clasificación de solicitudes, búsqueda en la base de conocimiento", "Previsión de la demanda y análisis de datos", "Piloto con medición de la calidad sobre sus datos"],
+          result: "Un trabajo concreto que antes hacían personas a mano ahora lo hace el sistema, y una persona sigue al volante."
+        },
+        crm: {
+          title: "Desarrollo de CRM y ERP",
+          text: "Construimos CRM y ERP en torno a sus procesos. No tendrá que adaptar los procesos al software.",
+          about: "Un CRM estándar funciona bien mientras su proceso se parezca al de todo el mundo. Cuando los comerciales llevan la mitad de su trabajo en hojas de cálculo porque el sistema «no sabe hacer eso», uno propio sale más barato. Migramos los datos de los sistemas antiguos y las hojas de cálculo, y lo implantamos departamento a departamento, para que el trabajo no se detenga ni un solo día.",
+          parts: ["Módulos de ventas, almacén, producción y finanzas, los que necesite", "Roles, permisos, registro de actividad", "Informes y paneles para la dirección", "Migración de datos desde hojas de cálculo y sistemas antiguos", "Conexión con contabilidad, telefonía y correo"],
+          result: "Un único sistema en lugar de un zoológico de hojas de cálculo. La dirección ve cómo van las cosas sin informes semanales de cada departamento."
+        },
+        cloud: {
+          title: "Soluciones en la nube",
+          text: "Trasladamos su infraestructura a Amazon Web Services, entera o por partes, y nos aseguramos de que funcione sin que la factura suba sin motivo.",
+          about: "La nube no siempre es más barata que un servidor propio. Compensa cuando la carga da saltos, cuando hace falta tolerancia a fallos o cuando un entorno nuevo debe estar listo en minutos y no en una semana. Por eso la migración empieza con una auditoría y un cálculo de costes, avanza por etapas y en cada paso hay un plan de marcha atrás.",
+          parts: ["Auditoría de la infraestructura actual y cálculo de costes", "Arquitectura en AWS y plan de migración", "Traslado de servidores, bases de datos y archivos", "Copias de seguridad y monitorización", "Optimización de costes tras la migración"],
+          result: "Una infraestructura que sobrevive a la caída de un servidor y una factura de la nube que realmente se entiende."
+        },
+        redhat: {
+          title: "Infraestructura empresarial con Red Hat",
+          text: "Construimos la infraestructura de TI de su empresa con Red Hat: servidores con Red Hat Enterprise Linux, la plataforma de contenedores OpenShift y automatización con Ansible.",
+          about: "Red Hat es la opción cuando la infraestructura tiene que funcionar durante años y superar auditorías, en lugar de vivir en la cabeza de un solo administrador. La suscripción se justifica por el soporte del fabricante y un ciclo de vida largo: en Red Hat Enterprise Linux son diez años. Diseñamos todo según sus cargas de trabajo y dejamos la configuración de los servidores escrita en Ansible, de modo que cualquier máquina se puede reconstruir a partir de un playbook y no de lo que alguien recuerde sobre cómo se configuró. Red Hat es nuestro socio, así que también podemos ayudarle con las suscripciones y el soporte del fabricante.",
+          parts: ["Auditoría de los servidores actuales y plan de migración", "Red Hat Enterprise Linux, con actualizaciones centralizadas mediante Red Hat Satellite", "Plataforma de contenedores OpenShift para sus aplicaciones", "Automatización de la configuración y el despliegue con Ansible", "Gestión centralizada de identidades y accesos (Identity Management)", "Monitorización, copias de seguridad y documentación para su equipo"],
+          result: "Una infraestructura que se puede auditar, reproducir y entregar a otro equipo sin que el conocimiento se vaya con una sola persona."
+        },
+        api: {
+          title: "API e integraciones",
+          text: "Diseñamos API para sus sistemas y los conectamos con los servicios que ya utiliza.",
+          about: "Lo que más vemos son datos que se introducen dos veces: los pedidos de la web se vuelven a teclear a mano en el sistema contable y los pagos se cuadran en una hoja de cálculo. Una integración elimina ese trabajo y los errores que genera. La monitorización se configura aparte, porque las integraciones fallan en silencio cuando un socio cambia su API, y es mejor enterarse por el sistema que por un cliente.",
+          parts: ["Diseño y documentación de API", "Pasarelas de pago, empresas de envío, CRM, contabilidad", "Intercambio de datos entre sistemas internos", "Colas y reintentos ante fallos", "Monitorización y alertas"],
+          result: "Los datos se introducen una sola vez y llegan solos allí donde hacen falta."
+        },
+        support: {
+          title: "Soporte técnico",
+          text: "Mantenemos sus sistemas de TI en marcha y los seguimos desarrollando, incluidos los que no hicimos nosotros.",
+          about: "Corregir errores es solo una parte del trabajo. También están las actualizaciones de seguridad que cierran brechas, la monitorización que detecta un fallo antes que los usuarios y las pequeñas mejoras sobre la marcha. Si el sistema viene de otro proveedor, empezamos con una auditoría y redactamos la documentación, porque sin ella cada cambio es una lotería.",
+          parts: ["Monitorización de disponibilidad y errores", "Corrección de errores y actualizaciones de seguridad", "Copias de seguridad y pruebas de restauración", "Mejoras y nuevas funciones planificadas", "Auditoría y documentación de sistemas de terceros"],
+          result: "El sistema funciona y el equipo sabe cómo está hecho."
+        }
+      }
+    },
+    pt: {
+      note: "Escolhemos a tecnologia em função da tarefa, nunca o contrário. Por vezes, a resposta honesta é um serviço pronto por subscrição, e dizemo-lo mesmo que isso nos deixe sem nada para desenvolver.",
+      items: {
+        concept: {
+          title: "Conceção de soluções de TI",
+          text: "Apuramos o que o sistema tem realmente de fazer e registamo-lo de forma que tanto o negócio como os programadores o compreendam.",
+          about: "Os erros mais caros acontecem antes da primeira linha de código, quando se constrói um sistema para um problema que ninguém chegou a definir bem. Por isso, não falamos só com a direção, mas também com a contabilidade, o armazém e a equipa comercial: com todos os que vão trabalhar no sistema todos os dias. Por vezes, a conclusão é não desenvolver nada e configurar um produto que já existe. Também é um bom resultado.",
+          parts: ["Entrevistas aos colaboradores e análise dos processos atuais", "Requisitos de negócio e cenários de utilização", "Comparação: produto pronto ou desenvolvimento à medida", "Caderno de encargos com estimativa de prazos e orçamento por fase"],
+          result: "Um documento com o qual qualquer equipa, a nossa ou outra, pode orçamentar o projeto e começar a trabalhar."
+        },
+        saas: {
+          title: "Desenvolvimento SaaS",
+          text: "Concebemos e construímos plataformas SaaS, desde uma primeira versão para clientes-piloto até um serviço em que cada cliente tem o seu próprio espaço, plano e painel.",
+          about: "Num SaaS, o dinheiro não vem do código, mas da rapidez com que um novo cliente passa do registo ao pagamento e ao trabalho efetivo, sem nunca ligar para o suporte. A arquitetura multi-inquilino, a faturação e as permissões ficam previstas desde o início: refazê-las com clientes já lá dentro custa várias vezes mais. E a primeira versão sai cedo, porque os utilizadores reais depressa mostram que funcionalidades estavam a mais.",
+          parts: ["Arquitetura multi-inquilino com os dados de cada cliente isolados", "Registo, planos, subscrições, pagamento online", "Áreas de cliente, perfis e permissões", "Integrações e uma API pública para os seus clientes", "Escalabilidade à medida que a carga cresce"],
+          result: "Um produto que se vende por subscrição, e não um projeto que é preciso implementar à mão de cada vez."
+        },
+        web: {
+          title: "Desenvolvimento web",
+          text: "Desenvolvemos sites empresariais, marketplaces, lojas online, sistemas de reservas e ferramentas web internas. À medida, sem modelos.",
+          about: "Um site empresarial mede-se em pedidos e encomendas; o aspeto no portefólio fica muito atrás. Por isso, antes de começar, combinamos o que conta como resultado, e a análise de dados fica ativa no lançamento, não seis meses depois, quando alguém se lembrar. A tecnologia é escolhida à medida: uma landing page não precisa de uma plataforma pesada, e um marketplace não cabe num criador de sites.",
+          parts: ["Protótipo e design de interfaces", "Frontend, backend e painel de administração", "Integração com pagamentos, entregas, CRM e contabilidade", "Base de SEO, velocidade de carregamento, análise de dados", "Lançamento e acompanhamento"],
+          result: "Um serviço web em que se vê quantos pedidos e quanto dinheiro traz."
+        },
+        mobile: {
+          title: "Aplicações móveis",
+          text: "Desenvolvemos aplicações para iOS e Android, com a parte de servidor e o painel de administração que as fazem funcionar.",
+          about: "Uma aplicação compensa quando as pessoas voltam a ela: para repetir uma encomenda, ver um estado, consultar os pontos. Se um cliente só aparece uma vez por ano, um bom site móvel fica mais barato, e dizemo-lo antes de começar, não depois. Nativa ou multiplataforma: decidem o orçamento e o quanto a aplicação depende da câmara, da localização e do funcionamento sem rede.",
+          parts: ["Aplicações para iOS e Android", "Parte de servidor e API", "Painel de administração: conteúdos, encomendas, utilizadores", "Notificações push e análise de dados", "Publicação na App Store e no Google Play"],
+          result: "Uma aplicação que passa a revisão das lojas e que a sua equipa gere sem chamar um programador."
+        },
+        ai: {
+          title: "Soluções com inteligência artificial",
+          text: "Automatizamos processos de negócio com agentes de IA: software baseado em inteligência artificial e aprendizagem automática que trata dos passos de rotina que antes eram feitos pelos seus colaboradores.",
+          about: "Somos mais céticos em relação à IA do que muitos: boa parte das ideias do género «vamos acrescentar uma rede neuronal» resolve-se com automação simples. Mas quando há pessoas a passar horas a triar e-mails, documentos e pedidos, um agente baseado num modelo de linguagem elimina mesmo essa rotina: faz a triagem dos pedidos, introduz os dados no CRM e prepara um rascunho da resposta ao cliente. Começamos com um piloto sobre os seus dados, para que veja os números de precisão antes do desenvolvimento principal, e não depois.",
+          parts: ["Agentes de IA para passos de rotina: triagem de pedidos, registo no CRM, rascunhos de respostas a clientes", "Chatbots e assistentes para clientes e colaboradores", "Reconhecimento de documentos e extração de dados", "Classificação de pedidos, pesquisa na base de conhecimento", "Previsão da procura e análise de dados", "Piloto com medição da qualidade sobre os seus dados"],
+          result: "Um trabalho concreto que antes era feito à mão passa a ser feito pelo sistema, com uma pessoa sempre ao volante."
+        },
+        crm: {
+          title: "Desenvolvimento de CRM e ERP",
+          text: "Construímos CRM e ERP à volta dos seus processos. Não terá de adaptar os processos ao software.",
+          about: "Um CRM pronto a usar funciona enquanto o seu processo for parecido com o de toda a gente. Quando os comerciais fazem metade do trabalho em folhas de cálculo porque o sistema «não sabe fazer isso», um sistema próprio sai mais barato. Migramos os dados dos sistemas antigos e das folhas de cálculo e implementamos departamento a departamento, para que o trabalho não pare um único dia.",
+          parts: ["Módulos de vendas, armazém, produção e finanças, os que forem precisos", "Perfis, permissões, registo de ações", "Relatórios e painéis para a direção", "Migração de dados de folhas de cálculo e sistemas antigos", "Ligação à contabilidade, telefonia e e-mail"],
+          result: "Um único sistema em vez de um jardim zoológico de folhas de cálculo. A direção vê como estão as coisas sem relatórios semanais de cada departamento."
+        },
+        cloud: {
+          title: "Soluções na cloud",
+          text: "Migramos a sua infraestrutura para a Amazon Web Services, na totalidade ou por partes, e garantimos que funciona sem que a fatura suba sem razão.",
+          about: "A cloud nem sempre é mais barata do que um servidor próprio. Compensa quando a carga oscila muito, quando é precisa tolerância a falhas ou quando um novo ambiente tem de estar pronto em minutos e não numa semana. Por isso, a migração começa com uma auditoria e um cálculo de custos, avança por etapas e tem um plano de reversão em cada passo.",
+          parts: ["Auditoria da infraestrutura atual e cálculo de custos", "Arquitetura na AWS e plano de migração", "Migração de servidores, bases de dados e ficheiros", "Cópias de segurança e monitorização", "Otimização de custos após a migração"],
+          result: "Uma infraestrutura que sobrevive à falha de um servidor e uma fatura da cloud que se percebe de facto."
+        },
+        redhat: {
+          title: "Infraestrutura empresarial em Red Hat",
+          text: "Construímos a infraestrutura de TI da sua empresa em Red Hat: servidores com Red Hat Enterprise Linux, a plataforma de contentores OpenShift e automação com Ansible.",
+          about: "A Red Hat é a escolha certa quando a infraestrutura tem de funcionar durante anos e passar auditorias, em vez de viver na cabeça de um único administrador. A subscrição justifica-se pelo suporte do fabricante e por um ciclo de vida longo: no Red Hat Enterprise Linux são dez anos. Concebemos tudo para as suas cargas de trabalho e registamos a configuração dos servidores em Ansible, para que qualquer máquina possa ser reconstruída a partir de um playbook e não da memória de alguém sobre como foi configurada. A Red Hat é nossa parceira, por isso também ajudamos com as subscrições e o suporte do fabricante.",
+          parts: ["Auditoria dos servidores atuais e plano de migração", "Red Hat Enterprise Linux, com atualizações centralizadas no Red Hat Satellite", "Plataforma de contentores OpenShift para as suas aplicações", "Automação da configuração e da implementação com Ansible", "Gestão centralizada de identidades e acessos (Identity Management)", "Monitorização, cópias de segurança e documentação para a sua equipa"],
+          result: "Uma infraestrutura que pode ser auditada, reproduzida e entregue a outra equipa sem que o conhecimento saia com uma única pessoa."
+        },
+        api: {
+          title: "APIs e integrações",
+          text: "Concebemos APIs para os seus sistemas e ligamo-los aos serviços que já utiliza.",
+          about: "O que mais vemos são dados introduzidos duas vezes: as encomendas do site são reescritas à mão no sistema de faturação e os pagamentos são conferidos numa folha de cálculo. Uma integração elimina esse trabalho e os erros que ele gera. A monitorização é configurada à parte, porque as integrações falham em silêncio quando um parceiro altera a sua API, e é melhor sabê-lo pelo sistema do que por um cliente.",
+          parts: ["Conceção e documentação de APIs", "Prestadores de pagamento, transportadoras, CRM, contabilidade", "Troca de dados entre sistemas internos", "Filas e novas tentativas em caso de falha", "Monitorização e alertas"],
+          result: "Os dados são introduzidos uma só vez e chegam sozinhos aonde são precisos."
+        },
+        support: {
+          title: "Suporte técnico",
+          text: "Mantemos os seus sistemas de TI a funcionar e continuamos a desenvolvê-los, incluindo os que não fomos nós a fazer.",
+          about: "Corrigir erros é só uma parte do trabalho. Há também as atualizações de segurança que fecham falhas, a monitorização que deteta um problema antes dos utilizadores e as pequenas melhorias pelo caminho. Se o sistema veio de outro fornecedor, começamos por uma auditoria e escrevemos a documentação, porque sem ela cada alteração é uma lotaria.",
+          parts: ["Monitorização da disponibilidade e de erros", "Correção de erros e atualizações de segurança", "Cópias de segurança e testes de reposição", "Melhorias e novas funcionalidades planeadas", "Auditoria e documentação de sistemas de terceiros"],
+          result: "O sistema funciona e a equipa sabe como está construído."
+        }
+      }
+    },
+    it: {
+      note: "Scegliamo lo stack in base al compito, mai il contrario. A volte la risposta onesta è un servizio già pronto in abbonamento: in quel caso lo diciamo, anche se a noi non resta nulla da sviluppare.",
+      items: {
+        concept: {
+          title: "Ideazione della soluzione IT",
+          text: "Chiariamo che cosa deve fare davvero il sistema e lo mettiamo per iscritto in modo che lo capiscano sia il business sia gli sviluppatori.",
+          about: "Gli errori più costosi avvengono prima della prima riga di codice, quando si costruisce un sistema per un problema che nessuno ha davvero messo a fuoco. Per questo non parliamo solo con la direzione, ma anche con la contabilità, il magazzino, i commerciali: con tutti quelli che lavoreranno ogni giorno in quel sistema. A volte, alla fine, il consiglio è di non sviluppare nulla e di configurare un prodotto esistente. Anche questo è un ottimo risultato.",
+          parts: ["Interviste al personale e analisi dei processi attuali", "Requisiti di business e scenari d'uso", "Confronto: prodotto standard o sviluppo su misura", "Specifica tecnica con stima di tempi e budget per fase"],
+          result: "Un documento con cui qualsiasi team, il nostro o un altro, può stimare il progetto e mettersi al lavoro."
+        },
+        saas: {
+          title: "Sviluppo SaaS",
+          text: "Progettiamo e realizziamo piattaforme SaaS, dalla prima versione per i clienti pilota fino a un servizio in cui ogni cliente ha il proprio spazio, piano tariffario e pannello.",
+          about: "Nel SaaS i soldi non li porta il codice, ma la velocità con cui un nuovo cliente passa dalla registrazione al pagamento al lavoro vero e proprio, senza mai chiamare l'assistenza. Multi-tenancy, fatturazione e permessi li prevediamo fin dall'inizio: rifarli quando i clienti sono già dentro costa molte volte di più. E la prima versione esce presto, perché gli utenti reali mostrano subito quali funzioni erano superflue.",
+          parts: ["Architettura multi-tenant con dati dei clienti isolati", "Registrazione, piani, abbonamenti, pagamenti online", "Aree clienti, ruoli e permessi", "Integrazioni e un'API pubblica per i Suoi clienti", "Scalabilità al crescere del carico"],
+          result: "Un prodotto che si vende in abbonamento, non un progetto da installare a mano ogni volta."
+        },
+        web: {
+          title: "Sviluppo web",
+          text: "Realizziamo siti aziendali, marketplace, negozi online, sistemi di prenotazione e strumenti web interni. Su misura, senza template.",
+          about: "Un sito aziendale si misura in contatti e ordini; come appare in un portfolio viene molto dopo. Per questo, prima di iniziare, concordiamo che cosa conta come risultato, e gli strumenti di analisi partono con il lancio, non sei mesi dopo quando qualcuno se ne ricorda. La tecnologia è scelta su misura: a una landing page non serve una piattaforma pesante, e un marketplace non entra in un website builder.",
+          parts: ["Prototipo e design delle interfacce", "Frontend, backend e pannello di amministrazione", "Integrazione con pagamenti, spedizioni, CRM e contabilità", "Basi SEO, velocità di caricamento, analisi", "Lancio e assistenza continuativa"],
+          result: "Un servizio web di cui si vede quanti contatti e quanto fatturato porta."
+        },
+        mobile: {
+          title: "App mobili",
+          text: "Sviluppiamo app per iOS e Android, insieme alla parte server e al pannello di amministrazione che le fanno funzionare.",
+          about: "Un'app si ripaga quando le persone ci tornano: per riordinare, controllare uno stato, vedere i punti fedeltà. Se un cliente passa una volta l'anno, un buon sito mobile costa meno, e glielo diciamo prima di iniziare, non dopo. Nativa o multipiattaforma: decidono il budget e quanto l'app dipende da fotocamera, geolocalizzazione e funzionamento offline.",
+          parts: ["App per iOS e Android", "Parte server e API", "Pannello di amministrazione: contenuti, ordini, utenti", "Notifiche push e analisi", "Pubblicazione su App Store e Google Play"],
+          result: "Un'app che supera la revisione degli store e che il Suo team gestisce senza chiamare uno sviluppatore."
+        },
+        ai: {
+          title: "Soluzioni di intelligenza artificiale",
+          text: "Automatizziamo i processi aziendali con agenti di IA: software basati su intelligenza artificiale e machine learning che svolgono i passaggi di routine prima affidati al personale.",
+          about: "Sull'IA siamo più scettici di molti: buona metà delle idee del tipo «aggiungiamo una rete neurale» si risolve con una normale automazione. Ma dove le persone passano ore a smistare e-mail, documenti e richieste, un agente basato su un modello linguistico toglie davvero di mezzo questa routine: smista le richieste, inserisce i dati nel CRM e prepara una bozza di risposta al cliente. Partiamo da un progetto pilota sui Suoi dati, così vede i numeri sull'accuratezza prima dello sviluppo vero e proprio, non dopo.",
+          parts: ["Agenti di IA per i passaggi di routine: smistamento delle richieste, inserimento nel CRM, bozze di risposta ai clienti", "Chatbot e assistenti per clienti e personale", "Riconoscimento di documenti ed estrazione dei dati", "Classificazione delle richieste, ricerca nella knowledge base", "Previsione della domanda e analisi dei dati", "Progetto pilota con misura della qualità sui Suoi dati"],
+          result: "Un lavoro preciso che prima si faceva a mano ora lo svolge il sistema, con una persona sempre al timone."
+        },
+        crm: {
+          title: "Sviluppo CRM ed ERP",
+          text: "Costruiamo CRM ed ERP attorno ai Suoi processi. Non dovrà piegare i processi al software.",
+          about: "Un CRM standard va bene finché il Suo processo somiglia a quello di tutti gli altri. Quando i commerciali gestiscono metà del lavoro in fogli di calcolo perché il sistema «non lo sa fare», uno proprio costa meno. Trasferiamo i dati dai vecchi sistemi e dai fogli di calcolo e avviamo un reparto alla volta, così il lavoro non si ferma nemmeno un giorno.",
+          parts: ["Moduli vendite, magazzino, produzione, finanza: quelli che servono", "Ruoli, permessi, registro delle attività", "Report e dashboard per la direzione", "Migrazione dei dati da fogli di calcolo e vecchi sistemi", "Collegamento con contabilità, telefonia ed e-mail"],
+          result: "Un solo sistema invece di uno zoo di fogli di calcolo. La direzione vede come vanno le cose senza report settimanali da ogni reparto."
+        },
+        cloud: {
+          title: "Soluzioni cloud",
+          text: "Spostiamo la Sua infrastruttura su Amazon Web Services, tutta o un pezzo alla volta, e facciamo in modo che funzioni senza che la bolletta salga senza motivo.",
+          about: "Il cloud non costa sempre meno di un server proprio. Conviene quando il carico fa sbalzi, quando serve tolleranza ai guasti o quando un nuovo ambiente va messo in piedi in pochi minuti anziché in una settimana. Per questo il trasferimento parte da un audit e da una stima dei costi, procede per fasi e a ogni passo c'è un piano di rollback.",
+          parts: ["Audit dell'infrastruttura attuale e stima dei costi", "Architettura AWS e piano di migrazione", "Trasferimento di server, database e file", "Backup e monitoraggio", "Ottimizzazione dei costi dopo il trasferimento"],
+          result: "Un'infrastruttura che sopravvive al guasto di un server e una bolletta del cloud che si capisce davvero."
+        },
+        redhat: {
+          title: "Infrastruttura aziendale su Red Hat",
+          text: "Costruiamo l'infrastruttura IT della Sua azienda su Red Hat: server con Red Hat Enterprise Linux, la piattaforma di container OpenShift, automazione con Ansible.",
+          about: "Red Hat è la scelta giusta quando l'infrastruttura deve funzionare per anni e superare gli audit, invece di vivere nella testa di un solo amministratore. L'abbonamento si ripaga con il supporto del produttore e un lungo ciclo di vita: per Red Hat Enterprise Linux sono dieci anni. Progettiamo tutto sui Suoi carichi di lavoro e mettiamo per iscritto la configurazione dei server in Ansible, così qualsiasi macchina si può ricostruire da un playbook anziché dalla memoria di qualcuno su come era stata configurata. Red Hat è nostro partner, quindi possiamo aiutarLa anche con abbonamenti e supporto del produttore.",
+          parts: ["Audit dei server attuali e piano di migrazione", "Red Hat Enterprise Linux, con aggiornamenti centralizzati tramite Red Hat Satellite", "Piattaforma di container OpenShift per le Sue applicazioni", "Automazione di configurazione e deployment con Ansible", "Gestione centralizzata di identità e accessi (Identity Management)", "Monitoraggio, backup e documentazione per il Suo team"],
+          result: "Un'infrastruttura che si può verificare, riprodurre e affidare a un altro team, senza che il know-how se ne vada con una sola persona."
+        },
+        api: {
+          title: "API e integrazioni",
+          text: "Progettiamo API per i Suoi sistemi e li colleghiamo ai servizi che già utilizza.",
+          about: "La cosa che vediamo più spesso sono dati inseriti due volte: gli ordini del sito ricopiati a mano nel gestionale, i pagamenti riconciliati in un foglio di calcolo. Un'integrazione elimina questo lavoro e gli errori che genera. Il monitoraggio lo configuriamo a parte, perché le integrazioni si rompono in silenzio quando un partner cambia la sua API, ed è meglio saperlo dal sistema che da un cliente.",
+          parts: ["Progettazione e documentazione delle API", "Sistemi di pagamento, corrieri, CRM, contabilità", "Scambio di dati tra sistemi interni", "Code e nuovi tentativi in caso di errore", "Monitoraggio e avvisi"],
+          result: "I dati si inseriscono una volta sola e arrivano da soli dove servono."
+        },
+        support: {
+          title: "Supporto tecnico",
+          text: "Manteniamo in funzione i Suoi sistemi IT e continuiamo a svilupparli, compresi quelli che non abbiamo realizzato noi.",
+          about: "Correggere i bug è solo una parte del lavoro. Ci sono anche gli aggiornamenti di sicurezza che chiudono le falle, il monitoraggio che si accorge di un guasto prima degli utenti e i piccoli miglioramenti strada facendo. Se il sistema arriva da un altro fornitore, partiamo da un audit e scriviamo la documentazione, perché senza di essa ogni modifica è una lotteria.",
+          parts: ["Monitoraggio di disponibilità ed errori", "Correzione dei bug e aggiornamenti di sicurezza", "Backup e test di ripristino", "Miglioramenti e nuove funzioni pianificati", "Audit e documentazione di sistemi di terzi"],
+          result: "Il sistema funziona e il team sa com'è fatto."
+        }
+      }
     }
   };
   const C = () => AIC.content[lang];
@@ -360,8 +899,14 @@
   };
   const svcList = () => svcKeys().map(svc);
 
+  const LOCALES = { uk: "uk-UA", en: "en-US", ru: "ru-RU", de: "de-DE", fr: "fr-FR", es: "es-ES", pt: "pt-PT", it: "it-IT" };
+  /* uk/ru: три форми; решта мов: однина чи множина за правилами Intl (у fr 0 — однина) */
   const plural = (n, forms) => {
-    if (lang === "en") return n === 1 ? forms[0] : forms[2];
+    if (lang !== "uk" && lang !== "ru") {
+      let one = n === 1;
+      try { one = new Intl.PluralRules(LOCALES[lang] || lang).select(n) === "one"; } catch { /* стара Intl */ }
+      return one ? forms[0] : forms[2];
+    }
     const m10 = n % 10, m100 = n % 100;
     if (m10 === 1 && m100 !== 11) return forms[0];
     if (m10 >= 2 && m10 <= 4 && (m100 < 12 || m100 > 14)) return forms[1];
@@ -1231,7 +1776,7 @@
     $("taskbar").setAttribute("aria-label", u().taskbar);
     $("dunTray").innerHTML = icon("modem", 16);
     dunRender();
-    $("langBtn").textContent = lang.toUpperCase();
+    $("langBtn").textContent = AIC.langCodes?.[lang] || lang.toUpperCase();
     $("langBtn").title = u().langLabel;
     $("langBtn").setAttribute("aria-label", `${u().langLabel}: ${LANG_NAMES[lang]}`);
     tick();
@@ -1239,7 +1784,7 @@
   function tick() {
     const d = new Date();
     $("clock").textContent = String(d.getHours()).padStart(2, "0") + ":" + String(d.getMinutes()).padStart(2, "0");
-    try { $("clock").title = d.toLocaleDateString({ uk: "uk-UA", ru: "ru-RU", en: "en-US" }[lang], { dateStyle: "full" }); } catch { /* стара Intl */ }
+    try { $("clock").title = d.toLocaleDateString(LOCALES[lang] || lang, { dateStyle: "full" }); } catch { /* стара Intl */ }
   }
   setInterval(tick, 15000);
   $("dunTray").addEventListener("click", () => openWin("dialup"));
@@ -1303,7 +1848,7 @@
     $("logon").innerHTML =
       `<section class="win dlg static active" role="dialog" aria-label="${esc(u().logonTitle)}"><div class="tb">${icon("flag", 16)}<span class="tt">${esc(u().logonTitle)}</span></div>` +
       `<div class="body pad"><div class="banner">${icon("flag", 40)}<div><b>Windows NT</b><small>Workstation</small></div></div>` +
-      `<div class="cad"><span class="keys" aria-hidden="true"><kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>Del</kbd></span><p>${esc(u().logonText)}</p></div>` +
+      `<div class="cad"><span class="keys" aria-hidden="true">${u().cadKeys.map((k) => `<kbd>${esc(k)}</kbd>`).join("")}</span><p>${esc(u().logonText)}</p></div>` +
       `<p class="hint">${esc(u().logonHint)}</p></div></section>`;
   }
   function showLogon() {

@@ -7,7 +7,8 @@
   if (!AIC || !AIC.content || !root) return;
 
   const LANGS = AIC.langs;
-  const LANG_NAMES = { uk: "Українська", en: "English", ru: "Русский" };
+  const LANG_NAMES = AIC.langNames || {};
+  const LANG_CODES = AIC.langCodes || {};
 
   /* Рядки інтерфейсу; тексти сайту — у AIC.content */
   const UI = {
@@ -46,6 +47,66 @@
       about: "О компании", nav: "Навигация", contact: "Контакты",
       topic: "Тема", includes: "Что входит", result: "Результат", close: "Закрыть", discuss: "Обсудить проект",
       backToTop: "Наверх", prev: "Предыдущий слайд", next: "Следующий слайд", slide: "Слайд"
+    },
+    de: {
+      home: "Start", services: "Leistungen", partners: "Partner", contacts: "Kontakt",
+      versions: "Versionen", versionsHead: "Diese Website im Wandel der Jahre", language: "Sprache", menu: "Menü",
+      learnMore: "Mehr erfahren", getInTouch: "Kontakt aufnehmen", more: "Weiterlesen",
+      partnersSub: "Technologien, mit denen wir täglich arbeiten",
+      name: "Ihr Name", email: "Ihre E-Mail-Adresse", message: "Nachricht", send: "Nachricht senden",
+      sent: "Ihr E-Mail-Programm wird geöffnet…", subject: "Anfrage über die Website",
+      writeUs: "Schreiben Sie uns", share: "Teilen", like: "Gefällt mir",
+      about: "Über uns", nav: "Navigation", contact: "Kontakt",
+      topic: "Betreff", includes: "Leistungsumfang", result: "Ergebnis", close: "Schließen", discuss: "Projekt besprechen",
+      backToTop: "Nach oben", prev: "Vorherige Folie", next: "Nächste Folie", slide: "Folie"
+    },
+    fr: {
+      home: "Accueil", services: "Services", partners: "Partenaires", contacts: "Contact",
+      versions: "Versions", versionsHead: "Ce site au fil des ans", language: "Langue", menu: "Menu",
+      learnMore: "En savoir plus", getInTouch: "Nous contacter", more: "Lire la suite",
+      partnersSub: "Les technologies avec lesquelles nous travaillons au quotidien",
+      name: "Votre nom", email: "Votre e-mail", message: "Message", send: "Envoyer le message",
+      sent: "Ouverture de votre messagerie…", subject: "Demande depuis le site",
+      writeUs: "Écrivez-nous", share: "Partager", like: "J'aime",
+      about: "À propos", nav: "Navigation", contact: "Contact",
+      topic: "Objet", includes: "Ce qui est inclus", result: "Résultat", close: "Fermer", discuss: "Parler de votre projet",
+      backToTop: "Haut de page", prev: "Diapositive précédente", next: "Diapositive suivante", slide: "Diapositive"
+    },
+    es: {
+      home: "Inicio", services: "Servicios", partners: "Socios", contacts: "Contacto",
+      versions: "Versiones", versionsHead: "Este sitio a lo largo de los años", language: "Idioma", menu: "Menú",
+      learnMore: "Saber más", getInTouch: "Contáctenos", more: "Leer más",
+      partnersSub: "Tecnologías con las que trabajamos a diario",
+      name: "Su nombre", email: "Su correo electrónico", message: "Mensaje", send: "Enviar mensaje",
+      sent: "Abriendo su programa de correo…", subject: "Consulta desde la web",
+      writeUs: "Escríbanos", share: "Compartir", like: "Me gusta",
+      about: "Sobre nosotros", nav: "Navegación", contact: "Contacto",
+      topic: "Asunto", includes: "Qué incluye", result: "Resultado", close: "Cerrar", discuss: "Hablar de su proyecto",
+      backToTop: "Volver arriba", prev: "Diapositiva anterior", next: "Diapositiva siguiente", slide: "Diapositiva"
+    },
+    pt: {
+      home: "Início", services: "Serviços", partners: "Parceiros", contacts: "Contactos",
+      versions: "Versões", versionsHead: "Este site ao longo dos anos", language: "Idioma", menu: "Menu",
+      learnMore: "Saber mais", getInTouch: "Contacte-nos", more: "Ler mais",
+      partnersSub: "Tecnologias com que trabalhamos todos os dias",
+      name: "O seu nome", email: "O seu e-mail", message: "Mensagem", send: "Enviar mensagem",
+      sent: "A abrir o seu programa de e-mail…", subject: "Pedido através do site",
+      writeUs: "Escreva-nos", share: "Partilhar", like: "Gosto",
+      about: "Sobre nós", nav: "Navegação", contact: "Contactos",
+      topic: "Assunto", includes: "O que inclui", result: "Resultado", close: "Fechar", discuss: "Falar sobre o seu projeto",
+      backToTop: "Voltar ao topo", prev: "Diapositivo anterior", next: "Diapositivo seguinte", slide: "Diapositivo"
+    },
+    it: {
+      home: "Home", services: "Servizi", partners: "Partner", contacts: "Contatti",
+      versions: "Versioni", versionsHead: "Questo sito negli anni", language: "Lingua", menu: "Menu",
+      learnMore: "Per saperne di più", getInTouch: "Ci contatti", more: "Dettagli",
+      partnersSub: "Le tecnologie con cui lavoriamo ogni giorno",
+      name: "Il Suo nome", email: "La Sua e-mail", message: "Messaggio", send: "Invia messaggio",
+      sent: "Apertura del programma di posta…", subject: "Richiesta dal sito",
+      writeUs: "Ci scriva", share: "Condividi", like: "Mi piace",
+      about: "Chi siamo", nav: "Navigazione", contact: "Contatti",
+      topic: "Oggetto", includes: "Cosa comprende", result: "Risultato", close: "Chiudi", discuss: "Parliamo del Suo progetto",
+      backToTop: "Torna su", prev: "Slide precedente", next: "Slide successiva", slide: "Slide"
     }
   };
 
@@ -246,6 +307,331 @@
           result: "A system that works, and a team that knows how it's put together."
         }
       }
+    },
+    de: {
+      sub: "Wir verkaufen nicht einfach die Technologie, die wir zufällig beherrschen. Zuerst verstehen wir Ihre Aufgabe, dann wählen wir die Werkzeuge. Und wenn ein fertiger Dienst im Abo für Sie ausreicht, sagen wir Ihnen das offen.",
+      items: {
+        concept: {
+          lead: "Wissen, was gebaut wird – noch vor der ersten Codezeile",
+          pitch: "Die teuersten Fehler in IT-Projekten passieren am Anfang, wenn ein System für eine Aufgabe gebaut wird, die niemand klar formuliert hat. Wir sprechen mit den Menschen, die später damit arbeiten: Buchhaltung, Lager, Vertrieb. Und falls sich zeigt, dass ein angepasstes Standardprodukt genügt, hören Sie das von uns, bevor Sie Ihr Budget in die Entwicklung stecken.",
+          list: ["Interviews mit Mitarbeitenden und Analyse der aktuellen Prozesse", "Fachliche Anforderungen und Anwendungsszenarien", "Standardlösungen und Individualentwicklung im Vergleich", "Pflichtenheft mit Zeit- und Budgetschätzung je Projektphase"],
+          result: "Ein Dokument, anhand dessen jedes Team – unseres oder ein anderes – das Projekt kalkulieren und loslegen kann."
+        },
+        saas: {
+          lead: "Ein Dienst, den Kunden selbst kaufen – ganz ohne Anruf beim Support",
+          pitch: "Über den Erfolg von SaaS entscheidet nicht der Code, sondern wie leicht sich ein neuer Kunde registrieren, bezahlen und loslegen kann. Mandantenfähigkeit, Abrechnung und Zugriffsrechte planen wir vom ersten Tag an ein, denn sie nachzurüsten, wenn die Kunden schon im System sind, kostet ein Vielfaches. Die erste Version veröffentlichen wir früh: Echte Nutzer zeigen schnell, auf welche Funktionen Sie verzichten können.",
+          list: ["Mandantenfähige Architektur mit getrennten Kundendaten", "Registrierung, Tarife, Abonnements und Online-Zahlung", "Kundenbereiche, Rollen und Zugriffsrechte", "Integrationen und eine offene API für Ihre Kunden", "Skalierung bei wachsender Last"],
+          result: "Ein Produkt, das sich im Abo verkauft – kein Projekt, das jedes Mal von Hand eingeführt werden muss."
+        },
+        web: {
+          lead: "Eine Website, die an Anfragen gemessen wird, nicht am Bild im Portfolio",
+          pitch: "Schon vor dem Start vereinbaren wir, was als Ergebnis zählt, und schalten die Webanalyse vor dem Launch ein, nicht ein halbes Jahr danach. Die Technologie richtet sich nach der Aufgabe: Eine Landingpage braucht keine schwere Plattform, und ein Marktplatz passt in keinen Homepage-Baukasten. Wir entwickeln Unternehmenswebsites, Marktplätze, Onlineshops, Buchungssysteme und interne Webanwendungen.",
+          list: ["Prototyp und Interface-Design", "Frontend, Backend und Administrationsbereich", "Anbindung an Zahlung, Versand, CRM und Buchhaltungssysteme", "SEO-Grundlagen, schnelle Ladezeiten und Webanalyse", "Launch und laufende Betreuung"],
+          result: "Ein Webservice, an dem Sie ablesen können, wie viele Anfragen und wie viel Umsatz er bringt."
+        },
+        mobile: {
+          lead: "Eine App, zu der Kunden zurückkehren – oder ein ehrliches „Sie brauchen keine“",
+          pitch: "Eine App rechnet sich, wenn Kunden sie regelmäßig nutzen: nachbestellen, den Lieferstatus verfolgen, Bonuspunkte sammeln. Kommen Ihre Kunden nur einmal im Jahr, ist eine gute mobile Website günstiger – und das sagen wir Ihnen, bevor die Arbeit beginnt. Ob nativ oder plattformübergreifend, entscheiden wir nach Budget und danach, wie sehr die App Kamera, Standort und Offline-Modus braucht.",
+          list: ["Apps für iOS und Android", "Serverseite und API", "Admin-Bereich für Inhalte, Bestellungen und Nutzer", "Push-Benachrichtigungen und Analyse", "Veröffentlichung im App Store und bei Google Play"],
+          result: "Eine App, die die Prüfung im App Store und bei Google Play besteht und die Ihr Team ohne Entwickler betreibt."
+        },
+        ai: {
+          lead: "KI-Agenten, die Ihrem Team die Routine abnehmen",
+          pitch: "Ein KI-Agent erledigt Routineschritte eines Prozesses selbstständig: Er sortiert Anfragen, pflegt das CRM, entwirft Antworten an Kunden – und ein Mensch prüft das Ergebnis. Dabei sind wir skeptischer als die meisten: Die Hälfte der Ideen nach dem Motto „Bauen wir ein neuronales Netz ein“ löst schlichte Automatisierung, und das sagen wir Ihnen auch. Deshalb beginnt alles mit einem Pilotprojekt auf Ihren eigenen Daten – die Genauigkeit sehen Sie vor der eigentlichen Entwicklung, nicht danach.",
+          list: ["KI-Agenten, die Anfragen sortieren, das CRM pflegen und Kundenantworten entwerfen", "Chatbots und Assistenten für Kunden und Mitarbeitende", "Dokumentenerkennung und Datenextraktion", "Klassifizierung von Anfragen und Suche in der Wissensdatenbank", "Bedarfsprognosen und Datenanalyse", "Pilotprojekt mit Qualitätsmessung auf Ihren Daten"],
+          result: "Ein Prozess, den bisher Menschen von Hand erledigt haben, läuft jetzt im System – und die Kontrolle bleibt beim Menschen."
+        },
+        crm: {
+          lead: "Ein System, das sich Ihren Prozessen anpasst – nicht umgekehrt",
+          pitch: "Ein Standard-CRM funktioniert, solange Ihr Prozess Standard ist. Sobald Ihr Vertrieb die Hälfte der Arbeit in Excel-Tabellen erledigt, weil das System „das nicht kann“, wird eine eigene Lösung günstiger. Wir übernehmen die Daten aus Altsystemen und Tabellen und führen das System Abteilung für Abteilung ein, sodass die Arbeit keinen einzigen Tag stillsteht.",
+          list: ["Module für Vertrieb, Lager, Produktion und Finanzen – je nach Bedarf", "Rollen, Zugriffsrechte und Änderungsprotokoll", "Berichte und Dashboards für die Geschäftsführung", "Datenübernahme aus Tabellen und Altsystemen", "Anbindung an Buchhaltung, Telefonie und E-Mail"],
+          result: "Ein System statt eines Tabellen-Zoos: Die Geschäftsführung sieht den Stand der Dinge ohne wöchentliche Berichte aus jeder Abteilung."
+        },
+        cloud: {
+          lead: "AWS-Infrastruktur, die Ausfälle übersteht und nicht grundlos teurer wird",
+          pitch: "Die Cloud ist nicht immer günstiger als ein eigener Server. Sie lohnt sich, wenn die Last stark schwankt, Ausfallsicherheit gefragt ist oder neue Umgebungen in Minuten statt in einer Woche bereitstehen müssen. Deshalb beginnt der Umzug zu Amazon Web Services mit einem Audit und einer Kostenschätzung, und migriert wird schrittweise – mit einem Rückfallplan für jeden Schritt.",
+          list: ["Audit der bestehenden Infrastruktur und Kostenschätzung", "AWS-Architektur und Migrationsplan", "Umzug von Servern, Datenbanken und Dateien", "Datensicherung und Monitoring", "Kostenoptimierung nach dem Umzug"],
+          result: "Eine Infrastruktur, die den Ausfall eines Servers übersteht, und eine Cloud-Rechnung, die Sie verstehen."
+        },
+        redhat: {
+          lead: "Infrastruktur, die nicht nur im Kopf eines einzigen Admins existiert",
+          pitch: "Unternehmen setzen auf Red Hat, wenn Server jahrelang laufen und Audits bestehen müssen. Die Subskription zahlt sich durch Herstellersupport und einen langen Lebenszyklus aus: Red Hat Enterprise Linux wird zehn Jahre lang unterstützt. Wir planen die Infrastruktur für Ihre Workloads und beschreiben die Konfiguration in Ansible, sodass sich jeder Server per Playbook neu aufbauen lässt. Red Hat ist unser Partner – deshalb helfen wir auch bei Subskriptionen und Herstellersupport.",
+          list: ["Audit Ihrer bestehenden Server und Migrationsplan", "Red Hat Enterprise Linux mit zentralen Updates über Red Hat Satellite", "Die Container-Plattform OpenShift für Ihre Anwendungen", "Automatisierte Konfiguration und Bereitstellung mit Ansible", "Zentrale Verwaltung von Identitäten und Zugriffsrechten (Identity Management)", "Monitoring, Datensicherung und Dokumentation für Ihr Team"],
+          result: "Eine Infrastruktur, die sich prüfen, reproduzieren und ohne Wissensverlust an ein anderes Team übergeben lässt."
+        },
+        api: {
+          lead: "Daten einmal erfassen – den Rest des Weges finden sie allein",
+          pitch: "Das häufigste Problem, das wir sehen, ist die doppelte Datenerfassung: Bestellungen aus dem Onlineshop werden von Hand in die Buchhaltung übertragen, Zahlungen in einer Tabelle abgeglichen. Eine Integration nimmt Ihnen diese Arbeit ab – und die Fehler gleich mit. Monitoring richten wir grundsätzlich ein, denn Integrationen brechen lautlos, wenn ein Partner seine API ändert, und davon erfahren Sie besser vom System als vom Kunden.",
+          list: ["API-Design und Dokumentation", "Anbindung an Zahlungsanbieter, Versanddienstleister, CRM und Buchhaltung", "Datenaustausch zwischen internen Systemen", "Warteschlangen und automatische Wiederholung bei Fehlern", "Monitoring und Benachrichtigungen"],
+          result: "Daten werden einmal erfasst und gelangen von selbst dorthin, wo sie gebraucht werden."
+        },
+        support: {
+          lead: "Support, der ein Problem bemerkt, bevor es Ihre Nutzer tun",
+          pitch: "Support ist mehr als Fehlerbehebung: Dazu gehören Updates, die Sicherheitslücken schließen, Monitoring und kleine Verbesserungen im laufenden Betrieb. Wir übernehmen auch Systeme, die nicht von uns stammen. Dann beginnen wir mit einem Audit und einer Dokumentation, denn ohne sie ist jede Änderung ein Glücksspiel.",
+          list: ["Überwachung von Verfügbarkeit und Fehlern", "Fehlerbehebung und Sicherheitsupdates", "Datensicherung und Wiederherstellungstests", "Geplante Verbesserungen und neue Funktionen", "Audit und Dokumentation von Systemen anderer Dienstleister"],
+          result: "Ein System, das funktioniert, und ein Team, das weiß, wie es aufgebaut ist."
+        }
+      }
+    },
+    fr: {
+      sub: "Nous ne vendons pas la technologie que nous avons sous la main. Nous commençons par comprendre votre besoin, puis nous choisissons les outils. Et si un service prêt à l'emploi sur abonnement vous suffit, nous vous le dirons franchement.",
+      items: {
+        concept: {
+          lead: "Savoir quoi construire avant la première ligne de code",
+          pitch: "Les erreurs les plus coûteuses d'un projet informatique se commettent au départ, quand on construit un système pour un besoin que personne n'a clairement formulé. Nous parlons avec ceux qui utiliseront le système : la comptabilité, l'entrepôt, les commerciaux. Et s'il s'avère qu'un produit du marché bien paramétré vous convient, vous l'apprendrez de notre bouche avant d'avoir dépensé votre budget en développement.",
+          list: ["Entretiens avec vos équipes et analyse des processus actuels", "Exigences métier et scénarios d'utilisation", "Comparatif entre solutions du marché et développement sur mesure", "Cahier des charges avec estimation des délais et du budget par phase"],
+          result: "Un document à partir duquel n'importe quelle équipe, la nôtre ou une autre, peut chiffrer le projet et se mettre au travail."
+        },
+        saas: {
+          lead: "Un service que vos clients achètent seuls, sans appeler le support",
+          pitch: "Le succès d'un SaaS ne se joue pas sur le code, mais sur la facilité avec laquelle un nouveau client peut s'inscrire, payer et commencer à travailler. Nous prévoyons le multi-tenant, la facturation et les droits d'accès dès le premier jour, car les ajouter une fois les clients installés coûte plusieurs fois plus cher. Et nous sortons la première version tôt : les vrais utilisateurs montrent vite de quelles fonctionnalités vous pouvez vous passer.",
+          list: ["Architecture multi-tenant avec isolation des données clients", "Inscription, formules, abonnements et paiement en ligne", "Espaces clients, rôles et droits d'accès", "Intégrations et API publique pour vos clients", "Montée en charge au rythme de la croissance"],
+          result: "Un produit qui se vend par abonnement, et non un projet qu'il faut déployer à la main à chaque fois."
+        },
+        web: {
+          lead: "Un site jugé sur les demandes qu'il génère, pas sur une capture de portfolio",
+          pitch: "Avant de commencer, nous convenons de ce qui comptera comme résultat, et nous activons les statistiques avant la mise en ligne, pas six mois plus tard. La technologie suit le besoin : une landing page n'a pas besoin d'une plateforme lourde, et une marketplace ne tiendra jamais dans un outil de création de site. Nous réalisons des sites d'entreprise, des marketplaces, des boutiques en ligne, des systèmes de réservation et des outils web internes.",
+          list: ["Prototype et design des interfaces", "Frontend, backend et interface d'administration", "Intégration du paiement, de la livraison, du CRM et de la comptabilité", "Bases SEO, chargement rapide et statistiques", "Mise en ligne et maintenance"],
+          result: "Un service web dont on voit combien de demandes et de chiffre d'affaires il rapporte."
+        },
+        mobile: {
+          lead: "Une application que vos clients rouvrent, ou un honnête « vous n'en avez pas besoin »",
+          pitch: "Une application est rentable quand les clients s'en servent régulièrement : pour recommander, suivre une livraison, cumuler des points de fidélité. Si l'on vient chez vous une fois par an, un bon site mobile coûte moins cher, et nous vous le dirons avant de commencer. Natif ou multiplateforme ? Nous tranchons selon le budget et selon l'usage que l'application fait de l'appareil photo, de la géolocalisation et du mode hors ligne.",
+          list: ["Applications iOS et Android", "Partie serveur et API", "Back-office pour les contenus, les commandes et les utilisateurs", "Notifications push et statistiques", "Publication sur l'App Store et Google Play"],
+          result: "Une application qui passe la validation de l'App Store et de Google Play, et que votre équipe pilote sans développeur."
+        },
+        ai: {
+          lead: "Des agents d'IA qui déchargent vos équipes de la routine",
+          pitch: "Un agent d'IA exécute seul les étapes routinières d'un processus : il trie les demandes, alimente le CRM, prépare les réponses aux clients, et une personne valide le résultat. Pour autant, nous sommes plus sceptiques que la plupart : la moitié des idées du type « ajoutons un réseau de neurones » se règlent par une simple automatisation, et nous vous le dirons. Tout commence donc par un pilote sur vos propres données : vous voyez la précision avant le développement principal, pas après.",
+          list: ["Agents d'IA qui trient les demandes, alimentent le CRM et préparent les réponses aux clients", "Chatbots et assistants pour vos clients et vos équipes", "Reconnaissance de documents et extraction de données", "Classification des demandes et recherche dans la base de connaissances", "Prévision de la demande et analyse de données", "Pilote avec mesure de la qualité sur vos données"],
+          result: "Un processus autrefois mené à la main est désormais exécuté par le système, et le contrôle reste humain."
+        },
+        crm: {
+          lead: "Un système adapté à vos processus, et non l'inverse",
+          pitch: "Un CRM standard fonctionne tant que votre processus est standard. Quand vos commerciaux gèrent la moitié de leur travail dans des tableurs parce que le système « ne sait pas faire », un développement sur mesure devient moins cher. Nous reprenons les données des anciens systèmes et des tableurs, puis déployons service par service, sans un seul jour d'arrêt.",
+          list: ["Modules ventes, stock, production et finance, selon vos besoins", "Rôles, droits d'accès et journal des actions", "Rapports et tableaux de bord pour la direction", "Reprise des données des tableurs et des anciens systèmes", "Intégration avec la comptabilité, la téléphonie et la messagerie"],
+          result: "Un seul système au lieu d'une ménagerie de tableurs : la direction voit où en sont les choses sans rapports hebdomadaires de chaque service."
+        },
+        cloud: {
+          lead: "Une infrastructure AWS qui résiste aux pannes et dont le coût ne dérape pas",
+          pitch: "Le cloud n'est pas toujours moins cher qu'un serveur à soi. Il l'emporte quand la charge fluctue, quand la tolérance aux pannes est indispensable ou quand de nouveaux environnements doivent être prêts en quelques minutes plutôt qu'en une semaine. C'est pourquoi une migration vers Amazon Web Services commence par un audit et une estimation des coûts, puis se fait par étapes, avec un plan de retour arrière à chaque étape.",
+          list: ["Audit de l'infrastructure actuelle et estimation des coûts", "Architecture AWS et plan de migration", "Migration des serveurs, des bases de données et des fichiers", "Sauvegardes et supervision", "Optimisation des coûts après la migration"],
+          result: "Une infrastructure qui survit à la panne d'un serveur, et une facture cloud que vous comprenez."
+        },
+        redhat: {
+          lead: "Une infrastructure qui ne repose pas sur la mémoire d'un seul administrateur",
+          pitch: "Les entreprises choisissent Red Hat quand leurs serveurs doivent tourner des années et passer des audits. L'abonnement se rentabilise grâce au support de l'éditeur et à un long cycle de vie : Red Hat Enterprise Linux est maintenu pendant dix ans. Nous concevons l'infrastructure selon vos charges et décrivons la configuration dans Ansible, si bien que tout serveur peut être reconstruit à partir d'un playbook. Red Hat est notre partenaire : nous vous aidons donc aussi pour les abonnements et le support de l'éditeur.",
+          list: ["Audit de vos serveurs actuels et plan de migration", "Red Hat Enterprise Linux avec mises à jour centralisées via Red Hat Satellite", "La plateforme de conteneurs OpenShift pour vos applications", "Automatisation de la configuration et du déploiement avec Ansible", "Gestion centralisée des identités et des accès (Identity Management)", "Supervision, sauvegardes et documentation pour votre équipe"],
+          result: "Une infrastructure que l'on peut auditer, reproduire et transmettre à une autre équipe sans perte de savoir."
+        },
+        api: {
+          lead: "Saisissez les données une fois, elles iront seules où il faut",
+          pitch: "Le problème le plus fréquent que nous rencontrons, c'est la double saisie : les commandes du site ressaisies à la main en comptabilité, les paiements rapprochés dans un tableur. Une intégration supprime ce travail, et les erreurs avec. Et nous mettons toujours en place une supervision, car une intégration casse sans bruit quand un partenaire modifie son API, et mieux vaut l'apprendre du système que d'un client.",
+          list: ["Conception et documentation d'API", "Intégration avec les prestataires de paiement, les transporteurs, le CRM et la comptabilité", "Échange de données entre systèmes internes", "Files d'attente et nouvelles tentatives en cas d'échec", "Supervision et alertes"],
+          result: "Les données sont saisies une seule fois et arrivent d'elles-mêmes là où l'on en a besoin."
+        },
+        support: {
+          lead: "Un support qui repère un problème avant vos utilisateurs",
+          pitch: "Le support, ce n'est pas seulement corriger des bugs : ce sont aussi des mises à jour qui comblent les failles de sécurité, de la supervision et de petites améliorations au fil de l'eau. Nous reprenons également des systèmes que nous n'avons pas développés. Dans ce cas, nous commençons par un audit et une documentation, car sans elle chaque modification est une loterie.",
+          list: ["Supervision de la disponibilité et des erreurs", "Correction de bugs et mises à jour de sécurité", "Sauvegardes et tests de restauration", "Améliorations et nouvelles fonctionnalités planifiées", "Audit et documentation des systèmes développés par d'autres prestataires"],
+          result: "Un système qui fonctionne, et une équipe qui sait comment il est construit."
+        }
+      }
+    },
+    es: {
+      sub: "No vendemos sin más la tecnología que conocemos. Primero entendemos su problema y después elegimos las herramientas. Y si le basta con un servicio de suscripción ya hecho, se lo diremos con franqueza.",
+      items: {
+        concept: {
+          lead: "Sepa qué construir antes de la primera línea de código",
+          pitch: "Los errores más caros de un proyecto de TI se cometen al principio, cuando se construye un sistema para un problema que nadie ha definido con claridad. Hablamos con las personas que trabajarán con el sistema: contabilidad, almacén, comerciales. Y si resulta que le sirve un producto existente bien configurado, se lo diremos antes de que gaste el presupuesto en desarrollo.",
+          list: ["Entrevistas con el personal y análisis de los procesos actuales", "Requisitos de negocio y escenarios de uso", "Comparativa entre soluciones existentes y desarrollo a medida", "Especificación técnica con estimación de plazos y presupuesto por fases"],
+          result: "Un documento con el que cualquier equipo, el nuestro u otro, puede presupuestar el proyecto y ponerse manos a la obra."
+        },
+        saas: {
+          lead: "Un servicio que los clientes compran por su cuenta, sin llamar a soporte",
+          pitch: "El éxito de un SaaS no depende del código, sino de lo fácil que le resulte a un cliente nuevo registrarse, pagar y empezar a trabajar. Incorporamos multiinquilino, facturación y permisos desde el primer día, porque añadirlos cuando los clientes ya están dentro cuesta varias veces más. Y lanzamos pronto la primera versión: los usuarios reales enseguida muestran de qué funciones se puede prescindir.",
+          list: ["Arquitectura multiinquilino con los datos de cada cliente aislados", "Registro, tarifas, suscripciones y pago en línea", "Áreas de cliente, roles y permisos", "Integraciones y API pública para sus clientes", "Escalado a medida que crece la carga"],
+          result: "Un producto que se vende por suscripción, no un proyecto que hay que implantar a mano cada vez."
+        },
+        web: {
+          lead: "Una web que se mide en contactos, no en capturas para el portafolio",
+          pitch: "Antes de empezar acordamos qué se considerará un resultado y activamos la analítica antes del lanzamiento, no seis meses después. La tecnología se elige según la tarea: una landing page no necesita una plataforma pesada y un marketplace no cabe en un creador de webs. Hacemos webs corporativas, marketplaces, tiendas online, sistemas de reservas y herramientas web internas.",
+          list: ["Prototipo y diseño de interfaces", "Frontend, backend y panel de administración", "Integración con pagos, envíos, CRM y sistemas contables", "Base SEO, carga rápida y analítica", "Lanzamiento y mantenimiento"],
+          result: "Un servicio web en el que se ve cuántos contactos y cuántos ingresos aporta."
+        },
+        mobile: {
+          lead: "Una aplicación a la que sus clientes vuelven, o un sincero «no la necesita»",
+          pitch: "Una aplicación se amortiza cuando el cliente la usa con regularidad: repite pedidos, sigue el estado de un envío, acumula puntos. Si le visitan una vez al año, una buena web móvil sale más barata, y se lo diremos antes de empezar. ¿Nativa o multiplataforma? Lo decidimos según el presupuesto y según cuánto necesite la aplicación la cámara, la geolocalización y el modo sin conexión.",
+          list: ["Aplicaciones para iOS y Android", "Parte de servidor y API", "Panel de administración para contenidos, pedidos y usuarios", "Notificaciones push y analítica", "Publicación en App Store y Google Play"],
+          result: "Una aplicación que supera la revisión de App Store y Google Play y que su equipo gestiona sin desarrolladores."
+        },
+        ai: {
+          lead: "Agentes de IA que liberan a su equipo de la rutina",
+          pitch: "Un agente de IA ejecuta por sí solo los pasos rutinarios de un proceso: clasifica solicitudes, rellena el CRM, prepara respuestas a los clientes, y una persona revisa el resultado. Aun así, somos más escépticos que la mayoría: la mitad de las ideas del tipo «añadamos una red neuronal» se resuelven con una automatización corriente, y se lo diremos. Por eso todo empieza con un piloto sobre sus propios datos: usted ve la precisión antes del desarrollo principal, no después.",
+          list: ["Agentes de IA que clasifican solicitudes, rellenan el CRM y preparan respuestas a clientes", "Chatbots y asistentes para clientes y empleados", "Reconocimiento de documentos y extracción de datos", "Clasificación de consultas y búsqueda en la base de conocimiento", "Previsión de la demanda y análisis de datos", "Piloto con medición de la calidad sobre sus datos"],
+          result: "Un proceso que antes llevaban personas a mano ahora lo ejecuta el sistema, y el control sigue en manos humanas."
+        },
+        crm: {
+          lead: "Un sistema que se adapta a sus procesos, y no al revés",
+          pitch: "Un CRM estándar funciona mientras su proceso sea estándar. Cuando los comerciales llevan la mitad del trabajo en hojas de cálculo porque el sistema «no sabe hacerlo», un desarrollo propio sale más barato. Migramos los datos de los sistemas antiguos y de las hojas de cálculo e implantamos el sistema departamento por departamento, para que el trabajo no se detenga ni un solo día.",
+          list: ["Módulos de ventas, almacén, producción y finanzas, según necesidad", "Roles, permisos y registro de actividad", "Informes y cuadros de mando para la dirección", "Migración de datos desde hojas de cálculo y sistemas antiguos", "Integración con contabilidad, telefonía y correo electrónico"],
+          result: "Un único sistema en lugar de un zoo de hojas de cálculo: la dirección ve cómo van las cosas sin informes semanales de cada departamento."
+        },
+        cloud: {
+          lead: "Infraestructura en AWS que resiste los fallos y no se encarece sin motivo",
+          pitch: "La nube no siempre es más barata que un servidor propio. Sale ganando cuando la carga sufre picos, cuando se necesita tolerancia a fallos o cuando los nuevos entornos deben estar listos en minutos y no en una semana. Por eso la migración a Amazon Web Services empieza con una auditoría y un cálculo de costes, y se hace por etapas, con un plan de vuelta atrás en cada paso.",
+          list: ["Auditoría de la infraestructura actual y cálculo de costes", "Arquitectura en AWS y plan de migración", "Traslado de servidores, bases de datos y archivos", "Copias de seguridad y monitorización", "Optimización de costes tras la migración"],
+          result: "Una infraestructura que sobrevive a la caída de un servidor, y una factura de la nube que usted entiende."
+        },
+        redhat: {
+          lead: "Una infraestructura que no depende de la memoria de un solo administrador",
+          pitch: "Las empresas eligen Red Hat cuando sus servidores deben funcionar durante años y superar auditorías. La suscripción se amortiza con el soporte del fabricante y un ciclo de vida largo: Red Hat Enterprise Linux tiene diez años de soporte. Diseñamos la infraestructura según sus cargas de trabajo y describimos la configuración en Ansible, de modo que cualquier servidor se puede reconstruir a partir de un playbook. Red Hat es nuestro socio, así que también le ayudamos con las suscripciones y el soporte del fabricante.",
+          list: ["Auditoría de sus servidores actuales y plan de migración", "Red Hat Enterprise Linux con actualizaciones centralizadas mediante Red Hat Satellite", "La plataforma de contenedores OpenShift para sus aplicaciones", "Automatización de la configuración y el despliegue con Ansible", "Gestión centralizada de identidades y accesos (Identity Management)", "Monitorización, copias de seguridad y documentación para su equipo"],
+          result: "Una infraestructura que se puede auditar, reproducir y entregar a otro equipo sin perder conocimiento."
+        },
+        api: {
+          lead: "Introduzca los datos una vez: el resto del camino lo hacen solos",
+          pitch: "El problema más habitual que vemos es la doble introducción de datos: los pedidos de la web se pasan a mano a contabilidad y los pagos se cuadran en una hoja de cálculo. Una integración elimina ese trabajo, y los errores con él. Y siempre configuramos la monitorización, porque las integraciones fallan en silencio cuando un socio cambia su API, y es mejor enterarse por el sistema que por un cliente.",
+          list: ["Diseño y documentación de API", "Integración con pasarelas de pago, empresas de mensajería, CRM y contabilidad", "Intercambio de datos entre sistemas internos", "Colas y reintentos ante fallos", "Monitorización y alertas"],
+          result: "Los datos se introducen una sola vez y llegan solos allí donde hacen falta."
+        },
+        support: {
+          lead: "Un soporte que detecta el problema antes que sus usuarios",
+          pitch: "El soporte es mucho más que corregir errores: son actualizaciones que cierran vulnerabilidades, monitorización y pequeñas mejoras sobre la marcha. También nos hacemos cargo de sistemas que no hemos desarrollado nosotros. En ese caso empezamos con una auditoría y documentación, porque sin ella cada cambio es una lotería.",
+          list: ["Monitorización de la disponibilidad y de los errores", "Corrección de errores y actualizaciones de seguridad", "Copias de seguridad y pruebas de restauración", "Mejoras planificadas y nuevas funciones", "Auditoría y documentación de sistemas de otros proveedores"],
+          result: "Un sistema que funciona, y un equipo que sabe cómo está construido."
+        }
+      }
+    },
+    pt: {
+      sub: "Não vendemos simplesmente a tecnologia que conhecemos. Primeiro percebemos o seu problema, depois escolhemos as ferramentas. E se um serviço por subscrição já pronto lhe bastar, dizemos-lho com franqueza.",
+      items: {
+        concept: {
+          lead: "Saiba o que construir antes da primeira linha de código",
+          pitch: "Os erros mais caros num projeto de TI cometem-se no início, quando se começa a construir um sistema para um problema que ninguém formulou com clareza. Falamos com as pessoas que vão trabalhar com o sistema: contabilidade, armazém, comerciais. E se se verificar que lhe serve um produto existente com alguma configuração, vai ouvi-lo da nossa parte antes de gastar o orçamento em desenvolvimento.",
+          list: ["Entrevistas com os colaboradores e análise dos processos atuais", "Requisitos de negócio e cenários de utilização", "Comparação entre soluções existentes e desenvolvimento à medida", "Caderno de encargos com estimativa de prazos e orçamento por fase"],
+          result: "Um documento com o qual qualquer equipa, a nossa ou outra, pode orçamentar o projeto e pôr mãos à obra."
+        },
+        saas: {
+          lead: "Um serviço que os clientes compram sozinhos, sem ligar para o suporte",
+          pitch: "O sucesso de um SaaS não depende do código, mas da facilidade com que um novo cliente se regista, paga e começa a trabalhar. Prevemos a arquitetura multi-inquilino, a faturação e as permissões de acesso desde o primeiro dia, porque acrescentá-las quando os clientes já lá estão custa várias vezes mais. E lançamos cedo a primeira versão: os utilizadores reais depressa mostram de que funcionalidades pode prescindir.",
+          list: ["Arquitetura multi-inquilino com os dados de cada cliente isolados", "Registo, planos, subscrições e pagamento online", "Áreas de cliente, perfis e permissões de acesso", "Integrações e API pública para os seus clientes", "Escalabilidade à medida que a carga cresce"],
+          result: "Um produto que se vende por subscrição, e não um projeto que é preciso implementar à mão de cada vez."
+        },
+        web: {
+          lead: "Um site avaliado pelos pedidos que gera, não pela imagem no portefólio",
+          pitch: "Antes de começar, acordamos o que conta como resultado e ativamos a análise de tráfego antes do lançamento, não seis meses depois. A tecnologia é escolhida em função da tarefa: uma landing page não precisa de uma plataforma pesada, e um marketplace não cabe num criador de sites. Fazemos sites institucionais, marketplaces, lojas online, sistemas de reservas e ferramentas web internas.",
+          list: ["Protótipo e design de interfaces", "Frontend, backend e painel de administração", "Integração com pagamentos, entregas, CRM e sistemas de contabilidade", "Base de SEO, carregamento rápido e análise de tráfego", "Lançamento e acompanhamento"],
+          result: "Um serviço web em que se vê quantos pedidos e quanto dinheiro traz."
+        },
+        mobile: {
+          lead: "Uma aplicação a que os clientes regressam, ou um sincero «não precisa dela»",
+          pitch: "Uma aplicação compensa quando o cliente a usa com regularidade: repete encomendas, acompanha o estado de uma entrega, acumula pontos. Se os clientes o visitam uma vez por ano, um bom site para telemóvel fica mais barato, e dizemos-lho antes de começar. Nativa ou multiplataforma: decidimos em função do orçamento e de quanto a aplicação precisa da câmara, da geolocalização e do modo offline.",
+          list: ["Aplicações para iOS e Android", "Componente de servidor e API", "Painel de administração para conteúdos, encomendas e utilizadores", "Notificações push e análise de utilização", "Publicação na App Store e no Google Play"],
+          result: "Uma aplicação que passa a revisão da App Store e do Google Play e que a sua equipa gere sem programadores."
+        },
+        ai: {
+          lead: "Agentes de IA que tiram a rotina das mãos da sua equipa",
+          pitch: "Um agente de IA executa sozinho os passos rotineiros de um processo: faz a triagem de pedidos, preenche o CRM, prepara respostas aos clientes, e uma pessoa verifica o resultado. Ainda assim, somos mais céticos do que a maioria: metade das ideias do género «vamos juntar uma rede neuronal» resolve-se com automatização simples, e nós dizemos-lho. Por isso, tudo começa com um piloto sobre os seus próprios dados: vê a precisão antes do desenvolvimento principal, e não depois.",
+          list: ["Agentes de IA que fazem a triagem de pedidos, preenchem o CRM e preparam respostas aos clientes", "Chatbots e assistentes para clientes e colaboradores", "Reconhecimento de documentos e extração de dados", "Classificação de pedidos e pesquisa na base de conhecimento", "Previsão da procura e análise de dados", "Piloto com avaliação da qualidade sobre os seus dados"],
+          result: "Um processo que antes era conduzido à mão por pessoas passa a ser executado pelo sistema, e o controlo continua nas mãos de uma pessoa."
+        },
+        crm: {
+          lead: "Um sistema feito à medida dos seus processos, e não o contrário",
+          pitch: "Um CRM de prateleira funciona enquanto o seu processo for standard. Quando os comerciais gerem metade do trabalho em folhas de cálculo porque o sistema «não faz isso», o desenvolvimento próprio passa a ser mais barato. Migramos os dados dos sistemas antigos e das folhas de cálculo e implementamos o sistema departamento a departamento, para que o trabalho não pare um único dia.",
+          list: ["Módulos de vendas, armazém, produção e finanças, conforme a necessidade", "Perfis, permissões de acesso e registo de ações", "Relatórios e dashboards para a direção", "Migração de dados de folhas de cálculo e sistemas antigos", "Integração com contabilidade, telefonia e e-mail"],
+          result: "Um só sistema em vez de um jardim zoológico de folhas de cálculo: a direção vê o ponto da situação sem relatórios semanais de cada departamento."
+        },
+        cloud: {
+          lead: "Infraestrutura na AWS que resiste a falhas e não encarece sem razão",
+          pitch: "A cloud nem sempre é mais barata do que um servidor próprio. Compensa quando a carga oscila muito, quando é preciso tolerância a falhas ou quando novos ambientes têm de estar prontos em minutos e não numa semana. Por isso, a migração para a Amazon Web Services começa com uma auditoria e um cálculo de custos, e faz-se por fases, com um plano de reversão em cada passo.",
+          list: ["Auditoria da infraestrutura atual e cálculo de custos", "Arquitetura na AWS e plano de migração", "Migração de servidores, bases de dados e ficheiros", "Cópias de segurança e monitorização", "Otimização de custos após a migração"],
+          result: "Uma infraestrutura que sobrevive à falha de um servidor, e uma fatura da cloud que consegue perceber."
+        },
+        redhat: {
+          lead: "Uma infraestrutura que não vive na cabeça de um só administrador",
+          pitch: "As empresas escolhem a Red Hat quando os servidores têm de funcionar durante anos e passar auditorias. A subscrição paga-se com o suporte do fabricante e um ciclo de vida longo: o Red Hat Enterprise Linux tem suporte durante dez anos. Concebemos a infraestrutura à medida das suas cargas e descrevemos a configuração em Ansible, de modo que qualquer servidor pode ser reconstruído a partir de um playbook. A Red Hat é nossa parceira, por isso também ajudamos com as subscrições e o suporte do fabricante.",
+          list: ["Auditoria dos seus servidores atuais e plano de migração", "Red Hat Enterprise Linux com atualizações centralizadas através do Red Hat Satellite", "A plataforma de contentores OpenShift para as suas aplicações", "Automatização da configuração e da implementação com Ansible", "Gestão centralizada de identidades e acessos (Identity Management)", "Monitorização, cópias de segurança e documentação para a sua equipa"],
+          result: "Uma infraestrutura que se pode auditar, reproduzir e entregar a outra equipa sem perda de conhecimento."
+        },
+        api: {
+          lead: "Introduza os dados uma vez, e eles fazem sozinhos o resto do caminho",
+          pitch: "A dor mais comum que encontramos é a dupla introdução de dados: as encomendas do site são passadas à mão para a contabilidade e os pagamentos conferidos numa folha de cálculo. Uma integração elimina esse trabalho, e os erros também. E configuramos sempre a monitorização, porque as integrações avariam em silêncio quando um parceiro altera a sua API, e é melhor saber disso pelo sistema do que por um cliente.",
+          list: ["Conceção e documentação de APIs", "Integração com prestadores de pagamento, transportadoras, CRM e contabilidade", "Troca de dados entre sistemas internos", "Filas e novas tentativas em caso de falha", "Monitorização e alertas"],
+          result: "Os dados são introduzidos uma só vez e chegam sozinhos aonde são precisos."
+        },
+        support: {
+          lead: "Um suporte que deteta o problema antes dos seus utilizadores",
+          pitch: "O suporte é mais do que corrigir erros: são atualizações que fecham vulnerabilidades, monitorização e pequenas melhorias pelo caminho. Também assumimos sistemas que não foram feitos por nós. Nesse caso, começamos por uma auditoria e pela documentação, porque sem ela cada alteração é uma lotaria.",
+          list: ["Monitorização da disponibilidade e dos erros", "Correção de erros e atualizações de segurança", "Cópias de segurança e testes de recuperação", "Melhorias planeadas e novas funcionalidades", "Auditoria e documentação de sistemas de outros fornecedores"],
+          result: "Um sistema que funciona, e uma equipa que sabe como está construído."
+        }
+      }
+    },
+    it: {
+      sub: "Non vendiamo semplicemente la tecnologia che conosciamo. Prima capiamo il Suo problema, poi scegliamo gli strumenti. E se Le basta un servizio già pronto in abbonamento, glielo diremo con franchezza.",
+      items: {
+        concept: {
+          lead: "Sapere cosa costruire prima ancora della prima riga di codice",
+          pitch: "Gli errori più costosi nei progetti IT si commettono all'inizio, quando si costruisce un sistema per un problema che nessuno ha definito con chiarezza. Parliamo con le persone che lavoreranno con il sistema: amministrazione, magazzino, commerciali. E se emerge che Le basta un prodotto esistente opportunamente configurato, lo sentirà da noi prima di spendere il budget nello sviluppo.",
+          list: ["Interviste al personale e analisi dei processi attuali", "Requisiti di business e scenari d'uso", "Confronto tra soluzioni pronte e sviluppo su misura", "Capitolato tecnico con stima di tempi e budget per fase"],
+          result: "Un documento con cui qualsiasi team, il nostro o un altro, può stimare il progetto e mettersi al lavoro."
+        },
+        saas: {
+          lead: "Un servizio che i clienti acquistano da soli, senza chiamare l'assistenza",
+          pitch: "Il successo di un SaaS non dipende dal codice, ma da quanto è semplice per un nuovo cliente registrarsi, pagare e iniziare a lavorare. Multi-tenancy, fatturazione e permessi li prevediamo dal primo giorno, perché aggiungerli quando i clienti sono già dentro costa molte volte di più. E rilasciamo presto la prima versione: gli utenti reali mostrano in fretta di quali funzioni si può fare a meno.",
+          list: ["Architettura multi-tenant con i dati dei clienti isolati", "Registrazione, piani, abbonamenti e pagamento online", "Aree riservate, ruoli e permessi", "Integrazioni e API pubblica per i Suoi clienti", "Scalabilità al crescere del carico"],
+          result: "Un prodotto che si vende in abbonamento, non un progetto da installare a mano ogni volta."
+        },
+        web: {
+          lead: "Un sito che si misura in contatti, non in screenshot da portfolio",
+          pitch: "Prima di partire concordiamo che cosa conta come risultato e attiviamo le statistiche prima del lancio, non sei mesi dopo. La tecnologia si sceglie in base al compito: una landing page non ha bisogno di una piattaforma pesante e un marketplace non sta in un sito fai-da-te. Realizziamo siti aziendali, marketplace, negozi online, sistemi di prenotazione e strumenti web interni.",
+          list: ["Prototipo e design delle interfacce", "Frontend, backend e pannello di amministrazione", "Integrazione con pagamenti, spedizioni, CRM e gestionali contabili", "Basi SEO, caricamento veloce e statistiche", "Lancio e assistenza continuativa"],
+          result: "Un servizio web da cui si vede quanti contatti e quanto fatturato porta."
+        },
+        mobile: {
+          lead: "Un'app su cui i clienti tornano, oppure un sincero «non Le serve»",
+          pitch: "Un'app si ripaga quando i clienti la usano con regolarità: riordinano, seguono una consegna, accumulano punti fedeltà. Se La visitano una volta l'anno, un buon sito mobile costa meno, e glielo diremo prima di iniziare. Nativa o multipiattaforma: lo decidiamo in base al budget e a quanto l'app ha bisogno di fotocamera, geolocalizzazione e modalità offline.",
+          list: ["App per iOS e Android", "Parte server e API", "Pannello di amministrazione per contenuti, ordini e utenti", "Notifiche push e statistiche", "Pubblicazione su App Store e Google Play"],
+          result: "Un'app che supera la revisione di App Store e Google Play e che il Suo team gestisce senza sviluppatori."
+        },
+        ai: {
+          lead: "Agenti di IA che tolgono la routine al Suo team",
+          pitch: "Un agente di IA esegue da solo i passaggi ripetitivi di un processo: smista le richieste, compila il CRM, prepara le risposte ai clienti, mentre una persona controlla il risultato. Allo stesso tempo siamo più scettici della media: metà delle idee del tipo «aggiungiamo una rete neurale» si risolve con una normale automazione, e glielo diremo. Per questo tutto parte da un progetto pilota sui Suoi dati: vede l'accuratezza prima dello sviluppo vero e proprio, non dopo.",
+          list: ["Agenti di IA che smistano le richieste, compilano il CRM e preparano le risposte ai clienti", "Chatbot e assistenti per clienti e dipendenti", "Riconoscimento di documenti ed estrazione dei dati", "Classificazione delle richieste e ricerca nella knowledge base", "Previsione della domanda e analisi dei dati", "Progetto pilota con misurazione della qualità sui Suoi dati"],
+          result: "Un processo che prima gestivano le persone a mano ora lo esegue il sistema, e il controllo resta a una persona."
+        },
+        crm: {
+          lead: "Un sistema su misura per i Suoi processi, non il contrario",
+          pitch: "Un CRM standard funziona finché il Suo processo è standard. Quando i commerciali gestiscono metà del lavoro in fogli di calcolo perché il sistema «non lo fa», uno sviluppo su misura diventa più conveniente. Trasferiamo i dati dai vecchi sistemi e dai fogli di calcolo e introduciamo il sistema reparto per reparto, così il lavoro non si ferma nemmeno per un giorno.",
+          list: ["Moduli vendite, magazzino, produzione e finanza, secondo le necessità", "Ruoli, permessi e registro delle attività", "Report e dashboard per la direzione", "Migrazione dei dati da fogli di calcolo e vecchi sistemi", "Integrazione con contabilità, telefonia ed e-mail"],
+          result: "Un solo sistema al posto di uno zoo di fogli di calcolo: la direzione vede come stanno le cose senza report settimanali da ogni reparto."
+        },
+        cloud: {
+          lead: "Infrastruttura AWS che resiste ai guasti e non rincara senza motivo",
+          pitch: "Il cloud non è sempre più economico di un server proprio. Conviene quando il carico ha forti picchi, quando serve la tolleranza ai guasti o quando i nuovi ambienti devono essere pronti in pochi minuti anziché in una settimana. Per questo il passaggio ad Amazon Web Services parte da un audit e da una stima dei costi, e avviene per fasi, con un piano di rollback a ogni passo.",
+          list: ["Audit dell'infrastruttura attuale e stima dei costi", "Architettura su AWS e piano di migrazione", "Trasferimento di server, database e file", "Backup e monitoraggio", "Ottimizzazione dei costi dopo la migrazione"],
+          result: "Un'infrastruttura che sopravvive al guasto di un server, e una fattura del cloud che Lei capisce."
+        },
+        redhat: {
+          lead: "Un'infrastruttura che non vive nella testa di un solo amministratore",
+          pitch: "Le aziende scelgono Red Hat quando i server devono funzionare per anni e superare gli audit. L'abbonamento si ripaga con il supporto del produttore e un ciclo di vita lungo: Red Hat Enterprise Linux è supportato per dieci anni. Progettiamo l'infrastruttura sui Suoi carichi di lavoro e descriviamo la configurazione in Ansible, così ogni server si può ricostruire a partire da un playbook. Red Hat è nostro partner, quindi La aiutiamo anche con abbonamenti e supporto del produttore.",
+          list: ["Audit dei server attuali e piano di migrazione", "Red Hat Enterprise Linux con aggiornamenti centralizzati tramite Red Hat Satellite", "La piattaforma di container OpenShift per le Sue applicazioni", "Automazione della configurazione e del deployment con Ansible", "Gestione centralizzata di identità e accessi (Identity Management)", "Monitoraggio, backup e documentazione per il Suo team"],
+          result: "Un'infrastruttura che si può verificare, riprodurre e passare a un altro team senza perdere conoscenze."
+        },
+        api: {
+          lead: "Inserisca i dati una volta: al resto pensano loro",
+          pitch: "Il problema più frequente che vediamo è il doppio inserimento: gli ordini del sito ricopiati a mano nella contabilità, i pagamenti riconciliati in un foglio di calcolo. Un'integrazione elimina questo lavoro, e gli errori con esso. E impostiamo sempre il monitoraggio, perché le integrazioni si rompono in silenzio quando un partner cambia la sua API, ed è meglio saperlo dal sistema che da un cliente.",
+          list: ["Progettazione e documentazione delle API", "Integrazione con sistemi di pagamento, corrieri, CRM e contabilità", "Scambio di dati tra sistemi interni", "Code e nuovi tentativi in caso di errore", "Monitoraggio e notifiche"],
+          result: "I dati si inseriscono una volta sola e arrivano da soli dove servono."
+        },
+        support: {
+          lead: "Un supporto che nota il problema prima dei Suoi utenti",
+          pitch: "Il supporto è più che correggere bug: sono aggiornamenti che chiudono le vulnerabilità, monitoraggio e piccoli miglioramenti strada facendo. Prendiamo in carico anche sistemi che non abbiamo sviluppato noi. In quel caso partiamo da un audit e dalla documentazione, perché senza di essa ogni modifica è una lotteria.",
+          list: ["Monitoraggio della disponibilità e degli errori", "Correzione dei bug e aggiornamenti di sicurezza", "Backup e test di ripristino", "Miglioramenti pianificati e nuove funzionalità", "Audit e documentazione di sistemi realizzati da altri fornitori"],
+          result: "Un sistema che funziona, e un team che sa come è fatto."
+        }
+      }
     }
   };
 
@@ -280,7 +666,7 @@
   if (!LANGS.includes(lang)) lang = LANGS.includes(document.documentElement.lang) ? document.documentElement.lang : "uk";
 
   const c = () => AIC.content[lang];
-  const u = () => UI[lang];
+  const u = () => UI[lang] || UI.en;
 
   /* ---------- Розмітка ---------- */
   function navbar() {
@@ -290,7 +676,7 @@
       `<span class="yr">${esc(v.year)}</span>${esc(v.name[lang])}</a></li>`
     ).join("");
     const langs = LANGS.map((l) =>
-      `<li><a href="#" data-lang="${l}"${l === lang ? ' class="active" aria-current="true"' : ""}><span class="yr">${l.toUpperCase()}</span>${LANG_NAMES[l]}</a></li>`
+      `<li><a href="#" data-lang="${l}" lang="${l}"${l === lang ? ' class="active" aria-current="true"' : ""}><span class="yr">${esc(LANG_CODES[l] || l.toUpperCase())}</span>${esc(LANG_NAMES[l] || l)}</a></li>`
     ).join("");
     return `
       <header class="navbar" id="w10Nav">
@@ -306,7 +692,7 @@
               <ul class="dropdown-menu"><li class="dropdown-header">${esc(s.versionsHead)}</li>${versions}</ul>
             </li>
             <li class="dropdown">
-              <button type="button" class="dropdown-toggle" aria-expanded="false" aria-haspopup="true" aria-label="${esc(s.language)}">${lang.toUpperCase()} <b class="caret"></b></button>
+              <button type="button" class="dropdown-toggle" aria-expanded="false" aria-haspopup="true" aria-label="${esc(s.language)}">${esc(LANG_CODES[lang] || lang.toUpperCase())} <b class="caret"></b></button>
               <ul class="dropdown-menu"><li class="dropdown-header">${esc(s.language)}</li>${langs}</ul>
             </li>
           </ul>
@@ -348,7 +734,7 @@
 
   /* Послуги для поточної мови: наші тексти, а за їх відсутності — словник сайту */
   function svcList() {
-    const own = (SVC[lang] || SVC.uk).items;
+    const own = (SVC[lang] || SVC.en).items;
     return c().services.items.map((it) => {
       const o = own[it.key];
       return {
@@ -369,7 +755,7 @@
     return `
       <section class="section" id="services">
         <div class="container">
-          <div class="section-title reveal"><h2>${esc(c().services.heading)}</h2><p>${esc((SVC[lang] || SVC.uk).sub)}</p></div>
+          <div class="section-title reveal"><h2>${esc(c().services.heading)}</h2><p>${esc((SVC[lang] || SVC.en).sub)}</p></div>
           <div class="services">
             ${list.map((it, i) => `
               <article class="service reveal${wideLast && i === list.length - 1 ? " wide" : ""}" style="--c:${COLORS[i % COLORS.length]}">

@@ -3,34 +3,37 @@ import { existsSync, readFileSync } from 'node:fs';
 import { beforeAll, describe, expect, it } from 'vitest';
 
 /** Классическая версия сайта: переехала в /classic/. */
-const pages = {
-  uk: 'dist/classic/index.html',
-  ru: 'dist/ru/classic/index.html',
-  en: 'dist/en/classic/index.html',
-};
+/** Все локали сайта в порядке переключателя языков. */
+const locales = ['en', 'de', 'fr', 'es', 'pt', 'it', 'uk', 'ru'] as const;
+type Locale = (typeof locales)[number];
+const localePrefix = Object.fromEntries(locales.map((l) => [l, l === 'uk' ? '/' : `/${l}/`])) as Record<Locale, string>;
+
+/** Классическая версия сайта: переехала в /classic/. */
+const pages = Object.fromEntries(locales.map((l) => [l, `dist${localePrefix[l]}classic/index.html`])) as Record<
+  Locale,
+  string
+>;
 
 /** Вариант по умолчанию (src/variants/default.ts) занимает корень и прежние адреса локалей. */
-const retro = {
-  uk: 'dist/index.html',
-  ru: 'dist/ru/index.html',
-  en: 'dist/en/index.html',
-};
+const retro = Object.fromEntries(locales.map((l) => [l, `dist${localePrefix[l]}index.html`])) as Record<Locale, string>;
 
 /** Ретро-варианты по своим адресам ('' — корень локали). */
 const variantSlugs = ['', 'dos/', 'unix/', 'apple/', 'lisa/', 'linux/', 'mc/', 'win31/', 'winnt/', 'web90/', 'web2010/', 'ai/', 'nc/'];
-const localePrefix = { uk: '/', ru: '/ru/', en: '/en/' };
 const variantPages = Object.entries(localePrefix).flatMap(([locale, prefix]) =>
   variantSlugs.map((slug) => ({ locale, slug, url: prefix + slug, file: `dist${prefix}${slug}index.html` }))
 );
 const allPages = [...Object.values(pages), ...variantPages.map((page) => page.file)];
 
-const slogans = {
-  uk: 'Ми бачили, як зароджувалося IT.',
-  ru: 'Мы видели, как зарождалось IT.',
-  en: 'We saw IT being born.',
-};
-
 const read = (path: string) => readFileSync(path, 'utf8');
+
+/** Текст так, как Astro выводит его в разметку. */
+const escapeHtml = (text: string) =>
+  text.replace(/[&<>"']/g, (ch) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[ch]!);
+
+/** Слоган каждой локали — из её словаря. */
+const slogans = Object.fromEntries(
+  locales.map((l) => [l, escapeHtml(JSON.parse(read(`src/i18n/${l}.json`)).footer.slogan)])
+) as Record<Locale, string>;
 
 beforeAll(() => {
   execSync('npm run build', { stdio: 'inherit' });
@@ -92,7 +95,7 @@ describe('страницы локалей', () => {
 
   it('используют уникальные заголовки для каждой локали', () => {
     const titles = Object.values(pages).map((path) => /<title>(.*?)<\/title>/s.exec(read(path))?.[1]);
-    expect(new Set(titles).size).toBe(3);
+    expect(new Set(titles).size).toBe(locales.length);
   });
 });
 
@@ -128,10 +131,21 @@ describe('шапка и подвал', () => {
     expect(read(pages.ru)).toContain('aria-current="true"');
   });
 
-  it('выстраивают языки в порядке UK, EN, RU', () => {
+  it('выстраивают языки в порядке EN, DE, FR, ES, PT, IT, UK, RU', () => {
     for (const path of Object.values(pages)) {
-      const order = [...read(path).matchAll(/>(UK|EN|RU)</g)].map((m) => m[1]);
-      expect(order, path).toEqual(['UK', 'EN', 'RU']);
+      const list = read(path).split('data-lang-switcher')[1]?.split('<nav')[1]?.split('</nav>')[0] ?? '';
+      const order = [...list.matchAll(/>(UK|EN|RU|DE|FR|ES|PT|IT)</g)].map((m) => m[1]);
+      expect(order, path).toEqual(['EN', 'DE', 'FR', 'ES', 'PT', 'IT', 'UK', 'RU']);
+    }
+  });
+
+  it('дают в выборе языка ссылки на все локали', () => {
+    for (const path of Object.values(pages)) {
+      const list = read(path).split('data-lang-switcher')[1]?.split('</nav>')[0] ?? '';
+      for (const locale of locales) {
+        if (pages[locale] === path) continue;
+        expect(list, `${path} → ${locale}`).toContain(`href="${localePrefix[locale]}classic/"`);
+      }
     }
   });
 
@@ -478,11 +492,12 @@ describe('перелинковка и футер', () => {
 });
 
 describe('язык по умолчанию', () => {
-  it('отправляет на английскую версию за пределами Украины, кроме роботов', () => {
+  it('за пределами Украины выбирает язык браузера, иначе английский; роботов не трогает', () => {
     for (const page of [...variantPages.map((p) => p.file), ...Object.values(pages)]) {
       const html = read(page);
       expect(html, page).toContain('Europe/Kyiv');
-      expect(html, page).toContain("location.replace(url(aicId, 'en')");
+      expect(html, page).toContain('navigator.languages');
+      expect(html, page).toContain("wanted || 'en'");
       expect(html, page).toMatch(/bot\|crawl/);
     }
   });

@@ -54,6 +54,71 @@
       pauseLabel: "Пауза анимации", playLabel: "Продолжить анимацию", againLabel: "Вырастить ёлку заново",
       keys: "<kbd>Space</kbd> пауза · <kbd>R</kbd> вырастить заново",
       tree: "Вращающаяся ASCII-ёлка: гирлянда, шары, огоньки, звезда на макушке и подарки под ней"
+    },
+    de: {
+      services: "Leistungen", partners: "Partner", contacts: "Kontakt", language: "Sprache",
+      greet: "Frohe Weihnachten und ein gutes neues Jahr!",
+      ctaServices: "Geschenke auspacken", ctaContacts: "Schreiben Sie uns",
+      servicesSub: "Zehn Geschenke unter dem Baum, eines für jeden Bereich. Packen Sie eines aus: Darin steht, was wir tun, was zur Arbeit gehört und was Sie am Ende bekommen.",
+      partnersSub: "Technologien, mit denen wir jeden Tag arbeiten. Diese Lichterkette leuchtet das ganze Jahr.",
+      open: "[+] Geschenk auspacken", close: "[–] wieder einpacken",
+      includes: "Leistungsumfang", result: "Ergebnis",
+      pause: "❚❚ Pause", play: "▶ weiter", again: "↻ neu",
+      pauseLabel: "Animation anhalten", playLabel: "Animation fortsetzen", againLabel: "Den Baum noch einmal wachsen lassen",
+      keys: "<kbd>Leertaste</kbd> Pause · <kbd>R</kbd> neu wachsen lassen",
+      tree: "Ein sich drehender ASCII-Weihnachtsbaum mit Lametta, Kugeln, funkelnden Lichtern, einem Stern an der Spitze und Geschenken darunter"
+    },
+    fr: {
+      services: "Services", partners: "Partenaires", contacts: "Contact", language: "Langue",
+      greet: "Joyeux Noël et bonne année !",
+      ctaServices: "Ouvrir les cadeaux", ctaContacts: "Nous écrire",
+      servicesSub: "Dix cadeaux sous le sapin, un par domaine. Ouvrez celui que vous voulez : vous y trouverez ce que nous faisons, ce que comprend le travail et ce que vous obtenez à la fin.",
+      partnersSub: "Les technologies avec lesquelles nous travaillons tous les jours. Cette guirlande reste allumée toute l'année.",
+      open: "[+] ouvrir le cadeau", close: "[–] refermer",
+      includes: "Ce qui est inclus", result: "Résultat",
+      pause: "❚❚ pause", play: "▶ reprendre", again: "↻ recommencer",
+      pauseLabel: "Mettre l'animation en pause", playLabel: "Reprendre l'animation", againLabel: "Faire repousser le sapin",
+      keys: "<kbd>Espace</kbd> pause · <kbd>R</kbd> faire repousser",
+      tree: "Un sapin de Noël en ASCII qui tourne, avec guirlande, boules, lumières scintillantes, une étoile au sommet et des cadeaux au pied"
+    },
+    es: {
+      services: "Servicios", partners: "Socios", contacts: "Contacto", language: "Idioma",
+      greet: "¡Feliz Navidad y próspero Año Nuevo!",
+      ctaServices: "Abrir los regalos", ctaContacts: "Escríbanos",
+      servicesSub: "Diez regalos bajo el árbol, uno por cada área. Abra el que quiera: dentro está lo que hacemos, qué incluye el trabajo y qué obtiene al final.",
+      partnersSub: "Tecnologías con las que trabajamos cada día. Esta guirnalda está encendida todo el año.",
+      open: "[+] abrir el regalo", close: "[–] cerrar",
+      includes: "Qué incluye", result: "Resultado",
+      pause: "❚❚ pausa", play: "▶ seguir", again: "↻ de nuevo",
+      pauseLabel: "Pausar la animación", playLabel: "Reanudar la animación", againLabel: "Hacer crecer el árbol de nuevo",
+      keys: "<kbd>Espacio</kbd> pausa · <kbd>R</kbd> crecer de nuevo",
+      tree: "Un árbol de Navidad en ASCII que gira, con espumillón, bolas, luces parpadeantes, una estrella en la punta y regalos debajo"
+    },
+    pt: {
+      services: "Serviços", partners: "Parceiros", contacts: "Contactos", language: "Idioma",
+      greet: "Feliz Natal e Feliz Ano Novo!",
+      ctaServices: "Abrir os presentes", ctaContacts: "Escreva-nos",
+      servicesSub: "Dez presentes debaixo da árvore, um para cada área. Abra o que quiser: lá dentro está o que fazemos, o que inclui o trabalho e o que recebe no fim.",
+      partnersSub: "Tecnologias com que trabalhamos todos os dias. Estas luzes ficam acesas o ano inteiro.",
+      open: "[+] abrir o presente", close: "[–] fechar",
+      includes: "O que inclui", result: "Resultado",
+      pause: "❚❚ pausa", play: "▶ continuar", again: "↻ de novo",
+      pauseLabel: "Pausar a animação", playLabel: "Continuar a animação", againLabel: "Fazer crescer a árvore de novo",
+      keys: "<kbd>Espaço</kbd> pausa · <kbd>R</kbd> crescer de novo",
+      tree: "Uma árvore de Natal em ASCII a rodar, com fitas douradas, bolas, luzes a piscar, uma estrela no topo e presentes por baixo"
+    },
+    it: {
+      services: "Servizi", partners: "Partner", contacts: "Contatti", language: "Lingua",
+      greet: "Buon Natale e felice anno nuovo!",
+      ctaServices: "Scarta i regali", ctaContacts: "Ci scriva",
+      servicesSub: "Dieci regali sotto l'albero, uno per ogni area. Ne scarti uno qualsiasi: dentro c'è quello che facciamo, cosa comprende il lavoro e cosa ottiene alla fine.",
+      partnersSub: "Le tecnologie con cui lavoriamo ogni giorno. Queste luci restano accese tutto l'anno.",
+      open: "[+] scarta il regalo", close: "[–] richiudi",
+      includes: "Cosa comprende", result: "Risultato",
+      pause: "❚❚ pausa", play: "▶ riprendi", again: "↻ di nuovo",
+      pauseLabel: "Metti in pausa l'animazione", playLabel: "Riprendi l'animazione", againLabel: "Fai crescere di nuovo l'albero",
+      keys: "<kbd>Spazio</kbd> pausa · <kbd>R</kbd> fai ricrescere",
+      tree: "Un albero di Natale in ASCII che ruota, con festoni, palline, luci scintillanti, una stella in cima e regali sotto"
     }
   };
 
@@ -765,11 +830,15 @@
     document.documentElement.lang = lang;
     $("xmNav").innerHTML = [["xmServices", s.services], ["xmPartners", s.partners], ["xmContacts", s.contacts]]
       .map(([id, label]) => `<a href="#${id}" data-go="${id}">${esc(label)}</a>`).join("");
-    $("xmLangs").setAttribute("aria-label", s.language);
-    $("xmLangs").querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.l === lang)));
+    $("xmLangBtn").textContent = (AIC.langCodes && AIC.langCodes[lang]) || lang.toUpperCase();
+    $("xmLangBtn").setAttribute("aria-label", `${s.language}: ${(AIC.langNames && AIC.langNames[lang]) || lang}`);
+    $("xmLangList").setAttribute("aria-label", s.language);
+    $("xmLangList").innerHTML = LANGS.map((l) =>
+      `<li><button type="button" data-l="${l}" lang="${l}"${l === lang ? ' aria-current="true"' : ""}>` +
+      `<b>${esc((AIC.langCodes && AIC.langCodes[l]) || l.toUpperCase())}</b>${esc((AIC.langNames && AIC.langNames[l]) || l)}</button></li>`).join("");
     $("xmTitle").textContent = C.hero.title;
     $("xmLead").textContent = C.hero.text;
-    $("xmTypedLead").textContent = `${C.hero.typedLead}:`;
+    $("xmTypedLead").textContent = C.hero.typedLead;
     $("xmTyped").setAttribute("aria-label", C.hero.typed.join(", "));
     $("xmCtaServices").textContent = s.ctaServices;
     $("xmCtaContacts").textContent = s.ctaContacts;
@@ -781,6 +850,7 @@
     pauseBtn.hidden = REDUCED;
     setPaused(paused);
     greetEl.innerHTML = greetHtml();
+    greetEl.classList.toggle("long", [...s.greet].length > 30);
     updateGreet(true);
     $("xmMain").innerHTML = mainHtml();
     startTyped();
@@ -793,9 +863,21 @@
     render();
   }
 
-  $("xmLangs").addEventListener("click", (e) => {
+  const langMenu = $("xmLangs");
+  langMenu.addEventListener("click", (e) => {
     const b = e.target.closest("button[data-l]");
-    if (b) setLang(b.dataset.l);
+    if (!b) return;
+    langMenu.open = false;
+    setLang(b.dataset.l);
+  });
+  document.addEventListener("pointerdown", (e) => {
+    if (langMenu.open && !langMenu.contains(e.target)) langMenu.open = false;
+  });
+  langMenu.addEventListener("keydown", (e) => {
+    if (e.key !== "Escape" || !langMenu.open) return;
+    langMenu.open = false;
+    $("xmLangBtn").focus();
+    e.stopPropagation();
   });
   root.addEventListener("click", (e) => {
     const link = e.target.closest("[data-go]");

@@ -40,7 +40,7 @@
         "  DIR             список файлів",
         "  TYPE <файл>     відкрити файл (можна просто ім'я)",
         "  MAIL            написати нам",
-        "  LANG UK|EN|RU   змінити мову",
+        "  LANG <мова>     змінити мову",
         "  COLOR           змінити монітор",
         "  CLS             очистити екран",
         "  VER             версія",
@@ -85,7 +85,7 @@
         "  DIR             list files",
         "  TYPE <file>     open a file (or just type its name)",
         "  MAIL            write to us",
-        "  LANG UK|EN|RU   switch language",
+        "  LANG <code>     switch language",
         "  COLOR           switch monitor",
         "  CLS             clear screen",
         "  VER             version",
@@ -130,7 +130,7 @@
         "  DIR             список файлов",
         "  TYPE <файл>     открыть файл (можно просто имя)",
         "  MAIL            написать нам",
-        "  LANG UK|EN|RU   сменить язык",
+        "  LANG <язык>     сменить язык",
         "  COLOR           сменить монитор",
         "  CLS             очистить экран",
         "  VER             версия",
@@ -139,6 +139,231 @@
         "  COMMAND         консольный режим",
         "",
         "Клавиши: ↑↓ Home End Enter F1–F10 Esc Ctrl+O"
+      ]
+    },
+    de: {
+      title: "ArtIntelliCo — Softwareentwicklung und IT-Support für Unternehmen",
+      menu: ["Leistungen", "Partner", "Kontakt", "Sprache:", "Monitor:"],
+      monitors: { ega: "EGA", green: "Grün", amber: "Bernstein" },
+      cols: ["Name", "Beschreibung"],
+      fkeys: ["Hilfe", "Sprache", "Ansicht", "Mail", "", "", "", "", "Monitor", "Ende"],
+      skip: "Zum Überspringen beliebige Taste drücken",
+      heroTitle: "Wir entwickeln IT-Lösungen, die für Ihr Unternehmen arbeiten",
+      heroText: "Das Team von ArtIntelliCo hilft Ihnen, Ihre Geschäftsprozesse zu digitalisieren und zu automatisieren: Wir konzipieren moderne IT-Lösungen und führen sie ein.",
+      heroLead: "Was wir für Ihr Unternehmen tun",
+      phrases: ["SaaS-Plattformen entwickeln", "CRM- und ERP-Systeme aufbauen", "künstliche Intelligenz einsetzen", "Infrastruktur in die Cloud bringen"],
+      readmeDesc: "Über das Unternehmen",
+      hint: "↑↓ Datei wählen   Enter öffnen   F1 Hilfe",
+      discuss: "Projekt besprechen",
+      partnersTitle: "Unsere Partner",
+      contactTitle: "Erzählen Sie uns von Ihrem Projekt",
+      contactText: "Wenn Sie eine Zusammenarbeit vorschlagen möchten oder mehr über unsere Lösungen und unsere Erfahrung wissen wollen – schreiben Sie uns eine E-Mail.",
+      emailLabel: "E-Mail",
+      write: "E-Mail schreiben",
+      copy: "Adresse kopieren",
+      copied: "Adresse kopiert",
+      copyFailed: "Kopieren nicht möglich. Die Adresse lautet " + EMAIL,
+      cancel: "Abbrechen",
+      copyright: "© 2026 ArtIntelliCo. Alle Rechte vorbehalten.",
+      legal: "ArtIntelliCo LLC",
+      slogan: "Wir haben die Geburt der IT miterlebt. Wir wissen, wie sie heute funktioniert – und verstehen, wohin sie sich morgen entwickelt.",
+      source: "Klassische Version der Website",
+      bad: "Befehl oder Dateiname nicht gefunden. Geben Sie HELP ein.",
+      back: "Geben Sie NC ein oder drücken Sie Esc, um zu den Fenstern zurückzukehren.",
+      help: [
+        "Befehle:",
+        "  DIR             Dateien auflisten",
+        "  TYPE <Datei>    Datei öffnen (oder nur den Namen eingeben)",
+        "  MAIL            an uns schreiben",
+        "  LANG <Code>     Sprache wechseln",
+        "  COLOR           Monitor wechseln",
+        "  CLS             Bildschirm löschen",
+        "  VER             Version",
+        "  BOOT            neu starten",
+        "  NC              zurück zu den Fenstern",
+        "  COMMAND         Konsolenmodus",
+        "",
+        "Tasten: ↑↓ Pos1 Ende Enter F1–F10 Esc Strg+O"
+      ]
+    },
+    fr: {
+      title: "ArtIntelliCo — développement logiciel et support informatique pour les entreprises",
+      menu: ["Services", "Partenaires", "Contacts", "Langue :", "Moniteur :"],
+      monitors: { ega: "EGA", green: "Vert", amber: "Ambre" },
+      cols: ["Nom", "Description"],
+      fkeys: ["Aide", "Langue", "Voir", "Courrier", "", "", "", "", "Moniteur", "Quitter"],
+      skip: "Appuyez sur une touche pour passer",
+      heroTitle: "Nous créons des solutions informatiques qui travaillent pour votre entreprise",
+      heroText: "L'équipe ArtIntelliCo vous aide à numériser et à automatiser vos processus métier en concevant et en déployant des solutions informatiques modernes.",
+      heroLead: "Pour votre entreprise, nous",
+      phrases: ["développons des plateformes SaaS", "mettons en place des systèmes CRM et ERP", "faisons travailler l'IA pour vous", "migrons l'infrastructure vers le cloud"],
+      readmeDesc: "À propos de l'entreprise",
+      hint: "↑↓ choisir un fichier   Entrée ouvrir   F1 aide",
+      discuss: "Parler de votre projet",
+      partnersTitle: "Nos partenaires",
+      contactTitle: "Parlez-nous de votre projet",
+      contactText: "Vous avez une proposition de partenariat ou souhaitez en savoir plus sur nos solutions et notre expérience ? Écrivez-nous par e-mail.",
+      emailLabel: "E-mail",
+      write: "Écrire un e-mail",
+      copy: "Copier l'adresse",
+      copied: "Adresse copiée",
+      copyFailed: "Copie impossible. L'adresse est " + EMAIL,
+      cancel: "Annuler",
+      copyright: "© 2026 ArtIntelliCo. Tous droits réservés.",
+      legal: "ArtIntelliCo LLC",
+      slogan: "Nous avons vu naître l'informatique. Nous savons comment elle fonctionne aujourd'hui — et nous comprenons où elle va demain.",
+      source: "Version classique du site",
+      bad: "Commande ou nom de fichier incorrect. Tapez HELP.",
+      back: "Tapez NC ou appuyez sur Échap pour revenir aux panneaux.",
+      help: [
+        "Commandes :",
+        "  DIR             liste des fichiers",
+        "  TYPE <fichier>  ouvrir un fichier (ou tapez son nom)",
+        "  MAIL            nous écrire",
+        "  LANG <code>     changer de langue",
+        "  COLOR           changer de moniteur",
+        "  CLS             effacer l'écran",
+        "  VER             version",
+        "  BOOT            redémarrer",
+        "  NC              revenir aux panneaux",
+        "  COMMAND         mode console",
+        "",
+        "Touches : ↑↓ Origine Fin Entrée F1–F10 Échap Ctrl+O"
+      ]
+    },
+    es: {
+      title: "ArtIntelliCo — desarrollo de software y soporte de TI para empresas",
+      menu: ["Servicios", "Socios", "Contacto", "Idioma:", "Monitor:"],
+      monitors: { ega: "EGA", green: "Verde", amber: "Ámbar" },
+      cols: ["Nombre", "Descripción"],
+      fkeys: ["Ayuda", "Idioma", "Ver", "Correo", "", "", "", "", "Monitor", "Salir"],
+      skip: "Pulse cualquier tecla para omitir",
+      heroTitle: "Creamos soluciones de TI que trabajan para su negocio",
+      heroText: "El equipo de ArtIntelliCo le ayuda a digitalizar y automatizar sus procesos de negocio diseñando e implantando soluciones de TI modernas.",
+      heroLead: "Para su negocio",
+      phrases: ["desarrollamos plataformas SaaS", "creamos sistemas CRM y ERP", "ponemos la IA a trabajar", "llevamos la infraestructura a la nube"],
+      readmeDesc: "Sobre la empresa",
+      hint: "↑↓ elegir archivo   Intro abrir   F1 ayuda",
+      discuss: "Hablar de su proyecto",
+      partnersTitle: "Nuestros socios",
+      contactTitle: "Cuéntenos su proyecto",
+      contactText: "Si tiene una propuesta de colaboración o quiere saber más sobre nuestras soluciones y nuestra experiencia, escríbanos un correo electrónico.",
+      emailLabel: "Correo electrónico",
+      write: "Escribir un correo",
+      copy: "Copiar dirección",
+      copied: "Dirección copiada",
+      copyFailed: "No se ha podido copiar. La dirección es " + EMAIL,
+      cancel: "Cancelar",
+      copyright: "© 2026 ArtIntelliCo. Todos los derechos reservados.",
+      legal: "ArtIntelliCo LLC",
+      slogan: "Vimos nacer la informática. Sabemos cómo funciona hoy y entendemos hacia dónde va mañana.",
+      source: "Versión clásica del sitio",
+      bad: "Comando o nombre de archivo incorrecto. Escriba HELP.",
+      back: "Escriba NC o pulse Esc para volver a los paneles.",
+      help: [
+        "Comandos:",
+        "  DIR             lista de archivos",
+        "  TYPE <archivo>  abrir un archivo (o escriba su nombre)",
+        "  MAIL            escribirnos",
+        "  LANG <código>   cambiar de idioma",
+        "  COLOR           cambiar de monitor",
+        "  CLS             borrar la pantalla",
+        "  VER             versión",
+        "  BOOT            reiniciar",
+        "  NC              volver a los paneles",
+        "  COMMAND         modo consola",
+        "",
+        "Teclas: ↑↓ Inicio Fin Intro F1–F10 Esc Ctrl+O"
+      ]
+    },
+    pt: {
+      title: "ArtIntelliCo — desenvolvimento de software e suporte de TI para empresas",
+      menu: ["Serviços", "Parceiros", "Contactos", "Idioma:", "Monitor:"],
+      monitors: { ega: "EGA", green: "Verde", amber: "Âmbar" },
+      cols: ["Nome", "Descrição"],
+      fkeys: ["Ajuda", "Idioma", "Ver", "Correio", "", "", "", "", "Monitor", "Sair"],
+      skip: "Prima qualquer tecla para saltar",
+      heroTitle: "Criamos soluções de TI que trabalham para o seu negócio",
+      heroText: "A equipa da ArtIntelliCo ajuda-o a digitalizar e automatizar os processos do seu negócio, concebendo e implementando soluções de TI modernas.",
+      heroLead: "Para o seu negócio",
+      phrases: ["desenvolvemos plataformas SaaS", "criamos sistemas CRM e ERP", "pomos a IA a trabalhar", "levamos a infraestrutura para a cloud"],
+      readmeDesc: "Sobre a empresa",
+      hint: "↑↓ escolher ficheiro   Enter abrir   F1 ajuda",
+      discuss: "Falar do seu projeto",
+      partnersTitle: "Os nossos parceiros",
+      contactTitle: "Fale-nos do seu projeto",
+      contactText: "Se tem uma proposta de parceria ou quer saber mais sobre as nossas soluções e a nossa experiência, envie-nos um e-mail.",
+      emailLabel: "E-mail",
+      write: "Escrever um e-mail",
+      copy: "Copiar endereço",
+      copied: "Endereço copiado",
+      copyFailed: "Não foi possível copiar. O endereço é " + EMAIL,
+      cancel: "Cancelar",
+      copyright: "© 2026 ArtIntelliCo. Todos os direitos reservados.",
+      legal: "ArtIntelliCo LLC",
+      slogan: "Vimos a informática nascer. Sabemos como funciona hoje — e percebemos para onde caminha amanhã.",
+      source: "Versão clássica do site",
+      bad: "Comando ou nome de ficheiro inválido. Escreva HELP.",
+      back: "Escreva NC ou prima Esc para voltar aos painéis.",
+      help: [
+        "Comandos:",
+        "  DIR             lista de ficheiros",
+        "  TYPE <ficheiro> abrir um ficheiro (ou só o nome)",
+        "  MAIL            escrever-nos",
+        "  LANG <código>   mudar de idioma",
+        "  COLOR           mudar de monitor",
+        "  CLS             limpar o ecrã",
+        "  VER             versão",
+        "  BOOT            reiniciar",
+        "  NC              voltar aos painéis",
+        "  COMMAND         modo consola",
+        "",
+        "Teclas: ↑↓ Home End Enter F1–F10 Esc Ctrl+O"
+      ]
+    },
+    it: {
+      title: "ArtIntelliCo — sviluppo software e assistenza IT per le aziende",
+      menu: ["Servizi", "Partner", "Contatti", "Lingua:", "Monitor:"],
+      monitors: { ega: "EGA", green: "Verde", amber: "Ambra" },
+      cols: ["Nome", "Descrizione"],
+      fkeys: ["Aiuto", "Lingua", "Vedi", "Posta", "", "", "", "", "Monitor", "Esci"],
+      skip: "Premere un tasto qualsiasi per saltare",
+      heroTitle: "Realizziamo soluzioni IT che lavorano per la Sua azienda",
+      heroText: "Il team di ArtIntelliCo La aiuta a digitalizzare e automatizzare i processi aziendali progettando e introducendo soluzioni IT moderne.",
+      heroLead: "Per la Sua azienda",
+      phrases: ["sviluppiamo piattaforme SaaS", "realizziamo sistemi CRM ed ERP", "mettiamo al lavoro l'IA", "portiamo l'infrastruttura nel cloud"],
+      readmeDesc: "Chi siamo",
+      hint: "↑↓ scegliere file   Invio aprire   F1 aiuto",
+      discuss: "Parliamo del Suo progetto",
+      partnersTitle: "I nostri partner",
+      contactTitle: "Ci parli del Suo progetto",
+      contactText: "Se ha una proposta di collaborazione o desidera saperne di più sulle nostre soluzioni e sulla nostra esperienza, ci scriva un'e-mail.",
+      emailLabel: "E-mail",
+      write: "Scrivere un'e-mail",
+      copy: "Copia indirizzo",
+      copied: "Indirizzo copiato",
+      copyFailed: "Impossibile copiare. L'indirizzo è " + EMAIL,
+      cancel: "Annulla",
+      copyright: "© 2026 ArtIntelliCo. Tutti i diritti riservati.",
+      legal: "ArtIntelliCo LLC",
+      slogan: "Abbiamo visto nascere l'informatica. Sappiamo come funziona oggi e capiamo dove andrà domani.",
+      source: "Versione classica del sito",
+      bad: "Comando o nome di file non valido. Digitare HELP.",
+      back: "Digitare NC o premere Esc per tornare ai pannelli.",
+      help: [
+        "Comandi:",
+        "  DIR             elenco dei file",
+        "  TYPE <file>     aprire un file (o digitarne il nome)",
+        "  MAIL            scriverci",
+        "  LANG <codice>   cambiare lingua",
+        "  COLOR           cambiare monitor",
+        "  CLS             pulire lo schermo",
+        "  VER             versione",
+        "  BOOT            riavviare",
+        "  NC              tornare ai pannelli",
+        "  COMMAND         modalità console",
+        "",
+        "Tasti: ↑↓ Home Fine Invio F1–F10 Esc Ctrl+O"
       ]
     }
   };
@@ -167,7 +392,7 @@
         ],
         cmds: ["КОМАНДИ", "ls [-la]  cd  pwd  cat  more  echo  clear  date  uname  who  whoami  finger  mail  history  man"],
         extra: [
-          ["lang uk|en|ru", "мова"],
+          ["lang", "мова"],
           ["phosphor white|green|amber", "колір люмінофора"],
           ["dos", "DOS-версія сайту"],
           ["nc", "Norton Commander"],
@@ -204,7 +429,7 @@
         ],
         cmds: ["COMMANDS", "ls [-la]  cd  pwd  cat  more  echo  clear  date  uname  who  whoami  finger  mail  history  man"],
         extra: [
-          ["lang uk|en|ru", "language"],
+          ["lang", "language"],
           ["phosphor white|green|amber", "phosphor colour"],
           ["dos", "DOS version of the site"],
           ["nc", "Norton Commander"],
@@ -241,7 +466,7 @@
         ],
         cmds: ["КОМАНДЫ", "ls [-la]  cd  pwd  cat  more  echo  clear  date  uname  who  whoami  finger  mail  history  man"],
         extra: [
-          ["lang uk|en|ru", "язык"],
+          ["lang", "язык"],
           ["phosphor white|green|amber", "цвет люминофора"],
           ["dos", "DOS-версия сайта"],
           ["nc", "Norton Commander"],
@@ -254,6 +479,191 @@
           ["logout", "выйти"]
         ],
         keys: ["КЛАВИШИ", "↑↓ история, Tab дополнение, Ctrl+C отменить, Ctrl+L очистить экран"]
+      }
+    },
+    de: {
+      motd: ["Willkommen bei ArtIntelliCo. Hilfe gefällig? Geben Sie ", "help", " ein."],
+      discuss: ["Projekt besprechen: ", "mail"],
+      phosphors: { white: "weiß", green: "grün", amber: "bernstein" },
+      phosphorSet: "Phosphor: ",
+      langSet: "LANG=de_DE.ISO8859-1",
+      skip: "Zum Überspringen beliebige Taste drücken",
+      man: {
+        header: "UNIX-Programmierhandbuch",
+        name: ["NAME", "intro — wie man diese Website liest"],
+        desc: ["BESCHREIBUNG", "Die Website ist das Heimatverzeichnis /usr/guest. Beginnen Sie mit:"],
+        steps: [
+          ["ls", "was es hier gibt"],
+          ["cat README", "über das Unternehmen"],
+          ["cd services; ls", "Leistungen"],
+          ["man concept", "eine Leistung als Handbuchseite"],
+          ["cat partners", "unsere Partner"],
+          ["mail", "ein Brief von uns: so erreichen Sie uns"],
+          ["finger aic", "wer wir sind"]
+        ],
+        cmds: ["BEFEHLE", "ls [-la]  cd  pwd  cat  more  echo  clear  date  uname  who  whoami  finger  mail  history  man"],
+        extra: [
+          ["lang", "Sprache"],
+          ["phosphor white|green|amber", "Farbe des Phosphors"],
+          ["dos", "DOS-Version der Website"],
+          ["nc", "Norton Commander"],
+          ["apple", "Apple ]["],
+          ["lisa", "Apple Lisa"],
+          ["startx", "X11 + fvwm"],
+          ["mc", "Midnight Commander"],
+          ["win", "Windows 3.11"],
+          ["ai", "KI"],
+          ["logout", "abmelden"]
+        ],
+        keys: ["TASTEN", "↑↓ Verlauf, Tab ergänzen, Strg+C Abbruch, Strg+L Bildschirm löschen"]
+      }
+    },
+    fr: {
+      motd: ["Bienvenue chez ArtIntelliCo. Besoin d'aide ? Tapez ", "help", "."],
+      discuss: ["Parler de votre projet : ", "mail"],
+      phosphors: { white: "blanc", green: "vert", amber: "ambre" },
+      phosphorSet: "Phosphore : ",
+      langSet: "LANG=fr_FR.ISO8859-1",
+      skip: "Appuyez sur une touche pour passer",
+      man: {
+        header: "Manuel du programmeur UNIX",
+        name: ["NOM", "intro — comment lire ce site"],
+        desc: ["DESCRIPTION", "Le site est le répertoire personnel /usr/guest. Commencez par :"],
+        steps: [
+          ["ls", "ce qu'il y a ici"],
+          ["cat README", "à propos de l'entreprise"],
+          ["cd services; ls", "les services"],
+          ["man concept", "un service en page de manuel"],
+          ["cat partners", "nos partenaires"],
+          ["mail", "une lettre de notre part : comment nous joindre"],
+          ["finger aic", "qui nous sommes"]
+        ],
+        cmds: ["COMMANDES", "ls [-la]  cd  pwd  cat  more  echo  clear  date  uname  who  whoami  finger  mail  history  man"],
+        extra: [
+          ["lang", "langue"],
+          ["phosphor white|green|amber", "couleur du phosphore"],
+          ["dos", "version DOS du site"],
+          ["nc", "Norton Commander"],
+          ["apple", "Apple ]["],
+          ["lisa", "Apple Lisa"],
+          ["startx", "X11 + fvwm"],
+          ["mc", "Midnight Commander"],
+          ["win", "Windows 3.11"],
+          ["ai", "IA"],
+          ["logout", "se déconnecter"]
+        ],
+        keys: ["TOUCHES", "↑↓ historique, Tab complète, Ctrl+C annule, Ctrl+L efface l'écran"]
+      }
+    },
+    es: {
+      motd: ["Bienvenido a ArtIntelliCo. ¿Necesita ayuda? Escriba ", "help", "."],
+      discuss: ["Hablar de su proyecto: ", "mail"],
+      phosphors: { white: "blanco", green: "verde", amber: "ámbar" },
+      phosphorSet: "Fósforo: ",
+      langSet: "LANG=es_ES.ISO8859-1",
+      skip: "Pulse cualquier tecla para omitir",
+      man: {
+        header: "Manual del programador UNIX",
+        name: ["NOMBRE", "intro — cómo leer este sitio"],
+        desc: ["DESCRIPCIÓN", "El sitio es el directorio personal /usr/guest. Empiece por:"],
+        steps: [
+          ["ls", "qué hay aquí"],
+          ["cat README", "sobre la empresa"],
+          ["cd services; ls", "servicios"],
+          ["man concept", "un servicio como página de manual"],
+          ["cat partners", "nuestros socios"],
+          ["mail", "una carta nuestra: cómo contactarnos"],
+          ["finger aic", "quiénes somos"]
+        ],
+        cmds: ["COMANDOS", "ls [-la]  cd  pwd  cat  more  echo  clear  date  uname  who  whoami  finger  mail  history  man"],
+        extra: [
+          ["lang", "idioma"],
+          ["phosphor white|green|amber", "color del fósforo"],
+          ["dos", "versión DOS del sitio"],
+          ["nc", "Norton Commander"],
+          ["apple", "Apple ]["],
+          ["lisa", "Apple Lisa"],
+          ["startx", "X11 + fvwm"],
+          ["mc", "Midnight Commander"],
+          ["win", "Windows 3.11"],
+          ["ai", "IA"],
+          ["logout", "cerrar sesión"]
+        ],
+        keys: ["TECLAS", "↑↓ historial, Tab completa, Ctrl+C cancela, Ctrl+L borra pantalla"]
+      }
+    },
+    pt: {
+      motd: ["Bem-vindo à ArtIntelliCo. Precisa de ajuda? Escreva ", "help", "."],
+      discuss: ["Falar do seu projeto: ", "mail"],
+      phosphors: { white: "branco", green: "verde", amber: "âmbar" },
+      phosphorSet: "Fósforo: ",
+      langSet: "LANG=pt_PT.ISO8859-1",
+      skip: "Prima qualquer tecla para saltar",
+      man: {
+        header: "Manual do programador UNIX",
+        name: ["NOME", "intro — como ler este site"],
+        desc: ["DESCRIÇÃO", "O site é o diretório pessoal /usr/guest. Comece por:"],
+        steps: [
+          ["ls", "o que há aqui"],
+          ["cat README", "sobre a empresa"],
+          ["cd services; ls", "serviços"],
+          ["man concept", "um serviço como página de manual"],
+          ["cat partners", "os nossos parceiros"],
+          ["mail", "uma carta nossa: como nos contactar"],
+          ["finger aic", "quem somos"]
+        ],
+        cmds: ["COMANDOS", "ls [-la]  cd  pwd  cat  more  echo  clear  date  uname  who  whoami  finger  mail  history  man"],
+        extra: [
+          ["lang", "idioma"],
+          ["phosphor white|green|amber", "cor do fósforo"],
+          ["dos", "versão DOS do site"],
+          ["nc", "Norton Commander"],
+          ["apple", "Apple ]["],
+          ["lisa", "Apple Lisa"],
+          ["startx", "X11 + fvwm"],
+          ["mc", "Midnight Commander"],
+          ["win", "Windows 3.11"],
+          ["ai", "IA"],
+          ["logout", "terminar sessão"]
+        ],
+        keys: ["TECLAS", "↑↓ histórico, Tab completar, Ctrl+C cancelar, Ctrl+L limpar o ecrã"]
+      }
+    },
+    it: {
+      motd: ["Benvenuti in ArtIntelliCo. Serve aiuto? Digiti ", "help", "."],
+      discuss: ["Parliamo del Suo progetto: ", "mail"],
+      phosphors: { white: "bianco", green: "verde", amber: "ambra" },
+      phosphorSet: "Fosfori: ",
+      langSet: "LANG=it_IT.ISO8859-1",
+      skip: "Premere un tasto qualsiasi per saltare",
+      man: {
+        header: "Manuale del programmatore UNIX",
+        name: ["NOME", "intro — come leggere questo sito"],
+        desc: ["DESCRIZIONE", "Il sito è la directory home /usr/guest. Cominci da:"],
+        steps: [
+          ["ls", "che cosa c'è qui"],
+          ["cat README", "l'azienda"],
+          ["cd services; ls", "servizi"],
+          ["man concept", "un servizio come pagina di manuale"],
+          ["cat partners", "i nostri partner"],
+          ["mail", "una lettera da parte nostra: come contattarci"],
+          ["finger aic", "chi siamo"]
+        ],
+        cmds: ["COMANDI", "ls [-la]  cd  pwd  cat  more  echo  clear  date  uname  who  whoami  finger  mail  history  man"],
+        extra: [
+          ["lang", "lingua"],
+          ["phosphor white|green|amber", "colore dei fosfori"],
+          ["dos", "versione DOS del sito"],
+          ["nc", "Norton Commander"],
+          ["apple", "Apple ]["],
+          ["lisa", "Apple Lisa"],
+          ["startx", "X11 + fvwm"],
+          ["mc", "Midnight Commander"],
+          ["win", "Windows 3.11"],
+          ["ai", "IA"],
+          ["logout", "disconnettersi"]
+        ],
+        keys: ["TASTI", "↑↓ storico, Tab completa, Ctrl+C annulla, Ctrl+L pulisce lo schermo"]
       }
     }
   };
@@ -622,11 +1032,576 @@
           bugs: "Чужую систему без документации не правят: любая правка превращается в лотерею. Поэтому в таком случае сначала проводим аудит (support -a)."
         }
       }
+    },
+    de: {
+      header: "Handbuch der ArtIntelliCo-Leistungen",
+      sec: { name: "NAME", syn: "ÜBERSICHT", desc: "BESCHREIBUNG", opts: "OPTIONEN", ret: "RÜCKGABEWERT", bugs: "FEHLER", notes: "ANMERKUNGEN", see: "SIEHE AUCH", list: "SEITEN" },
+      intro: {
+        name: "Einführung in Abschnitt 8: Leistungen von ArtIntelliCo",
+        desc: [
+          "Jede Seite dieses Abschnitts beschreibt eine Leistung. Wir wählen die Technik passend zur Aufgabe, nicht die Aufgabe passend zur Technik.",
+          "Manchmal ist die beste Antwort ein fertiger Dienst im Abonnement. Dann sagen wir Ihnen das, und es muss nichts entwickelt werden."
+        ]
+      },
+      pages: {
+        concept: {
+          name: "Konzeption von IT-Lösungen",
+          desc: [
+            "Wir klären, was das System tatsächlich leisten muss, und halten es so fest, dass es sowohl die Fachseite als auch die Entwickler verstehen.",
+            "Am Anfang stehen Gespräche. Nicht nur mit der Geschäftsführung, sondern auch mit Buchhaltung, Lager und Vertrieb, also mit den Menschen, die jeden Tag die Knöpfe drücken werden. Der Grund ist einfach: Der teuerste Fehler eines Projekts passiert vor der ersten Codezeile, wenn ein System für ein Problem gebaut wird, das niemand sauber definiert hat."
+          ],
+          opts: ["Interviews mit Mitarbeitern; Analyse, wie die Prozesse heute laufen", "fachliche Anforderungen und Anwendungsszenarien", "Vergleich fertiger Produkte mit einer Individualentwicklung", "ein Pflichtenheft mit Zeit- und Budgetschätzung je Phase"],
+          ret: "Ein Dokument, anhand dessen jedes Team, unseres oder ein anderes, den Aufwand schätzen und mit der Arbeit beginnen kann.",
+          bugs: "Manchmal raten wir, nichts zu entwickeln, sondern ein vorhandenes Produkt anzupassen. Dieses Verhalten ist beabsichtigt."
+        },
+        saas: {
+          name: "SaaS-Entwicklung",
+          desc: [
+            "Wir konzipieren und bauen SaaS-Plattformen: von der ersten Version für Pilotkunden bis zum Dienst, in dem jeder Kunde seinen eigenen Arbeitsbereich, Tarif und Kundenbereich hat.",
+            "Bei SaaS verdient man das Geld nicht mit dem Code, sondern damit, wie leicht sich ein neuer Kunde registriert, bezahlt und loslegt, ohne je beim Support anzurufen. Deshalb gehören Mandantenfähigkeit, Abrechnung und Berechtigungen vom ersten Tag an dazu: Sie nachzurüsten, wenn die Kunden schon im System sind, kostet ein Vielfaches."
+          ],
+          opts: ["mandantenfähige Architektur; Kundendaten strikt getrennt", "Registrierung, Tarife, Abonnements, Online-Zahlung", "Kundenbereiche, Rollen, Berechtigungen", "Integrationen und eine öffentliche API für Ihre Kunden", "Skalierung bei wachsender Last"],
+          ret: "Ein Produkt, das Sie im Abonnement verkaufen. Kein Projekt, das jedes Mal von Hand eingeführt wird.",
+          bugs: "Die erste Version erscheint früher, als Ihnen lieb ist. Mit Absicht: Echte Nutzer zeigen schnell, welche Funktionen nie gebraucht wurden."
+        },
+        web: {
+          name: "Webentwicklung",
+          desc: [
+            "Wir entwickeln Unternehmenswebsites, Marktplätze, Onlineshops, Buchungssysteme und interne Webanwendungen. Passend zur Aufgabe, ohne Vorlagen.",
+            "Eine Unternehmenswebsite misst man an Anfragen und Bestellungen; wie sie im Portfolio aussieht, ist zweitrangig. Vor dem Start legen wir fest, was als Ergebnis zählt, und die Webanalyse läuft schon vor dem Livegang, nicht erst ein halbes Jahr später. Die Technik richtet sich nach der Aufgabe: Eine Landingpage braucht keine schwere Plattform, und ein Marktplatz passt in keinen Homepage-Baukasten."
+          ],
+          opts: ["Prototyp und Oberflächendesign", "Frontend, Backend, Administrationsbereich", "Anbindung an Zahlung, Versand, CRM und Buchhaltungssysteme", "SEO-Grundlagen, Ladezeit, Webanalyse", "Livegang und laufende Betreuung"],
+          ret: "Ein Webdienst, an dem man sieht, wie viele Anfragen und wie viel Umsatz er bringt."
+        },
+        mobile: {
+          name: "Mobile Apps",
+          desc: [
+            "Wir entwickeln Apps für iOS und Android, samt Serverseite und Administrationsbereich dahinter.",
+            "Eine App rechnet sich, wenn Nutzer zu ihr zurückkehren: für eine Nachbestellung, den Lieferstatus, Bonuspunkte. Ob nativ oder plattformübergreifend, entscheiden das Budget und die Frage, wie stark die App auf Kamera, Standort und Offline-Modus angewiesen ist."
+          ],
+          opts: ["Apps für iOS und Android", "Serverseite und API", "Administrationsbereich: Inhalte, Bestellungen, Nutzer", "Push-Benachrichtigungen und Analyse", "Veröffentlichung im App Store und bei Google Play"],
+          ret: "Eine App, die die Prüfung der Stores besteht. Ihr Team betreibt sie ohne Entwickler.",
+          bugs: "Wenn ein Kunde die App einmal im Jahr öffnen würde, brauchen Sie keine: Wir empfehlen dann eine gute mobile Website, das ist günstiger. Das sagen wir, bevor die Arbeit beginnt."
+        },
+        ai: {
+          name: "KI-Lösungen",
+          desc: [
+            "Wir automatisieren Geschäftsprozesse mit KI-Agenten und anderen Lösungen auf Basis von künstlicher Intelligenz und maschinellem Lernen. Der Agent erledigt die Routineschritte eines Prozesses selbst, ein Mensch prüft das Ergebnis.",
+            "Sprachmodelle lohnen sich dort, wo Mitarbeiter stundenlang E-Mails, Dokumente und Anfragen sortieren. Die Arbeit beginnt mit einem Pilotprojekt auf Ihren eigenen Daten: Die Zahlen zur Genauigkeit sehen Sie vor der eigentlichen Entwicklung, nicht danach."
+          ],
+          opts: ["KI-Agenten, die selbstständig Anfragen sortieren, das CRM befüllen und Antworten an Kunden vorbereiten", "Chatbots und Assistenten für Kunden und Mitarbeiter", "Dokumentenerkennung und Datenextraktion", "Klassifizierung von Anfragen, Suche in der Wissensdatenbank", "Bedarfsprognosen, Datenanalyse", "ein Pilotprojekt mit Qualitätsmessung auf Ihren Daten"],
+          ret: "Ein Prozess, den bisher Menschen von Hand erledigt haben, läuft jetzt im System. Die Kontrolle bleibt beim Menschen.",
+          bugs: "Wir sehen KI skeptischer als die meisten. Die Hälfte der Ideen nach dem Muster „Bauen wir doch ein neuronales Netz ein“ lässt sich mit gewöhnlicher Automatisierung lösen, und dann sagen wir das auch."
+        },
+        "crm-erp": {
+          name: "CRM- und ERP-Entwicklung",
+          desc: [
+            "{crm-erp} baut CRM- und ERP-Systeme um Ihre Abläufe herum. Umgekehrt funktioniert es nicht.",
+            "Ein CRM von der Stange genügt, solange Ihr Prozess dem Standard ähnelt. Sobald Ihr Vertrieb die Hälfte der Arbeit in Tabellen erledigt, weil das System „das nicht kann“, kommt eine eigene Lösung günstiger.",
+            "Die Daten werden aus Altsystemen und Tabellen übernommen. Die Einführung erfolgt Abteilung für Abteilung, damit die Arbeit keinen Tag stillsteht."
+          ],
+          opts: ["Module für Vertrieb, Lager, Produktion, Finanzen; nur die, die Sie brauchen", "Rollen, Berechtigungen, Änderungsprotokoll", "Berichte und Dashboards für die Geschäftsführung", "Datenübernahme aus Tabellen und Altsystemen", "Anbindung an Buchhaltung, Telefonie, E-Mail"],
+          ret: "Ein System statt eines Tabellenzoos. Die Geschäftsführung sieht, wo das Unternehmen steht, ohne jede Woche Berichte aus allen Abteilungen einzusammeln."
+        },
+        cloud: {
+          name: "Cloud-Lösungen",
+          desc: [
+            "Wir verlagern Ihre Infrastruktur ganz oder teilweise zu Amazon Web Services und sorgen dafür, dass sie läuft und die Rechnung nicht grundlos steigt.",
+            "Ein Umzug beginnt mit einem Audit und einer Kostenschätzung. Migriert wird in Etappen, mit einem Rückfallplan für jeden Schritt."
+          ],
+          opts: ["Audit der bestehenden Infrastruktur, Kostenschätzung", "Architektur in AWS, Migrationsplan", "Umzug von Servern, Datenbanken, Dateien", "Datensicherung und Überwachung", "Kostenoptimierung nach dem Umzug"],
+          ret: "Eine Infrastruktur, die den Ausfall eines Servers übersteht. Eine Cloud-Rechnung, die Sie verstehen.",
+          bugs: "Die Cloud ist nicht immer günstiger als ein eigener Server. Sie lohnt sich, wenn die Last stark schwankt, wenn Ausfallsicherheit gefragt ist oder wenn neue Umgebungen in Minuten statt in einer Woche bereitstehen müssen."
+        },
+        redhat: {
+          name: "Unternehmensinfrastruktur auf Red Hat",
+          desc: [
+            "Wir bauen die IT-Infrastruktur Ihres Unternehmens auf Red Hat auf: Server mit Red Hat Enterprise Linux, die Container-Plattform OpenShift, Automatisierung mit Ansible.",
+            "Red Hat ist die richtige Wahl, wenn eine Infrastruktur jahrelang laufen und Audits bestehen muss, statt im Kopf eines einzigen Administrators zu leben. Das Abonnement rechnet sich durch den Herstellersupport und einen langen Lebenszyklus: Red Hat Enterprise Linux wird zehn Jahre lang unterstützt.",
+            "Die Infrastruktur wird auf Ihre Workloads zugeschnitten, die Serverkonfiguration in Ansible beschrieben. Jeder Server lässt sich nach Playbook neu aufbauen statt aus dem Gedächtnis."
+          ],
+          opts: ["Audit Ihrer bestehenden Server und ein Migrationsplan", "Einführung von Red Hat Enterprise Linux, zentrale Updates über Red Hat Satellite", "die Container-Plattform OpenShift für Ihre Anwendungen", "Automatisierung von Konfiguration und Deployment mit Ansible", "zentrale Verwaltung von Identitäten und Zugriffsrechten (Identity Management)", "Überwachung, Datensicherung, Dokumentation für Ihr Team"],
+          ret: "Eine Infrastruktur, die sich prüfen, nachbauen und an ein anderes Team übergeben lässt, ohne dass Wissen verloren geht.",
+          notes: "Red Hat ist unser Partner, deshalb helfen wir Ihnen auch bei Abonnements und Herstellersupport."
+        },
+        api: {
+          name: "APIs und Integrationen",
+          desc: [
+            "Wir entwerfen APIs für Ihre Systeme und verbinden sie mit den Diensten, die Sie bereits nutzen.",
+            "Am häufigsten begegnet uns dasselbe: Daten werden doppelt erfasst. Bestellungen von der Website werden von Hand ins Buchhaltungssystem abgetippt, Zahlungen in einer Tabelle abgeglichen. Eine Integration nimmt Ihnen diese Arbeit ab, und mit ihr die Fehler, die dabei entstehen."
+          ],
+          opts: ["API-Design und Dokumentation", "Anbindung an Zahlungsanbieter, Versanddienste, CRM, Buchhaltung", "Datenaustausch zwischen internen Systemen", "Warteschlangen und Wiederholungsversuche bei Fehlern", "Überwachung und Benachrichtigungen"],
+          ret: "Daten werden einmal erfasst und gelangen von selbst dorthin, wo sie gebraucht werden.",
+          bugs: "Integrationen brechen lautlos, wenn ein Partner seine API ändert. Deshalb ist -w immer aktiv: Den Ausfall soll das System melden, nicht ein Kunde."
+        },
+        support: {
+          name: "Technischer Support",
+          desc: [
+            "Wir halten Ihre IT-Systeme am Laufen und entwickeln sie weiter, auch solche, die nicht von uns stammen.",
+            "Fehlerbehebung ist nur ein Teil der Arbeit. Dazu kommen Updates, die Sicherheitslücken schließen, eine Überwachung, die Probleme vor den Nutzern bemerkt, und kleine Verbesserungen im laufenden Betrieb."
+          ],
+          opts: ["Überwachung von Verfügbarkeit und Fehlern", "Fehlerbehebung, Sicherheitsupdates", "Datensicherung und Wiederherstellungstests", "geplante Verbesserungen und neue Funktionen", "Audit und Dokumentation von Systemen anderer Dienstleister"],
+          ret: "Das System läuft, und es gibt ein Team, das weiß, wie es aufgebaut ist.",
+          bugs: "Ein fremdes System ohne Dokumentation lässt sich nicht sicher ändern: Jeder Eingriff wird zum Glücksspiel. In diesem Fall beginnen wir mit einem Audit (support -a)."
+        }
+      }
+    },
+    fr: {
+      header: "Manuel des services ArtIntelliCo",
+      sec: { name: "NOM", syn: "SYNOPSIS", desc: "DESCRIPTION", opts: "OPTIONS", ret: "VALEUR RENVOYÉE", bugs: "BOGUES", notes: "NOTES", see: "VOIR AUSSI", list: "PAGES" },
+      intro: {
+        name: "introduction à la section 8 : services ArtIntelliCo",
+        desc: [
+          "Chaque page de cette section décrit un service. Nous choisissons les technologies en fonction du besoin, et non le besoin en fonction des technologies.",
+          "Parfois, la meilleure réponse est un service existant sur abonnement. Nous vous le dirons alors, et il n'y aura rien à développer."
+        ]
+      },
+      pages: {
+        concept: {
+          name: "conception de solutions informatiques",
+          desc: [
+            "Nous déterminons ce que le système doit réellement faire et nous le formalisons de manière que les métiers comme les développeurs le comprennent.",
+            "Tout commence par des entretiens. Pas seulement avec la direction, mais aussi avec la comptabilité, l'entrepôt et les commerciaux, c'est-à-dire avec ceux qui appuieront sur les boutons tous les jours. La raison est simple : l'erreur la plus coûteuse d'un projet se commet avant la première ligne de code, quand on construit le système pour un problème que personne n'a vraiment défini."
+          ],
+          opts: ["entretiens avec le personnel ; analyse du fonctionnement actuel des processus", "exigences métier et scénarios d'utilisation", "comparaison entre produits du marché et développement sur mesure", "un cahier des charges avec délais et budget estimés par phase"],
+          ret: "Un document à partir duquel n'importe quelle équipe, la nôtre ou une autre, peut chiffrer le travail et le lancer.",
+          bugs: "Il arrive que nous conseillions de ne rien développer et de paramétrer un produit existant. Ce comportement est voulu."
+        },
+        saas: {
+          name: "développement SaaS",
+          desc: [
+            "Nous concevons et construisons des plateformes SaaS, de la première version pour des clients pilotes jusqu'au service où chaque client dispose de son espace, de sa formule et de son tableau de bord.",
+            "Dans le SaaS, l'argent ne vient pas du code. Il vient de la facilité avec laquelle un nouveau client s'inscrit, paie et se lance sans jamais appeler le support. C'est pourquoi l'architecture multi-locataire, la facturation et les droits d'accès sont prévus dès le premier jour : les ajouter une fois les clients installés coûte plusieurs fois plus cher."
+          ],
+          opts: ["architecture multi-locataire ; données des clients isolées les unes des autres", "inscription, formules, abonnements, paiement en ligne", "espaces clients, rôles, droits d'accès", "intégrations et API publique pour vos clients", "montée en charge à mesure que l'activité grandit"],
+          ret: "Un produit que vous vendez par abonnement. Pas un projet que l'on déploie à la main à chaque fois.",
+          bugs: "La première version sort plus tôt que vous ne le voudriez. C'est voulu : les vrais utilisateurs montrent vite quelles fonctions étaient superflues."
+        },
+        web: {
+          name: "développement web",
+          desc: [
+            "Nous réalisons des sites d'entreprise, des places de marché, des boutiques en ligne, des systèmes de réservation et des outils web internes. Sur mesure, sans modèle tout fait.",
+            "Un site d'entreprise se mesure en demandes et en commandes ; son allure dans un portfolio passe loin derrière. Avant de commencer, nous convenons de ce qui comptera comme résultat, et la mesure d'audience fonctionne avant la mise en ligne, pas six mois plus tard. La technologie suit le besoin : une page d'atterrissage n'a que faire d'une plateforme lourde, et une place de marché n'entrera pas dans un constructeur de sites."
+          ],
+          opts: ["prototype et conception des interfaces", "frontend, backend, interface d'administration", "intégration avec le paiement, la livraison, le CRM et la comptabilité", "bases du SEO, vitesse de chargement, mesure d'audience", "mise en ligne et maintenance"],
+          ret: "Un service web dont on voit combien de demandes et de chiffre d'affaires il rapporte."
+        },
+        mobile: {
+          name: "applications mobiles",
+          desc: [
+            "Nous développons des applications iOS et Android, avec la partie serveur et l'interface d'administration qui les font tourner.",
+            "Une application est rentable quand on y revient : une nouvelle commande, le suivi d'une livraison, des points de fidélité. Natif ou multiplateforme : tout dépend du budget et de la place qu'y tiennent l'appareil photo, la géolocalisation et le mode hors ligne."
+          ],
+          opts: ["applications iOS et Android", "partie serveur et API", "interface d'administration : contenus, commandes, utilisateurs", "notifications push et statistiques", "publication sur l'App Store et Google Play"],
+          ret: "Une application qui passe la validation des stores. Votre équipe la gère sans faire appel à un développeur.",
+          bugs: "Si un client ne l'ouvre qu'une fois par an, une application est inutile : nous conseillons plutôt un bon site mobile, moins cher. Nous le disons avant le début des travaux."
+        },
+        ai: {
+          name: "solutions d'intelligence artificielle",
+          desc: [
+            "Nous automatisons les processus métier avec des agents IA et d'autres solutions fondées sur l'intelligence artificielle et l'apprentissage automatique. L'agent enchaîne lui-même les étapes routinières d'un processus ; une personne vérifie le résultat.",
+            "Les modèles de langage sont vraiment utiles là où des employés passent des heures à trier e-mails, documents et demandes. Le travail commence par un pilote sur vos propres données : vous voyez les chiffres de précision avant le développement principal, pas après."
+          ],
+          opts: ["agents IA qui trient les demandes, remplissent le CRM et préparent les réponses aux clients en toute autonomie", "chatbots et assistants pour les clients et le personnel", "reconnaissance de documents et extraction de données", "classification des demandes, recherche dans la base de connaissances", "prévision de la demande, analyse de données", "un pilote avec mesure de la qualité sur vos données"],
+          ret: "Un processus autrefois effectué à la main est désormais assuré par le système. Une personne garde le contrôle.",
+          bugs: "Nous sommes plus sceptiques que beaucoup à l'égard de l'IA. La moitié des idées du type « ajoutons un réseau de neurones » se règlent par une automatisation ordinaire, et dans ce cas nous le disons."
+        },
+        "crm-erp": {
+          name: "développement CRM et ERP",
+          desc: [
+            "{crm-erp} construit des systèmes CRM et ERP autour de vos processus. L'inverse ne fonctionne pas.",
+            "Un CRM standard suffit tant que votre processus ressemble à la norme. Dès que les commerciaux font la moitié de leur travail dans des tableurs parce que le système « ne sait pas faire », développer le vôtre revient moins cher.",
+            "Les données sont reprises des anciens systèmes et des tableurs. Le déploiement se fait service par service, pour que le travail ne s'arrête pas un seul jour."
+          ],
+          opts: ["modules ventes, stock, production, finances ; seulement ceux dont vous avez besoin", "rôles, droits d'accès, journal des actions", "rapports et tableaux de bord pour la direction", "reprise des données depuis les tableurs et les anciens systèmes", "intégration avec la comptabilité, la téléphonie, la messagerie"],
+          ret: "Un seul système au lieu d'une ménagerie de tableurs. La direction voit où en sont les choses sans réclamer chaque semaine un rapport à chaque service."
+        },
+        cloud: {
+          name: "solutions cloud",
+          desc: [
+            "Nous migrons votre infrastructure vers Amazon Web Services, en totalité ou en partie, et veillons à ce qu'elle tourne sans que la facture grimpe sans raison.",
+            "Une migration commence par un audit et une estimation des coûts. Tout est transféré progressivement, avec un plan de retour arrière à chaque étape."
+          ],
+          opts: ["audit de l'infrastructure actuelle, estimation des coûts", "architecture AWS, plan de migration", "transfert des serveurs, bases de données, fichiers", "sauvegardes et supervision", "optimisation des coûts après la migration"],
+          ret: "Une infrastructure qui survit à la panne d'un serveur. Une facture cloud que vous comprenez.",
+          bugs: "Le cloud n'est pas toujours moins cher qu'un serveur à soi. Il devient rentable quand la charge connaît des pics, quand il faut de la tolérance aux pannes ou quand de nouveaux environnements doivent être prêts en quelques minutes plutôt qu'en une semaine."
+        },
+        redhat: {
+          name: "infrastructure d'entreprise sous Red Hat",
+          desc: [
+            "Nous construisons l'infrastructure informatique de votre entreprise sur Red Hat : serveurs sous Red Hat Enterprise Linux, plateforme de conteneurs OpenShift, automatisation avec Ansible.",
+            "On choisit Red Hat quand une infrastructure doit tourner des années et passer des audits, au lieu de reposer sur la mémoire d'un seul administrateur. L'abonnement se rentabilise grâce au support de l'éditeur et à un long cycle de vie : Red Hat Enterprise Linux est maintenu pendant dix ans.",
+            "L'infrastructure est conçue pour vos charges de travail, et la configuration des serveurs est décrite dans Ansible. N'importe quel serveur se reconstruit à partir d'un playbook, et non de mémoire."
+          ],
+          opts: ["audit de vos serveurs actuels et plan de migration", "déploiement de Red Hat Enterprise Linux, mises à jour centralisées via Red Hat Satellite", "la plateforme de conteneurs OpenShift pour vos applications", "automatisation de la configuration et du déploiement avec Ansible", "gestion centralisée des identités et des accès (Identity Management)", "supervision, sauvegardes, documentation pour votre équipe"],
+          ret: "Une infrastructure que l'on peut auditer, reproduire et confier à une autre équipe sans perdre le savoir accumulé.",
+          notes: "Red Hat est notre partenaire : nous pouvons donc aussi vous aider à y voir clair dans les abonnements et le support de l'éditeur."
+        },
+        api: {
+          name: "API et intégrations",
+          desc: [
+            "Nous concevons des API pour vos systèmes et les relions aux services que vous utilisez déjà.",
+            "Le cas le plus fréquent est toujours le même : des données saisies deux fois. Les commandes du site ressaisies à la main dans la comptabilité, les paiements rapprochés dans un tableur. Une intégration supprime ce travail, et les erreurs qu'il engendre."
+          ],
+          opts: ["conception et documentation d'API", "intégration avec les prestataires de paiement, les transporteurs, le CRM, la comptabilité", "échange de données entre systèmes internes", "files d'attente et nouvelles tentatives en cas d'échec", "supervision et alertes"],
+          ret: "Les données sont saisies une seule fois et arrivent d'elles-mêmes là où on en a besoin.",
+          bugs: "Les intégrations cassent sans bruit quand un partenaire modifie son API. C'est pourquoi -w est toujours actif : c'est au système de signaler la panne, pas à un client."
+        },
+        support: {
+          name: "support technique",
+          desc: [
+            "Nous maintenons vos systèmes informatiques en état de marche et les faisons évoluer, y compris ceux que nous n'avons pas développés.",
+            "Corriger les bogues n'est qu'une partie du travail. Il y a aussi les mises à jour qui comblent les failles de sécurité, la supervision qui repère un problème avant les utilisateurs, et les petites améliorations au fil de l'eau."
+          ],
+          opts: ["surveillance de la disponibilité et des erreurs", "correction de bogues, mises à jour de sécurité", "sauvegardes et tests de restauration", "améliorations planifiées et nouvelles fonctions", "audit et documentation de systèmes livrés par d'autres prestataires"],
+          ret: "Le système fonctionne, et une équipe sait comment il est construit.",
+          bugs: "On ne modifie pas sans risque le système non documenté de quelqu'un d'autre : chaque changement devient un pari. Dans ce cas, nous commençons par un audit (support -a)."
+        }
+      }
+    },
+    es: {
+      header: "Manual de servicios de ArtIntelliCo",
+      sec: { name: "NOMBRE", syn: "SINOPSIS", desc: "DESCRIPCIÓN", opts: "OPCIONES", ret: "VALOR DEVUELTO", bugs: "ERRORES", notes: "NOTAS", see: "VÉASE TAMBIÉN", list: "PÁGINAS" },
+      intro: {
+        name: "introducción a la sección 8: servicios de ArtIntelliCo",
+        desc: [
+          "Cada página de esta sección describe un servicio. Elegimos la tecnología según el problema, no el problema según la tecnología.",
+          "A veces la mejor respuesta es un servicio ya existente por suscripción. En ese caso se lo diremos, y no habrá que desarrollar nada."
+        ]
+      },
+      pages: {
+        concept: {
+          name: "concepto de la solución de TI",
+          desc: [
+            "Averiguamos qué debe hacer realmente el sistema y lo ponemos por escrito para que lo entiendan tanto el negocio como los desarrolladores.",
+            "Todo empieza con conversaciones. No solo con quien toma la decisión, sino también con contabilidad, el almacén y los comerciales, es decir, con quienes pulsarán los botones cada día. La razón es sencilla: el error más caro de un proyecto se comete antes de la primera línea de código, cuando el sistema se construye para un problema que nadie ha definido bien."
+          ],
+          opts: ["entrevistas con el personal; análisis de cómo funcionan hoy los procesos", "requisitos de negocio y escenarios de uso", "comparativa entre productos existentes y desarrollo a medida", "una especificación con plazos y presupuesto estimados por fases"],
+          ret: "Un documento con el que cualquier equipo, el nuestro o cualquier otro, puede presupuestar el trabajo y ponerlo en marcha.",
+          bugs: "A veces aconsejamos no desarrollar nada y configurar un producto existente. Es el comportamiento previsto."
+        },
+        saas: {
+          name: "desarrollo SaaS",
+          desc: [
+            "Diseñamos y construimos plataformas SaaS: desde una primera versión para clientes piloto hasta un servicio en el que cada cliente tiene su propio espacio, plan y panel.",
+            "En SaaS el dinero no está en el código. Está en lo fácil que le resulta a un cliente nuevo registrarse, pagar y empezar a trabajar sin llamar nunca a soporte. Por eso la arquitectura multiinquilino, la facturación y los permisos se incorporan desde el primer día: añadirlos cuando los clientes ya están dentro cuesta varias veces más."
+          ],
+          opts: ["arquitectura multiinquilino; datos de cada cliente aislados", "registro, planes, suscripciones, pagos en línea", "paneles de cliente, roles, permisos", "integraciones y una API pública para sus clientes", "escalado a medida que crece la carga"],
+          ret: "Un producto que se vende por suscripción. No un proyecto que alguien implanta a mano cada vez.",
+          bugs: "La primera versión sale antes de lo que usted querría. A propósito: los usuarios reales enseguida muestran qué funciones sobraban."
+        },
+        web: {
+          name: "desarrollo web",
+          desc: [
+            "Creamos webs corporativas, marketplaces, tiendas en línea, sistemas de reservas y herramientas web internas. A la medida del problema, sin plantillas.",
+            "Una web de empresa se mide en solicitudes y pedidos; cómo luce en un portafolio queda muy en segundo plano. Antes de empezar acordamos qué contará como resultado, y la analítica funciona antes del lanzamiento, no seis meses después. La tecnología se elige según el problema: una landing page no necesita una plataforma pesada, y un marketplace no cabe en un creador de webs."
+          ],
+          opts: ["prototipo y diseño de interfaces", "frontend, backend, panel de administración", "integración con pagos, envíos, CRM y sistemas contables", "bases de SEO, velocidad de carga, analítica", "lanzamiento y mantenimiento"],
+          ret: "Un servicio web en el que se ve cuántas solicitudes y cuántos ingresos aporta."
+        },
+        mobile: {
+          name: "aplicaciones móviles",
+          desc: [
+            "Desarrollamos aplicaciones para iOS y Android junto con la parte de servidor y el panel de administración que hay detrás.",
+            "Una aplicación se rentabiliza cuando la gente vuelve a ella: un pedido repetido, el estado de un envío, puntos de fidelidad. Nativa o multiplataforma: lo deciden el presupuesto y cuánto depende la aplicación de la cámara, la geolocalización y el modo sin conexión."
+          ],
+          opts: ["aplicaciones para iOS y Android", "parte de servidor y API", "panel de administración: contenidos, pedidos, usuarios", "notificaciones push y analítica", "publicación en App Store y Google Play"],
+          ret: "Una aplicación que supera la revisión de las tiendas. Su equipo la gestiona sin llamar a un desarrollador.",
+          bugs: "Si un cliente solo la abriría una vez al año, no necesita una aplicación: le recomendamos una buena web móvil, que sale más barata. Lo decimos antes de empezar."
+        },
+        ai: {
+          name: "soluciones con inteligencia artificial",
+          desc: [
+            "Automatizamos procesos de negocio con agentes de IA y otras soluciones basadas en inteligencia artificial y aprendizaje automático. El agente recorre por sí mismo los pasos rutinarios del proceso y una persona revisa el resultado.",
+            "Los modelos de lenguaje resultan realmente útiles donde la plantilla pasa horas clasificando correos, documentos y solicitudes. El trabajo empieza con un piloto sobre sus propios datos: usted ve las cifras de precisión antes del desarrollo principal, no después."
+          ],
+          opts: ["agentes de IA que por sí solos clasifican solicitudes, rellenan el CRM y preparan respuestas a los clientes", "chatbots y asistentes para clientes y empleados", "reconocimiento de documentos y extracción de datos", "clasificación de solicitudes, búsqueda en la base de conocimiento", "previsión de la demanda, análisis de datos", "un piloto con medición de calidad sobre sus datos"],
+          ret: "Un proceso que antes hacían personas a mano ahora lo hace el sistema. El control sigue en manos de una persona.",
+          bugs: "Somos más escépticos con la IA que la mayoría. La mitad de las ideas del tipo «añadamos una red neuronal» se resuelven con automatización corriente, y en ese caso lo decimos."
+        },
+        "crm-erp": {
+          name: "desarrollo de CRM y ERP",
+          desc: [
+            "{crm-erp} construye sistemas CRM y ERP en torno a sus procesos. Al revés no funciona.",
+            "Un CRM estándar basta mientras su proceso se parezca al estándar. Cuando los comerciales llevan la mitad del trabajo en hojas de cálculo porque el sistema «no sabe hacerlo», uno propio sale más barato.",
+            "Los datos se migran desde los sistemas antiguos y las hojas de cálculo. La implantación se hace departamento por departamento, para que el trabajo no se detenga ni un día."
+          ],
+          opts: ["módulos de ventas, almacén, producción y finanzas; solo los que necesite", "roles, permisos, registro de actividad", "informes y cuadros de mando para la dirección", "migración de datos desde hojas de cálculo y sistemas antiguos", "integración con contabilidad, telefonía y correo"],
+          ret: "Un solo sistema en lugar de un zoológico de hojas de cálculo. La dirección ve cómo van las cosas sin reunir cada semana informes de todos los departamentos."
+        },
+        cloud: {
+          name: "soluciones en la nube",
+          desc: [
+            "Trasladamos su infraestructura a Amazon Web Services, completa o por partes, y nos aseguramos de que funcione sin que la factura suba sin motivo.",
+            "La mudanza empieza con una auditoría y un cálculo de costes. Todo se migra por fases, con un plan de vuelta atrás en cada paso."
+          ],
+          opts: ["auditoría de la infraestructura actual, cálculo de costes", "arquitectura en AWS, plan de migración", "traslado de servidores, bases de datos y archivos", "copias de seguridad y monitorización", "optimización de costes tras la mudanza"],
+          ret: "Una infraestructura que sobrevive a la caída de un servidor. Una factura de la nube que se entiende.",
+          bugs: "La nube no siempre es más barata que un servidor propio. Compensa cuando la carga tiene picos, cuando se necesita tolerancia a fallos o cuando los nuevos entornos deben estar listos en minutos y no en una semana."
+        },
+        redhat: {
+          name: "infraestructura empresarial con Red Hat",
+          desc: [
+            "Construimos la infraestructura de TI de su empresa sobre Red Hat: servidores con Red Hat Enterprise Linux, la plataforma de contenedores OpenShift y automatización con Ansible.",
+            "Red Hat es la opción cuando la infraestructura tiene que funcionar durante años y superar auditorías, en lugar de depender de la memoria de un solo administrador. La suscripción se amortiza gracias al soporte del fabricante y a un ciclo de vida largo: Red Hat Enterprise Linux tiene soporte durante diez años.",
+            "La infraestructura se diseña según sus cargas de trabajo, y la configuración de los servidores se describe en Ansible. Cualquier servidor se reconstruye a partir de un playbook, no de memoria."
+          ],
+          opts: ["auditoría de sus servidores actuales y plan de migración", "implantación de Red Hat Enterprise Linux, actualizaciones centralizadas con Red Hat Satellite", "la plataforma de contenedores OpenShift para sus aplicaciones", "automatización de la configuración y el despliegue con Ansible", "gestión centralizada de identidades y accesos (Identity Management)", "monitorización, copias de seguridad y documentación para su equipo"],
+          ret: "Una infraestructura que se puede auditar, reproducir y traspasar a otro equipo sin perder conocimiento.",
+          notes: "Red Hat es socio nuestro, así que también podemos ayudarle a aclararse con las suscripciones y el soporte del fabricante."
+        },
+        api: {
+          name: "API e integraciones",
+          desc: [
+            "Diseñamos API para sus sistemas y las conectamos con los servicios que ya utiliza.",
+            "Lo que más vemos es siempre lo mismo: datos que se introducen dos veces. Pedidos de la web que se vuelven a teclear a mano en el sistema contable, pagos que se cuadran en una hoja de cálculo. Una integración elimina ese trabajo y los errores que genera."
+          ],
+          opts: ["diseño y documentación de API", "integración con pasarelas de pago, empresas de mensajería, CRM y contabilidad", "intercambio de datos entre sistemas internos", "colas y reintentos ante fallos", "monitorización y alertas"],
+          ret: "Los datos se introducen una sola vez y llegan solos a donde hacen falta.",
+          bugs: "Las integraciones se rompen sin hacer ruido cuando un socio cambia su API. Por eso -w está siempre activado: la avería debe comunicarla el sistema, no un cliente."
+        },
+        support: {
+          name: "soporte técnico",
+          desc: [
+            "Mantenemos sus sistemas de TI en marcha y los seguimos desarrollando, incluidos los que no hemos creado nosotros.",
+            "Corregir errores es solo una parte del trabajo. También están las actualizaciones que cierran agujeros de seguridad, la monitorización que detecta un problema antes que los usuarios y las pequeñas mejoras sobre la marcha."
+          ],
+          opts: ["monitorización de disponibilidad y errores", "corrección de errores, actualizaciones de seguridad", "copias de seguridad y pruebas de restauración", "mejoras planificadas y nuevas funciones", "auditoría y documentación de sistemas de otros proveedores"],
+          ret: "El sistema funciona y hay un equipo que sabe cómo está construido.",
+          bugs: "Un sistema ajeno sin documentación no se puede tocar con seguridad: cada cambio es una lotería. En ese caso empezamos por una auditoría (support -a)."
+        }
+      }
+    },
+    pt: {
+      header: "Manual de serviços da ArtIntelliCo",
+      sec: { name: "NOME", syn: "SINOPSE", desc: "DESCRIÇÃO", opts: "OPÇÕES", ret: "VALOR DE RETORNO", bugs: "ERROS", notes: "NOTAS", see: "VER TAMBÉM", list: "PÁGINAS" },
+      intro: {
+        name: "introdução à secção 8: serviços da ArtIntelliCo",
+        desc: [
+          "Cada página desta secção descreve um serviço. Escolhemos a tecnologia em função do problema, e não o problema em função da tecnologia.",
+          "Por vezes, a melhor resposta é um serviço já existente por subscrição. Nesse caso dizemo-lo, e não é preciso desenvolver nada."
+        ]
+      },
+      pages: {
+        concept: {
+          name: "conceção de soluções de TI",
+          desc: [
+            "Apuramos o que o sistema tem realmente de fazer e pomo-lo por escrito de forma que tanto o negócio como os programadores o entendam.",
+            "Tudo começa com conversas. Não só com quem decide, mas também com a contabilidade, o armazém e os comerciais, ou seja, com quem vai carregar nos botões todos os dias. A razão é simples: o erro mais caro de um projeto comete-se antes da primeira linha de código, quando o sistema é construído para um problema que ninguém definiu bem."
+          ],
+          opts: ["entrevistas com os colaboradores; análise de como os processos funcionam hoje", "requisitos de negócio e cenários de utilização", "comparação entre produtos existentes e desenvolvimento à medida", "um caderno de encargos com prazos e orçamento estimados por fase"],
+          ret: "Um documento a partir do qual qualquer equipa, a nossa ou outra, pode orçamentar o trabalho e começá-lo.",
+          bugs: "Por vezes aconselhamos a não desenvolver nada e a configurar um produto existente. Este comportamento é intencional."
+        },
+        saas: {
+          name: "desenvolvimento SaaS",
+          desc: [
+            "Concebemos e construímos plataformas SaaS: desde uma primeira versão para clientes-piloto até um serviço em que cada cliente tem o seu próprio espaço, plano e área de cliente.",
+            "No SaaS, o dinheiro não está no código. Está na facilidade com que um novo cliente se regista, paga e começa a trabalhar sem nunca ligar para o suporte. Por isso a arquitetura multi-inquilino, a faturação e as permissões entram desde o primeiro dia: acrescentá-las quando os clientes já lá estão custa várias vezes mais."
+          ],
+          opts: ["arquitetura multi-inquilino; dados de cada cliente isolados", "registo, planos, subscrições, pagamentos online", "áreas de cliente, perfis, permissões", "integrações e uma API pública para os seus clientes", "escalabilidade à medida que a carga cresce"],
+          ret: "Um produto que se vende por subscrição. Não um projeto que alguém implementa à mão de cada vez.",
+          bugs: "A primeira versão sai mais cedo do que gostaria. De propósito: os utilizadores reais mostram depressa que funções nunca fizeram falta."
+        },
+        web: {
+          name: "desenvolvimento web",
+          desc: [
+            "Criamos sites institucionais, marketplaces, lojas online, sistemas de reservas e ferramentas web internas. À medida do problema, sem modelos prontos.",
+            "Um site empresarial mede-se em pedidos de contacto e encomendas; o aspeto no portefólio fica muito para trás. Antes de começar, combinamos o que conta como resultado, e a análise de tráfego fica ativa antes do lançamento, não seis meses depois. A tecnologia segue o problema: uma landing page não precisa de uma plataforma pesada, e um marketplace não cabe num construtor de sites."
+          ],
+          opts: ["protótipo e design de interfaces", "frontend, backend, painel de administração", "integração com pagamentos, entregas, CRM e sistemas de contabilidade", "bases de SEO, velocidade de carregamento, análise de tráfego", "lançamento e acompanhamento"],
+          ret: "Um serviço web em que se vê quantos pedidos e quanta receita traz."
+        },
+        mobile: {
+          name: "aplicações móveis",
+          desc: [
+            "Desenvolvemos aplicações para iOS e Android, juntamente com a parte de servidor e o painel de administração por trás delas.",
+            "Uma aplicação compensa quando as pessoas voltam a ela: uma nova encomenda, o estado de uma entrega, pontos de fidelização. Nativa ou multiplataforma: decidem o orçamento e o quanto a aplicação depende da câmara, da localização e do modo offline."
+          ],
+          opts: ["aplicações para iOS e Android", "parte de servidor e API", "painel de administração: conteúdos, encomendas, utilizadores", "notificações push e análise", "publicação na App Store e no Google Play"],
+          ret: "Uma aplicação que passa a revisão das lojas. A sua equipa gere-a sem chamar um programador.",
+          bugs: "Se um cliente só a abrir uma vez por ano, não precisa de uma aplicação: recomendamos um bom site para telemóvel, que fica mais barato. Dizemo-lo antes de o trabalho começar."
+        },
+        ai: {
+          name: "soluções com inteligência artificial",
+          desc: [
+            "Automatizamos processos de negócio com agentes de IA e outras soluções baseadas em inteligência artificial e aprendizagem automática. O agente percorre sozinho os passos rotineiros do processo; uma pessoa verifica o resultado.",
+            "Os modelos de linguagem são realmente úteis onde os colaboradores passam horas a triar e-mails, documentos e pedidos. O trabalho começa com um piloto sobre os seus próprios dados: vê os números de precisão antes do desenvolvimento principal, e não depois."
+          ],
+          opts: ["agentes de IA que, sozinhos, triam pedidos, preenchem o CRM e preparam respostas aos clientes", "chatbots e assistentes para clientes e colaboradores", "reconhecimento de documentos e extração de dados", "classificação de pedidos, pesquisa na base de conhecimento", "previsão da procura, análise de dados", "um piloto com medição da qualidade sobre os seus dados"],
+          ret: "Um processo que antes era feito à mão por pessoas passa a ser feito pelo sistema. O controlo continua nas mãos de uma pessoa.",
+          bugs: "Somos mais céticos em relação à IA do que a maioria. Metade das ideias do género «vamos acrescentar uma rede neuronal» resolve-se com automatização comum, e nesse caso dizemo-lo."
+        },
+        "crm-erp": {
+          name: "desenvolvimento de CRM e ERP",
+          desc: [
+            "{crm-erp} constrói sistemas CRM e ERP à volta dos seus processos. Ao contrário não funciona.",
+            "Um CRM pronto a usar chega enquanto o seu processo se parecer com o padrão. Quando os comerciais fazem metade do trabalho em folhas de cálculo porque o sistema «não sabe fazer isso», ter um próprio sai mais barato.",
+            "Os dados são migrados dos sistemas antigos e das folhas de cálculo. A implementação avança departamento a departamento, para que o trabalho não pare um único dia."
+          ],
+          opts: ["módulos de vendas, armazém, produção, finanças; só os necessários", "perfis, permissões, registo de atividade", "relatórios e painéis para a gestão", "migração de dados de folhas de cálculo e sistemas antigos", "integração com contabilidade, telefonia, e-mail"],
+          ret: "Um único sistema em vez de um jardim zoológico de folhas de cálculo. A gestão vê como estão as coisas sem recolher todas as semanas relatórios de cada departamento."
+        },
+        cloud: {
+          name: "soluções na cloud",
+          desc: [
+            "Migramos a sua infraestrutura para a Amazon Web Services, total ou parcialmente, e garantimos que funciona sem que a fatura suba sem razão.",
+            "A mudança começa com uma auditoria e uma estimativa de custos. Tudo é migrado por fases, com um plano de reversão em cada passo."
+          ],
+          opts: ["auditoria da infraestrutura atual, estimativa de custos", "arquitetura na AWS, plano de migração", "migração de servidores, bases de dados, ficheiros", "cópias de segurança e monitorização", "otimização de custos após a mudança"],
+          ret: "Uma infraestrutura que sobrevive à falha de um servidor. Uma fatura da cloud que se percebe.",
+          bugs: "A cloud nem sempre é mais barata do que um servidor próprio. Compensa quando a carga tem picos, quando é precisa tolerância a falhas ou quando novos ambientes têm de estar prontos em minutos e não numa semana."
+        },
+        redhat: {
+          name: "infraestrutura empresarial em Red Hat",
+          desc: [
+            "Construímos a infraestrutura de TI da sua empresa em Red Hat: servidores com Red Hat Enterprise Linux, a plataforma de contentores OpenShift e automatização com Ansible.",
+            "Red Hat é a escolha certa quando a infraestrutura tem de funcionar durante anos e passar auditorias, em vez de depender da memória de um único administrador. A subscrição paga-se com o suporte do fabricante e um ciclo de vida longo: o Red Hat Enterprise Linux tem suporte durante dez anos.",
+            "A infraestrutura é desenhada para as suas cargas de trabalho, e a configuração dos servidores é descrita em Ansible. Qualquer servidor se reconstrói a partir de um playbook, e não de memória."
+          ],
+          opts: ["auditoria dos seus servidores atuais e plano de migração", "implementação do Red Hat Enterprise Linux, atualizações centralizadas com o Red Hat Satellite", "a plataforma de contentores OpenShift para as suas aplicações", "automatização da configuração e da implementação com Ansible", "gestão centralizada de identidades e acessos (Identity Management)", "monitorização, cópias de segurança, documentação para a sua equipa"],
+          ret: "Uma infraestrutura que se pode auditar, reproduzir e passar a outra equipa sem perder conhecimento.",
+          notes: "A Red Hat é nossa parceira, por isso também ajudamos a esclarecer as subscrições e o suporte do fabricante."
+        },
+        api: {
+          name: "APIs e integrações",
+          desc: [
+            "Concebemos APIs para os seus sistemas e ligamo-las aos serviços que já utiliza.",
+            "O que mais encontramos é sempre o mesmo: dados introduzidos duas vezes. Encomendas do site copiadas à mão para o sistema de contabilidade, pagamentos conferidos numa folha de cálculo. Uma integração elimina esse trabalho e os erros que ele gera."
+          ],
+          opts: ["conceção e documentação de APIs", "integração com prestadores de pagamento, transportadoras, CRM, contabilidade", "troca de dados entre sistemas internos", "filas e novas tentativas em caso de falha", "monitorização e alertas"],
+          ret: "Os dados são introduzidos uma vez e chegam sozinhos aonde são precisos.",
+          bugs: "As integrações avariam em silêncio quando um parceiro altera a sua API. Por isso o -w está sempre ligado: quem deve comunicar a avaria é o sistema, não um cliente."
+        },
+        support: {
+          name: "suporte técnico",
+          desc: [
+            "Mantemos os seus sistemas de TI a funcionar e continuamos a desenvolvê-los, incluindo os que não foram feitos por nós.",
+            "Corrigir erros é só uma parte do trabalho. Há também as atualizações que fecham falhas de segurança, a monitorização que deteta um problema antes dos utilizadores e as pequenas melhorias pelo caminho."
+          ],
+          opts: ["monitorização da disponibilidade e de erros", "correção de erros, atualizações de segurança", "cópias de segurança e testes de reposição", "melhorias planeadas e novas funcionalidades", "auditoria e documentação de sistemas de outros fornecedores"],
+          ret: "O sistema funciona, e há uma equipa que sabe como está construído.",
+          bugs: "Um sistema alheio sem documentação não se altera com segurança: cada alteração torna-se uma lotaria. Nesse caso começamos por uma auditoria (support -a)."
+        }
+      }
+    },
+    it: {
+      header: "Manuale dei servizi ArtIntelliCo",
+      sec: { name: "NOME", syn: "SINTASSI", desc: "DESCRIZIONE", opts: "OPZIONI", ret: "VALORE RESTITUITO", bugs: "BUG", notes: "NOTE", see: "VEDERE ANCHE", list: "PAGINE" },
+      intro: {
+        name: "introduzione alla sezione 8: servizi ArtIntelliCo",
+        desc: [
+          "Ogni pagina di questa sezione descrive un servizio. Scegliamo la tecnologia in base al problema, non il problema in base alla tecnologia.",
+          "A volte la risposta migliore è un servizio già pronto in abbonamento. In quel caso glielo diciamo, e non c'è nulla da sviluppare."
+        ]
+      },
+      pages: {
+        concept: {
+          name: "ideazione della soluzione IT",
+          desc: [
+            "Chiariamo che cosa deve fare davvero il sistema e lo mettiamo per iscritto in modo che lo capiscano sia l'azienda sia gli sviluppatori.",
+            "Tutto comincia dai colloqui. Non solo con chi decide, ma anche con l'amministrazione, il magazzino e i commerciali, cioè con chi premerà i pulsanti ogni giorno. Il motivo è semplice: l'errore più costoso di un progetto si commette prima ancora di scrivere una riga di codice, quando il sistema viene costruito per un problema che nessuno ha definito bene."
+          ],
+          opts: ["colloqui con il personale; analisi di come funzionano oggi i processi", "requisiti di business e scenari d'uso", "confronto tra prodotti pronti e sviluppo su misura", "un capitolato con tempi e budget stimati per fase"],
+          ret: "Un documento in base al quale qualsiasi team, il nostro o un altro, può stimare il lavoro e avviarlo.",
+          bugs: "A volte consigliamo di non sviluppare nulla e di configurare un prodotto esistente. È il comportamento previsto."
+        },
+        saas: {
+          name: "sviluppo SaaS",
+          desc: [
+            "Progettiamo e realizziamo piattaforme SaaS: dalla prima versione per i clienti pilota a un servizio in cui ogni cliente ha il proprio spazio, piano e area riservata.",
+            "Nel SaaS i soldi non li fa il codice. Li fa la facilità con cui un nuovo cliente si registra, paga e comincia a lavorare senza mai chiamare l'assistenza. Per questo multi-tenancy, fatturazione e permessi si prevedono dal primo giorno: aggiungerli quando i clienti sono già dentro costa molte volte di più."
+          ],
+          opts: ["architettura multi-tenant; dati dei clienti isolati tra loro", "registrazione, piani, abbonamenti, pagamenti online", "aree riservate, ruoli, permessi", "integrazioni e un'API pubblica per i Suoi clienti", "scalabilità al crescere del carico"],
+          ret: "Un prodotto che si vende in abbonamento. Non un progetto che qualcuno installa a mano ogni volta.",
+          bugs: "La prima versione esce prima di quanto vorrebbe. Di proposito: gli utenti reali mostrano presto quali funzioni non servivano."
+        },
+        web: {
+          name: "sviluppo web",
+          desc: [
+            "Realizziamo siti aziendali, marketplace, negozi online, sistemi di prenotazione e strumenti web interni. Su misura, senza modelli.",
+            "Un sito aziendale si misura in richieste e ordini; come appare in un portfolio viene molto dopo. Prima di iniziare concordiamo che cosa conta come risultato, e gli strumenti di analisi sono attivi prima del lancio, non sei mesi dopo. La tecnologia segue il problema: a una landing page non serve una piattaforma pesante, e un marketplace non entra in un costruttore di siti."
+          ],
+          opts: ["prototipo e design delle interfacce", "frontend, backend, pannello di amministrazione", "integrazione con pagamenti, spedizioni, CRM e sistemi contabili", "basi SEO, velocità di caricamento, analisi", "lancio e assistenza continuativa"],
+          ret: "Un servizio web da cui si vede quante richieste e quanto fatturato porta."
+        },
+        mobile: {
+          name: "app mobili",
+          desc: [
+            "Sviluppiamo app per iOS e Android insieme alla parte server e al pannello di amministrazione che le sostengono.",
+            "Un'app si ripaga quando le persone ci tornano: un nuovo ordine, lo stato di una consegna, i punti fedeltà. Nativa o multipiattaforma: lo decidono il budget e quanto l'app dipende da fotocamera, geolocalizzazione e modalità offline."
+          ],
+          opts: ["app per iOS e Android", "parte server e API", "pannello di amministrazione: contenuti, ordini, utenti", "notifiche push e analisi", "pubblicazione su App Store e Google Play"],
+          ret: "Un'app che supera la revisione degli store. Il Suo team la gestisce senza chiamare uno sviluppatore.",
+          bugs: "Se un cliente la apre una volta l'anno, un'app non serve: consigliamo piuttosto un buon sito mobile, che costa meno. Lo diciamo prima di iniziare i lavori."
+        },
+        ai: {
+          name: "soluzioni di intelligenza artificiale",
+          desc: [
+            "Automatizziamo i processi aziendali con agenti IA e altre soluzioni basate su intelligenza artificiale e apprendimento automatico. L'agente svolge da solo i passaggi di routine del processo; una persona verifica il risultato.",
+            "I modelli linguistici sono davvero utili dove i dipendenti passano ore a smistare e-mail, documenti e richieste. Il lavoro parte da un progetto pilota sui Suoi dati: i numeri sull'accuratezza li vede prima dello sviluppo vero e proprio, non dopo."
+          ],
+          opts: ["agenti IA che in autonomia smistano le richieste, compilano il CRM e preparano le risposte ai clienti", "chatbot e assistenti per clienti e dipendenti", "riconoscimento di documenti ed estrazione di dati", "classificazione delle richieste, ricerca nella knowledge base", "previsioni della domanda, analisi dei dati", "un progetto pilota con misura della qualità sui Suoi dati"],
+          ret: "Un processo che prima svolgevano le persone a mano ora lo svolge il sistema. Il controllo resta a una persona.",
+          bugs: "Sull'IA siamo più scettici di molti. Metà delle idee del tipo «aggiungiamo una rete neurale» si risolve con la normale automazione, e in quel caso lo diciamo."
+        },
+        "crm-erp": {
+          name: "sviluppo CRM ed ERP",
+          desc: [
+            "{crm-erp} costruisce sistemi CRM ed ERP attorno ai Suoi processi. Al contrario non funziona.",
+            "Un CRM standard basta finché il Suo processo somiglia a quello standard. Quando i commerciali gestiscono metà del lavoro in fogli di calcolo perché il sistema «non lo sa fare», uno su misura costa meno.",
+            "I dati vengono migrati dai vecchi sistemi e dai fogli di calcolo. L'avvio procede reparto per reparto, così il lavoro non si ferma neanche un giorno."
+          ],
+          opts: ["moduli vendite, magazzino, produzione, finanza; solo quelli che servono", "ruoli, permessi, registro delle attività", "report e dashboard per la direzione", "migrazione dei dati da fogli di calcolo e vecchi sistemi", "integrazione con contabilità, telefonia, posta elettronica"],
+          ret: "Un solo sistema invece di uno zoo di fogli di calcolo. La direzione vede come vanno le cose senza raccogliere ogni settimana i report di ogni reparto."
+        },
+        cloud: {
+          name: "soluzioni cloud",
+          desc: [
+            "Trasferiamo la Sua infrastruttura su Amazon Web Services, in tutto o in parte, e facciamo in modo che funzioni senza che la fattura cresca senza motivo.",
+            "Il trasloco inizia con un audit e una stima dei costi. Tutto viene migrato per fasi, con un piano di rollback a ogni passo."
+          ],
+          opts: ["audit dell'infrastruttura attuale, stima dei costi", "architettura su AWS, piano di migrazione", "trasferimento di server, database, file", "backup e monitoraggio", "ottimizzazione dei costi dopo il trasloco"],
+          ret: "Un'infrastruttura che sopravvive al guasto di un server. Una fattura del cloud comprensibile.",
+          bugs: "Il cloud non è sempre più economico di un server proprio. Conviene quando il carico ha picchi, quando serve tolleranza ai guasti o quando i nuovi ambienti devono essere pronti in pochi minuti anziché in una settimana."
+        },
+        redhat: {
+          name: "infrastruttura aziendale su Red Hat",
+          desc: [
+            "Costruiamo l'infrastruttura IT della Sua azienda su Red Hat: server con Red Hat Enterprise Linux, la piattaforma di container OpenShift, automazione con Ansible.",
+            "Si sceglie Red Hat quando l'infrastruttura deve funzionare per anni e superare gli audit, invece di reggersi sulla memoria di un unico amministratore. L'abbonamento si ripaga con il supporto del produttore e un ciclo di vita lungo: Red Hat Enterprise Linux è supportato per dieci anni.",
+            "L'infrastruttura viene progettata sui Suoi carichi di lavoro e la configurazione dei server è descritta in Ansible. Qualsiasi server si ricostruisce da un playbook, non a memoria."
+          ],
+          opts: ["audit dei server attuali e piano di migrazione", "adozione di Red Hat Enterprise Linux, aggiornamenti centralizzati tramite Red Hat Satellite", "la piattaforma di container OpenShift per le Sue applicazioni", "automazione di configurazione e deployment con Ansible", "gestione centralizzata di identità e accessi (Identity Management)", "monitoraggio, backup, documentazione per il Suo team"],
+          ret: "Un'infrastruttura che si può verificare, riprodurre e consegnare a un altro team senza perdere conoscenze.",
+          notes: "Red Hat è nostro partner, quindi possiamo aiutarLa anche a orientarsi tra abbonamenti e supporto del produttore."
+        },
+        api: {
+          name: "API e integrazioni",
+          desc: [
+            "Progettiamo API per i Suoi sistemi e le colleghiamo ai servizi che già utilizza.",
+            "Il caso più frequente è sempre lo stesso: dati inseriti due volte. Ordini del sito ricopiati a mano nel gestionale contabile, pagamenti riconciliati in un foglio di calcolo. Un'integrazione elimina questo lavoro e gli errori che produce."
+          ],
+          opts: ["progettazione e documentazione delle API", "integrazione con circuiti di pagamento, corrieri, CRM, contabilità", "scambio di dati tra sistemi interni", "code e nuovi tentativi in caso di errore", "monitoraggio e notifiche"],
+          ret: "I dati si inseriscono una volta sola e arrivano da soli dove servono.",
+          bugs: "Le integrazioni si rompono in silenzio quando un partner cambia la propria API. Per questo -w è sempre attivo: il guasto deve segnalarlo il sistema, non un cliente."
+        },
+        support: {
+          name: "supporto tecnico",
+          desc: [
+            "Manteniamo in funzione i Suoi sistemi IT e continuiamo a svilupparli, compresi quelli che non abbiamo scritto noi.",
+            "Correggere i bug è solo una parte del lavoro. Ci sono anche gli aggiornamenti che chiudono le falle di sicurezza, il monitoraggio che si accorge di un problema prima degli utenti e i piccoli miglioramenti strada facendo."
+          ],
+          opts: ["monitoraggio di disponibilità ed errori", "correzione di bug, aggiornamenti di sicurezza", "backup e prove di ripristino", "miglioramenti pianificati e nuove funzioni", "audit e documentazione di sistemi di altri fornitori"],
+          ret: "Il sistema funziona, e c'è un team che sa com'è fatto.",
+          bugs: "Un sistema altrui senza documentazione non si modifica in sicurezza: ogni intervento diventa una lotteria. In quel caso partiamo da un audit (support -a)."
+        }
+      }
     }
   };
 
   const PHOSPHORS = ["white", "green", "amber"];
-  const LANGS = ["uk", "en", "ru"];
+  const LANGS = window.AIC && Array.isArray(AIC.langs) ? AIC.langs.filter((l) => I18N[l] && UX[l] && MAN[l]) : Object.keys(I18N);
   const SERVICE_FILES = ["concept", "saas", "web", "mobile", "ai", "crm-erp", "cloud", "redhat", "api", "support"];
   const BIN = ["cat", "clear", "date", "echo", "finger", "hostname", "ls", "mail", "man", "more", "pwd", "uname", "who", "whoami"];
   const BUILTINS = ["cd", "history", "logout", "exit", "help", "lang", "phosphor", "setenv", "printenv", "dos", "nc", "apple", "lisa", "linux", "startx", "mc", "win", "ai"];
@@ -641,8 +1616,8 @@
   const coarse = matchMedia("(pointer: coarse)").matches;
 
   const nav = (navigator.language || "").toLowerCase();
-  let lang = store.get("aic-lang") || (nav.startsWith("ru") ? "ru" : nav.startsWith("uk") ? "uk" : nav.startsWith("en") ? "en" : "uk");
-  if (!LANGS.includes(lang)) lang = "uk";
+  let lang = store.get("aic-lang") || document.documentElement.lang || nav.split("-")[0];
+  if (!LANGS.includes(lang)) lang = LANGS.includes(nav.split("-")[0]) ? nav.split("-")[0] : "uk";
   let phosphor = store.get("aic-phosphor");
   if (!PHOSPHORS.includes(phosphor)) phosphor = "white";
   let cwd = HOME;
@@ -657,7 +1632,12 @@
   const NAV = {
     uk: { versions: "Інші версії сайту:", sections: "Розділи сайту:", items: ["Про компанію", "Послуги", "Партнери", "Контакти", "Довідка"] },
     en: { versions: "Other versions of the site:", sections: "Site sections:", items: ["About", "Services", "Partners", "Contacts", "Help"] },
-    ru: { versions: "Другие версии сайта:", sections: "Разделы сайта:", items: ["О компании", "Услуги", "Партнёры", "Контакты", "Помощь"] }
+    ru: { versions: "Другие версии сайта:", sections: "Разделы сайта:", items: ["О компании", "Услуги", "Партнёры", "Контакты", "Помощь"] },
+    de: { versions: "Andere Versionen der Website:", sections: "Bereiche der Website:", items: ["Über uns", "Leistungen", "Partner", "Kontakt", "Hilfe"] },
+    fr: { versions: "Autres versions du site :", sections: "Rubriques du site :", items: ["À propos", "Services", "Partenaires", "Contacts", "Aide"] },
+    es: { versions: "Otras versiones del sitio:", sections: "Secciones del sitio:", items: ["Sobre nosotros", "Servicios", "Socios", "Contacto", "Ayuda"] },
+    pt: { versions: "Outras versões do site:", sections: "Secções do site:", items: ["Sobre nós", "Serviços", "Parceiros", "Contactos", "Ajuda"] },
+    it: { versions: "Altre versioni del sito:", sections: "Sezioni del sito:", items: ["Chi siamo", "Servizi", "Partner", "Contatti", "Aiuto"] }
   };
   const navLines = () => {
     const n = NAV[lang] || NAV.uk;
@@ -673,6 +1653,7 @@
       n.items.map((label, i) => tok(label, NAV_CMDS[i])).join("  ")
     ];
   };
+  const colon = () => (lang === "fr" ? "\u00a0:" : ":");
   const heading = (s) => `<span class="b u">${esc(s)}</span>`;
   const bytes = (s) => new TextEncoder().encode(s).length;
 
@@ -707,7 +1688,7 @@
 
   const contactLines = () => {
     const s = t();
-    return [heading(s.contactTitle), "", esc(s.contactText), "", esc(s.emailLabel) + ": " + `<a href="mailto:${EMAIL}">${EMAIL}</a>`];
+    return [heading(s.contactTitle), "", esc(s.contactText), "", esc(s.emailLabel) + colon() + " " + `<a href="mailto:${EMAIL}">${EMAIL}</a>`];
   };
   const contactText = () => [t().contactTitle, t().contactText, EMAIL].join("\n");
 
@@ -721,13 +1702,13 @@
         "",
         esc(s.heroText),
         "",
-        esc(s.heroLead) + ":",
+        esc(s.heroLead) + colon(),
         ...s.phrases.map((p) => "    - " + esc(p)),
         "",
         `<span class="d">${esc(s.copyright)}</span>`,
         `<span class="d">${esc(s.legal)}</span>`,
         `<span class="d">${esc(s.slogan)}</span>`,
-        `<span class="d">${esc(s.source)}:</span> <a href="${location.origin}/${lang === "uk" ? "" : lang + "/"}classic/" target="_blank" rel="noopener">artintellico.com</a>`,
+        `<span class="d">${esc(s.source)}${colon()}</span> <a href="${location.origin}${AIC.url("classic", lang)}" target="_blank" rel="noopener">artintellico.com</a>`,
         ...navLines()
       ];
     },
@@ -809,7 +1790,7 @@
 
   const planLines = () => {
     const s = t();
-    return [esc(s.heroTitle), "", esc(s.heroLead) + ":", ...s.phrases.map((p) => "    - " + esc(p))];
+    return [esc(s.heroTitle), "", esc(s.heroLead) + colon(), ...s.phrases.map((p) => "    - " + esc(p))];
   };
 
   const passwd = [
@@ -1001,13 +1982,16 @@
     const gap = Math.max(1, Math.floor((cols - left.length * 2 - mid.length) / 2));
     const pad = (s, n) => s + " ".repeat(Math.max(2, n - s.length));
     const cmdTok = (c) => {
-      if (c.startsWith("lang ")) return "lang " + ["uk", "en", "ru"].map((l) => tok(l, "lang " + l)).join("|");
+      if (c.startsWith("lang ")) return "lang " + LANGS.map((l) => tok(l, "lang " + l)).join("|");
       if (c.startsWith("phosphor ")) return "phosphor " + PHOSPHORS.map((p) => tok(p, "phosphor " + p)).join("|");
       /* Шляхи від домашнього каталогу, щоб посилання працювали з будь-якого cwd */
       return tok(c, c.replace(/\b(README|partners|services)\b/, "~/$1"));
     };
     const table = (rows) => {
+      rows = rows.map(([c, d]) => [c === "lang" ? "lang " + LANGS.join("|") : c, d]);
       const width = Math.max(...rows.map(([c]) => c.length)) + 3;
+      /* Вузький екран: опис під командою з відступом, як .TP у troff, щоб колонки не розсипались */
+      if (5 + width + Math.max(...rows.map(([, d]) => d.length)) > cols) return rows.flatMap(([c, d]) => ["     " + cmdTok(c), "         " + esc(d)]);
       return rows.map(([c, d]) => "     " + cmdTok(c) + " ".repeat(width - c.length) + esc(d));
     };
     /* Перелік команд переноситься вручну, зберігаючи відступ */
@@ -1100,6 +2084,32 @@
   }
   const expand = (s) => s.replace(/\$(\w+)/g, (_, k) => env()[k] ?? "");
 
+  /* Мова за кодом (de), локаллю (de_DE.ISO8859-1) або назвою (Deutsch, german, німецька) */
+  const LANG_WORDS = {
+    uk: ["ukrainian", "українська", "украинский", "ukrainisch", "ukrainien", "ucraniano", "ucraino"],
+    en: ["english", "англійська", "английский", "englisch", "anglais", "inglés", "inglês", "inglese"],
+    ru: ["russian", "російська", "русский", "russisch", "russe", "ruso", "russo"],
+    de: ["german", "deutsch", "німецька", "немецкий", "allemand", "alemán", "alemão", "tedesco"],
+    fr: ["french", "français", "французька", "французский", "französisch", "francés", "francês", "francese"],
+    es: ["spanish", "español", "castellano", "іспанська", "испанский", "spanisch", "espagnol", "espanhol", "spagnolo"],
+    pt: ["portuguese", "português", "португальська", "португальский", "portugiesisch", "portugais", "portugués", "portoghese"],
+    it: ["italian", "italiano", "італійська", "итальянский", "italienisch", "italien"]
+  };
+  const fold = (w) => w.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
+  function findLang(raw) {
+    const w = fold(raw);
+    if (!w) return null;
+    const code = w.slice(0, 2);
+    if (LANGS.includes(code) && (w.length === 2 || /^[a-z]{2}[_.-]/.test(w))) return code;
+    for (const l of LANGS) {
+      const names = [AIC.langNames && AIC.langNames[l], ...(LANG_WORDS[l] || [])].filter(Boolean).map(fold);
+      if (names.some((n) => n === w || (w.length >= 3 && n.startsWith(w)))) return l;
+    }
+    return null;
+  }
+  /* Перелік мов у стилі locale -a: поточна позначена зірочкою */
+  const langList = () => LANGS.map((l) => `${l === lang ? "*" : " "} ${tok(l, "lang " + l)}  ${esc(UX[l].langSet.split("=")[1].padEnd(15))}  ${esc((AIC.langNames && AIC.langNames[l]) || l)}`);
+
   function setLang(l) {
     lang = l;
     store.set("aic-lang", l);
@@ -1186,16 +2196,16 @@
       case "history":
         return emit(history.map((h, i) => esc(String(i + 1).padStart(5) + "  " + h)));
       case "lang": {
-        const l = (args[0] || "").toLowerCase();
-        if (!LANGS.includes(l)) return emit(["usage: lang " + LANGS.map((x) => tok(x, "lang " + x)).join("|")]);
+        const l = findLang(args.join(" "));
+        if (!l) return emit([...(args.length ? [esc(`lang: ${args.join(" ")}: unknown language`)] : []), "usage: lang code", ...langList()]);
         setLang(l);
         return emit([esc(u().langSet), u().motd.map((part, i) => (i === 1 ? tok(part) : esc(part))).join("")]);
       }
       case "setenv": {
         if (!args.length) return emit(Object.entries(env()).map(([k, v]) => esc(`${k}=${v}`)));
         if (args[0] === "LANG") {
-          const l = (args[1] || "").slice(0, 2).toLowerCase();
-          if (LANGS.includes(l)) { setLang(l); return emit([esc(u().langSet)]); }
+          const l = findLang(args[1] || "");
+          if (l) { setLang(l); return emit([esc(u().langSet)]); }
         }
         return;
       }
@@ -1213,42 +2223,42 @@
       case "command.com":
         await emit(["Connection to DOS..."]);
         await sleep(400);
-        location.href = "/dos/";
+        location.href = AIC.url("dos", lang);
         return true;
       case "ai":
       case "future":
-        location.href = "/ai/";
+        location.href = AIC.url("ai", lang);
         return true;
       case "win":
         await emit(["Starting Windows 3.11..."]);
         await sleep(400);
-        location.href = "/win31/";
+        location.href = AIC.url("win31", lang);
         return true;
       case "mc":
         await emit(["Starting Midnight Commander..."]);
         await sleep(400);
-        location.href = "/mc/";
+        location.href = AIC.url("mc", lang);
         return true;
       case "startx":
       case "linux":
         await emit(["xinit: starting X server..."]);
         await sleep(400);
-        location.href = "/linux/";
+        location.href = AIC.url("linux", lang);
         return true;
       case "lisa":
         await emit(["Starting ArtIntelliCo Office System..."]);
         await sleep(400);
-        location.href = "/lisa/";
+        location.href = AIC.url("lisa", lang);
         return true;
       case "apple":
         await emit(["Connecting to Apple ][..."]);
         await sleep(400);
-        location.href = "/apple/";
+        location.href = AIC.url("apple", lang);
         return true;
       case "nc":
         await emit(["Starting Norton Commander..."]);
         await sleep(400);
-        location.href = "/";
+        location.href = AIC.url("nc", lang);
         return true;
       case "logout":
       case "exit":

@@ -1,0 +1,178 @@
+{
+  "meta": {
+    "title": "Sviluppo software e assistenza IT per le aziende — ArtIntelliCo",
+    "description": "ArtIntelliCo sviluppa soluzioni IT: e-commerce, portali, SaaS, machine learning, intelligenza artificiale e supporto tecnico continuativo."
+  },
+  "nav": {
+    "skipToContent": "Vai al contenuto",
+    "services": "Servizi",
+    "contacts": "Contatti",
+    "classic": "Versione classica del sito",
+    "languageLabel": "Lingua"
+  },
+  "hero": {
+    "title": "Realizziamo soluzioni IT che lavorano per la Sua azienda",
+    "text": "Il team di ArtIntelliCo La aiuta a digitalizzare e automatizzare i processi aziendali, progettando e realizzando soluzioni IT moderne.",
+    "typedLead": "Per la Sua azienda",
+    "typed": [
+      "sviluppiamo piattaforme SaaS",
+      "realizziamo sistemi CRM ed ERP",
+      "mettiamo l'IA al lavoro",
+      "portiamo l'infrastruttura nel cloud"
+    ]
+  },
+  "services": {
+    "heading": "Come possiamo aiutarLa",
+    "lead": "Non ci leghiamo a un solo linguaggio di programmazione o a una sola piattaforma: prima capiamo il problema, poi scegliamo gli strumenti. A volte la risposta migliore è un servizio in abbonamento già pronto, e in quel caso glielo diciamo.",
+    "includesLabel": "Cosa comprende",
+    "resultLabel": "Risultato",
+    "more": "Dettagli",
+    "items": {
+      "concept": {
+        "title": "Ideazione della soluzione IT",
+        "text": "Chiariamo che cosa deve fare davvero il sistema e lo traduciamo in requisiti su cui possono lavorare sia l'azienda sia gli sviluppatori.",
+        "details": "L'errore più costoso in un progetto IT si commette ancora prima di scrivere il codice: il sistema viene costruito per un problema che nessuno ha definito bene. Per questo partiamo parlando con chi lo userà — contabilità, magazzino, commerciali — e non solo con chi firma l'approvazione. A volte la nostra conclusione è di non sviluppare nulla e configurare un prodotto esistente. Anche questo è un risultato.",
+        "includes": [
+          "interviste al personale e analisi dei processi attuali",
+          "requisiti di business e scenari d'uso",
+          "confronto tra prodotti pronti e sviluppo su misura",
+          "specifica con stima di tempi e budget per ogni fase"
+        ],
+        "result": "Un documento su cui qualsiasi team, il nostro o un altro, può fare una stima e iniziare a sviluppare."
+      },
+      "saas": {
+        "title": "Sviluppo SaaS",
+        "text": "Progettiamo e sviluppiamo piattaforme SaaS, da una prima versione per i clienti pilota fino a un servizio in cui ogni cliente ha il proprio spazio di lavoro, piano e pannello di controllo.",
+        "details": "Nel SaaS i soldi non stanno nel codice. Stanno nella facilità con cui un nuovo cliente può registrarsi, pagare e partire senza chiamare l'assistenza. Integriamo multi-tenancy, fatturazione e permessi fin dal primo giorno, perché aggiungerli quando i clienti sono già dentro costa molte volte di più. E cerchiamo di rilasciare presto la prima versione: gli utenti reali mostrano in fretta quali funzionalità non servivano.",
+        "includes": [
+          "architettura multi-tenant con i dati dei clienti isolati",
+          "registrazione, piani, abbonamenti e pagamenti online",
+          "dashboard per i clienti, ruoli e permessi",
+          "integrazioni e un'API pubblica per i Suoi clienti",
+          "scalabilità al crescere del carico"
+        ],
+        "result": "Un prodotto da vendere in abbonamento, non un progetto da installare a mano ogni volta."
+      },
+      "web": {
+        "title": "Sviluppo web",
+        "text": "Siti aziendali, marketplace, negozi online, sistemi di prenotazione e strumenti web interni, costruiti sull'obiettivo e non su un template.",
+        "details": "Un sito aziendale si giudica dai contatti e dagli ordini che porta, non da come appare in un portfolio. Per questo concordiamo in anticipo che cosa conta come risultato e configuriamo la web analytics prima del lancio, non sei mesi dopo. La tecnologia segue l'obiettivo: una landing page non ha bisogno di una piattaforma pesante, e un marketplace non entra in un website builder.",
+        "includes": [
+          "prototipo e design dell'interfaccia",
+          "frontend, backend e pannello di amministrazione",
+          "integrazioni con pagamenti, spedizioni, CRM e gestionali contabili",
+          "basi SEO, velocità delle pagine e web analytics",
+          "lancio e assistenza continuativa"
+        ],
+        "result": "Un servizio web di cui vede quanti contatti e quanto fatturato porta."
+      },
+      "mobile": {
+        "title": "App mobili",
+        "text": "App per iOS e Android, insieme alla parte server e al pannello di amministrazione che le sostengono.",
+        "details": "Un'app ha senso quando i clienti ci tornano regolarmente: per riordinare, seguire una spedizione, raccogliere punti fedeltà. Se qualcuno passa una volta l'anno, un buon sito mobile costa meno, e glielo diciamo prima di iniziare qualsiasi lavoro. Nativa o multipiattaforma: lo decidono il budget e quanto l'app si affida a fotocamera, geolocalizzazione e modalità offline.",
+        "includes": [
+          "app per iOS e Android",
+          "parte server e API",
+          "pannello di amministrazione per contenuti, ordini e utenti",
+          "notifiche push e analytics",
+          "pubblicazione su App Store e Google Play"
+        ],
+        "result": "Un'app che supera la revisione degli store e che il Suo team può gestire senza chiamare uno sviluppatore."
+      },
+      "ai": {
+        "title": "Soluzioni di intelligenza artificiale",
+        "text": "Offriamo soluzioni basate su intelligenza artificiale e machine learning che automatizzano i processi aziendali con agenti IA.",
+        "details": "Sull'IA siamo più scettici della media: metà delle idee del tipo «mettiamoci una rete neurale» si risolve con una normale automazione. Ma dove le persone passano ore a smistare e-mail, documenti e richieste di assistenza, i modelli linguistici tolgono davvero loro la routine. Partiamo con un progetto pilota sui Suoi dati, così vede le cifre sull'accuratezza prima dello sviluppo vero e proprio, non dopo.",
+        "includes": [
+          "agenti IA che svolgono da soli i passaggi di routine di un processo: smistare le richieste, compilare il CRM, preparare bozze di risposta ai clienti",
+          "chatbot e assistenti per clienti e dipendenti",
+          "riconoscimento di documenti ed estrazione di dati",
+          "classificazione delle richieste e ricerca nella knowledge base",
+          "previsione della domanda e analisi dei dati",
+          "un progetto pilota con la qualità misurata sui Suoi dati"
+        ],
+        "result": "Un processo specifico che prima si faceva a mano ora lo svolge il sistema, con una persona che mantiene il controllo."
+      },
+      "crm": {
+        "title": "Sviluppo CRM ed ERP",
+        "text": "Sistemi CRM ed ERP su misura, costruiti attorno al modo in cui lavora la Sua azienda, e non il contrario.",
+        "details": "Un CRM standard va bene finché il Suo processo è standard. Quando i commerciali svolgono metà del lavoro su fogli di calcolo perché il sistema «non lo prevede», sviluppare un sistema proprio diventa più conveniente. Migriamo i dati dai vecchi sistemi e dai fogli di calcolo e introduciamo il sistema un reparto alla volta, così il lavoro non si ferma nemmeno per un giorno.",
+        "includes": [
+          "moduli per vendite, magazzino, produzione e finanza, secondo le esigenze",
+          "ruoli, permessi e registro delle modifiche",
+          "report e dashboard per la direzione",
+          "migrazione dei dati da fogli di calcolo e sistemi legacy",
+          "integrazione con contabilità, telefonia ed e-mail"
+        ],
+        "result": "Un unico sistema al posto di uno zoo di fogli di calcolo: la direzione vede a che punto sono le cose senza report settimanali da ogni reparto."
+      },
+      "cloud": {
+        "title": "Soluzioni cloud",
+        "text": "Spostiamo la Sua infrastruttura, in tutto o in parte, su Amazon Web Services e ci assicuriamo che continui a funzionare e non costi di più senza motivo.",
+        "details": "Il cloud non è sempre più economico di un server proprio. Conviene quando il carico ha dei picchi, quando serve tolleranza ai guasti o quando i nuovi ambienti devono essere pronti in pochi minuti anziché in una settimana. Per questo una migrazione parte da un audit e da una stima dei costi, e il passaggio avviene per fasi, con un piano di rollback a ogni passo.",
+        "includes": [
+          "audit dell'infrastruttura attuale e stima dei costi",
+          "architettura AWS e piano di migrazione",
+          "trasferimento di server, database e file",
+          "backup e monitoraggio",
+          "ottimizzazione dei costi dopo la migrazione"
+        ],
+        "result": "Un'infrastruttura che regge il guasto di un server e una fattura del cloud che capisce davvero."
+      },
+      "redhat": {
+        "title": "Infrastruttura aziendale su Red Hat",
+        "text": "Costruiamo l'infrastruttura IT della Sua azienda su Red Hat: server con Red Hat Enterprise Linux, la piattaforma di container OpenShift e automazione con Ansible.",
+        "details": "Le aziende scelgono Red Hat quando l'infrastruttura deve funzionare per anni e superare gli audit, invece di vivere nella testa di un solo amministratore. La sottoscrizione si ripaga grazie al supporto del produttore e a un ciclo di vita lungo: Red Hat Enterprise Linux è supportato per dieci anni. Progettiamo l'infrastruttura sui Suoi carichi di lavoro e descriviamo la configurazione dei server in Ansible, così ogni macchina si può ricostruire da un playbook anziché a memoria. Red Hat è nostro partner, quindi possiamo aiutarLa anche a fare chiarezza su sottoscrizioni e supporto del produttore.",
+        "includes": [
+          "audit dei server attuali e piano di migrazione",
+          "adozione di Red Hat Enterprise Linux con aggiornamenti centralizzati tramite Red Hat Satellite",
+          "la piattaforma di container OpenShift per le Sue applicazioni",
+          "automazione di configurazione e deployment con Ansible",
+          "gestione centralizzata di identità e accessi (Identity Management)",
+          "monitoraggio, backup e documentazione per il Suo team"
+        ],
+        "result": "Un'infrastruttura che si può verificare, riprodurre e affidare a un altro team senza perdere il know-how accumulato."
+      },
+      "api": {
+        "title": "API e integrazioni",
+        "text": "Progettiamo API per i Suoi sistemi e le colleghiamo ai servizi che già utilizza.",
+        "details": "Il problema che incontriamo più spesso sono i dati inseriti due volte. Ordini dal sito ricopiati a mano nel gestionale contabile, pagamenti riconciliati su un foglio di calcolo. Un'integrazione elimina questo lavoro e gli errori che si porta dietro. Configuriamo anche il monitoraggio, perché le integrazioni si rompono in silenzio quando un partner cambia la propria API, ed è meglio saperlo dal sistema che da un cliente.",
+        "includes": [
+          "progettazione e documentazione delle API",
+          "integrazioni con provider di pagamento, corrieri, CRM e contabilità",
+          "scambio di dati tra sistemi interni",
+          "code e nuovi tentativi in caso di errore",
+          "monitoraggio e alert"
+        ],
+        "result": "I dati si inseriscono una volta sola e arrivano da soli dove devono arrivare."
+      },
+      "support": {
+        "title": "Supporto tecnico",
+        "text": "Manteniamo in funzione i Suoi sistemi e continuiamo a migliorarli, anche quelli che non abbiamo sviluppato noi.",
+        "details": "L'assistenza non è solo correzione dei bug. Sono anche gli aggiornamenti che chiudono le falle di sicurezza, il monitoraggio che individua un problema prima degli utenti e i piccoli miglioramenti strada facendo. Se il sistema viene da un altro fornitore, partiamo da un audit e dalla documentazione: senza, ogni modifica è un azzardo.",
+        "includes": [
+          "monitoraggio di disponibilità ed errori",
+          "correzione dei bug e aggiornamenti di sicurezza",
+          "backup e test di ripristino",
+          "miglioramenti pianificati e nuove funzionalità",
+          "audit e documentazione di sistemi realizzati da altri fornitori"
+        ],
+        "result": "Un sistema che funziona e un team che sa com'è fatto."
+      }
+    }
+  },
+  "partners": {
+    "heading": "I nostri partner"
+  },
+  "contacts": {
+    "heading": "Ci parli del Suo progetto",
+    "text": "Se ha una proposta di collaborazione o vuole saperne di più sulle nostre soluzioni e sulla nostra esperienza, ci scriva un'e-mail.",
+    "emailLabel": "E-mail"
+  },
+  "footer": {
+    "rights": "Tutti i diritti riservati.",
+    "slogan": "Abbiamo visto nascere l'informatica. Sappiamo come funziona oggi e capiamo dove andrà domani.",
+    "variants": "Versione del sito",
+    "addressLabel": "Indirizzo"
+  }
+}

@@ -1,0 +1,178 @@
+{
+  "meta": {
+    "title": "Desarrollo de software y soporte de TI para empresas — ArtIntelliCo",
+    "description": "ArtIntelliCo desarrolla soluciones de TI: comercio electrónico, portales, SaaS, aprendizaje automático, inteligencia artificial y soporte técnico continuo."
+  },
+  "nav": {
+    "skipToContent": "Saltar al contenido",
+    "services": "Servicios",
+    "contacts": "Contacto",
+    "classic": "Versión clásica del sitio",
+    "languageLabel": "Idioma"
+  },
+  "hero": {
+    "title": "Creamos soluciones de TI que trabajan para su negocio",
+    "text": "El equipo de ArtIntelliCo le ayuda a digitalizar y automatizar los procesos de su empresa diseñando e implantando soluciones de TI modernas.",
+    "typedLead": "Para su negocio",
+    "typed": [
+      "creamos plataformas SaaS",
+      "implantamos sistemas CRM y ERP",
+      "ponemos la IA a trabajar",
+      "llevamos la infraestructura a la nube"
+    ]
+  },
+  "services": {
+    "heading": "Cómo podemos ayudarle",
+    "lead": "No nos atamos a un lenguaje de programación ni a una plataforma: primero entendemos el problema y después elegimos las herramientas. A veces la mejor respuesta es un servicio de suscripción ya existente, y en ese caso se lo diremos.",
+    "includesLabel": "Qué incluye",
+    "resultLabel": "Resultado",
+    "more": "Detalles",
+    "items": {
+      "concept": {
+        "title": "Concepto de la solución de TI",
+        "text": "Analizamos qué tiene que hacer realmente el sistema y lo convertimos en requisitos con los que puedan trabajar tanto el negocio como los desarrolladores.",
+        "details": "El error más caro de un proyecto de TI se comete antes de la primera línea de código: el sistema se construye para un problema que nadie definió bien. Por eso empezamos hablando con quienes lo van a usar —contabilidad, almacén, comerciales— y no solo con quien da el visto bueno. A veces nuestra conclusión es no desarrollar nada y configurar un producto existente. Eso también es un resultado.",
+        "includes": [
+          "entrevistas con el personal y análisis de los procesos actuales",
+          "requisitos de negocio y escenarios de uso",
+          "comparativa entre productos estándar y desarrollo a medida",
+          "especificación con estimación de plazos y presupuesto por fase"
+        ],
+        "result": "Un documento con el que cualquier equipo, el nuestro o uno ajeno, puede presupuestar el proyecto y empezar a desarrollarlo."
+      },
+      "saas": {
+        "title": "Desarrollo SaaS",
+        "text": "Diseñamos y desarrollamos plataformas SaaS, desde una primera versión para clientes piloto hasta un servicio en el que cada cliente tiene su propio espacio de trabajo, plan y panel.",
+        "details": "En SaaS el dinero no está en el código. Está en lo fácil que le resulta a un cliente nuevo registrarse, pagar y empezar sin llamar a soporte. Incorporamos la arquitectura multi-tenant, la facturación y los permisos desde el primer día, porque añadirlos cuando ya hay clientes dentro cuesta varias veces más. Y procuramos lanzar pronto la primera versión: los usuarios reales enseñan enseguida qué funciones nunca hicieron falta.",
+        "includes": [
+          "arquitectura multi-tenant con los datos de cada cliente aislados",
+          "registro, planes, suscripciones y pagos en línea",
+          "paneles para clientes, roles y permisos",
+          "integraciones y una API pública para sus clientes",
+          "escalado a medida que crece la carga"
+        ],
+        "result": "Un producto que puede vender por suscripción, no un proyecto que hay que implantar a mano cada vez."
+      },
+      "web": {
+        "title": "Desarrollo web",
+        "text": "Webs corporativas, marketplaces, tiendas online, sistemas de reservas y herramientas web internas, construidos en función de la tarea y no de una plantilla.",
+        "details": "Una web de empresa se juzga por las solicitudes y los pedidos que genera, no por cómo queda en un portfolio. Por eso acordamos de antemano qué cuenta como resultado y configuramos la analítica antes del lanzamiento, no seis meses después. La tecnología se adapta a la tarea: una landing page no necesita una plataforma pesada, y un marketplace no cabe en un creador de webs.",
+        "includes": [
+          "prototipo y diseño de interfaz",
+          "frontend, backend y panel de administración",
+          "integraciones con pasarelas de pago, envíos, CRM y sistemas contables",
+          "bases de SEO, velocidad de carga y analítica",
+          "lanzamiento y soporte continuo"
+        ],
+        "result": "Un servicio web del que puede ver cuántas solicitudes y cuántos ingresos genera."
+      },
+      "mobile": {
+        "title": "Aplicaciones móviles",
+        "text": "Aplicaciones para iOS y Android, junto con la parte de servidor y el panel de administración que hay detrás.",
+        "details": "Una aplicación tiene sentido cuando los clientes vuelven a ella con regularidad: para repetir un pedido, seguir un envío o acumular puntos de fidelidad. Si alguien entra una vez al año, una buena web móvil sale más barata, y se lo diremos antes de empezar. Nativa o multiplataforma: lo deciden el presupuesto y lo mucho que la aplicación dependa de la cámara, la geolocalización y el modo sin conexión.",
+        "includes": [
+          "aplicaciones para iOS y Android",
+          "parte de servidor y API",
+          "panel de administración para contenidos, pedidos y usuarios",
+          "notificaciones push y analítica",
+          "publicación en App Store y Google Play"
+        ],
+        "result": "Una aplicación que supera la revisión de las tiendas y que su equipo puede gestionar sin llamar a un desarrollador."
+      },
+      "ai": {
+        "title": "Soluciones con inteligencia artificial",
+        "text": "Ofrecemos soluciones basadas en inteligencia artificial y aprendizaje automático que automatizan los procesos de su empresa con agentes de IA.",
+        "details": "Somos más escépticos con la IA que la mayoría: la mitad de las ideas del tipo «pongamos una red neuronal» se resuelven con una automatización corriente. Pero allí donde hay personas que pasan horas clasificando correos, documentos y solicitudes de soporte, los modelos de lenguaje les quitan de verdad la rutina de encima. Empezamos con un piloto sobre sus propios datos, para que vea las cifras de precisión antes del desarrollo principal y no después.",
+        "includes": [
+          "agentes de IA que se encargan por sí solos de los pasos rutinarios del proceso: clasificar solicitudes, rellenar el CRM, redactar borradores de respuesta a clientes",
+          "chatbots y asistentes para clientes y empleados",
+          "reconocimiento de documentos y extracción de datos",
+          "clasificación de solicitudes y búsqueda en la base de conocimiento",
+          "previsión de la demanda y análisis de datos",
+          "un piloto con la calidad medida sobre sus datos"
+        ],
+        "result": "Un proceso concreto que antes se hacía a mano y que ahora hace el sistema, con una persona que sigue teniendo el control."
+      },
+      "crm": {
+        "title": "Desarrollo de CRM y ERP",
+        "text": "Sistemas CRM y ERP a medida, construidos en torno a la forma de trabajar de su empresa, y no al revés.",
+        "details": "Un CRM estándar funciona mientras su proceso sea estándar. Cuando los comerciales llevan la mitad de su trabajo en hojas de cálculo porque el sistema «no lo permite», desarrollar uno propio sale más barato. Migramos los datos de los sistemas antiguos y de las hojas de cálculo e implantamos por departamentos, para que el trabajo no se detenga ni un solo día.",
+        "includes": [
+          "módulos de ventas, almacén, producción y finanzas, según lo que necesite",
+          "roles, permisos y registro de auditoría",
+          "informes y cuadros de mando para la dirección",
+          "migración de datos desde hojas de cálculo y sistemas heredados",
+          "integración con contabilidad, telefonía y correo electrónico"
+        ],
+        "result": "Un único sistema en lugar de un zoo de hojas de cálculo: la dirección ve cómo van las cosas sin informes semanales de cada departamento."
+      },
+      "cloud": {
+        "title": "Soluciones en la nube",
+        "text": "Trasladamos su infraestructura, total o parcialmente, a Amazon Web Services y nos aseguramos de que siga funcionando y no se encarezca sin motivo.",
+        "details": "La nube no siempre es más barata que un servidor propio. Compensa cuando la carga tiene picos, cuando necesita tolerancia a fallos o cuando los nuevos entornos deben estar listos en minutos y no en una semana. Por eso una migración empieza con una auditoría y una estimación de costes, y el traslado se hace por fases, con un plan de vuelta atrás en cada paso.",
+        "includes": [
+          "auditoría de la infraestructura actual y estimación de costes",
+          "arquitectura en AWS y plan de migración",
+          "traslado de servidores, bases de datos y archivos",
+          "copias de seguridad y monitorización",
+          "optimización de costes tras la migración"
+        ],
+        "result": "Una infraestructura que aguanta la caída de un servidor y una factura de la nube que de verdad entiende."
+      },
+      "redhat": {
+        "title": "Infraestructura empresarial con Red Hat",
+        "text": "Construimos la infraestructura de TI de su empresa sobre Red Hat: servidores con Red Hat Enterprise Linux, la plataforma de contenedores OpenShift y automatización con Ansible.",
+        "details": "Las empresas eligen Red Hat cuando la infraestructura tiene que funcionar durante años y superar auditorías, en lugar de vivir en la cabeza de un solo administrador. La suscripción se amortiza gracias al soporte del fabricante y a un ciclo de vida largo: Red Hat Enterprise Linux tiene soporte durante diez años. Diseñamos la infraestructura según sus cargas de trabajo y describimos la configuración de los servidores en Ansible, de modo que cualquier máquina pueda reconstruirse a partir de un playbook y no de memoria. Red Hat es nuestro socio, así que también podemos ayudarle a poner orden en las suscripciones y el soporte del fabricante.",
+        "includes": [
+          "auditoría de sus servidores actuales y plan de migración",
+          "implantación de Red Hat Enterprise Linux con actualizaciones centralizadas mediante Red Hat Satellite",
+          "la plataforma de contenedores OpenShift para sus aplicaciones",
+          "automatización de la configuración y el despliegue con Ansible",
+          "gestión centralizada de identidades y accesos (Identity Management)",
+          "monitorización, copias de seguridad y documentación para su equipo"
+        ],
+        "result": "Una infraestructura que se puede auditar, reproducir y traspasar a otro equipo sin perder el conocimiento acumulado."
+      },
+      "api": {
+        "title": "API e integraciones",
+        "text": "Diseñamos API para sus sistemas y las conectamos con los servicios que ya utiliza.",
+        "details": "El problema más habitual que encontramos son los datos introducidos dos veces. Pedidos de la web que se vuelven a teclear a mano en el sistema contable, pagos que se cuadran en una hoja de cálculo. Una integración elimina ese trabajo y los errores que lo acompañan. También configuramos la monitorización, porque las integraciones fallan sin hacer ruido cuando un socio cambia su API, y es mejor enterarse por el sistema que por un cliente.",
+        "includes": [
+          "diseño y documentación de API",
+          "integraciones con pasarelas de pago, empresas de mensajería, CRM y contabilidad",
+          "intercambio de datos entre sistemas internos",
+          "colas y reintentos cuando algo falla",
+          "monitorización y alertas"
+        ],
+        "result": "Los datos se introducen una sola vez y llegan solos adonde tienen que llegar."
+      },
+      "support": {
+        "title": "Soporte técnico",
+        "text": "Mantenemos sus sistemas en funcionamiento y seguimos mejorándolos, también los que no hemos desarrollado nosotros.",
+        "details": "El soporte no consiste solo en corregir errores. También son las actualizaciones que cierran agujeros de seguridad, la monitorización que detecta un problema antes que los usuarios y las pequeñas mejoras sobre la marcha. Si el sistema lo hizo otro proveedor, empezamos con una auditoría y documentación: sin ellas, cada cambio es una apuesta.",
+        "includes": [
+          "monitorización de la disponibilidad y los errores",
+          "corrección de errores y actualizaciones de seguridad",
+          "copias de seguridad y pruebas de restauración",
+          "mejoras planificadas y nuevas funcionalidades",
+          "auditoría y documentación de sistemas desarrollados por otros proveedores"
+        ],
+        "result": "Un sistema que funciona y un equipo que sabe cómo está construido."
+      }
+    }
+  },
+  "partners": {
+    "heading": "Nuestros socios"
+  },
+  "contacts": {
+    "heading": "Cuéntenos su proyecto",
+    "text": "Si tiene una propuesta de colaboración o quiere saber más sobre nuestras soluciones y nuestra experiencia, escríbanos un correo electrónico.",
+    "emailLabel": "Correo electrónico"
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados.",
+    "slogan": "Vimos nacer la informática. Sabemos cómo funciona hoy y entendemos hacia dónde va mañana.",
+    "variants": "Versión del sitio",
+    "addressLabel": "Dirección"
+  }
+}

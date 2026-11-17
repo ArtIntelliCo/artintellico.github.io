@@ -1,5 +1,10 @@
 ---
-import { localeName, localePath, locales, t, type Locale } from '../i18n';
+import { localeName, localeNative, localePath, locales, t, type Locale } from '../i18n';
+
+/*
+ * Выбор языка в шапке классической версии. Языков восемь, поэтому это выпадающий список
+ * на <details>, как и выбор варианта: работает без JavaScript, ссылки видны поисковикам.
+ */
 
 interface Props {
   locale: Locale;
@@ -9,21 +14,62 @@ const { locale } = Astro.props;
 const dict = t(locale);
 ---
 
-<nav aria-label={dict.nav.languageLabel} class="flex items-center gap-1 text-sm font-semibold">
-  {
-    locales.map((item) =>
-      item === locale ? (
-        <span aria-current="true" class="rounded px-1.5 py-1 sm:px-2 text-brand-blue">
-          {localeName[item]}
-        </span>
-      ) : (
-        <a
-          href={localePath[item]}
-          class="rounded px-1.5 py-1 sm:px-2 text-brand-navy/60 transition hover:text-brand-blue"
-        >
-          {localeName[item]}
-        </a>
-      )
-    )
+<details class="lang-switcher sm:relative" data-lang-switcher>
+  <summary
+    aria-label={dict.nav.languageLabel}
+    class="flex cursor-pointer list-none items-center gap-1 whitespace-nowrap rounded px-2 py-1 text-sm font-semibold text-brand-blue transition select-none hover:text-brand-navy [&::-webkit-details-marker]:hidden"
+  >
+    {localeName[locale]}
+    <svg aria-hidden="true" viewBox="0 0 10 6" class="h-1.5 w-2.5 transition-transform" fill="currentColor">
+      <path d="M0 0h10L5 6z"></path>
+    </svg>
+  </summary>
+  <nav
+    aria-label={dict.nav.languageLabel}
+    class="absolute inset-x-4 top-full z-50 mt-2 rounded-lg sm:inset-x-auto sm:right-0 sm:w-48 border border-brand-navy/10 bg-white py-2 shadow-lg"
+  >
+    <ul>
+      {
+        locales.map((item) => (
+          <li>
+            {item === locale ? (
+              <span aria-current="true" class="flex gap-3 px-4 py-1.5 text-sm font-semibold text-brand-blue">
+                <span class="w-6 shrink-0 font-mono text-xs leading-5">{localeName[item]}</span>
+                {localeNative[item]}
+              </span>
+            ) : (
+              <a
+                href={localePath[item]}
+                lang={item}
+                hreflang={item}
+                class="flex gap-3 px-4 py-1.5 text-sm transition hover:bg-brand-navy/5 hover:text-brand-blue"
+              >
+                <span class="w-6 shrink-0 font-mono text-xs leading-5 text-brand-navy/40">{localeName[item]}</span>
+                {localeNative[item]}
+              </a>
+            )}
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+</details>
+
+<style>
+  .lang-switcher[open] summary svg {
+    transform: rotate(180deg);
   }
-</nav>
+</style>
+
+<script>
+  for (const details of document.querySelectorAll<HTMLDetailsElement>('[data-lang-switcher]')) {
+    document.addEventListener('click', (event) => {
+      if (details.open && !details.contains(event.target as Node)) details.open = false;
+    });
+    details.addEventListener('keydown', (event) => {
+      if (event.key !== 'Escape') return;
+      details.open = false;
+      details.querySelector('summary')?.focus();
+    });
+  }
+</script>

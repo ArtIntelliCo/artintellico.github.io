@@ -6,148 +6,124 @@
   /* Тексти взяті з artintellico.com — ті самі, що в index.html */
   const I18N = {
     uk: {
-      title: "ArtIntelliCo — розробка та підтримка ІТ рішень для бізнесу",
-      menu: ["Послуги", "Партнери", "Контакти", "Мова:", "Монітор:"],
-      monitors: { ega: "EGA", green: "Зелений", amber: "Бурштин" },
-      cols: ["Ім'я", "Опис"],
-      fkeys: ["Довідка", "Мова", "Перегляд", "Лист", "", "", "", "", "Монітор", "Вихід"],
-      skip: "Натисніть будь-яку клавішу, щоб пропустити",
       heroTitle: "Ми створюємо ІТ рішення, що працюють на ваш бізнес",
       heroText: "Команда ArtIntelliCo допомагає цифровізувати та автоматизувати ваші бізнес-процеси шляхом розробки та впровадження сучасних ІТ рішень.",
       heroLead: "Для вашого бізнесу ми",
       phrases: ["розробляємо SaaS-платформи", "будуємо CRM та ERP системи", "впроваджуємо штучний інтелект", "переносимо інфраструктуру в хмару"],
       readmeDesc: "Про компанію",
-      hint: "↑↓ вибрати файл   Enter відкрити   F1 довідка",
-      discuss: "Обговорити задачу",
       partnersTitle: "Наші партнери",
       contactTitle: "Розкажіть про вашу задачу",
       contactText: "Якщо у вас є пропозиція щодо співпраці або ви хочете дізнатися більше про наші рішення та досвід — напишіть нам на пошту.",
       emailLabel: "Пошта",
-      write: "Написати листа",
-      copy: "Копіювати адресу",
-      copied: "Адресу скопійовано",
-      copyFailed: "Не вдалося скопіювати. Адреса: " + EMAIL,
-      cancel: "Скасувати",
       copyright: "© 2026 ArtIntelliCo. Усі права захищено.",
       legal: "ТОВ «АртІнтелліко»",
       slogan: "Ми бачили, як зароджувалося IT. Знаємо, як воно працює сьогодні — і розуміємо, куди рухається завтра.",
-      source: "Класична версія сайту",
-      bad: "Невірна команда або ім'я файлу. Введіть HELP.",
-      back: "Введіть NC або натисніть Esc, щоб повернутися до панелей.",
-      help: [
-        "Команди:",
-        "  DIR             список файлів",
-        "  TYPE <файл>     відкрити файл (можна просто ім'я)",
-        "  MAIL            написати нам",
-        "  LANG UK|EN|RU   змінити мову",
-        "  COLOR           змінити монітор",
-        "  CLS             очистити екран",
-        "  VER             версія",
-        "  BOOT            перезавантажити",
-        "  NC              повернутися до панелей",
-        "  COMMAND         консольний режим",
-        "  UNIX            термінал UNIX",
-        "  APPLE           Apple ][",
-        "  LISA            Apple Lisa",
-        "",
-        "Клавіші: ↑↓ Home End Enter F1–F10 Esc Ctrl+O"
-      ]
+      source: "Класична версія сайту"
     },
     en: {
-      title: "ArtIntelliCo — software development and IT support for business",
-      menu: ["Services", "Partners", "Contacts", "Lang:", "Monitor:"],
-      monitors: { ega: "EGA", green: "Green", amber: "Amber" },
-      cols: ["Name", "Description"],
-      fkeys: ["Help", "Lang", "View", "Mail", "", "", "", "", "Monitor", "Quit"],
-      skip: "Press any key to skip",
       heroTitle: "We build IT solutions that work for your business",
       heroText: "The ArtIntelliCo team helps you digitalise and automate business processes by designing and delivering modern IT solutions.",
       heroLead: "For your business we",
       phrases: ["build SaaS platforms", "ship CRM and ERP systems", "put AI to work", "move infrastructure to the cloud"],
       readmeDesc: "About the company",
-      hint: "↑↓ select file   Enter open   F1 help",
-      discuss: "Discuss your project",
       partnersTitle: "Our partners",
       contactTitle: "Tell us about your project",
       contactText: "If you have a partnership proposal or want to know more about our solutions and experience — drop us an email.",
       emailLabel: "Email",
-      write: "Write an email",
-      copy: "Copy address",
-      copied: "Address copied",
-      copyFailed: "Couldn't copy. The address is " + EMAIL,
-      cancel: "Cancel",
       copyright: "© 2026 ArtIntelliCo. All rights reserved.",
       legal: "ArtIntelliCo LLC",
       slogan: "We saw IT being born. We know how it works today — and we understand where it is heading tomorrow.",
-      source: "Classic version of the site",
-      bad: "Bad command or file name. Type HELP.",
-      back: "Type NC or press Esc to return to the panels.",
-      help: [
-        "Commands:",
-        "  DIR             list files",
-        "  TYPE <file>     open a file (or just type its name)",
-        "  MAIL            write to us",
-        "  LANG UK|EN|RU   switch language",
-        "  COLOR           switch monitor",
-        "  CLS             clear screen",
-        "  VER             version",
-        "  BOOT            reboot",
-        "  NC              back to the panels",
-        "  COMMAND         console mode",
-        "  UNIX            UNIX terminal",
-        "  APPLE           Apple ][",
-        "  LISA            Apple Lisa",
-        "",
-        "Keys: ↑↓ Home End Enter F1–F10 Esc Ctrl+O"
-      ]
+      source: "Classic version of the site"
     },
     ru: {
-      title: "ArtIntelliCo — разработка и поддержка ИТ решений для бизнеса",
-      menu: ["Услуги", "Партнёры", "Контакты", "Язык:", "Монитор:"],
-      monitors: { ega: "EGA", green: "Зелёный", amber: "Янтарь" },
-      cols: ["Имя", "Описание"],
-      fkeys: ["Помощь", "Язык", "Просмотр", "Письмо", "", "", "", "", "Монитор", "Выход"],
-      skip: "Нажмите любую клавишу, чтобы пропустить",
       heroTitle: "Мы создаём работающие ИТ решения для вашего бизнеса",
       heroText: "Команда ArtIntelliCo помогает цифровизировать и автоматизировать ваши бизнес-процессы путём разработки и внедрения современных ИТ решений.",
       heroLead: "Для вашего бизнеса мы",
       phrases: ["разрабатываем SaaS-платформы", "строим CRM и ERP системы", "внедряем искусственный интеллект", "переносим инфраструктуру в облако"],
       readmeDesc: "О компании",
-      hint: "↑↓ выбрать файл   Enter открыть   F1 помощь",
-      discuss: "Обсудить задачу",
       partnersTitle: "Наши партнёры",
       contactTitle: "Расскажите о вашей задаче",
       contactText: "Если у вас есть предложение о сотрудничестве или вы хотите узнать больше о наших решениях и опыте — напишите нам на почту.",
       emailLabel: "Почта",
-      write: "Написать письмо",
-      copy: "Копировать адрес",
-      copied: "Адрес скопирован",
-      copyFailed: "Не удалось скопировать. Адрес: " + EMAIL,
-      cancel: "Отмена",
       copyright: "© 2026 ArtIntelliCo. Все права защищены.",
       legal: "ООО «АртИнтеллико»",
       slogan: "Мы видели, как зарождалось IT. Знаем, как оно работает сегодня — и понимаем, куда движется завтра.",
-      source: "Классическая версия сайта",
-      bad: "Неверная команда или имя файла. Введите HELP.",
-      back: "Введите NC или нажмите Esc, чтобы вернуться к панелям.",
-      help: [
-        "Команды:",
-        "  DIR             список файлов",
-        "  TYPE <файл>     открыть файл (можно просто имя)",
-        "  MAIL            написать нам",
-        "  LANG UK|EN|RU   сменить язык",
-        "  COLOR           сменить монитор",
-        "  CLS             очистить экран",
-        "  VER             версия",
-        "  BOOT            перезагрузить",
-        "  NC              вернуться к панелям",
-        "  COMMAND         консольный режим",
-        "  UNIX            терминал UNIX",
-        "  APPLE           Apple ][",
-        "  LISA            Apple Lisa",
-        "",
-        "Клавиши: ↑↓ Home End Enter F1–F10 Esc Ctrl+O"
-      ]
+      source: "Классическая версия сайта"
+    },
+    de: {
+      heroTitle: "Wir entwickeln IT-Lösungen, die für Ihr Unternehmen arbeiten",
+      heroText: "Das Team von ArtIntelliCo hilft Ihnen, Ihre Geschäftsprozesse zu digitalisieren und zu automatisieren: Wir konzipieren moderne IT-Lösungen und führen sie ein.",
+      heroLead: "Was wir für Ihr Unternehmen tun",
+      phrases: ["SaaS-Plattformen entwickeln", "CRM- und ERP-Systeme bauen", "künstliche Intelligenz einsetzen", "Infrastruktur in die Cloud verlagern"],
+      readmeDesc: "Über das Unternehmen",
+      partnersTitle: "Unsere Partner",
+      contactTitle: "Erzählen Sie uns von Ihrem Projekt",
+      contactText: "Wenn Sie uns eine Zusammenarbeit vorschlagen möchten oder mehr über unsere Lösungen und unsere Erfahrung wissen wollen, schreiben Sie uns eine E-Mail.",
+      emailLabel: "E-Mail",
+      copyright: "© 2026 ArtIntelliCo. Alle Rechte vorbehalten.",
+      legal: "ArtIntelliCo LLC",
+      slogan: "Wir haben die Geburt der IT miterlebt. Wir wissen, wie sie heute funktioniert – und verstehen, wohin sie sich morgen entwickelt.",
+      source: "Klassische Version der Website"
+    },
+    fr: {
+      heroTitle: "Nous créons des solutions informatiques qui travaillent pour votre entreprise",
+      heroText: "L'équipe ArtIntelliCo vous aide à numériser et à automatiser vos processus métier en concevant et en déployant des solutions informatiques modernes.",
+      heroLead: "Ce que nous faisons pour votre entreprise",
+      phrases: ["développer des plateformes SaaS", "créer des systèmes CRM et ERP", "mettre l'IA au service de vos processus", "migrer l'infrastructure vers le cloud"],
+      readmeDesc: "À propos de l'entreprise",
+      partnersTitle: "Nos partenaires",
+      contactTitle: "Parlez-nous de votre projet",
+      contactText: "Si vous avez une proposition de partenariat ou souhaitez en savoir plus sur nos solutions et notre expérience, écrivez-nous par e-mail.",
+      emailLabel: "E-mail",
+      copyright: "© 2026 ArtIntelliCo. Tous droits réservés.",
+      legal: "ArtIntelliCo LLC",
+      slogan: "Nous avons vu naître l'informatique. Nous savons comment elle fonctionne aujourd'hui — et nous comprenons où elle va demain.",
+      source: "Version classique du site"
+    },
+    es: {
+      heroTitle: "Creamos soluciones de TI que trabajan para su negocio",
+      heroText: "El equipo de ArtIntelliCo le ayuda a digitalizar y automatizar sus procesos de negocio diseñando e implantando soluciones de TI modernas.",
+      heroLead: "Lo que hacemos por su negocio",
+      phrases: ["desarrollar plataformas SaaS", "crear sistemas CRM y ERP", "poner la IA a trabajar", "llevar la infraestructura a la nube"],
+      readmeDesc: "Sobre la empresa",
+      partnersTitle: "Nuestros socios",
+      contactTitle: "Cuéntenos su proyecto",
+      contactText: "Si tiene una propuesta de colaboración o quiere saber más sobre nuestras soluciones y nuestra experiencia, escríbanos un correo.",
+      emailLabel: "Correo electrónico",
+      copyright: "© 2026 ArtIntelliCo. Todos los derechos reservados.",
+      legal: "ArtIntelliCo LLC",
+      slogan: "Vimos nacer la informática. Sabemos cómo funciona hoy y entendemos hacia dónde va mañana.",
+      source: "Versión clásica del sitio"
+    },
+    pt: {
+      heroTitle: "Criamos soluções de TI que trabalham para o seu negócio",
+      heroText: "A equipa da ArtIntelliCo ajuda-o a digitalizar e automatizar os processos do seu negócio, concebendo e implementando soluções de TI modernas.",
+      heroLead: "O que fazemos pelo seu negócio",
+      phrases: ["desenvolver plataformas SaaS", "criar sistemas CRM e ERP", "pôr a IA a trabalhar", "levar a infraestrutura para a cloud"],
+      readmeDesc: "Sobre a empresa",
+      partnersTitle: "Os nossos parceiros",
+      contactTitle: "Fale-nos do seu projeto",
+      contactText: "Se tem uma proposta de parceria ou quer saber mais sobre as nossas soluções e a nossa experiência, envie-nos um e-mail.",
+      emailLabel: "E-mail",
+      copyright: "© 2026 ArtIntelliCo. Todos os direitos reservados.",
+      legal: "ArtIntelliCo LLC",
+      slogan: "Vimos a informática nascer. Sabemos como funciona hoje — e percebemos para onde caminha amanhã.",
+      source: "Versão clássica do site"
+    },
+    it: {
+      heroTitle: "Realizziamo soluzioni IT che lavorano per la Sua azienda",
+      heroText: "Il team di ArtIntelliCo La aiuta a digitalizzare e automatizzare i processi aziendali, progettando e realizzando soluzioni IT moderne.",
+      heroLead: "Cosa facciamo per la Sua azienda",
+      phrases: ["sviluppare piattaforme SaaS", "realizzare sistemi CRM ed ERP", "mettere al lavoro l'IA", "portare l'infrastruttura nel cloud"],
+      readmeDesc: "Informazioni sull'azienda",
+      partnersTitle: "I nostri partner",
+      contactTitle: "Ci parli del Suo progetto",
+      contactText: "Se ha una proposta di collaborazione o desidera saperne di più sulle nostre soluzioni e sulla nostra esperienza, ci scriva un'e-mail.",
+      emailLabel: "E-mail",
+      copyright: "© 2026 ArtIntelliCo. Tutti i diritti riservati.",
+      legal: "ArtIntelliCo LLC",
+      slogan: "Abbiamo visto nascere l'informatica. Sappiamo come funziona oggi e capiamo dove andrà domani.",
+      source: "Versione classica del sito"
     }
   };
 
@@ -184,7 +160,7 @@
         "  glint                менеджер пакетів",
         "  control-panel        панель керування",
         "  mail                 пошта",
-        "  lang uk|en|ru        мова",
+        "  lang [xx]            мова",
         "  clear, exit",
         "  nc, dos, unix, apple, lisa — інші версії"
       ]
@@ -220,7 +196,7 @@
         "  glint                package manager",
         "  control-panel        control panel",
         "  mail                 mail",
-        "  lang uk|en|ru        language",
+        "  lang [xx]            language",
         "  clear, exit",
         "  nc, dos, unix, apple, lisa — other versions"
       ]
@@ -256,9 +232,189 @@
         "  glint                менеджер пакетов",
         "  control-panel        панель управления",
         "  mail                 почта",
-        "  lang uk|en|ru        язык",
+        "  lang [xx]            язык",
         "  clear, exit",
         "  nc, dos, unix, apple, lisa — другие версии"
+      ]
+    },
+    de: {
+      utilities: "Hilfsprogramme",
+      apps: { xterm: "Xterm", cp: "Systemsteuerung", glint: "Glint", mail: "E-Mail", partners: "Partner", lang: "Sprache", versions: "Andere Versionen der Website" },
+      exit: "Fvwm beenden",
+      ops: ["Verschieben", "Größe ändern", "Nach vorne", "Nach hinten", "Zum Symbol", "Maximieren", "Schließen"],
+      cp: ["Über uns", "Leistungen", "Partner", "Kontakt", "Sprache", "Andere Versionen"],
+      groups: ["Alle Pakete", "Base", "Services"],
+      query: "Abfragen", verify: "Prüfen", install: "Installieren", uninstall: "Entfernen", configure: "Konfigurieren…",
+      count: (n, s) => `${n} Pakete${s ? ", ausgewählt: " + s : ""}`,
+      info: "Paketinformationen",
+      fields: ["Name", "Version", "Release", "Gruppe", "Größe", "Paketersteller", "URL", "Kurzbeschreibung"],
+      notInstalled: "nicht installiert",
+      installing: (n) => `${n} wird installiert…`,
+      installNeed: (n) => `Um „${n}“ zu installieren, erzählen Sie uns von Ihrem Projekt.`,
+      verifyOk: (n) => `${n}: Prüfung bestanden, alle Dateien sind vorhanden.`,
+      uninstallNo: (n) => `${n} kann nicht entfernt werden: Ihr Unternehmen ist auf dieses Paket angewiesen.`,
+      write: "E-Mail schreiben", copy: "Adresse kopieren", copied: "Adresse kopiert.", copyFailed: "Kopieren fehlgeschlagen.",
+      close: "Schließen", ok: "OK",
+      mailTitle: "E-Mail: 1 neue Nachricht", from: "Von", subject: "Betreff",
+      skip: "Drücken Sie eine beliebige Taste, um zu überspringen",
+      startx: "Geben Sie startx ein, um X erneut zu starten.",
+      help: [
+        "Befehle:",
+        "  ls [services]        Dateien",
+        "  cat README           über das Unternehmen",
+        "  cat services/saas    eine Leistung",
+        "  rpm -qa              alle Pakete",
+        "  rpm -qi aic-saas     Paketinformationen",
+        "  glint                Paketmanager",
+        "  control-panel        Systemsteuerung",
+        "  mail                 E-Mail",
+        "  lang [xx]            Sprache",
+        "  clear, exit",
+        "  nc, dos, unix, apple, lisa — andere Versionen"
+      ]
+    },
+    fr: {
+      utilities: "Utilitaires",
+      apps: { xterm: "Xterm", cp: "Panneau de configuration", glint: "Glint", mail: "Courrier", partners: "Partenaires", lang: "Langue", versions: "Autres versions du site" },
+      exit: "Quitter Fvwm",
+      ops: ["Déplacer", "Redimensionner", "Premier plan", "Arrière-plan", "Iconifier", "Agrandir", "Fermer"],
+      cp: ["À propos", "Services", "Partenaires", "Contacts", "Langue", "Autres versions"],
+      groups: ["Tous les paquets", "Base", "Services"],
+      query: "Interroger", verify: "Vérifier", install: "Installer", uninstall: "Désinstaller", configure: "Configurer…",
+      count: (n, s) => `${n} paquets${s ? ", sélectionné : " + s : ""}`,
+      info: "Informations sur le paquet",
+      fields: ["Nom", "Version", "Révision", "Groupe", "Taille", "Empaqueteur", "URL", "Résumé"],
+      notInstalled: "non installé",
+      installing: (n) => `Installation de ${n}…`,
+      installNeed: (n) => `Pour installer « ${n} », parlez-nous de votre projet.`,
+      verifyOk: (n) => `${n} : vérification réussie, tous les fichiers sont en place.`,
+      uninstallNo: (n) => `Impossible de désinstaller ${n} : votre entreprise en a besoin.`,
+      write: "Écrire un e-mail", copy: "Copier l'adresse", copied: "Adresse copiée.", copyFailed: "La copie a échoué.",
+      close: "Fermer", ok: "OK",
+      mailTitle: "Courrier : 1 nouveau message", from: "De", subject: "Objet",
+      skip: "Appuyez sur une touche pour passer",
+      startx: "Tapez startx pour relancer X.",
+      help: [
+        "Commandes :",
+        "  ls [services]        fichiers",
+        "  cat README           à propos de l'entreprise",
+        "  cat services/saas    un service",
+        "  rpm -qa              tous les paquets",
+        "  rpm -qi aic-saas     informations sur le paquet",
+        "  glint                gestionnaire de paquets",
+        "  control-panel        panneau de configuration",
+        "  mail                 courrier",
+        "  lang [xx]            langue",
+        "  clear, exit",
+        "  nc, dos, unix, apple, lisa — autres versions"
+      ]
+    },
+    es: {
+      utilities: "Utilidades",
+      apps: { xterm: "Xterm", cp: "Panel de control", glint: "Glint", mail: "Correo", partners: "Socios", lang: "Idioma", versions: "Otras versiones del sitio" },
+      exit: "Salir de Fvwm",
+      ops: ["Mover", "Cambiar tamaño", "Traer al frente", "Enviar al fondo", "Iconizar", "Maximizar", "Cerrar"],
+      cp: ["Acerca de", "Servicios", "Socios", "Contacto", "Idioma", "Otras versiones"],
+      groups: ["Todos los paquetes", "Base", "Services"],
+      query: "Consultar", verify: "Verificar", install: "Instalar", uninstall: "Desinstalar", configure: "Configurar…",
+      count: (n, s) => `${n} paquetes${s ? ", seleccionado: " + s : ""}`,
+      info: "Información del paquete",
+      fields: ["Nombre", "Versión", "Revisión", "Grupo", "Tamaño", "Empaquetador", "URL", "Resumen"],
+      notInstalled: "no instalado",
+      installing: (n) => `Instalando ${n}…`,
+      installNeed: (n) => `Para instalar «${n}», cuéntenos su proyecto.`,
+      verifyOk: (n) => `${n}: verificación correcta, todos los archivos están en su sitio.`,
+      uninstallNo: (n) => `No se puede desinstalar ${n}: su negocio depende de este paquete.`,
+      write: "Escribir un correo", copy: "Copiar dirección", copied: "Dirección copiada.", copyFailed: "No se pudo copiar.",
+      close: "Cerrar", ok: "Aceptar",
+      mailTitle: "Correo: 1 mensaje nuevo", from: "De", subject: "Asunto",
+      skip: "Pulse cualquier tecla para omitir",
+      startx: "Escriba startx para volver a iniciar X.",
+      help: [
+        "Comandos:",
+        "  ls [services]        archivos",
+        "  cat README           sobre la empresa",
+        "  cat services/saas    un servicio",
+        "  rpm -qa              todos los paquetes",
+        "  rpm -qi aic-saas     información del paquete",
+        "  glint                gestor de paquetes",
+        "  control-panel        panel de control",
+        "  mail                 correo",
+        "  lang [xx]            idioma",
+        "  clear, exit",
+        "  nc, dos, unix, apple, lisa — otras versiones"
+      ]
+    },
+    pt: {
+      utilities: "Utilitários",
+      apps: { xterm: "Xterm", cp: "Painel de controlo", glint: "Glint", mail: "Correio", partners: "Parceiros", lang: "Idioma", versions: "Outras versões do site" },
+      exit: "Sair do Fvwm",
+      ops: ["Mover", "Redimensionar", "Trazer para a frente", "Enviar para trás", "Iconificar", "Maximizar", "Fechar"],
+      cp: ["Sobre nós", "Serviços", "Parceiros", "Contactos", "Idioma", "Outras versões"],
+      groups: ["Todos os pacotes", "Base", "Services"],
+      query: "Consultar", verify: "Verificar", install: "Instalar", uninstall: "Desinstalar", configure: "Configurar…",
+      count: (n, s) => `${n} pacotes${s ? ", selecionado: " + s : ""}`,
+      info: "Informação do pacote",
+      fields: ["Nome", "Versão", "Revisão", "Grupo", "Tamanho", "Empacotador", "URL", "Resumo"],
+      notInstalled: "não instalado",
+      installing: (n) => `A instalar ${n}…`,
+      installNeed: (n) => `Para instalar «${n}», fale-nos do seu projeto.`,
+      verifyOk: (n) => `${n}: verificação concluída, todos os ficheiros estão no lugar.`,
+      uninstallNo: (n) => `Não é possível desinstalar ${n}: o seu negócio depende deste pacote.`,
+      write: "Escrever um e-mail", copy: "Copiar endereço", copied: "Endereço copiado.", copyFailed: "Não foi possível copiar.",
+      close: "Fechar", ok: "OK",
+      mailTitle: "Correio: 1 mensagem nova", from: "De", subject: "Assunto",
+      skip: "Prima qualquer tecla para saltar",
+      startx: "Escreva startx para voltar a iniciar o X.",
+      help: [
+        "Comandos:",
+        "  ls [services]        ficheiros",
+        "  cat README           sobre a empresa",
+        "  cat services/saas    um serviço",
+        "  rpm -qa              todos os pacotes",
+        "  rpm -qi aic-saas     informação do pacote",
+        "  glint                gestor de pacotes",
+        "  control-panel        painel de controlo",
+        "  mail                 correio",
+        "  lang [xx]            idioma",
+        "  clear, exit",
+        "  nc, dos, unix, apple, lisa — outras versões"
+      ]
+    },
+    it: {
+      utilities: "Utilità",
+      apps: { xterm: "Xterm", cp: "Pannello di controllo", glint: "Glint", mail: "Posta", partners: "Partner", lang: "Lingua", versions: "Altre versioni del sito" },
+      exit: "Esci da Fvwm",
+      ops: ["Sposta", "Ridimensiona", "In primo piano", "In secondo piano", "Riduci a icona", "Ingrandisci", "Chiudi"],
+      cp: ["Chi siamo", "Servizi", "Partner", "Contatti", "Lingua", "Altre versioni"],
+      groups: ["Tutti i pacchetti", "Base", "Services"],
+      query: "Interroga", verify: "Verifica", install: "Installa", uninstall: "Disinstalla", configure: "Configura…",
+      count: (n, s) => `${n} pacchetti${s ? ", selezionato: " + s : ""}`,
+      info: "Informazioni sul pacchetto",
+      fields: ["Nome", "Versione", "Rilascio", "Gruppo", "Dimensione", "Autore pacchetto", "URL", "Sommario"],
+      notInstalled: "non installato",
+      installing: (n) => `Installazione di ${n}…`,
+      installNeed: (n) => `Per installare «${n}», ci parli del Suo progetto.`,
+      verifyOk: (n) => `${n}: verifica superata, tutti i file sono al loro posto.`,
+      uninstallNo: (n) => `Impossibile disinstallare ${n}: la Sua azienda ha bisogno di questo pacchetto.`,
+      write: "Scrivi un'e-mail", copy: "Copia indirizzo", copied: "Indirizzo copiato.", copyFailed: "Copia non riuscita.",
+      close: "Chiudi", ok: "OK",
+      mailTitle: "Posta: 1 nuovo messaggio", from: "Da", subject: "Oggetto",
+      skip: "Premere un tasto qualsiasi per saltare",
+      startx: "Digitare startx per riavviare X.",
+      help: [
+        "Comandi:",
+        "  ls [services]        file",
+        "  cat README           informazioni sull'azienda",
+        "  cat services/saas    un servizio",
+        "  rpm -qa              tutti i pacchetti",
+        "  rpm -qi aic-saas     informazioni sul pacchetto",
+        "  glint                gestore dei pacchetti",
+        "  control-panel        pannello di controllo",
+        "  mail                 posta",
+        "  lang [xx]            lingua",
+        "  clear, exit",
+        "  nc, dos, unix, apple, lisa — altre versioni"
       ]
     }
   };
@@ -555,12 +711,503 @@
           result: "Система работает, а команда знает, как она устроена."
         }
       ]
+    },
+    de: {
+      files: "Paketinhalt",
+      result: "Nach der Installation",
+      lead: "Pakete der Gruppe Services werden passend zur Aufgabe installiert, nicht umgekehrt: Sprache und Plattform wählen wir erst, wenn klar ist, was zu tun ist. Manchmal ist ein fertiger Abodienst die beste Antwort, und dann sagen wir das auch.",
+      pkgs: [
+        {
+          summary: "Konzeption von IT-Lösungen",
+          desc: [
+            "Wird als Erstes installiert, noch bevor es Code gibt. Wir klären, welches Problem das System lösen soll, und übersetzen es in Anforderungen, die Fachabteilung und Entwickler gleich verstehen.",
+            "Die teuersten Fehler in IT-Projekten entstehen, bevor jemand programmiert: Das System wird für ein Problem gebaut, das niemand klar formuliert hat. Deshalb sprechen wir mit allen, die damit arbeiten werden (Buchhaltung, Lager, Vertrieb), nicht nur mit der Person, die unterschreibt. Manchmal lautet das Ergebnis: nichts entwickeln, sondern ein vorhandenes Produkt anpassen. Auch das ist ein Ergebnis."
+          ],
+          files: ["Interviews mit Mitarbeitenden und Analyse der Abläufe", "fachliche Anforderungen und Nutzungsszenarien", "Vergleich fertiger Produkte mit Individualentwicklung", "Pflichtenheft mit Zeit- und Budgetschätzung je Phase"],
+          result: "Ein Dokument, nach dem jedes Team, unseres oder ein anderes, den Aufwand schätzen und mit der Arbeit beginnen kann."
+        },
+        {
+          summary: "SaaS-Entwicklung",
+          desc: [
+            "Eine SaaS-Plattform aus einer Hand: von der ersten Version für Pilotkunden bis zum Dienst, in dem jeder Kunde seinen eigenen Bereich, seinen Tarif und sein Kundenkonto hat.",
+            "Bei SaaS verdient nicht der Code das Geld, sondern der Weg des neuen Kunden: registrieren, bezahlen, loslegen und nie beim Support anrufen. Mandantenfähigkeit, Abrechnung und Zugriffsrechte sind in diesem Paket vom ersten Tag an enthalten, denn sie nachzurüsten, wenn die Kunden schon drin sind, kostet ein Vielfaches. Die erste Version geht früh raus: Echte Nutzer zeigen schnell, was überflüssig war."
+          ],
+          files: ["mandantenfähige Architektur, getrennte Kundendaten", "Registrierung, Tarife, Abonnements, Onlinezahlung", "Kundenkonten, Rollen und Zugriffsrechte", "Integrationen und eine offene API für Kunden", "Skalierung bei wachsender Last"],
+          result: "Ein Produkt, das im Abo verkauft wird, statt eines Projekts, das jedes Mal von Hand eingeführt wird."
+        },
+        {
+          summary: "Webentwicklung",
+          desc: [
+            "Unternehmenswebsites, Marktplätze, Onlineshops, Buchungssysteme, interne Webanwendungen. Vorlagen sind im Paket nicht enthalten.",
+            "Eine Unternehmenswebsite wird an Anfragen und Bestellungen gemessen, nicht am Design im Portfolio. Deshalb legen wir vor Arbeitsbeginn fest, was als Ergebnis zählt, und richten die Webanalyse vor dem Start ein. Die Technik richtet sich nach der Aufgabe: Eine Landingpage braucht keine schwere Plattform, und ein Marktplatz passt in keinen Baukasten."
+          ],
+          files: ["Prototyp und Oberflächendesign", "Frontend, Backend, Administrationsbereich", "Anbindung von Zahlung, Versand, CRM und Buchhaltung", "SEO-Grundlagen, Ladezeit, Webanalyse", "Start und laufende Betreuung"],
+          result: "Ein Webdienst, bei dem man sieht, wie viele Anfragen und wie viel Umsatz er bringt."
+        },
+        {
+          summary: "Mobile Apps",
+          desc: [
+            "Apps für iOS und Android, zusammen mit Serverteil und Administrationsbereich.",
+            "Eine App lohnt sich, wenn Kunden regelmäßig wiederkommen: nachbestellen, einen Status prüfen, Punkte sammeln. Wer nur einmal im Jahr vorbeischaut, ist mit einer guten mobilen Website günstiger bedient, und das sagen wir vor Arbeitsbeginn. Ob nativ oder plattformübergreifend, entscheiden das Budget und die Frage, ob die App Kamera, Standort und Offlinebetrieb braucht."
+          ],
+          files: ["Apps für iOS und Android", "Serverteil und API", "Administrationsbereich für Inhalte, Bestellungen und Nutzer", "Push-Benachrichtigungen und Analyse", "Veröffentlichung im App Store und bei Google Play"],
+          result: "Die App besteht die Prüfung der Stores, und Ihr Team betreut sie ohne Entwickler."
+        },
+        {
+          summary: "KI-Lösungen",
+          desc: [
+            "Automatisierung von Geschäftsprozessen mit KI-Agenten auf Basis von künstlicher Intelligenz und maschinellem Lernen. Ein Agent erledigt Routineschritte selbst: Anfragen sortieren, das CRM befüllen, Antworten an Kunden vorbereiten.",
+            "Wir sehen KI skeptischer als viele: Die Hälfte der Ideen nach dem Motto „Bauen wir ein neuronales Netz ein“ deckt gewöhnliche Automatisierung ab. Wo Menschen aber stundenlang E-Mails, Dokumente und Anfragen sortieren, nehmen Sprachmodelle die Routine tatsächlich ab. Wir beginnen mit einem Pilotprojekt auf Ihren Daten, sodass Sie die Trefferquote kennen, bevor die eigentliche Entwicklung beginnt."
+          ],
+          files: ["KI-Agenten für Routineschritte im Prozess", "Chatbots und Assistenten für Kunden und Mitarbeitende", "Dokumentenerkennung und Datenextraktion", "Klassifizierung von Anfragen, Suche in der Wissensdatenbank", "Bedarfsprognosen und Datenanalyse", "Pilotprojekt mit gemessener Qualität auf Ihren Daten"],
+          result: "Einen Prozess, den bisher Menschen erledigt haben, führt jetzt das System aus. Das letzte Wort hat weiterhin ein Mensch."
+        },
+        {
+          summary: "CRM- und ERP-Entwicklung",
+          desc: [
+            "CRM und ERP, gebaut um Ihre Abläufe herum. Abwärtskompatibilität mit „Prozess an das System angepasst“ wird nicht unterstützt.",
+            "Ein Standard-CRM ist gut, solange Ihr Ablauf dem Standard ähnelt. Wenn der Vertrieb die halbe Arbeit in Tabellen erledigt, weil das System „das nicht kann“, ist ein eigenes System günstiger. Wir übernehmen Daten aus Altsystemen und Tabellen und führen das System Abteilung für Abteilung ein, damit die Arbeit keinen Tag stillsteht."
+          ],
+          files: ["Module für Vertrieb, Lager, Produktion, Finanzen, je nach Bedarf", "Rollen, Zugriffsrechte, Änderungsprotokoll", "Berichte und Dashboards für die Geschäftsführung", "Datenübernahme aus Tabellen und Altsystemen", "Anbindung an Buchhaltung, Telefonie und E-Mail"],
+          result: "Ein System statt eines Tabellen-Zoos. Die Geschäftsführung sieht den Stand der Dinge ohne wöchentliche Berichte aus jeder Abteilung."
+        },
+        {
+          summary: "Cloud-Lösungen",
+          desc: [
+            "Wir verlagern Ihre Infrastruktur ganz oder teilweise zu Amazon Web Services und betreuen sie danach, damit sie läuft und nicht grundlos teurer wird.",
+            "Die Cloud ist nicht immer günstiger als ein eigener Server. Sie lohnt sich bei schwankender Last, wenn Ausfallsicherheit gefragt ist oder neue Umgebungen in Minuten statt in einer Woche bereitstehen sollen. Deshalb beginnt die Installation mit einem Audit und einer Kostenschätzung, und der Umzug erfolgt in Etappen, mit einem Rückfallplan für jeden Schritt."
+          ],
+          files: ["Infrastruktur-Audit und Kostenschätzung", "AWS-Architektur und Migrationsplan", "Umzug von Servern, Datenbanken und Dateien", "Datensicherung und Monitoring", "Kostenoptimierung nach dem Umzug"],
+          result: "Eine Infrastruktur, die den Ausfall eines Servers übersteht, und eine Cloud-Rechnung, die nachvollziehbar ist."
+        },
+        {
+          summary: "Unternehmensinfrastruktur auf Red Hat",
+          desc: [
+            "IT-Infrastruktur des Unternehmens auf Red Hat: Server mit Red Hat Enterprise Linux, die Containerplattform OpenShift, Automatisierung mit Ansible.",
+            "Red Hat wählt man, wenn die Infrastruktur jahrelang laufen und Audits bestehen soll, statt nur im Kopf eines einzigen Administrators zu existieren. Die Subskription rechnet sich durch den Herstellersupport und den langen Lebenszyklus: Red Hat Enterprise Linux wird zehn Jahre lang unterstützt. Wir planen für Ihre Lasten und beschreiben die Serverkonfiguration in Ansible, sodass sich jeder Server aus einem Playbook neu aufbauen lässt. Red Hat ist unser Partner, daher helfen wir auch bei Subskriptionen und Herstellersupport."
+          ],
+          files: ["Audit der vorhandenen Server und Migrationsplan", "Red Hat Enterprise Linux, Updates über Red Hat Satellite", "die Containerplattform OpenShift", "Automatisierung von Konfiguration und Deployment mit Ansible", "Benutzerkonten und Zugriff: Identity Management", "Monitoring, Datensicherung, Dokumentation"],
+          result: "Eine Infrastruktur, die sich prüfen, reproduzieren und an ein anderes Team übergeben lässt, ohne dass Wissen verloren geht."
+        },
+        {
+          summary: "APIs und Integrationen",
+          desc: [
+            "APIs für Ihre IT-Systeme und Anbindungen an die Dienste, die Sie bereits nutzen.",
+            "Das Bild, das wir am häufigsten sehen: Daten werden doppelt erfasst. Bestellungen von der Website werden von Hand ins Buchhaltungssystem übertragen, Zahlungen in einer Tabelle abgeglichen. Eine Integration nimmt diese Arbeit ab, samt den Fehlern, die sie verursacht. Monitoring ist fester Bestandteil des Pakets: Integrationen brechen leise, wenn ein Partner seine API ändert, und davon erfährt man besser vom System als vom Kunden."
+          ],
+          files: ["Entwurf und Dokumentation von APIs", "Anbindung von Zahlungsanbietern, Versand, CRM und Buchhaltung", "Datenaustausch zwischen internen Systemen", "Warteschlangen und Wiederholversuche bei Fehlern", "Monitoring und Benachrichtigungen"],
+          result: "Daten werden einmal erfasst und gelangen von selbst überall dorthin, wo sie gebraucht werden."
+        },
+        {
+          summary: "Technischer Support",
+          desc: [
+            "Betreuung und Weiterentwicklung Ihrer IT-Systeme, auch solcher, die nicht von uns stammen.",
+            "Fehlerbehebung ist nur ein Teil des Pakets. Dazu gehören auch Updates, die Sicherheitslücken schließen, Monitoring, das ein Problem vor den Nutzern bemerkt, und kleine Verbesserungen nebenbei. Stammt das System von einem anderen Dienstleister, beginnen wir mit einem Audit und einer Dokumentation: Ohne sie wird jede Änderung zum Glücksspiel."
+          ],
+          files: ["Überwachung von Verfügbarkeit und Fehlern", "Fehlerbehebung und Sicherheitsupdates", "Datensicherung und Wiederherstellungstests", "geplante Verbesserungen und neue Funktionen", "Audit und Dokumentation fremder Systeme"],
+          result: "Das System läuft, und das Team weiß, wie es aufgebaut ist."
+        }
+      ]
+    },
+    fr: {
+      files: "Contenu du paquet",
+      result: "Après l'installation",
+      lead: "Les paquets du groupe Services s'installent en fonction de la tâche, et non l'inverse : nous choisissons le langage et la plateforme une fois que l'on sait ce qu'il faut faire. Parfois, la meilleure réponse est un service sur abonnement déjà existant, et dans ce cas nous vous le dirons.",
+      pkgs: [
+        {
+          summary: "Conception de solutions informatiques",
+          desc: [
+            "À installer en premier, avant la moindre ligne de code. Nous cernons le problème que le système doit résoudre et le traduisons en exigences que le métier et les développeurs lisent de la même façon.",
+            "Les erreurs les plus coûteuses d'un projet informatique se commettent avant même la programmation : on construit le système pour un problème que personne n'a clairement formulé. Nous parlons donc avec tous ceux qui l'utiliseront (comptabilité, entrepôt, commerciaux), pas seulement avec la personne qui signe. Il arrive que la conclusion soit de ne rien développer et de paramétrer un produit existant. C'est aussi un résultat."
+          ],
+          files: ["entretiens avec le personnel et analyse des processus", "exigences métier et scénarios d'utilisation", "comparaison des produits existants et du développement sur mesure", "cahier des charges avec estimation des délais et du budget par phase"],
+          result: "Un document à partir duquel n'importe quelle équipe, la nôtre ou une autre, peut chiffrer le travail et le commencer."
+        },
+        {
+          summary: "Développement SaaS",
+          desc: [
+            "Une plateforme SaaS clés en main : de la première version pour les clients pilotes jusqu'au service où chaque client dispose de son espace, de ses formules et de son compte.",
+            "En SaaS, ce n'est pas le code qui rapporte de l'argent, c'est le parcours du nouveau client : il s'inscrit, il paie, il commence à travailler et n'appelle jamais le support. Le multi-locataire, la facturation et les droits d'accès font partie de ce paquet dès le premier jour, car les ajouter quand les clients sont déjà là coûte plusieurs fois plus cher. La première version sort tôt : les vrais utilisateurs montrent vite ce qui était superflu."
+          ],
+          files: ["architecture multi-locataire, données clients isolées", "inscription, formules, abonnements, paiement en ligne", "espaces clients, rôles et droits d'accès", "intégrations et API publique pour les clients", "montée en charge au fil de la croissance"],
+          result: "Un produit vendu par abonnement, et non un projet déployé à la main à chaque fois."
+        },
+        {
+          summary: "Développement web",
+          desc: [
+            "Sites d'entreprise, places de marché, boutiques en ligne, systèmes de réservation, outils web internes. Aucun modèle tout fait dans le paquet.",
+            "Un site d'entreprise se juge aux demandes et aux commandes, pas à son allure dans un portfolio. Avant de commencer, nous fixons donc ce qui compte comme résultat, et l'analytique est en place avant la mise en ligne. La technologie dépend de la tâche : une page d'atterrissage n'a pas besoin d'une plateforme lourde, et une place de marché ne tient pas dans un constructeur de sites."
+          ],
+          files: ["prototype et conception des interfaces", "frontend, backend, interface d'administration", "intégrations avec le paiement, la livraison, le CRM et la comptabilité", "bases du référencement, vitesse de chargement, analytique", "mise en ligne et suivi"],
+          result: "Un service web dont on voit combien de demandes et de chiffre d'affaires il rapporte."
+        },
+        {
+          summary: "Applications mobiles",
+          desc: [
+            "Applications iOS et Android, livrées avec la partie serveur et une interface d'administration.",
+            "Une application se justifie quand les clients reviennent régulièrement : pour recommander, suivre un statut, cumuler des points. S'ils viennent une fois par an, un bon site mobile coûte moins cher, et nous vous le dirons avant de commencer. Natif ou multiplateforme : le choix dépend du budget et du besoin d'accéder à l'appareil photo, à la localisation et au mode hors ligne."
+          ],
+          files: ["applications iOS et Android", "partie serveur et API", "interface d'administration pour les contenus, les commandes et les utilisateurs", "notifications push et statistiques", "publication sur l'App Store et Google Play"],
+          result: "L'application passe la validation des stores, et votre équipe la gère sans développeurs."
+        },
+        {
+          summary: "Solutions d'intelligence artificielle",
+          desc: [
+            "Automatisation des processus métier par des agents d'IA, fondés sur l'intelligence artificielle et l'apprentissage automatique. L'agent se charge lui-même des étapes routinières : trier les demandes, remplir le CRM, préparer les réponses aux clients.",
+            "Nous sommes plus sceptiques que beaucoup à l'égard de l'IA : la moitié des idées du type « ajoutons un réseau de neurones » se règlent par une automatisation ordinaire. Mais là où des personnes passent des heures à trier e-mails, documents et demandes, les modèles de langage suppriment vraiment la routine. Nous commençons par un pilote sur vos données : vous voyez les chiffres de précision avant le développement principal."
+          ],
+          files: ["agents d'IA pour les étapes routinières des processus", "chatbots et assistants pour les clients et le personnel", "reconnaissance de documents et extraction de données", "classement des demandes, recherche dans la base de connaissances", "prévision de la demande et analyse de données", "pilote avec mesure de la qualité sur vos données"],
+          result: "Un processus autrefois assuré par des personnes est désormais exécuté par le système. Le dernier mot revient toujours à un humain."
+        },
+        {
+          summary: "Développement CRM et ERP",
+          desc: [
+            "CRM et ERP construits autour de vos processus. La rétrocompatibilité avec « le processus plié au système » n'est pas prise en charge.",
+            "Un CRM standard convient tant que votre processus ressemble au standard. Si les commerciaux gèrent la moitié de leur travail dans des tableurs parce que le système « ne sait pas faire », un outil sur mesure reviendra moins cher. Nous reprenons les données des anciens systèmes et des tableurs, et déployons service par service pour que le travail ne s'arrête pas un seul jour."
+          ],
+          files: ["modules ventes, stock, production, finances, selon les besoins", "rôles, droits d'accès, journal des actions", "rapports et tableaux de bord pour la direction", "reprise des données depuis les tableurs et les anciens systèmes", "intégration avec la comptabilité, la téléphonie et la messagerie"],
+          result: "Un seul système au lieu d'une ménagerie de tableurs. La direction voit où en sont les choses sans rapports hebdomadaires de chaque service."
+        },
+        {
+          summary: "Solutions cloud",
+          desc: [
+            "Nous migrons votre infrastructure, en totalité ou en partie, vers Amazon Web Services et nous en occupons ensuite, pour qu'elle fonctionne et ne coûte pas plus cher sans raison.",
+            "Le cloud n'est pas toujours moins cher qu'un serveur à soi. Il devient rentable quand la charge varie fortement, quand il faut de la tolérance aux pannes ou quand de nouveaux environnements doivent être prêts en quelques minutes plutôt qu'en une semaine. L'installation commence donc par un audit et une estimation des coûts, et la migration se fait par étapes, avec un plan de retour arrière à chacune."
+          ],
+          files: ["audit de l'infrastructure et estimation des coûts", "architecture AWS et plan de migration", "transfert des serveurs, des bases de données et des fichiers", "sauvegardes et supervision", "optimisation des coûts après la migration"],
+          result: "Une infrastructure qui survit à la panne d'un serveur, et une facture cloud qui a du sens."
+        },
+        {
+          summary: "Infrastructure d'entreprise sous Red Hat",
+          desc: [
+            "L'infrastructure informatique de l'entreprise sous Red Hat : serveurs sous Red Hat Enterprise Linux, plateforme de conteneurs OpenShift, automatisation avec Ansible.",
+            "On choisit Red Hat quand l'infrastructure doit tourner pendant des années et passer des audits, au lieu de ne reposer que sur la mémoire d'un seul administrateur. L'abonnement se rentabilise par le support de l'éditeur et un long cycle de vie : Red Hat Enterprise Linux est maintenu pendant dix ans. Nous concevons pour vos charges et décrivons la configuration des serveurs dans Ansible, si bien que tout serveur peut être reconstruit à partir d'un playbook. Red Hat est notre partenaire : nous vous aidons aussi pour les abonnements et le support de l'éditeur."
+          ],
+          files: ["audit des serveurs existants et plan de migration", "Red Hat Enterprise Linux, mises à jour via Red Hat Satellite", "la plateforme de conteneurs OpenShift", "automatisation de la configuration et du déploiement avec Ansible", "comptes et accès : Identity Management", "supervision, sauvegardes, documentation"],
+          result: "Une infrastructure que l'on peut auditer, reproduire et confier à une autre équipe sans perdre le savoir accumulé."
+        },
+        {
+          summary: "API et intégrations",
+          desc: [
+            "Des API pour vos systèmes informatiques et des liaisons avec les services que vous utilisez déjà.",
+            "Ce que nous voyons le plus souvent : des données saisies deux fois. Les commandes du site retapées dans la comptabilité, les paiements rapprochés dans un tableur. Une intégration supprime ce travail, et avec lui les erreurs qu'il provoque. La supervision fait obligatoirement partie du paquet : les intégrations cassent en silence quand un partenaire modifie son API, et mieux vaut l'apprendre du système que d'un client."
+          ],
+          files: ["conception et documentation des API", "intégrations avec les prestataires de paiement, la livraison, le CRM et la comptabilité", "échange de données entre systèmes internes", "files d'attente et nouvelles tentatives en cas d'échec", "supervision et alertes"],
+          result: "Les données sont saisies une seule fois et arrivent d'elles-mêmes partout où elles sont utiles."
+        },
+        {
+          summary: "Support technique",
+          desc: [
+            "Maintenance et évolution de vos systèmes informatiques, y compris ceux que nous n'avons pas développés.",
+            "La correction de bogues n'est qu'une partie du paquet. Il comprend aussi les mises à jour qui comblent les failles, une supervision qui repère un problème avant les utilisateurs et de petites améliorations au fil de l'eau. Si le système vient d'un autre prestataire, nous commençons par un audit et une documentation : sans elle, chaque modification est un pari."
+          ],
+          files: ["supervision de la disponibilité et des erreurs", "correction de bogues et mises à jour de sécurité", "sauvegardes et tests de restauration", "améliorations et nouvelles fonctions planifiées", "audit et documentation de systèmes développés par d'autres"],
+          result: "Le système fonctionne, et l'équipe sait comment il est construit."
+        }
+      ]
+    },
+    es: {
+      files: "Contenido del paquete",
+      result: "Tras la instalación",
+      lead: "Los paquetes del grupo Services se instalan a la medida de la tarea, y no al revés: elegimos el lenguaje y la plataforma cuando ya está claro qué hay que hacer. A veces la mejor respuesta es un servicio de suscripción ya existente, y entonces se lo diremos.",
+      pkgs: [
+        {
+          summary: "Concepto de la solución de TI",
+          desc: [
+            "Se instala el primero, antes de que exista una sola línea de código. Averiguamos qué problema debe resolver el sistema y lo convertimos en requisitos que el negocio y los desarrolladores entienden de la misma manera.",
+            "Los errores más caros de un proyecto de TI se cometen antes de empezar a programar: el sistema se construye para un problema que nadie formuló con claridad. Por eso hablamos con todos los que lo van a usar (contabilidad, almacén, comerciales), no solo con quien firma. A veces la conclusión es no desarrollar nada y configurar un producto existente. Eso también es un resultado."
+          ],
+          files: ["entrevistas con el personal y análisis de los procesos", "requisitos de negocio y escenarios de uso", "comparación de productos existentes con un desarrollo a medida", "especificación técnica con estimación de plazos y presupuesto por fases"],
+          result: "Un documento con el que cualquier equipo, el nuestro u otro, puede presupuestar el trabajo y ponerse manos a la obra."
+        },
+        {
+          summary: "Desarrollo SaaS",
+          desc: [
+            "Una plataforma SaaS llave en mano: desde la primera versión para clientes piloto hasta un servicio en el que cada cliente tiene su propio espacio, sus planes y su área privada.",
+            "En SaaS el dinero no lo genera el código, sino el recorrido del cliente nuevo: se registra, paga, empieza a trabajar y nunca llama a soporte. La arquitectura multiinquilino, la facturación y los permisos vienen en este paquete desde el primer día, porque añadirlos cuando los clientes ya están dentro cuesta varias veces más. La primera versión sale pronto: los usuarios reales enseguida muestran lo que sobraba."
+          ],
+          files: ["arquitectura multiinquilino, datos de clientes aislados", "registro, planes, suscripciones, pago en línea", "áreas privadas de clientes, roles y permisos", "integraciones y una API pública para clientes", "escalado a medida que crece la carga"],
+          result: "Un producto que se vende por suscripción, no un proyecto que se implanta a mano cada vez."
+        },
+        {
+          summary: "Desarrollo web",
+          desc: [
+            "Sitios corporativos, marketplaces, tiendas en línea, sistemas de reservas, herramientas web internas. El paquete no incluye plantillas.",
+            "Un sitio de empresa se juzga por las solicitudes y los pedidos, no por cómo luce en un portafolio. Por eso, antes de empezar fijamos qué cuenta como resultado y dejamos la analítica configurada antes del lanzamiento. La tecnología depende de la tarea: una página de aterrizaje no necesita una plataforma pesada, y un marketplace no cabe en un creador de sitios."
+          ],
+          files: ["prototipo y diseño de interfaces", "frontend, backend, panel de administración", "integraciones con pagos, envíos, CRM y contabilidad", "base de SEO, velocidad de carga, analítica", "lanzamiento y mantenimiento"],
+          result: "Un servicio web en el que se ve cuántas solicitudes y cuántos ingresos aporta."
+        },
+        {
+          summary: "Aplicaciones móviles",
+          desc: [
+            "Aplicaciones para iOS y Android, junto con la parte de servidor y un panel de administración.",
+            "Una aplicación compensa cuando los clientes vuelven con regularidad: para repetir un pedido, consultar un estado o acumular puntos. Si le visitan una vez al año, un buen sitio móvil sale más barato, y se lo diremos antes de empezar. Nativa o multiplataforma: lo deciden el presupuesto y si la aplicación necesita cámara, ubicación y modo sin conexión."
+          ],
+          files: ["aplicaciones para iOS y Android", "parte de servidor y API", "panel de administración para contenidos, pedidos y usuarios", "notificaciones push y analítica", "publicación en App Store y Google Play"],
+          result: "La aplicación supera la revisión de las tiendas y su equipo la gestiona sin desarrolladores."
+        },
+        {
+          summary: "Soluciones con inteligencia artificial",
+          desc: [
+            "Automatización de procesos de negocio con agentes de IA, basados en inteligencia artificial y aprendizaje automático. El agente se encarga por sí mismo de los pasos rutinarios: clasificar solicitudes, rellenar el CRM, preparar respuestas a los clientes.",
+            "Somos más escépticos con la IA que la mayoría: la mitad de las ideas del tipo «pongamos una red neuronal» se resuelven con automatización corriente. Pero donde hay personas que pasan horas clasificando correos, documentos y solicitudes, los modelos de lenguaje eliminan la rutina de verdad. Empezamos con un piloto sobre sus datos, así que verá las cifras de precisión antes del desarrollo principal."
+          ],
+          files: ["agentes de IA para los pasos rutinarios del proceso", "chatbots y asistentes para clientes y empleados", "reconocimiento de documentos y extracción de datos", "clasificación de solicitudes, búsqueda en la base de conocimiento", "previsión de la demanda y análisis de datos", "un piloto con la calidad medida sobre sus datos"],
+          result: "Un proceso que antes hacían personas lo ejecuta ahora el sistema. La última palabra sigue siendo de una persona."
+        },
+        {
+          summary: "Desarrollo de CRM y ERP",
+          desc: [
+            "CRM y ERP construidos en torno a sus procesos. No se admite la compatibilidad con «el proceso adaptado al sistema».",
+            "Un CRM estándar sirve mientras su proceso se parezca al estándar. Si los comerciales llevan la mitad del trabajo en hojas de cálculo porque el sistema «no permite hacerlo», uno propio le saldrá más barato. Migramos los datos de los sistemas antiguos y de las hojas de cálculo e implantamos departamento por departamento, para que el trabajo no se detenga ni un día."
+          ],
+          files: ["módulos de ventas, almacén, producción y finanzas, según se necesiten", "roles, permisos, registro de actividad", "informes y cuadros de mando para la dirección", "migración de datos desde hojas de cálculo y sistemas antiguos", "integración con contabilidad, telefonía y correo"],
+          result: "Un solo sistema en lugar de un zoológico de hojas de cálculo. La dirección ve cómo van las cosas sin informes semanales de cada departamento."
+        },
+        {
+          summary: "Soluciones en la nube",
+          desc: [
+            "Trasladamos su infraestructura, entera o por partes, a Amazon Web Services y la cuidamos después, para que funcione y no se encarezca sin motivo.",
+            "La nube no siempre es más barata que un servidor propio. Compensa cuando la carga sube y baja, cuando se necesita tolerancia a fallos o cuando los nuevos entornos deben estar listos en minutos y no en una semana. Por eso la instalación empieza con una auditoría y un cálculo de costes, y la migración se hace por etapas, con un plan de vuelta atrás en cada paso."
+          ],
+          files: ["auditoría de la infraestructura y cálculo de costes", "arquitectura en AWS y plan de migración", "traslado de servidores, bases de datos y archivos", "copias de seguridad y monitorización", "optimización de costes tras la migración"],
+          result: "Una infraestructura que sobrevive a la caída de un servidor y una factura de la nube que tiene sentido."
+        },
+        {
+          summary: "Infraestructura empresarial con Red Hat",
+          desc: [
+            "La infraestructura de TI de la empresa con Red Hat: servidores con Red Hat Enterprise Linux, la plataforma de contenedores OpenShift, automatización con Ansible.",
+            "Red Hat se elige cuando la infraestructura debe funcionar durante años y superar auditorías, en lugar de depender de la memoria de un solo administrador. La suscripción se amortiza con el soporte del fabricante y un ciclo de vida largo: Red Hat Enterprise Linux tiene soporte durante diez años. Diseñamos para sus cargas y describimos la configuración de los servidores en Ansible, de modo que cualquier servidor puede reconstruirse a partir de un playbook. Red Hat es nuestro socio, así que también le ayudamos con las suscripciones y el soporte del fabricante."
+          ],
+          files: ["auditoría de los servidores actuales y plan de migración", "Red Hat Enterprise Linux, actualizaciones mediante Red Hat Satellite", "la plataforma de contenedores OpenShift", "automatización de la configuración y el despliegue con Ansible", "cuentas y accesos: Identity Management", "monitorización, copias de seguridad, documentación"],
+          result: "Una infraestructura que se puede auditar, reproducir y entregar a otro equipo sin perder lo que se sabe de ella."
+        },
+        {
+          summary: "API e integraciones",
+          desc: [
+            "API para sus sistemas de TI y conexiones con los servicios que ya utiliza.",
+            "Lo que vemos con más frecuencia: datos introducidos dos veces. Los pedidos de la web se vuelven a teclear en el sistema contable y los pagos se cuadran en una hoja de cálculo. Una integración elimina ese trabajo junto con los errores que provoca. La monitorización forma parte obligatoria del paquete: las integraciones se rompen en silencio cuando un socio cambia su API, y es mejor enterarse por el sistema que por un cliente."
+          ],
+          files: ["diseño y documentación de API", "integraciones con pasarelas de pago, envíos, CRM y contabilidad", "intercambio de datos entre sistemas internos", "colas y reintentos ante fallos", "monitorización y alertas"],
+          result: "Los datos se introducen una sola vez y llegan por sí solos a donde hacen falta."
+        },
+        {
+          summary: "Soporte técnico",
+          desc: [
+            "Soporte y evolución de sus sistemas de TI, incluidos los que no hemos desarrollado nosotros.",
+            "Corregir errores es solo una parte del paquete. También incluye actualizaciones que cierran vulnerabilidades, una monitorización que detecta un problema antes que los usuarios y pequeñas mejoras sobre la marcha. Si el sistema viene de otro proveedor, empezamos con una auditoría y documentación: sin ella, cada cambio es una apuesta."
+          ],
+          files: ["monitorización de la disponibilidad y de los errores", "corrección de errores y actualizaciones de seguridad", "copias de seguridad y pruebas de restauración", "mejoras y nuevas funciones planificadas", "auditoría y documentación de sistemas de otros proveedores"],
+          result: "El sistema funciona y el equipo sabe cómo está construido."
+        }
+      ]
+    },
+    pt: {
+      files: "Conteúdo do pacote",
+      result: "Após a instalação",
+      lead: "Os pacotes do grupo Services instalam-se à medida da tarefa, e não o contrário: escolhemos a linguagem e a plataforma quando já está claro o que é preciso fazer. Por vezes, a melhor resposta é um serviço por subscrição já existente, e nesse caso dizemo-lo.",
+      pkgs: [
+        {
+          summary: "Conceção de soluções de TI",
+          desc: [
+            "Instala-se primeiro, antes de existir qualquer código. Percebemos que problema o sistema tem de resolver e traduzimo-lo em requisitos que o negócio e os programadores leem da mesma maneira.",
+            "Os erros mais caros de um projeto de TI cometem-se antes de alguém começar a programar: o sistema é construído para um problema que ninguém formulou com clareza. Por isso falamos com todos os que o vão usar (contabilidade, armazém, comerciais), e não apenas com quem assina. Por vezes, a conclusão é não desenvolver nada e configurar um produto existente. Também isso é um resultado."
+          ],
+          files: ["entrevistas com os colaboradores e análise dos processos", "requisitos de negócio e cenários de utilização", "comparação de produtos existentes com desenvolvimento por medida", "caderno de encargos com estimativa de prazos e orçamento por fase"],
+          result: "Um documento com o qual qualquer equipa, a nossa ou outra, consegue orçamentar o trabalho e começá-lo."
+        },
+        {
+          summary: "Desenvolvimento SaaS",
+          desc: [
+            "Uma plataforma SaaS chave na mão: da primeira versão para clientes-piloto até um serviço em que cada cliente tem o seu espaço, os seus planos e a sua área de cliente.",
+            "No SaaS, quem gera receita não é o código, é o percurso do novo cliente: regista-se, paga, começa a trabalhar e nunca liga para o suporte. A arquitetura multi-inquilino, a faturação e as permissões de acesso fazem parte deste pacote desde o primeiro dia, porque acrescentá-las quando os clientes já lá estão custa várias vezes mais. A primeira versão sai cedo: os utilizadores reais mostram depressa o que estava a mais."
+          ],
+          files: ["arquitetura multi-inquilino, dados dos clientes isolados", "registo, planos, subscrições, pagamento online", "áreas de cliente, perfis e permissões de acesso", "integrações e uma API pública para clientes", "escalabilidade à medida que a carga cresce"],
+          result: "Um produto vendido por subscrição, e não um projeto implementado à mão de cada vez."
+        },
+        {
+          summary: "Desenvolvimento web",
+          desc: [
+            "Sites empresariais, marketplaces, lojas online, sistemas de reservas, ferramentas web internas. O pacote não inclui modelos prontos.",
+            "Um site empresarial avalia-se pelos pedidos de contacto e pelas encomendas, não pelo aspeto num portefólio. Por isso, antes de começar, definimos o que conta como resultado, e a análise de tráfego fica configurada antes do lançamento. A tecnologia depende da tarefa: uma landing page não precisa de uma plataforma pesada, e um marketplace não cabe num construtor de sites."
+          ],
+          files: ["protótipo e design das interfaces", "frontend, backend, painel de administração", "integrações com pagamentos, entregas, CRM e contabilidade", "bases de SEO, velocidade de carregamento, análise de tráfego", "lançamento e acompanhamento"],
+          result: "Um serviço web em que se vê quantos pedidos e quanta receita traz."
+        },
+        {
+          summary: "Aplicações móveis",
+          desc: [
+            "Aplicações para iOS e Android, com a parte de servidor e um painel de administração.",
+            "Uma aplicação compensa quando os clientes voltam com regularidade: para repetir uma encomenda, acompanhar um estado, acumular pontos. Se o visitam uma vez por ano, um bom site móvel fica mais barato, e dizemo-lo antes de começar. Nativa ou multiplataforma: decide o orçamento e a necessidade de câmara, localização e modo offline."
+          ],
+          files: ["aplicações para iOS e Android", "parte de servidor e API", "painel de administração para conteúdos, encomendas e utilizadores", "notificações push e estatísticas", "publicação na App Store e no Google Play"],
+          result: "A aplicação passa a revisão das lojas e a sua equipa gere-a sem programadores."
+        },
+        {
+          summary: "Soluções com inteligência artificial",
+          desc: [
+            "Automatização de processos de negócio com agentes de IA, baseados em inteligência artificial e aprendizagem automática. O agente trata sozinho dos passos rotineiros: triar pedidos, preencher o CRM, preparar respostas aos clientes.",
+            "Somos mais céticos em relação à IA do que a maioria: metade das ideias do género «vamos pôr uma rede neuronal» resolve-se com automatização comum. Mas onde há pessoas a passar horas a triar e-mails, documentos e pedidos, os modelos de linguagem tiram mesmo a rotina de cima. Começamos com um piloto sobre os seus dados, para que veja os números de precisão antes do desenvolvimento principal."
+          ],
+          files: ["agentes de IA para os passos rotineiros do processo", "chatbots e assistentes para clientes e colaboradores", "reconhecimento de documentos e extração de dados", "classificação de pedidos, pesquisa na base de conhecimento", "previsão da procura e análise de dados", "um piloto com a qualidade medida sobre os seus dados"],
+          result: "Um processo que antes era feito por pessoas passa a ser executado pelo sistema. A última palavra continua a ser de uma pessoa."
+        },
+        {
+          summary: "Desenvolvimento de CRM e ERP",
+          desc: [
+            "CRM e ERP construídos à volta dos seus processos. A retrocompatibilidade com «o processo ajustado ao sistema» não é suportada.",
+            "Um CRM de prateleira serve enquanto o seu processo se parecer com o padrão. Se os comerciais fazem metade do trabalho em folhas de cálculo porque o sistema «não faz isso», um sistema próprio sai mais barato. Migramos os dados de sistemas antigos e de folhas de cálculo e implementamos departamento a departamento, para que o trabalho não pare um único dia."
+          ],
+          files: ["módulos de vendas, armazém, produção e finanças, conforme a necessidade", "perfis, permissões de acesso, registo de atividade", "relatórios e painéis para a gestão", "migração de dados de folhas de cálculo e sistemas antigos", "integração com contabilidade, telefonia e e-mail"],
+          result: "Um único sistema em vez de um jardim zoológico de folhas de cálculo. A gestão vê o ponto da situação sem relatórios semanais de cada departamento."
+        },
+        {
+          summary: "Soluções na cloud",
+          desc: [
+            "Levamos a sua infraestrutura, no todo ou em parte, para a Amazon Web Services e cuidamos dela depois, para que funcione e não fique mais cara sem motivo.",
+            "A cloud nem sempre é mais barata do que um servidor próprio. Compensa quando a carga oscila, quando é precisa tolerância a falhas ou quando novos ambientes devem ficar prontos em minutos e não numa semana. Por isso a instalação começa com uma auditoria e uma estimativa de custos, e a migração faz-se por etapas, com um plano de reversão em cada passo."
+          ],
+          files: ["auditoria da infraestrutura e estimativa de custos", "arquitetura na AWS e plano de migração", "migração de servidores, bases de dados e ficheiros", "cópias de segurança e monitorização", "otimização de custos após a migração"],
+          result: "Uma infraestrutura que sobrevive à falha de um servidor e uma fatura de cloud que faz sentido."
+        },
+        {
+          summary: "Infraestrutura empresarial em Red Hat",
+          desc: [
+            "A infraestrutura de TI da empresa em Red Hat: servidores com Red Hat Enterprise Linux, a plataforma de contentores OpenShift, automatização com Ansible.",
+            "Escolhe-se Red Hat quando a infraestrutura tem de funcionar durante anos e passar auditorias, em vez de depender da memória de um único administrador. A subscrição paga-se com o suporte do fabricante e um ciclo de vida longo: o Red Hat Enterprise Linux tem suporte durante dez anos. Projetamos para as suas cargas e descrevemos a configuração dos servidores em Ansible, para que qualquer servidor possa ser reconstruído a partir de um playbook. A Red Hat é nossa parceira, por isso também ajudamos com as subscrições e o suporte do fabricante."
+          ],
+          files: ["auditoria dos servidores atuais e plano de migração", "Red Hat Enterprise Linux, atualizações através do Red Hat Satellite", "a plataforma de contentores OpenShift", "automatização da configuração e da implementação com Ansible", "contas e acessos: Identity Management", "monitorização, cópias de segurança, documentação"],
+          result: "Uma infraestrutura que se pode auditar, reproduzir e entregar a outra equipa sem perder o conhecimento acumulado."
+        },
+        {
+          summary: "APIs e integrações",
+          desc: [
+            "APIs para os seus sistemas de TI e ligações aos serviços que já utiliza.",
+            "O cenário que vemos com mais frequência: dados introduzidos duas vezes. As encomendas do site são copiadas à mão para o sistema de contabilidade, os pagamentos são conferidos numa folha de cálculo. Uma integração elimina esse trabalho, juntamente com os erros que ele provoca. A monitorização faz obrigatoriamente parte do pacote: as integrações avariam em silêncio quando um parceiro altera a sua API, e é melhor saber disso pelo sistema do que por um cliente."
+          ],
+          files: ["conceção e documentação de APIs", "integrações com prestadores de pagamento, entregas, CRM e contabilidade", "troca de dados entre sistemas internos", "filas e novas tentativas em caso de falha", "monitorização e alertas"],
+          result: "Os dados são introduzidos uma só vez e chegam sozinhos a todo o lado onde fazem falta."
+        },
+        {
+          summary: "Suporte técnico",
+          desc: [
+            "Suporte e evolução dos seus sistemas de TI, incluindo os que não fomos nós a desenvolver.",
+            "Corrigir erros é apenas uma parte do pacote. Inclui também atualizações que fecham vulnerabilidades, monitorização que deteta um problema antes dos utilizadores e pequenas melhorias pelo caminho. Se o sistema vem de outro fornecedor, começamos por uma auditoria e pela documentação: sem ela, cada alteração é uma lotaria."
+          ],
+          files: ["monitorização da disponibilidade e dos erros", "correção de erros e atualizações de segurança", "cópias de segurança e testes de reposição", "melhorias e novas funcionalidades planeadas", "auditoria e documentação de sistemas de terceiros"],
+          result: "O sistema funciona e a equipa sabe como está construído."
+        }
+      ]
+    },
+    it: {
+      files: "Contenuto del pacchetto",
+      result: "Dopo l'installazione",
+      lead: "I pacchetti del gruppo Services si installano in base al compito, non il contrario: linguaggio e piattaforma li scegliamo quando è chiaro che cosa c'è da fare. A volte la risposta migliore è un servizio in abbonamento già pronto, e in quel caso glielo diciamo.",
+      pkgs: [
+        {
+          summary: "Ideazione della soluzione IT",
+          desc: [
+            "Si installa per primo, prima che esista una riga di codice. Chiariamo quale problema deve risolvere il sistema e lo traduciamo in requisiti che il business e gli sviluppatori leggono allo stesso modo.",
+            "Gli errori più costosi di un progetto IT nascono prima ancora della programmazione: il sistema viene costruito per un problema che nessuno ha formulato con chiarezza. Per questo parliamo con tutti quelli che lo useranno (contabilità, magazzino, commerciali), non solo con chi firma. A volte la conclusione è non sviluppare nulla e configurare un prodotto esistente. Anche questo è un risultato."
+          ],
+          files: ["interviste al personale e analisi dei processi", "requisiti di business e scenari d'uso", "confronto tra prodotti pronti e sviluppo su misura", "capitolato tecnico con stima di tempi e budget per fase"],
+          result: "Un documento con cui qualsiasi team, il nostro o un altro, può stimare il lavoro e avviarlo."
+        },
+        {
+          summary: "Sviluppo SaaS",
+          desc: [
+            "Una piattaforma SaaS chiavi in mano: dalla prima versione per i clienti pilota fino a un servizio in cui ogni cliente ha il proprio spazio, i propri piani e la propria area riservata.",
+            "Nel SaaS i soldi non li fa il codice, ma il percorso del nuovo cliente: si registra, paga, inizia a lavorare e non chiama mai l'assistenza. Multi-tenancy, fatturazione e permessi di accesso sono in questo pacchetto dal primo giorno, perché aggiungerli quando i clienti sono già dentro costa molte volte di più. La prima versione esce presto: gli utenti reali mostrano in fretta che cosa era superfluo."
+          ],
+          files: ["architettura multi-tenant, dati dei clienti isolati", "registrazione, piani, abbonamenti, pagamenti online", "aree riservate dei clienti, ruoli e permessi", "integrazioni e un'API pubblica per i clienti", "scalabilità al crescere del carico"],
+          result: "Un prodotto venduto in abbonamento, non un progetto installato a mano ogni volta."
+        },
+        {
+          summary: "Sviluppo web",
+          desc: [
+            "Siti aziendali, marketplace, negozi online, sistemi di prenotazione, strumenti web interni. Nessun modello preconfezionato nel pacchetto.",
+            "Un sito aziendale si giudica dalle richieste e dagli ordini, non da come appare in un portfolio. Per questo, prima di iniziare, stabiliamo che cosa conta come risultato e configuriamo le statistiche prima del lancio. La tecnologia dipende dal compito: una landing page non ha bisogno di una piattaforma pesante, e un marketplace non sta in un costruttore di siti."
+          ],
+          files: ["prototipo e progettazione delle interfacce", "frontend, backend, pannello di amministrazione", "integrazioni con pagamenti, spedizioni, CRM e contabilità", "basi SEO, velocità di caricamento, statistiche", "lancio e assistenza continuativa"],
+          result: "Un servizio web di cui si vede quante richieste e quanto fatturato porta."
+        },
+        {
+          summary: "App mobili",
+          desc: [
+            "App per iOS e Android, insieme alla parte server e a un pannello di amministrazione.",
+            "Un'app conviene quando i clienti tornano regolarmente: per riordinare, controllare uno stato, raccogliere punti. Se La visitano una volta l'anno, un buon sito mobile costa meno, e glielo diciamo prima di iniziare. Nativa o multipiattaforma: decidono il budget e la necessità di fotocamera, posizione e modalità offline."
+          ],
+          files: ["app per iOS e Android", "parte server e API", "pannello di amministrazione per contenuti, ordini e utenti", "notifiche push e statistiche", "pubblicazione su App Store e Google Play"],
+          result: "L'app supera la revisione degli store e il Suo team la gestisce senza sviluppatori."
+        },
+        {
+          summary: "Soluzioni di intelligenza artificiale",
+          desc: [
+            "Automazione dei processi aziendali con agenti di IA, basati su intelligenza artificiale e apprendimento automatico. L'agente svolge da solo i passaggi di routine: smista le richieste, compila il CRM, prepara le risposte ai clienti.",
+            "Nei confronti dell'IA siamo più scettici di molti: metà delle idee del tipo «aggiungiamo una rete neurale» si risolve con una normale automazione. Ma dove le persone passano ore a smistare e-mail, documenti e richieste, i modelli linguistici tolgono davvero la routine. Partiamo da un progetto pilota sui Suoi dati, così vedrà i valori di accuratezza prima dello sviluppo vero e proprio."
+          ],
+          files: ["agenti di IA per i passaggi di routine del processo", "chatbot e assistenti per clienti e dipendenti", "riconoscimento di documenti ed estrazione di dati", "classificazione delle richieste, ricerca nella knowledge base", "previsione della domanda e analisi dei dati", "un pilota con la qualità misurata sui Suoi dati"],
+          result: "Un processo che prima svolgevano le persone ora lo esegue il sistema. L'ultima parola resta a una persona."
+        },
+        {
+          summary: "Sviluppo CRM ed ERP",
+          desc: [
+            "CRM ed ERP costruiti attorno ai Suoi processi. La retrocompatibilità con «il processo adattato al sistema» non è supportata.",
+            "Un CRM standard va bene finché il Suo processo somiglia a quello standard. Se i commerciali tengono metà del lavoro nei fogli di calcolo perché il sistema «non lo prevede», uno su misura costerà meno. Migriamo i dati dai vecchi sistemi e dai fogli di calcolo e avviamo reparto per reparto, così il lavoro non si ferma nemmeno un giorno."
+          ],
+          files: ["moduli vendite, magazzino, produzione, finanza, secondo le necessità", "ruoli, permessi, registro delle attività", "report e dashboard per la direzione", "migrazione dei dati da fogli di calcolo e vecchi sistemi", "integrazione con contabilità, telefonia e posta elettronica"],
+          result: "Un unico sistema al posto di uno zoo di fogli di calcolo. La direzione vede come stanno le cose senza report settimanali da ogni reparto."
+        },
+        {
+          summary: "Soluzioni cloud",
+          desc: [
+            "Trasferiamo la Sua infrastruttura, in tutto o in parte, su Amazon Web Services e poi ce ne occupiamo, perché funzioni e non diventi più cara senza motivo.",
+            "Il cloud non è sempre più economico di un server proprio. Conviene quando il carico oscilla, quando serve tolleranza ai guasti o quando i nuovi ambienti devono essere pronti in pochi minuti anziché in una settimana. Per questo l'installazione inizia con un audit e una stima dei costi, e la migrazione procede per fasi, con un piano di rollback a ogni passo."
+          ],
+          files: ["audit dell'infrastruttura e stima dei costi", "architettura su AWS e piano di migrazione", "trasferimento di server, database e file", "backup e monitoraggio", "ottimizzazione dei costi dopo la migrazione"],
+          result: "Un'infrastruttura che sopravvive al guasto di un server e una bolletta del cloud che ha senso."
+        },
+        {
+          summary: "Infrastruttura aziendale su Red Hat",
+          desc: [
+            "L'infrastruttura IT dell'azienda su Red Hat: server con Red Hat Enterprise Linux, la piattaforma di container OpenShift, automazione con Ansible.",
+            "Si sceglie Red Hat quando l'infrastruttura deve funzionare per anni e superare gli audit, invece di vivere nella memoria di un solo amministratore. L'abbonamento si ripaga con il supporto del produttore e un ciclo di vita lungo: Red Hat Enterprise Linux è supportato per dieci anni. Progettiamo per i Suoi carichi e descriviamo la configurazione dei server in Ansible, così qualsiasi server si può ricostruire da un playbook. Red Hat è nostro partner, quindi La aiutiamo anche con abbonamenti e supporto del produttore."
+          ],
+          files: ["audit dei server attuali e piano di migrazione", "Red Hat Enterprise Linux, aggiornamenti tramite Red Hat Satellite", "la piattaforma di container OpenShift", "automazione di configurazione e deployment con Ansible", "account e accessi: Identity Management", "monitoraggio, backup, documentazione"],
+          result: "Un'infrastruttura che si può verificare, riprodurre e affidare a un altro team senza perdere conoscenze."
+        },
+        {
+          summary: "API e integrazioni",
+          desc: [
+            "API per i Suoi sistemi IT e collegamenti con i servizi che già utilizza.",
+            "Il quadro che vediamo più spesso: dati inseriti due volte. Gli ordini del sito ricopiati a mano nel gestionale contabile, i pagamenti riconciliati in un foglio di calcolo. Un'integrazione elimina questo lavoro insieme agli errori che provoca. Il monitoraggio è parte obbligatoria del pacchetto: le integrazioni si rompono in silenzio quando un partner cambia la propria API, ed è meglio saperlo dal sistema che da un cliente."
+          ],
+          files: ["progettazione e documentazione delle API", "integrazioni con sistemi di pagamento, spedizioni, CRM e contabilità", "scambio di dati tra sistemi interni", "code e nuovi tentativi in caso di errore", "monitoraggio e avvisi"],
+          result: "I dati si inseriscono una sola volta e arrivano da soli ovunque servano."
+        },
+        {
+          summary: "Supporto tecnico",
+          desc: [
+            "Assistenza ed evoluzione dei Suoi sistemi IT, compresi quelli che non abbiamo sviluppato noi.",
+            "La correzione dei bug è solo una parte del pacchetto. Ci sono anche gli aggiornamenti che chiudono le vulnerabilità, un monitoraggio che si accorge di un problema prima degli utenti e piccoli miglioramenti strada facendo. Se il sistema arriva da un altro fornitore, partiamo da un audit e dalla documentazione: senza, ogni modifica è un azzardo."
+          ],
+          files: ["monitoraggio della disponibilità e degli errori", "correzione dei bug e aggiornamenti di sicurezza", "backup e prove di ripristino", "migliorie e nuove funzioni pianificate", "audit e documentazione di sistemi altrui"],
+          result: "Il sistema funziona e il team sa com'è fatto."
+        }
+      ]
     }
   };
 
-  const LANGS = ["uk", "en", "ru"];
-  const LANG_NAMES = { uk: "Українська", en: "English", ru: "Русский" };
-  const VERSIONS = [["Norton Commander", "/"], ["DOS", "/dos/"], ["UNIX", "/unix/"], ["Apple ][", "/apple/"], ["Apple Lisa", "/lisa/"], ["Midnight Commander", "/mc/"], ["Windows 3.11", "/win31/"], ["AI", "/ai/"]];
+  /* Мови й адреси дає спільний рантайм window.AIC */
+  const AIC = window.AIC || {};
+  const LANGS = (Array.isArray(AIC.langs) && AIC.langs.length ? AIC.langs : Object.keys(I18N)).filter((l) => I18N[l] && RX[l] && RPM[l]);
+  const LANG_NAMES = AIC.langNames || Object.fromEntries(LANGS.map((l) => [l, l.toUpperCase()]));
+  const VERSIONS = [["Norton Commander", "nc"], ["DOS", "dos"], ["UNIX", "unix"], ["Apple ][", "apple"], ["Apple Lisa", "lisa"], ["Midnight Commander", "mc"], ["Windows 3.11", "win31"], ["AI", "ai"]];
+  /* Адреса іншої версії сайту поточною мовою */
+  const vurl = (id) => (typeof AIC.url === "function" ? AIC.url(id, lang) : (lang === "uk" ? "/" : "/" + lang + "/") + id + "/");
+  /* Французька ставить нерозривний пробіл перед двокрапкою */
+  const colon = () => (lang === "fr" ? "\u00a0:" : ":");
   const SVC = ["concept", "saas", "web", "mobile", "ai", "crm-erp", "cloud", "redhat", "api", "support"];
   const PKGS = [{ name: "aic-release", group: "Base", kind: "about" }, ...SVC.map((s, i) => ({ name: "aic-" + s, group: "Services", kind: "svc", i }))];
 
@@ -573,7 +1220,7 @@
   const coarse = matchMedia("(pointer: coarse)").matches;
   const narrow = () => matchMedia("(max-width: 760px)").matches;
   const nav = (navigator.language || "").toLowerCase();
-  let lang = store.get("aic-lang") || (nav.startsWith("ru") ? "ru" : nav.startsWith("uk") ? "uk" : nav.startsWith("en") ? "en" : "uk");
+  let lang = store.get("aic-lang") || LANGS.find((l) => nav.startsWith(l)) || "uk";
   if (!LANGS.includes(lang)) lang = "uk";
   const t = () => I18N[lang];
   const r = () => RX[lang];
@@ -588,7 +1235,7 @@
     if (p.kind !== "svc") return [t().heroTitle, t().heroText].join(" ");
     const k = svcPkg(p.i);
     const R = RPM[lang];
-    return [...k.desc, R.files + ":", ...k.files.map((f) => "  - " + f), R.result + ":", "  " + k.result].join("\n");
+    return [...k.desc, R.files + colon(), ...k.files.map((f) => "  - " + f), R.result + colon(), "  " + k.result].join("\n");
   };
 
   /* ---------- Піктограми у стилі XPM ---------- */
@@ -822,38 +1469,73 @@
   }
 
   /* ---------- Меню fvwm ---------- */
-  let menuEl = null;
-  function menu(x, y, title, items) {
-    closeMenu();
+  /* Меню можуть розкриватися каскадом: menus[0] — головне, далі підменю */
+  const menus = [];
+  function menu(x, y, title, items, level = 0, opener = null, focusFirst = true) {
+    closeMenu(level);
     const m = document.createElement("div");
     m.className = "fmenu";
     m.setAttribute("role", "menu");
+    if (title) m.setAttribute("aria-label", title);
     m.innerHTML = (title ? `<div class="mt">${esc(title)}</div>` : "") + items.map((it, k) => it.sep ? "<hr>"
+      : it.sub ? `<button type="button" role="menuitem" class="sub" aria-haspopup="menu" aria-expanded="false" data-k="${k}">${esc(it.label)}</button>`
       : `<button type="button" role="menuitem${it.checked !== undefined ? "radio" : ""}" data-k="${k}"${it.checked !== undefined ? ` aria-checked="${it.checked}"` : ""}>${esc(it.label)}</button>`).join("");
     xroot.appendChild(m);
     const R = rootRect();
     const mr = m.getBoundingClientRect();
+    if (opener) {
+      /* Підменю праворуч від пункту, а якщо не влазить — ліворуч від батьківського меню */
+      const ob = opener.getBoundingClientRect();
+      const pb = opener.closest(".fmenu").getBoundingClientRect();
+      x = ob.right + mr.width + 4 <= R.right ? ob.right - 2 : pb.left - mr.width + 2;
+    }
     m.style.left = Math.max(0, Math.min(x - R.left, R.width - mr.width - 4)) + "px";
     m.style.top = Math.max(0, Math.min(y - R.top, R.height - mr.height - 4)) + "px";
+    const openSub = (btn, focus) => {
+      const it = items[Number(btn.dataset.k)];
+      if (menus[level + 1] && btn.getAttribute("aria-expanded") === "true") { if (focus) menus[level + 1].querySelector("button").focus({ preventScroll: true }); return; }
+      const ob = btn.getBoundingClientRect();
+      menu(ob.right, ob.top - 3, it.label, it.sub(), level + 1, btn, focus);
+      btn.setAttribute("aria-expanded", "true");
+    };
     m.addEventListener("click", (e) => {
-      const b = e.target.closest("button[data-k]");
-      if (!b) return;
-      const it = items[Number(b.dataset.k)];
+      const btn = e.target.closest("button[data-k]");
+      if (!btn) return;
+      const it = items[Number(btn.dataset.k)];
+      if (it.sub) { openSub(btn, true); return; }
       closeMenu();
       it.act();
+    });
+    if (!coarse) m.addEventListener("pointerover", (e) => {
+      const btn = e.target.closest("button[data-k]");
+      if (!btn) return;
+      if (items[Number(btn.dataset.k)].sub) openSub(btn, false);
+      else closeMenu(level + 1);
     });
     m.addEventListener("keydown", (e) => {
       const bs = [...m.querySelectorAll("button")];
       const k = bs.indexOf(document.activeElement);
       if (e.key === "ArrowDown") { e.preventDefault(); bs[(k + 1) % bs.length].focus(); }
       if (e.key === "ArrowUp") { e.preventDefault(); bs[(k - 1 + bs.length) % bs.length].focus(); }
+      if (e.key === "ArrowRight" && bs[k] && bs[k].classList.contains("sub")) { e.preventDefault(); openSub(bs[k], true); }
+      if ((e.key === "ArrowLeft" || e.key === "Escape") && opener) {
+        e.preventDefault();
+        e.stopPropagation();
+        closeMenu(level);
+        opener.focus({ preventScroll: true });
+      }
     });
-    menuEl = m;
+    menus[level] = m;
     const first = m.querySelector("button");
-    if (first) first.focus({ preventScroll: true });
+    if (first && focusFirst) first.focus({ preventScroll: true });
+    return m;
   }
-  function closeMenu() { if (menuEl) { menuEl.remove(); menuEl = null; } }
-  document.addEventListener("pointerdown", (e) => { if (menuEl && !e.target.closest(".fmenu")) closeMenu(); }, true);
+  function closeMenu(level = 0) {
+    while (menus.length > level) menus.pop().remove();
+    const parent = menus[level - 1];
+    if (parent) parent.querySelectorAll("[aria-expanded]").forEach((b) => b.setAttribute("aria-expanded", "false"));
+  }
+  document.addEventListener("pointerdown", (e) => { if (menus.length && !e.target.closest(".fmenu")) closeMenu(); }, true);
   document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeMenu(); });
 
   function rootMenu(x, y) {
@@ -864,9 +1546,9 @@
       { label: a.glint, act: () => open("glint") },
       { label: a.mail, act: () => openMail() },
       { sep: true },
-      ...LANGS.map((l) => ({ label: LANG_NAMES[l], checked: l === lang, act: () => setLang(l) })),
+      { label: a.lang, sub: () => LANGS.map((l) => ({ label: LANG_NAMES[l], checked: l === lang, act: () => setLang(l) })) },
       { sep: true },
-      ...VERSIONS.map(([n, u]) => ({ label: n, act: () => { location.href = u; } })),
+      ...VERSIONS.map(([n, id]) => ({ label: n, act: () => { location.href = vurl(id); } })),
       { sep: true },
       { label: r().exit, act: exitX }
     ]);
@@ -900,7 +1582,7 @@
       }
     }),
     lang: () => ({
-      title: () => r().apps.lang, icon: "lang", size: [260, 200], pos: ["c", "c"],
+      title: () => r().apps.lang, icon: "lang", size: [260, 330], pos: ["c", "c"],
       render: (c, rec) => {
         c.innerHTML = `<div class="pad tk" style="flex:1">${LANGS.map((l) => `<label class="radio"><input type="radio" name="lng" value="${l}"${l === lang ? " checked" : ""}> ${LANG_NAMES[l]}</label>`).join("")}</div>
           <div class="row tk"><button type="button" class="tkbtn default">${esc(r().close)}</button></div>`;
@@ -911,7 +1593,7 @@
     versions: () => ({
       title: () => r().apps.versions, icon: "versions", size: [300, 290], pos: ["c", "c"],
       render: (c) => {
-        c.innerHTML = `<div class="pad tk" style="display:flex;flex-direction:column;gap:8px;flex:1">${VERSIONS.map(([n, u]) => `<a class="tkbtn" href="${u}">${n}</a>`).join("")}</div>`;
+        c.innerHTML = `<div class="pad tk" style="display:flex;flex-direction:column;gap:8px;flex:1">${VERSIONS.map(([n, id]) => `<a class="tkbtn" href="${vurl(id)}">${n}</a>`).join("")}</div>`;
       }
     })
   };
@@ -1000,17 +1682,17 @@
           `<h2 class="ph">${esc(R.result)}</h2><p>${esc(k.result)}</p>`;
       }
       return `<dl class="info">
-      <dt>${esc(f[0])}:</dt><dd>${esc(i.name)}</dd>
-      <dt>${esc(f[1])}:</dt><dd>${esc(i.version)}</dd>
-      <dt>${esc(f[2])}:</dt><dd>${esc(i.release)} (${esc(r().notInstalled)})</dd>
-      <dt>${esc(f[3])}:</dt><dd>${esc(i.group)}</dd>
-      <dt>${esc(f[4])}:</dt><dd>${i.size}</dd>
-      <dt>${esc(f[5])}:</dt><dd>${esc(i.packager)}</dd>
-      <dt>${esc(f[6])}:</dt><dd><a href="${i.url}" target="_blank" rel="noopener">${esc(i.url)}</a></dd>
-      <dt>${esc(f[7])}:</dt><dd>${esc(i.summary)}</dd>
+      <dt>${esc(f[0] + colon())}</dt><dd>${esc(i.name)}</dd>
+      <dt>${esc(f[1] + colon())}</dt><dd>${esc(i.version)}</dd>
+      <dt>${esc(f[2] + colon())}</dt><dd>${esc(i.release)} (${esc(r().notInstalled)})</dd>
+      <dt>${esc(f[3] + colon())}</dt><dd>${esc(i.group)}</dd>
+      <dt>${esc(f[4] + colon())}</dt><dd>${i.size}</dd>
+      <dt>${esc(f[5] + colon())}</dt><dd>${esc(i.packager)}</dd>
+      <dt>${esc(f[6] + colon())}</dt><dd><a href="${i.url}" target="_blank" rel="noopener">${esc(i.url)}</a></dd>
+      <dt>${esc(f[7] + colon())}</dt><dd>${esc(i.summary)}</dd>
     </dl><div class="well pdesc">${extra}</div>`;
     };
-    dialog("info", () => r().info + ": " + name, body, [
+    dialog("info", () => r().info + colon() + " " + name, body, [
       { label: r().install, act: () => { close("info"); install(name); } },
       { label: r().close }
     ], [540, 480]);
@@ -1047,8 +1729,8 @@
     updateBiff();
     const s = t();
     return dialog("mail", r().mailTitle, `
-      <dl class="info"><dt>${esc(r().from)}:</dt><dd>ArtIntelliCo &lt;${EMAIL}&gt;</dd><dt>${esc(r().subject)}:</dt><dd>${esc(s.contactTitle)}</dd></dl>
-      <div class="well" style="margin-top:10px;font-weight:400"><p>${esc(s.contactText)}</p><p>${esc(s.emailLabel)}: <a href="mailto:${EMAIL}">${EMAIL}</a></p></div>`, [
+      <dl class="info"><dt>${esc(r().from + colon())}</dt><dd>ArtIntelliCo &lt;${EMAIL}&gt;</dd><dt>${esc(r().subject + colon())}</dt><dd>${esc(s.contactTitle)}</dd></dl>
+      <div class="well" style="margin-top:10px;font-weight:400"><p>${esc(s.contactText)}</p><p>${esc(s.emailLabel + colon())} <a href="mailto:${EMAIL}">${EMAIL}</a></p></div>`, [
       { label: r().write, href: `mailto:${EMAIL}` },
       { label: r().copy, act: copyEmail },
       { label: r().close }
@@ -1123,14 +1805,14 @@
 
     const readme = () => {
       const s = t();
-      return [`<span class="b">${esc(s.heroTitle)}</span>`, "", esc(s.heroText), "", esc(s.heroLead) + ":", ...s.phrases.map((p) => "  * " + esc(p)), "",
-        esc(s.copyright), esc(s.legal), esc(s.slogan), `${esc(s.source)}: <a href="${location.origin}/${lang === "uk" ? "" : lang + "/"}classic/" target="_blank" rel="noopener">artintellico.com</a>`];
+      return [`<span class="b">${esc(s.heroTitle)}</span>`, "", esc(s.heroText), "", esc(s.heroLead + colon()), ...s.phrases.map((p) => "  * " + esc(p)), "",
+        esc(s.copyright), esc(s.legal), esc(s.slogan), `${esc(s.source + colon())} <a href="${location.origin}/${lang === "uk" ? "" : lang + "/"}classic/" target="_blank" rel="noopener">artintellico.com</a>`];
     };
     const fileLines = (name) => {
       const s = t();
       if (name === "README") return readme();
       if (name === "partners") return [`<span class="b">${esc(s.partnersTitle)}</span>`, ...PARTNERS.map((p) => "  * " + esc(p))];
-      if (name === "contact") return [`<span class="b">${esc(s.contactTitle)}</span>`, esc(s.contactText), `${esc(s.emailLabel)}: <a href="mailto:${EMAIL}">${EMAIL}</a>`];
+      if (name === "contact") return [`<span class="b">${esc(s.contactTitle)}</span>`, esc(s.contactText), `${esc(s.emailLabel + colon())} <a href="mailto:${EMAIL}">${EMAIL}</a>`];
       const inSvc = name.startsWith("services/") || cwd === "services";
       const base = name.replace(/^services\//, "");
       if (inSvc && base === "README") return [esc(RPM[lang].lead), "", tok("rpm -qa", "rpm -qa") + "  " + tok("glint", "glint")];
@@ -1145,8 +1827,8 @@
       const R = RPM[lang];
       return [
         ...k.desc.flatMap((d, j) => (j ? ["", esc(d)] : [esc(d)])),
-        "", esc(R.files + ":"), ...k.files.map((f) => esc("  - " + f)),
-        "", esc(R.result + ":"), esc("  " + k.result)
+        "", esc(R.files + colon()), ...k.files.map((f) => esc("  - " + f)),
+        "", esc(R.result + colon()), esc("  " + k.result)
       ];
     };
     const rpmQi = (name) => {
@@ -1227,12 +1909,22 @@
         case "uname": return put(args.includes("-a") ? `Linux ${HOST} 1.2.13 #1 Wed Oct 2 09:00:00 EET 1996 i486` : "Linux");
         case "date": return put(esc(new Date().toString().replace(/ GMT.*/, "")));
         case "startx": return put(esc("Fatal server error: Server is already active for display 0"));
-        case "lang":
-          if (LANGS.includes(args[0])) { setLang(args[0]); return put(esc("LANG=" + args[0])); }
-          return put(esc("usage: lang uk|en|ru"));
+        case "export":
+          if (/^(LANG|LC_ALL)=\S/.test(arg)) return exec("lang " + arg.replace(/^\w+=/, ""));
+          return;
+        case "lang": {
+          /* Код (de, de_DE.ISO-8859-1) або назва мови її ж мовою (deutsch, français) */
+          const raw = (args[0] || "").toLowerCase().replace(/^lang=/, "");
+          const code = raw.split(/[_.-]/)[0];
+          const want = LANGS.includes(code) ? code : (raw.length > 2 && LANGS.find((l) => String(LANG_NAMES[l]).toLowerCase().startsWith(raw))) || code;
+          if (LANGS.includes(want)) { setLang(want); return put(esc("LANG=" + want)); }
+          if (want) put(esc(`lang: ${args[0]}: unknown language`));
+          LANGS.forEach((l) => put((l === lang ? "* " : "  ") + tok(l, "lang " + l) + "  " + esc(LANG_NAMES[l])));
+          return put(esc("usage: lang " + LANGS.join("|")));
+        }
         case "exit": case "logout": setTimeout(() => close("xterm"), 0); return;
         case "nc": case "dos": case "unix": case "apple": case "lisa": case "mc": case "win": case "ai": {
-          const u = { nc: "/", dos: "/dos/", unix: "/unix/", apple: "/apple/", lisa: "/lisa/", mc: "/mc/", win: "/win31/", ai: "/ai/" }[c0];
+          const u = vurl(c0 === "win" ? "win31" : c0);
           setTimeout(() => { location.href = u; }, 200);
           return;
         }
@@ -1268,7 +1960,7 @@
         await sleep(300);
         await run("cat README", true);
         put("");
-        put(esc(r().help[0].replace(":", "")) + ": " + tok("help", "help") + "  " + tok("ls", "ls") + "  " + tok("rpm -qa", "rpm -qa"));
+        put(esc(r().help[0]) + " " + tok("help", "help") + "  " + tok("ls", "ls") + "  " + tok("rpm -qa", "rpm -qa"));
       }
     };
   }

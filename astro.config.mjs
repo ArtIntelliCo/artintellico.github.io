@@ -6,7 +6,7 @@ import { defaultVariant } from './src/variants/default.ts';
 export default defineConfig({
   site: 'https://artintellico.com',
   i18n: {
-    locales: ['uk', 'en', 'ru'],
+    locales: ['en', 'de', 'fr', 'es', 'pt', 'it', 'uk', 'ru'],
     defaultLocale: 'uk',
     routing: {
       prefixDefaultLocale: false,
@@ -16,15 +16,15 @@ export default defineConfig({
   redirects: {
     '/uk': '/',
     // Вариант по умолчанию живёт на главной; его собственный адрес ведёт туда же.
-    [`/${defaultVariant}`]: '/',
-    [`/ru/${defaultVariant}`]: '/ru/',
-    [`/en/${defaultVariant}`]: '/en/',
+    ...Object.fromEntries(
+      ['', 'ru/', 'en/', 'de/', 'fr/', 'es/', 'pt/', 'it/'].map((prefix) => [`/${prefix}${defaultVariant}`, `/${prefix}`])
+    ),
   },
   integrations: [
     sitemap({
       i18n: {
         defaultLocale: 'uk',
-        locales: { uk: 'uk-UA', ru: 'ru-UA', en: 'en-US' },
+        locales: { uk: 'uk-UA', ru: 'ru-UA', en: 'en-US', de: 'de-DE', fr: 'fr-FR', es: 'es-ES', pt: 'pt-PT', it: 'it-IT' },
       },
     }),
   ],

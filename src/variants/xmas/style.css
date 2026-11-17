@@ -65,11 +65,43 @@ a { color: inherit; }
 .xm-nav a { color: var(--dim); text-decoration: none; padding: 4px 0; }
 .xm-nav a::before { content: "./"; color: #3a4357; }
 .xm-nav a:hover, .xm-nav a.on { color: var(--green-hi); }
-.xm-langs { display: flex; border: 1px solid var(--line); }
-.xm-langs button { padding: 3px 9px; color: var(--dim); font-size: 12px; }
-.xm-langs button + button { border-left: 1px solid var(--line); }
-.xm-langs button[aria-pressed="true"] { background: var(--green); color: #031008; font-weight: 700; }
-.xm-langs button:not([aria-pressed="true"]):hover { color: var(--ink); }
+.xm-langs { position: relative; font-size: 12px; }
+.xm-langs summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 3px 9px;
+  border: 1px solid var(--line);
+  color: var(--ink);
+  white-space: nowrap;
+}
+.xm-langs summary::-webkit-details-marker { display: none; }
+.xm-langs summary::after { content: " ▾"; color: var(--dim); }
+.xm-langs[open] summary { border-color: var(--green); }
+.xm-langs ul {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 6px);
+  z-index: 10;
+  min-width: 170px;
+  list-style: none;
+  padding: 6px 0;
+  background: #070a12;
+  border: 1px solid #263044;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, .6);
+}
+.xm-langs li button {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  padding: 5px 14px;
+  text-align: left;
+  color: var(--dim);
+  font-size: 13px;
+}
+.xm-langs li button b { width: 2ch; font-weight: 400; color: #4a5468; }
+.xm-langs li button:hover { color: var(--ink); background: #10151f; }
+.xm-langs li button[aria-current="true"] { color: var(--green-hi); }
+.xm-langs li button[aria-current="true"] b { color: var(--green-hi); }
 
 /* ---------- Перший екран: ялинка ---------- */
 .xm-hero {
@@ -114,6 +146,7 @@ a { color: inherit; }
   text-wrap: balance;
   pointer-events: none;
 }
+.xm-greet.long { letter-spacing: .3em; font-size: clamp(12px, 1.35vw, 16px); }
 .xm-greet-l > span { opacity: 0; transition: opacity .25s; }
 .xm-greet-l > span.on { opacity: 1; text-shadow: 0 0 10px currentColor; }
 
@@ -310,7 +343,8 @@ a { color: inherit; }
   .xm-card h2 { padding-right: 0; }
 }
 @media (max-width: 420px) {
-  .xm-greet { letter-spacing: .2em; font-size: 12px; }
+  .xm-greet, .xm-greet.long { letter-spacing: .2em; font-size: 12px; }
+  .xm-greet.long { letter-spacing: .12em; }
   .gift summary { padding-right: 50px; }
   .gift-body { padding-right: 50px; }
 }

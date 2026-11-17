@@ -132,10 +132,37 @@ header {
 .brand { display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 18px; letter-spacing: -.01em; }
 .brand-logo { width: 26px; height: 32px; filter: drop-shadow(0 0 10px rgba(124, 247, 255, .25)); }
 .spacer { flex: 1; }
-.seg { display: flex; padding: 3px; border: 1px solid var(--line); border-radius: 999px; background: var(--glass); }
-.seg button { padding: 4px 11px; border-radius: 999px; font-size: 14px; color: var(--muted); transition: color .2s, background .2s; }
-.seg button:hover { color: var(--ink); }
-.seg button[aria-pressed="true"] { background: var(--accent-soft); color: var(--signal); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--signal) 45%, transparent), var(--glow); }
+/* Мова: кнопка з кодом поточної мови і скляне меню з усіма мовами (коди й назви мовою оригіналу) */
+.langsel { position: relative; }
+.langbtn { display: inline-flex; align-items: center; gap: 6px; padding: 7px 11px 7px 12px; }
+.lang-icon { width: 16px; height: 16px; }
+.lang-code { min-width: 2ch; letter-spacing: .06em; color: var(--signal); }
+.langbtn .chev { width: 12px; height: 12px; opacity: .7; transition: transform .2s; }
+.langbtn[aria-expanded="true"] { border-color: color-mix(in srgb, var(--signal) 60%, transparent); box-shadow: var(--glow); }
+.langbtn[aria-expanded="true"] .chev { transform: rotate(180deg); }
+.langmenu {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  z-index: 25;
+  display: grid;
+  gap: 2px;
+  width: 210px;
+  max-width: calc(100vw - 24px);
+  padding: 6px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--glass-hi);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  backdrop-filter: blur(18px) saturate(140%);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, .45), 0 0 0 1px color-mix(in srgb, var(--signal) 18%, transparent);
+  animation: appear .2s ease-out both;
+}
+.langmenu button { display: flex; align-items: baseline; gap: 12px; width: 100%; padding: 7px 12px; border-radius: 10px; font-size: 15px; text-align: left; transition: background .15s, color .15s; }
+.langmenu button:hover, .langmenu button:focus-visible { background: var(--accent-soft); }
+.langmenu .code { width: 2.2em; flex: none; color: var(--muted); font-size: 12px; letter-spacing: .08em; }
+.langmenu [aria-checked="true"] { color: var(--signal); background: var(--accent-soft); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--signal) 45%, transparent); }
+.langmenu [aria-checked="true"] .code { color: var(--signal); }
 .ghost { padding: 7px 14px; border: 1px solid var(--line); border-radius: 999px; font-size: 14px; background: var(--glass); transition: border-color .2s, box-shadow .2s; }
 .ghost:hover { border-color: color-mix(in srgb, var(--signal) 60%, transparent); box-shadow: var(--glow); }
 #pastBtn { display: inline-flex; align-items: center; gap: 8px; }
@@ -435,6 +462,7 @@ aside .hint { color: var(--muted); font-size: 14px; line-height: 1.45; }
   background: var(--glass-hi);
   box-shadow: 0 24px 60px rgba(0, 0, 0, .45), 0 0 0 1px color-mix(in srgb, var(--signal) 18%, transparent);
 }
+.pop { max-height: calc(var(--aic-vh, 100vh) - 96px); overflow-y: auto; }
 .pop .list { margin: 0; border-top: 0; }
 .pop .list li:last-child { border-bottom: 0; }
 
@@ -468,13 +496,13 @@ aside .hint { color: var(--muted); font-size: 14px; line-height: 1.45; }
 }
 @media (max-width: 480px) {
   #themeBtn { display: none; }
-  .seg button { padding: 4px 8px; }
+  .langbtn { padding: 6px 9px 6px 10px; gap: 5px; }
   /* у шапці лишається тільки логотип — інакше кнопка брифу не вміщається */
   .brand { font-size: 0; gap: 0; }
   header { gap: 6px; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .w, .appear, .thinking span, .dot, .app::before, .map .orbits circle, .map .node.hot circle, .composer:focus-within::before, .msg.agent .lead.holo::before { animation: none; }
+  .w, .appear, .thinking span, .dot, .app::before, .map .orbits circle, .map .node.hot circle, .composer:focus-within::before, .msg.agent .lead.holo::before, .langmenu { animation: none; }
   .msg.agent .lead { transform: none; transition: none; }
   .map .ray, .map .q, .map .node circle, aside { transition: none; }
   .log { scroll-behavior: auto; }

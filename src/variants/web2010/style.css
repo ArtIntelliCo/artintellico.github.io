@@ -490,6 +490,10 @@ textarea.form-control { min-height: 130px; resize: vertical; }
   .footer .cols { grid-template-columns: 1fr 1fr; }
   .footer .cols > :first-child { grid-column: 1 / -1; }
 }
+/* Планшет: довші назви пунктів (fr, de, pt) мають вміститися в один рядок */
+@media (min-width: 768px) and (max-width: 991px) {
+  .nav > li > a, .nav > li > button { padding: 0 10px; }
+}
 @media (max-width: 767px) {
   .navbar-toggle { display: block; }
   .nav {

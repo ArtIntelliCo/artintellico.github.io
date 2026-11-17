@@ -255,8 +255,11 @@ dialog .row > *::after { content: " ]"; }
 dialog .row > :focus { background: var(--sel-bg); color: var(--sel-fg); }
 dialog .note { min-height: 1em; margin: 1em 0 0; text-align: center; }
 dialog .modes { list-style: none; margin-bottom: 1em; }
-dialog .modes a {
+#langs .box { width: min(32ch, calc(100vw - 6ch)); }
+dialog .modes a, dialog .modes button {
   display: grid;
+  width: 100%;
+  text-align: left;
   grid-template-columns: 5ch minmax(0, 1fr) 2ch;
   padding: 0 1ch;
   color: var(--dlg-fg);
@@ -265,9 +268,9 @@ dialog .modes a {
 }
 dialog .modes .y { color: var(--dlg-hi); }
 dialog .modes .n { overflow: hidden; text-overflow: ellipsis; }
-dialog .modes a[aria-current="page"] .n::after { content: " ◄"; }
-dialog .modes a:hover, dialog .modes a:focus { background: var(--sel-bg); color: var(--sel-fg); }
-dialog .modes a:hover .y, dialog .modes a:focus .y { color: inherit; }
+dialog .modes [aria-current] .n::after { content: " ◄"; }
+dialog .modes a:hover, dialog .modes a:focus, dialog .modes button:hover, dialog .modes button:focus { background: var(--sel-bg); color: var(--sel-fg); }
+dialog .modes a:hover .y, dialog .modes a:focus .y, dialog .modes button:hover .y, dialog .modes button:focus .y { color: inherit; }
 
 /* ---------- Вузькі екрани ---------- */
 @media (max-width: 760px) {

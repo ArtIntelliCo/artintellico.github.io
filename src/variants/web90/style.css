@@ -52,8 +52,9 @@
   color: #00ff00;
   font: bold 18px "Comic Sans MS", "Comic Sans", cursive;
 }
-.w90-langs { font: bold 12px Arial, sans-serif; color: #c0c0c0; }
-.w90-langs button { margin: 0 2px; }
+.w90-langs { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 4px; font: bold 12px Arial, sans-serif; color: #c0c0c0; }
+.w90-langs .lbl { margin-right: 2px; }
+.w90-langs button { margin: 0; min-width: 34px; padding: 3px 6px; }
 
 /* Бевел-кнопки */
 .w90-bvl {
@@ -233,6 +234,7 @@
   .w90-page { width: 100%; border-width: 0; }
   .w90-page, .w90-page > tbody, .w90-page > tbody > tr, .w90-page > tbody > tr > td { display: block; width: auto; }
   .w90-logo { font-size: 36px; }
+  .w90-langs .lbl { flex-basis: 100%; margin: 0 0 2px; }
   .w90-nav { width: auto; }
   .w90-nav .w90-navlinks { display: flex; flex-wrap: wrap; justify-content: center; gap: 5px; }
   .w90-nav .w90-navlinks .w90-bvl { display: inline-block; margin: 0; }

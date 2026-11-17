@@ -17,6 +17,11 @@ export const company = {
     uk: 'ТОВ «АртІнтелліко»',
     ru: 'ООО «АртИнтеллико»',
     en: 'ArtIntelliCo LLC',
+    de: 'ArtIntelliCo LLC',
+    fr: 'ArtIntelliCo LLC',
+    es: 'ArtIntelliCo LLC',
+    pt: 'ArtIntelliCo LLC',
+    it: 'ArtIntelliCo LLC',
   } satisfies Record<Locale, string>,
 
   /** Код ЄДРПОУ — 8 цифр. */
@@ -27,6 +32,11 @@ export const company = {
     uk: '',
     ru: '',
     en: '',
+    de: '',
+    fr: '',
+    es: '',
+    pt: '',
+    it: '',
   } satisfies Record<Locale, string>,
 
   email: 'io@artintellico.com',
