@@ -1,4 +1,5 @@
 import { t, type Locale } from '../i18n';
+import { defaultVariant as defaultVariantId } from './default';
 
 /**
  * Варианты оформления сайта. Порядок задаёт переключатель в футере:
@@ -18,35 +19,46 @@ export const variantIds = [
   'web90',
   'web2010',
   'ai',
+  'xmas',
 ] as const;
 export type VariantId = (typeof variantIds)[number];
 
 /** Варианты, которые собираются из src/variants/<id>/ (все, кроме классического). */
 export type RetroVariantId = Exclude<VariantId, 'classic'>;
 
+/** Вариант на главной странице; меняется в ./default.ts. */
+export const defaultVariant = defaultVariantId as RetroVariantId;
+
 interface Variant {
-  /** Путь внутри локали: '' — корень локали. */
+  /** Путь внутри локали: '' — корень локали (у варианта по умолчанию). */
   slug: string;
+  /** Собственный адрес варианта, когда он не на главной. */
+  ownSlug: string;
   /** Год появления системы, которую изображает вариант. */
   year?: string;
   name: string | Record<Locale, string>;
 }
 
-export const variants: Record<VariantId, Variant> = {
-  classic: { slug: 'classic/', name: { uk: 'Класичний сайт', ru: 'Классический сайт', en: 'Classic site' } },
-  apple: { slug: 'apple/', year: '1977', name: 'Apple ][' },
-  dos: { slug: 'dos/', year: '1981', name: 'DOS' },
-  lisa: { slug: 'lisa/', year: '1983', name: 'Apple Lisa' },
-  nc: { slug: '', year: '1986', name: 'Norton Commander' },
-  unix: { slug: 'unix/', year: '1986', name: 'UNIX 4.3 BSD' },
-  win31: { slug: 'win31/', year: '1993', name: 'Windows 3.11' },
-  mc: { slug: 'mc/', year: '1994', name: 'Midnight Commander' },
-  winnt: { slug: 'winnt/', year: '1996', name: 'Windows NT 4.0' },
-  linux: { slug: 'linux/', year: '1996', name: 'Linux, X11 + fvwm' },
-  web90: { slug: 'web90/', year: '1998', name: { uk: 'Сайт 90-х', ru: 'Сайт 90-х', en: '90s website' } },
-  web2010: { slug: 'web2010/', year: '2012', name: { uk: 'Сайт 2010-х', ru: 'Сайт 2010-х', en: '2010s website' } },
-  ai: { slug: 'ai/', year: String(new Date().getFullYear()), name: 'AI' },
+const variantList: Record<VariantId, Omit<Variant, 'slug'>> = {
+  classic: { ownSlug: 'classic/', name: { uk: 'Класичний сайт', ru: 'Классический сайт', en: 'Classic site' } },
+  apple: { ownSlug: 'apple/', year: '1977', name: 'Apple ][' },
+  dos: { ownSlug: 'dos/', year: '1981', name: 'DOS' },
+  lisa: { ownSlug: 'lisa/', year: '1983', name: 'Apple Lisa' },
+  nc: { ownSlug: 'nc/', year: '1986', name: 'Norton Commander' },
+  unix: { ownSlug: 'unix/', year: '1986', name: 'UNIX 4.3 BSD' },
+  win31: { ownSlug: 'win31/', year: '1993', name: 'Windows 3.11' },
+  mc: { ownSlug: 'mc/', year: '1994', name: 'Midnight Commander' },
+  winnt: { ownSlug: 'winnt/', year: '1996', name: 'Windows NT 4.0' },
+  linux: { ownSlug: 'linux/', year: '1996', name: 'Linux, X11 + fvwm' },
+  web90: { ownSlug: 'web90/', year: '1998', name: { uk: 'Сайт 90-х', ru: 'Сайт 90-х', en: '90s website' } },
+  web2010: { ownSlug: 'web2010/', year: '2012', name: { uk: 'Сайт 2010-х', ru: 'Сайт 2010-х', en: '2010s website' } },
+  ai: { ownSlug: 'ai/', year: String(new Date().getFullYear()), name: 'AI' },
+  xmas: { ownSlug: 'xmas/', year: String(new Date().getFullYear()), name: { uk: 'Різдво', ru: 'Рождество', en: 'Christmas' } },
 };
+
+export const variants = Object.fromEntries(
+  variantIds.map((id) => [id, { ...variantList[id], slug: id === defaultVariant ? '' : variantList[id].ownSlug }])
+) as Record<VariantId, Variant>;
 
 const localePrefix: Record<Locale, string> = { uk: '/', ru: '/ru/', en: '/en/' };
 
@@ -68,8 +80,8 @@ export const variantSlugs = Object.fromEntries(variantIds.map((id) => [id, varia
   string
 >;
 
-/** Заголовок страницы варианта; у Norton Commander, главной страницы, — заголовок сайта. */
+/** Заголовок страницы варианта; у главной страницы и классического сайта — заголовок сайта. */
 export function variantTitle(id: VariantId, locale: Locale): string {
   const title = t(locale).meta.title;
-  return id === 'nc' || id === 'classic' ? title : `${variantName(id, locale)} — ${title}`;
+  return id === defaultVariant || id === 'classic' ? title : `${variantName(id, locale)} — ${title}`;
 }

@@ -1,0 +1,39 @@
+<div class="xm" id="xm">
+  <canvas class="xm-snow" id="xmSnow" aria-hidden="true"></canvas>
+  <div class="xm-scroll" id="xmScroll">
+    <header class="xm-top">
+      <a class="xm-brand" href="#xmHero" data-go="xmHero"><img src="/logo.svg" alt="" width="22" height="22"><span>ArtIntelliCo</span></a>
+      <nav class="xm-nav" id="xmNav"></nav>
+      <div class="xm-langs" role="group" id="xmLangs">
+        <button type="button" data-l="uk" lang="uk">UK</button>
+        <button type="button" data-l="en" lang="en">EN</button>
+        <button type="button" data-l="ru" lang="ru">RU</button>
+      </div>
+    </header>
+
+    <section class="xm-hero" id="xmHero" aria-labelledby="xmTitle">
+      <div class="xm-stage">
+        <canvas class="xm-tree" id="xmTree" role="img"></canvas>
+        <div class="xm-hud" id="xmHud" aria-hidden="true"></div>
+        <div class="xm-ctl">
+          <button type="button" id="xmPause"></button>
+          <button type="button" id="xmAgain"></button>
+        </div>
+        <p class="xm-greet" id="xmGreet"></p>
+      </div>
+      <div class="xm-intro">
+        <p class="xm-prompt" aria-hidden="true">~/artintellico $ python christmas_tree.py</p>
+        <h1 id="xmTitle"></h1>
+        <p class="xm-lead" id="xmLead"></p>
+        <p class="xm-typed"><span id="xmTypedLead"></span> <span class="xm-typed-text" id="xmTyped"></span><span class="xm-caret" aria-hidden="true"></span></p>
+        <div class="xm-cta">
+          <a class="xm-btn xm-btn--gold" href="#xmServices" data-go="xmServices" id="xmCtaServices"></a>
+          <a class="xm-btn" href="#xmContacts" data-go="xmContacts" id="xmCtaContacts"></a>
+        </div>
+        <p class="xm-keys" id="xmKeys" aria-hidden="true"></p>
+      </div>
+    </section>
+
+    <main id="xmMain"></main>
+  </div>
+</div>

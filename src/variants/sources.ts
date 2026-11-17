@@ -12,7 +12,7 @@ const scripts = import.meta.glob<string>('./*/script.js', { query: '?raw', impor
 const htmlAttrs = import.meta.glob<Record<string, string>>('./*/html.json', { import: 'default', eager: true });
 
 /** Варианты, построенные на текстах из словарей (window.AIC.content). */
-const contentVariants = new Set<RetroVariantId>(['winnt', 'web90', 'web2010']);
+const contentVariants = new Set<RetroVariantId>(['winnt', 'web90', 'web2010', 'xmas']);
 
 export function variantSource(id: RetroVariantId) {
   return {

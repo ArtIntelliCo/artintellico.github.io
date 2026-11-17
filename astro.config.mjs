@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
+import { defaultVariant } from './src/variants/default.ts';
 
 export default defineConfig({
   site: 'https://artintellico.com',
@@ -14,6 +15,10 @@ export default defineConfig({
   },
   redirects: {
     '/uk': '/',
+    // Вариант по умолчанию живёт на главной; его собственный адрес ведёт туда же.
+    [`/${defaultVariant}`]: '/',
+    [`/ru/${defaultVariant}`]: '/ru/',
+    [`/en/${defaultVariant}`]: '/en/',
   },
   integrations: [
     sitemap({

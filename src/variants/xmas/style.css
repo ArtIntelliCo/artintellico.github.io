@@ -1,0 +1,321 @@
+/* Різдвяний сайт: ASCII-ялинка в терміналі — росте, обертається, світиться. Нижче — послуги-подарунки. */
+:root {
+  --bg: #04060b;
+  --ink: #d7dce6;
+  --dim: #6c7487;
+  --line: #1b2130;
+  --gold: #f2c94c;
+  --gold-2: #e39b2d;
+  --red: #e5484d;
+  --green: #46c25a;
+  --green-hi: #8be38f;
+  --blue: #4f7dff;
+  --snow: #eef3ff;
+  --mono: ui-monospace, "SFMono-Regular", "SF Mono", Menlo, Consolas, "DejaVu Sans Mono", "Liberation Mono", monospace;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; background: var(--bg); }
+body {
+  color: var(--ink);
+  font: 15px/1.6 var(--mono);
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+}
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+a { color: inherit; }
+:focus { outline: none; }
+:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+[hidden] { display: none !important; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+
+/* ---------- Каркас ---------- */
+.xm { position: relative; height: var(--aic-vh); background: var(--bg); overflow: hidden; }
+.xm-snow { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+.xm-scroll {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-color: #2a3244 transparent;
+  overscroll-behavior: contain;
+}
+
+/* ---------- Шапка ---------- */
+.xm-top {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  gap: 8px 22px;
+  min-height: 52px;
+  padding: 8px 20px;
+  background: linear-gradient(rgba(4, 6, 11, .94), rgba(4, 6, 11, .78));
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px dashed var(--line);
+  font-size: 13px;
+}
+.xm-brand { display: inline-flex; align-items: center; gap: 9px; text-decoration: none; font-weight: 700; letter-spacing: .02em; color: var(--snow); }
+.xm-brand img { width: 22px; height: 22px; display: block; }
+.xm-nav { display: flex; gap: 4px 18px; margin-left: auto; flex-wrap: wrap; }
+.xm-nav a { color: var(--dim); text-decoration: none; padding: 4px 0; }
+.xm-nav a::before { content: "./"; color: #3a4357; }
+.xm-nav a:hover, .xm-nav a.on { color: var(--green-hi); }
+.xm-langs { display: flex; border: 1px solid var(--line); }
+.xm-langs button { padding: 3px 9px; color: var(--dim); font-size: 12px; }
+.xm-langs button + button { border-left: 1px solid var(--line); }
+.xm-langs button[aria-pressed="true"] { background: var(--green); color: #031008; font-weight: 700; }
+.xm-langs button:not([aria-pressed="true"]):hover { color: var(--ink); }
+
+/* ---------- Перший екран: ялинка ---------- */
+.xm-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 460px);
+  align-items: center;
+  min-height: calc(var(--aic-vh) - 52px);
+  padding-right: 40px;
+}
+.xm-stage { position: relative; height: calc(var(--aic-vh) - 52px); min-height: 440px; }
+.xm-tree { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.xm-hud {
+  position: absolute;
+  left: 18px;
+  top: 14px;
+  color: #3e475b;
+  font-size: 11px;
+  line-height: 1.5;
+  white-space: pre;
+  pointer-events: none;
+}
+.xm-ctl { position: absolute; right: 12px; top: 10px; display: flex; gap: 6px; }
+.xm-ctl button {
+  padding: 2px 8px;
+  border: 1px solid var(--line);
+  color: var(--dim);
+  font-size: 11px;
+  background: rgba(4, 6, 11, .6);
+}
+.xm-ctl button:hover { color: var(--ink); border-color: #2c3548; }
+.xm-greet {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 4.5%;
+  text-align: center;
+  font-size: clamp(13px, 1.6vw, 18px);
+  font-weight: 700;
+  letter-spacing: .55em;
+  text-transform: uppercase;
+  padding: 0 12px;
+  text-wrap: balance;
+  pointer-events: none;
+}
+.xm-greet-l > span { opacity: 0; transition: opacity .25s; }
+.xm-greet-l > span.on { opacity: 1; text-shadow: 0 0 10px currentColor; }
+
+.xm-intro { position: relative; padding: 24px 0 40px; }
+.xm-prompt { color: #3e475b; font-size: 12px; margin-bottom: 18px; }
+.xm-intro h1 {
+  color: var(--snow);
+  font-size: clamp(22px, 2.3vw, 31px);
+  line-height: 1.25;
+  font-weight: 700;
+  letter-spacing: -.01em;
+  margin-bottom: 18px;
+  text-wrap: balance;
+}
+.xm-lead { color: #aab2c3; margin-bottom: 18px; }
+.xm-typed { color: var(--dim); min-height: 3.2em; margin-bottom: 26px; }
+.xm-typed-text { color: var(--gold); }
+.xm-caret { display: inline-block; width: .6em; height: 1.05em; margin-left: 2px; vertical-align: -.15em; background: var(--green-hi); animation: xm-blink 1s steps(1) infinite; }
+@keyframes xm-blink { 50% { opacity: 0; } }
+.xm-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 26px; }
+.xm-btn {
+  display: inline-block;
+  padding: 9px 16px;
+  border: 1px solid #2c3548;
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+}
+.xm-btn:hover { border-color: var(--green); color: var(--green-hi); }
+.xm-btn--gold { background: var(--gold); border-color: var(--gold); color: #1a1203; }
+.xm-btn--gold:hover { background: #ffd966; border-color: #ffd966; color: #1a1203; }
+.xm-keys { color: #3e475b; font-size: 12px; }
+.xm-keys kbd { font: inherit; color: var(--dim); border: 1px solid var(--line); padding: 0 5px; }
+
+/* ---------- Розділи ---------- */
+.xm-sec { position: relative; max-width: 1180px; margin: 0 auto; padding: 84px 24px 20px; scroll-margin-top: 40px; }
+.xm-sec h2 {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: var(--snow);
+  font-size: clamp(20px, 2.4vw, 28px);
+  line-height: 1.25;
+  margin-bottom: 14px;
+}
+.xm-sec h2::before { content: "*"; color: var(--gold); text-shadow: 0 0 12px var(--gold); }
+.xm-sec h2::after { content: ""; flex: 1; min-width: 30px; border-top: 1px dashed #263044; }
+.xm-sub { max-width: 72ch; color: #9aa3b5; margin-bottom: 40px; }
+
+/* Послуги — подарунки під ялинкою */
+.xm-gifts { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); gap: 34px 26px; align-items: start; }
+.gift {
+  --c: var(--red);
+  --r: var(--gold);
+  position: relative;
+  border: 1px solid var(--c);
+  background: color-mix(in srgb, var(--c) 8%, rgba(4, 6, 11, .9));
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, .4), 0 10px 30px -18px var(--c);
+}
+.gift::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 30px;
+  width: 8px;
+  background: repeating-linear-gradient(180deg, var(--r) 0 6px, color-mix(in srgb, var(--r) 70%, #000) 6px 8px);
+  opacity: .8;
+  pointer-events: none;
+}
+.gift-bow {
+  position: absolute;
+  top: -1.05em;
+  right: 15px;
+  color: var(--r);
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: -.05em;
+  text-shadow: 0 0 8px color-mix(in srgb, var(--r) 60%, transparent);
+  pointer-events: none;
+}
+.gift:nth-child(5n+2) { --c: var(--blue); --r: #ff8a8a; }
+.gift:nth-child(5n+3) { --c: var(--green); --r: var(--red); }
+.gift:nth-child(5n+4) { --c: var(--gold-2); --r: var(--snow); }
+.gift:nth-child(5n+5) { --c: #b45cff; --r: var(--gold); }
+.gift summary { display: block; list-style: none; cursor: pointer; padding: 18px 58px 16px 18px; }
+.gift summary::-webkit-details-marker { display: none; }
+.gift-no { color: var(--c); font-size: 12px; filter: brightness(1.3); }
+.gift h3 { color: var(--snow); font-size: 17px; line-height: 1.35; margin: 4px 0 8px; }
+.gift-text { display: block; color: #aab2c3; font-size: 14px; }
+.gift-open { display: inline-block; margin-top: 12px; color: var(--gold); font-size: 13px; }
+.gift .c, .gift[open] .o { display: none; }
+.gift[open] .c { display: inline; }
+.gift summary:hover .gift-open { text-decoration: underline; text-underline-offset: 3px; }
+.gift-body { padding: 0 58px 20px 18px; font-size: 14px; color: #c2c9d6; border-top: 1px dashed color-mix(in srgb, var(--c) 45%, transparent); padding-top: 14px; animation: xm-unwrap .35s ease-out; }
+@keyframes xm-unwrap { from { opacity: 0; transform: translateY(-6px); } }
+.gift-body p + p, .gift-body p + h4, .gift-body ul + h4 { margin-top: 12px; }
+.gift-body h4 { color: var(--snow); font-size: 13px; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 6px; }
+.gift-body ul { list-style: none; }
+.gift-body li { position: relative; padding-left: 1.6em; }
+.gift-body li::before { content: "*"; position: absolute; left: .3em; color: var(--gold); }
+.gift-result { color: var(--green-hi); }
+
+/* Партнери — вогники гірлянди */
+.xm-garland { position: relative; display: flex; flex-wrap: wrap; justify-content: center; gap: 30px 34px; padding-top: 28px; list-style: none; }
+.xm-garland::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 26px;
+  border-bottom: 1px solid #3a3f2a;
+  border-radius: 0 0 50% 50% / 0 0 100% 100%;
+  pointer-events: none;
+}
+.xm-garland li { --b: var(--gold); display: flex; flex-direction: column; align-items: center; gap: 10px; color: var(--ink); }
+.xm-garland li:nth-child(5n+2) { --b: var(--red); }
+.xm-garland li:nth-child(5n+3) { --b: var(--green-hi); }
+.xm-garland li:nth-child(5n+4) { --b: #7aa2ff; }
+.xm-garland li:nth-child(5n+5) { --b: #ff8ad8; }
+.xm-bulb {
+  width: 14px;
+  height: 20px;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  background: var(--b);
+  box-shadow: 0 0 14px 3px color-mix(in srgb, var(--b) 70%, transparent), 0 0 34px color-mix(in srgb, var(--b) 40%, transparent);
+  position: relative;
+  animation: xm-twinkle 2.4s ease-in-out infinite;
+  animation-delay: calc(var(--i, 0) * -.37s);
+}
+.xm-bulb::before { content: ""; position: absolute; left: 3px; right: 3px; top: -6px; height: 7px; background: #5b6170; border-radius: 2px 2px 0 0; }
+@keyframes xm-twinkle { 50% { opacity: .45; box-shadow: 0 0 4px 1px color-mix(in srgb, var(--b) 50%, transparent); } }
+.xm-garland a, .xm-garland span.xm-pname { text-decoration: none; font-size: 14px; }
+.xm-garland a:hover { color: var(--b); }
+
+/* Контакти — листівка */
+.xm-card {
+  position: relative;
+  max-width: 820px;
+  padding: 34px 34px 30px;
+  border: 1px dashed var(--gold);
+  background: rgba(4, 6, 11, .88);
+}
+.xm-stamp {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  padding: 8px 10px;
+  border: 2px dotted var(--red);
+  color: var(--red);
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.3;
+  transform: rotate(4deg);
+}
+.xm-card h2 { padding-right: 90px; }
+.xm-card p { max-width: 60ch; color: #aab2c3; margin-bottom: 26px; }
+.xm-mail { display: inline-flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.xm-mail-label { color: var(--dim); font-size: 13px; }
+.xm-mail a { color: var(--gold); font-size: clamp(18px, 2.4vw, 24px); font-weight: 700; text-decoration-color: rgba(242, 201, 76, .4); text-underline-offset: 5px; }
+.xm-mail a:hover { color: #ffd966; }
+
+.xm-foot {
+  max-width: 1180px;
+  margin: 80px auto 0;
+  padding: 26px 24px 34px;
+  border-top: 1px dashed var(--line);
+  color: var(--dim);
+  font-size: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 26px;
+  justify-content: space-between;
+}
+.xm-foot a { color: var(--dim); }
+.xm-foot a:hover { color: var(--ink); }
+
+/* ---------- Вузькі екрани ---------- */
+@media (max-width: 900px) {
+  .xm-top { flex-wrap: wrap; padding: 8px 14px; gap: 2px 14px; }
+  .xm-nav { order: 3; width: 100%; margin-left: 0; gap: 4px 16px; }
+  .xm-langs { margin-left: auto; }
+  .xm-hero { grid-template-columns: 1fr; padding-right: 0; min-height: 0; }
+  .xm-stage { height: calc(var(--aic-vh) * .7); min-height: 380px; max-height: 720px; }
+  .xm-intro { padding: 10px 20px 30px; }
+  .xm-keys { display: none; }
+  .xm-greet { letter-spacing: .32em; bottom: 3%; }
+  .xm-sec { padding: 64px 18px 10px; }
+  .xm-card { padding: 26px 20px 24px; }
+  .xm-stamp { position: static; display: inline-block; margin-bottom: 16px; }
+  .xm-card h2 { padding-right: 0; }
+}
+@media (max-width: 420px) {
+  .xm-greet { letter-spacing: .2em; font-size: 12px; }
+  .gift summary { padding-right: 50px; }
+  .gift-body { padding-right: 50px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .xm-caret, .xm-bulb { animation: none; }
+  .gift-body { animation: none; }
+}

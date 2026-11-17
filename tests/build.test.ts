@@ -9,7 +9,7 @@ const pages = {
   en: 'dist/en/classic/index.html',
 };
 
-/** Norton Commander — основной вариант, занимает корень и прежние адреса локалей. */
+/** Вариант по умолчанию (src/variants/default.ts) занимает корень и прежние адреса локалей. */
 const retro = {
   uk: 'dist/index.html',
   ru: 'dist/ru/index.html',
@@ -17,7 +17,7 @@ const retro = {
 };
 
 /** Ретро-варианты по своим адресам ('' — корень локали). */
-const variantSlugs = ['', 'dos/', 'unix/', 'apple/', 'lisa/', 'linux/', 'mc/', 'win31/', 'winnt/', 'web90/', 'web2010/', 'ai/'];
+const variantSlugs = ['', 'dos/', 'unix/', 'apple/', 'lisa/', 'linux/', 'mc/', 'win31/', 'winnt/', 'web90/', 'web2010/', 'ai/', 'nc/'];
 const localePrefix = { uk: '/', ru: '/ru/', en: '/en/' };
 const variantPages = Object.entries(localePrefix).flatMap(([locale, prefix]) =>
   variantSlugs.map((slug) => ({ locale, slug, url: prefix + slug, file: `dist${prefix}${slug}index.html` }))
@@ -413,6 +413,17 @@ describe('ретро-варианты', () => {
     expect(read(retro.uk)).toContain('Ми створюємо ІТ рішення, що працюють');
     expect(read(retro.ru)).toContain('Мы создаём работающие ИТ решения');
     expect(read(retro.en)).toContain('We build IT solutions that work');
+  });
+
+  it('открывают на главной вариант по умолчанию, а его собственный адрес ведёт на главную', () => {
+    for (const path of Object.values(retro)) {
+      expect(read(path), path).toContain('id="xmTree"');
+    }
+    for (const [locale, prefix] of Object.entries(localePrefix)) {
+      const file = `dist${prefix}xmas/index.html`;
+      expect(existsSync(file), file).toBe(true);
+      expect(read(file), `${locale}: ${file}`).toMatch(new RegExp(`http-equiv="refresh" content="0;url=${prefix}"`));
+    }
   });
 
   it('не содержат ссылок на старые адреса тем', () => {

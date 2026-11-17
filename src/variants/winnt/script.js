@@ -395,7 +395,7 @@
   const ROUND = new Set(["globe", "flag", "info", "err"]);
   const icon = (name, size = 32) =>
     `<svg viewBox="0 0 32 32" width="${size}" height="${size}" aria-hidden="true"${ROUND.has(name) ? "" : ' shape-rendering="crispEdges"'}>${ICONS[name]}</svg>`;
-  const variantIcon = (id) => (id === AIC.id ? "flag" : ["classic", "web90", "web2010", "ai"].includes(id) ? "globe" : ["dos", "nc", "unix", "mc", "apple"].includes(id) ? "cmd" : "app");
+  const variantIcon = (id) => (id === AIC.id ? "flag" : ["classic", "web90", "web2010", "ai", "xmas"].includes(id) ? "globe" : ["dos", "nc", "unix", "mc", "apple"].includes(id) ? "cmd" : "app");
 
   /* Гліфи кнопок заголовка */
   const G = {
@@ -1070,7 +1070,7 @@
   const RUN_WINS = { readme: "readme", notepad: "readme", wordpad: "readme", write: "readme", explorer: "mycomp", services: "services", partners: "partners",
     mail: "contacts", contacts: "contacts", winver: "about", about: "about", help: "help", winhelp: "help", control: "lang", intl: "lang", modes: "modes" };
   const RUN_ALIAS = { cmd: "dos", command: "dos", "ms-dos": "dos", norton: "nc", redhat: "linux", startx: "linux", x11: "linux", win: "win31", windows: "win31",
-    nt: "winnt", site: "classic", "90": "web90", "2010": "web2010" };
+    nt: "winnt", site: "classic", "90": "web90", "2010": "web2010", christmas: "xmas" };
 
   function runCmd(raw) {
     const v = raw.trim();
